@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -6,8 +5,7 @@ import { CheckCircle, Star, ArrowRight, Clock, Shield, Target } from "lucide-rea
 
 const Index = () => {
   const handleCTAClick = () => {
-    // Replace with your actual Gumroad URL
-    window.open("https://gumroad.com/your-product-link", "_blank");
+    window.open("https://noahgordon.gumroad.com/l/surgeonsmetabolismbible", "_blank");
   };
 
   return (
@@ -34,11 +32,11 @@ const Index = () => {
           </Badge>
           
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-            Restore Your <span className="text-blue-600">Vitality & Energy</span> Without Broken Mainstream Health Advice
+            Your Metabolism's Been <span className="text-blue-600">Misfiring for Years</span> — and No One Told You Why
           </h1>
           
           <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Fix your metabolism at the root and reclaim the energy, mental clarity, and performance you had in your 30s using a surgeon-specific protocol.
+            Discover the protocol elite surgeons are using to reclaim their energy, focus, and vitality — without restrictive diets or broken health advice.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
