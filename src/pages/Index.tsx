@@ -178,6 +178,35 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Science Behind the Reset Section */}
+      <section className="py-16 bg-slate-100">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              The Science Behind the Reset
+            </h2>
+          </div>
+
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Mitochondrial dysfunction has now been linked directly to the symptoms most orthopedic surgeons struggle with: low energy, poor sleep, loss of libido, brain fog, and emotional volatility.
+            </p>
+            
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              A review of 25 studies found consistent evidence that fatigue is strongly associated with impaired mitochondrial function—specifically reduced energy output at the cellular level<sup className="text-blue-600">1</sup>. Another study showed that individuals with better mitochondrial efficiency experienced deeper sleep, improved mood, and fewer signs of burnout and fatigue<sup className="text-blue-600">2</sup>.
+            </p>
+            
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              In short: the worse your mitochondria function, the worse you feel.
+            </p>
+            
+            <p className="text-lg text-slate-700 leading-relaxed">
+              This guide is built to reverse that dysfunction. By targeting the cellular root cause of your symptoms, it helps restore energy, sharpen focus, rebalance hormones, and reignite the drive you thought was lost to age.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* What You Get */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -367,14 +396,37 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-slate-400">
-            © 2024 Surgeon Metabolism Bible. All rights reserved.
-          </p>
-          <p className="text-xs text-slate-500 mt-2">
-            This product is not intended to diagnose, treat, cure, or prevent any disease.
-          </p>
+      <footer className="py-12 bg-slate-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <p className="text-slate-400 mb-4">
+              © 2024 Surgeon Metabolism Bible. All rights reserved.
+            </p>
+            
+            {/* Policy Links */}
+            <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+              <a href="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="text-slate-400 hover:text-white transition-colors">Refund Policy</a>
+            </div>
+            
+            {/* Citations */}
+            <div className="border-t border-slate-700 pt-8">
+              <h4 className="text-lg font-semibold mb-4">References</h4>
+              <div className="text-left max-w-4xl mx-auto space-y-3 text-sm text-slate-400">
+                <p>
+                  <sup>1</sup> Filler K, Lyon D, Bennett J, McCain N, et al. Association of mitochondrial dysfunction and fatigue: A review of the literature. BBA Clin. 2014 Aug;1:12-23.
+                </p>
+                <p>
+                  <sup>2</sup> Boolani A, O'Connor P, Reid J, et al. Sleep Quality in Relation to Trait Energy and Fatigue. Front Psychol. 2022 Feb 15;13:799961.
+                </p>
+              </div>
+            </div>
+            
+            <p className="text-xs text-slate-500 mt-6">
+              This product is not intended to diagnose, treat, cure, or prevent any disease.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
