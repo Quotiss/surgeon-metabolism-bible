@@ -396,36 +396,70 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-slate-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <p className="text-slate-400 mb-4">
-              © 2024 Surgeon Metabolism Bible. All rights reserved.
-            </p>
+      <footer className="py-16 bg-slate-900 text-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          
+          {/* Policy Sections */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             
-            {/* Policy Links */}
-            <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">Refund Policy</a>
+            {/* Terms of Service */}
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Terms of Service</h3>
+              <p className="text-slate-300 leading-relaxed">
+                By using this site or purchasing a product, you agree to not share, reproduce, or 
+                distribute any of the materials without written permission. This content is for 
+                educational purposes only and is not a substitute for medical advice. Use at your 
+                own discretion.
+              </p>
             </div>
-            
-            {/* Citations */}
-            <div className="border-t border-slate-700 pt-8">
-              <h4 className="text-lg font-semibold mb-4">References</h4>
-              <div className="text-left max-w-4xl mx-auto space-y-3 text-sm text-slate-400">
-                <p>
-                  <sup>1</sup> Filler K, Lyon D, Bennett J, McCain N, et al. Association of mitochondrial dysfunction and fatigue: A review of the literature. BBA Clin. 2014 Aug;1:12-23.
-                </p>
-                <p>
-                  <sup>2</sup> Boolani A, O'Connor P, Reid J, et al. Sleep Quality in Relation to Trait Energy and Fatigue. Front Psychol. 2022 Feb 15;13:799961.
-                </p>
+
+            {/* Privacy Policy */}
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Privacy Policy</h3>
+              <p className="text-slate-300 leading-relaxed">
+                We respect your privacy. We collect minimal personal information (name, email, 
+                payment details) to fulfill your order and deliver your products. We do not sell or 
+                share your information with third parties. All data is handled through secure 
+                platforms like Gumroad and our email provider.
+              </p>
+            </div>
+
+            {/* Refund Policy */}
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Refund Policy</h3>
+              <p className="text-slate-300 leading-relaxed">
+                We offer a 30-day, 100% money-back guarantee. If you're not satisfied with your 
+                purchase for any reason, simply email us within 30 days of your order and we'll 
+                issue a full refund — no questions asked. Your satisfaction is our priority.
+              </p>
+            </div>
+
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-slate-700 pt-8">
+            <div className="text-center mb-8">
+              <p className="text-slate-400 mb-6">
+                © 2024 Surgeon Metabolism Bible. All rights reserved.
+              </p>
+              
+              {/* Citations */}
+              <div className="mb-8">
+                <h4 className="text-lg font-semibold mb-4">References</h4>
+                <div className="text-left max-w-4xl mx-auto space-y-3 text-sm text-slate-400">
+                  <p>
+                    <sup>1</sup> Filler K, Lyon D, Bennett J, McCain N, et al. Association of mitochondrial dysfunction and fatigue: A review of the literature. BBA Clin. 2014 Aug;1:12-23.
+                  </p>
+                  <p>
+                    <sup>2</sup> Boolani A, O'Connor P, Reid J, et al. Sleep Quality in Relation to Trait Energy and Fatigue. Front Psychol. 2022 Feb 15;13:799961.
+                  </p>
+                </div>
               </div>
+              
+              <p className="text-xs text-slate-500">
+                This product is not intended to diagnose, treat, cure, or prevent any disease.
+              </p>
             </div>
-            
-            <p className="text-xs text-slate-500 mt-6">
-              This product is not intended to diagnose, treat, cure, or prevent any disease.
-            </p>
           </div>
         </div>
       </footer>
