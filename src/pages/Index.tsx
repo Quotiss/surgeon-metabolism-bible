@@ -2,91 +2,127 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Star, ArrowRight, Clock, Shield, Target } from "lucide-react";
+import FloatingCTA from "@/components/FloatingCTA";
+import { useAnalytics } from "@/hooks/useAnalytics";
+import { useEffect } from "react";
 
 const Index = () => {
-  const handleCTAClick = () => {
+  const { trackCTAClick } = useAnalytics();
+
+  // Preload critical resources
+  useEffect(() => {
+    // Preload Gumroad domain for faster navigation
+    const link = document.createElement('link');
+    link.rel = 'dns-prefetch';
+    link.href = '//noahgordon.gumroad.com';
+    document.head.appendChild(link);
+
+    // Performance optimization: lazy load non-critical content
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    });
+
+    document.querySelectorAll('.lazy-fade').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleCTAClick = (location: string = 'general') => {
+    trackCTAClick(location);
     window.open("https://noahgordon.gumroad.com/l/surgeonsmetabolismbible", "_blank");
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4">
+      {/* Floating Mobile CTA */}
+      <FloatingCTA onClick={() => handleCTAClick('floating_mobile')} />
+
+      {/* Header - Optimized for mobile */}
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-40 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between">
-            <div className="font-bold text-xl text-slate-900">
+            <div className="font-bold text-lg md:text-xl text-slate-900">
               Surgeon Metabolism Bible
             </div>
-            <Button onClick={handleCTAClick} className="bg-blue-600 hover:bg-blue-700">
+            <Button 
+              onClick={() => handleCTAClick('header')} 
+              className="bg-blue-600 hover:bg-blue-700 text-sm md:text-base px-3 md:px-4 py-2"
+            >
               Get Access Now
             </Button>
           </div>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-20 px-4">
+      {/* Hero Section - Mobile optimized */}
+      <section className="py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-6xl text-center">
-          <Badge className="mb-4 bg-blue-100 text-blue-800 border-blue-200">
+          <Badge className="mb-4 bg-blue-100 text-blue-800 border-blue-200 text-xs md:text-sm">
             For Orthopedic Surgeons Only
           </Badge>
           
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
             Your Metabolism's Been <span className="text-blue-600">Misfiring for Years</span> — and No One Told You Why
           </h1>
           
-          <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Discover the protocol elite surgeons are using to reclaim their energy, focus, and vitality — without restrictive diets or broken health advice.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col gap-4 justify-center items-center mb-8 md:mb-12">
             <Button 
-              onClick={handleCTAClick}
+              onClick={() => handleCTAClick('hero')}
               size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4 h-auto"
+              className="bg-blue-600 hover:bg-blue-700 text-base md:text-lg px-6 md:px-8 py-3 md:py-4 h-auto w-full sm:w-auto"
             >
               Get The Complete Protocol - $27
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5" />
             </Button>
-            <div className="text-sm text-slate-500">
+            <div className="text-xs md:text-sm text-slate-500 text-center">
               ⚡ Instant download • 50-page eBook + bonuses
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center space-x-2">
-              <Clock className="h-5 w-5 text-blue-600" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center space-x-2 text-sm md:text-base">
+              <Clock className="h-4 md:h-5 w-4 md:w-5 text-blue-600 flex-shrink-0" />
               <span className="text-slate-600">No time-wasting fluff</span>
             </div>
-            <div className="flex items-center justify-center space-x-2">
-              <Shield className="h-5 w-5 text-blue-600" />
+            <div className="flex items-center justify-center space-x-2 text-sm md:text-base">
+              <Shield className="h-4 md:h-5 w-4 md:w-5 text-blue-600 flex-shrink-0" />
               <span className="text-slate-600">Evidence-based approach</span>
             </div>
-            <div className="flex items-center justify-center space-x-2">
-              <Target className="h-5 w-5 text-blue-600" />
+            <div className="flex items-center justify-center space-x-2 text-sm md:text-base">
+              <Target className="h-4 md:h-5 w-4 md:w-5 text-blue-600 flex-shrink-0" />
               <span className="text-slate-600">Surgeon-specific protocol</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem Section */}
-      <section className="py-16 bg-slate-100">
+      {/* Problem Section - Mobile optimized spacing */}
+      <section className="py-12 md:py-16 bg-slate-100 lazy-fade">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
               You're Successful in Surgery, But Your Body is Failing You
             </h2>
-            <p className="text-xl text-slate-600">
+            <p className="text-lg md:text-xl text-slate-600">
               Sound familiar? You're not alone. Here's what most surgeons are struggling with:
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-6 border-l-4 border-l-red-500">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+            <Card className="p-4 md:p-6 border-l-4 border-l-red-500">
               <CardContent className="p-0">
                 <h3 className="font-semibold text-lg mb-4 text-slate-900">The Energy Crisis</h3>
-                <ul className="space-y-2 text-slate-700">
+                <ul className="space-y-2 text-slate-700 text-sm md:text-base">
                   <li className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
                     <span>Chronic fatigue that coffee can't fix</span>
@@ -103,10 +139,10 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="p-6 border-l-4 border-l-red-500">
+            <Card className="p-4 md:p-6 border-l-4 border-l-red-500">
               <CardContent className="p-0">
                 <h3 className="font-semibold text-lg mb-4 text-slate-900">The Performance Decline</h3>
-                <ul className="space-y-2 text-slate-700">
+                <ul className="space-y-2 text-slate-700 text-sm md:text-base">
                   <li className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
                     <span>Weight gain despite restrictive diets</span>
@@ -124,8 +160,8 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="text-center mt-12 p-8 bg-white rounded-lg shadow-lg">
-            <p className="text-lg text-slate-700 italic">
+          <div className="text-center mt-8 md:mt-12 p-6 md:p-8 bg-white rounded-lg shadow-lg">
+            <p className="text-base md:text-lg text-slate-700 italic">
               "You've tried every diet, supplement, and biohack out there. Nothing works because you're treating symptoms, not the root cause."
             </p>
           </div>
@@ -133,7 +169,7 @@ const Index = () => {
       </section>
 
       {/* Solution Section */}
-      <section className="py-16">
+      <section className="py-16 lazy-fade">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -179,7 +215,7 @@ const Index = () => {
       </section>
 
       {/* Science Behind the Reset Section */}
-      <section className="py-16 bg-slate-100">
+      <section className="py-16 bg-slate-100 lazy-fade">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -207,19 +243,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What You Get */}
-      <section className="py-16 bg-slate-50">
+      {/* What You Get - Mobile optimized */}
+      <section className="py-12 md:py-16 bg-slate-50 lazy-fade">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
               What You Get in the Surgeon Metabolism Bible
             </h2>
-            <p className="text-xl text-slate-600">
+            <p className="text-lg md:text-xl text-slate-600">
               Everything you need to restore your vitality and reclaim your energy
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             <Card className="p-8">
               <CardContent className="p-0">
                 <h3 className="font-bold text-2xl mb-4 text-slate-900">Core eBook (50 pages)</h3>
@@ -274,16 +310,16 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 md:mt-12">
             <Button 
-              onClick={handleCTAClick}
+              onClick={() => handleCTAClick('main_offer')}
               size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-lg px-12 py-4 h-auto"
+              className="bg-blue-600 hover:bg-blue-700 text-base md:text-lg px-8 md:px-12 py-3 md:py-4 h-auto w-full sm:w-auto"
             >
               Get Instant Access - $27
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5" />
             </Button>
-            <p className="text-sm text-slate-500 mt-4">
+            <p className="text-xs md:text-sm text-slate-500 mt-4">
               Instant download • 30-day money-back guarantee
             </p>
           </div>
@@ -291,7 +327,7 @@ const Index = () => {
       </section>
 
       {/* Results Section */}
-      <section className="py-16">
+      <section className="py-16 lazy-fade">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -371,7 +407,7 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-blue-600 text-white lazy-fade">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-4">
             Ready to Reclaim Your Vitality?
@@ -381,7 +417,7 @@ const Index = () => {
           </p>
           
           <Button 
-            onClick={handleCTAClick}
+            onClick={() => handleCTAClick('bottom_cta')}
             size="lg" 
             className="bg-white text-blue-600 hover:bg-slate-100 text-lg px-12 py-4 h-auto font-semibold"
           >
