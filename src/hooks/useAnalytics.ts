@@ -1,6 +1,12 @@
 
 import { useEffect } from 'react';
 
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+  }
+}
+
 export const useAnalytics = () => {
   useEffect(() => {
     // Track page view
@@ -17,6 +23,12 @@ export const useAnalytics = () => {
 
   const trackCTAClick = (location: string) => {
     trackEvent('cta_click', { location });
+    
+    // Fire Meta Pixel Lead event
+    if (window.fbq) {
+      window.fbq('track', 'Lead', { source: location });
+      console.log('Meta Pixel Lead event fired for:', location);
+    }
   };
 
   return { trackEvent, trackCTAClick };
