@@ -24,10 +24,10 @@ export const useAnalytics = () => {
   const trackCTAClick = (location: string) => {
     trackEvent('cta_click', { location });
     
-    // Fire Meta Pixel Lead event
+    // Fire Meta Pixel InitiateCheckout event
     if (window.fbq) {
-      window.fbq('track', 'Lead', { source: location });
-      console.log('Meta Pixel Lead event fired for:', location);
+      window.fbq('track', 'InitiateCheckout', { source: location });
+      console.log('Meta Pixel InitiateCheckout event fired for:', location);
     }
   };
 
