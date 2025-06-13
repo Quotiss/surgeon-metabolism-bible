@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -72,7 +73,7 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  /* Performance optimizations */
+  /* Critical CSS for immediate render */
   * {
     @apply border-border;
   }
@@ -84,11 +85,24 @@
     -moz-osx-font-smoothing: grayscale;
     /* Prevent layout shifts */
     overflow-x: hidden;
+    /* Force hardware acceleration for better performance */
+    transform: translateZ(0);
   }
 
   /* Optimize scroll behavior */
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Critical above-the-fold optimizations */
+  .hero-section {
+    will-change: auto;
+    contain: layout style paint;
+  }
+
+  .header-nav {
+    will-change: auto;
+    contain: layout style paint;
   }
 
   /* Reduce motion for users who prefer it */
@@ -98,13 +112,30 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
+    
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
 @layer utilities {
+  /* Optimized fade-in animation for lazy loading */
+  .lazy-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .lazy-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   /* Performance optimized animations */
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
+    animation: fadeIn 0.6s ease-out forwards;
   }
 
   @keyframes fadeIn {
@@ -116,18 +147,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  /* Lazy loading optimization */
-  .lazy-fade {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-  .lazy-fade.animate-fade-in {
-    opacity: 1;
-    transform: translateY(0);
   }
 
   /* Mobile optimizations */
@@ -149,14 +168,20 @@
     }
   }
 
-  /* Critical CSS for above-the-fold content */
-  .hero-section {
-    will-change: transform;
+  /* Optimize heavy elements for performance */
+  .card {
     contain: layout style paint;
   }
 
-  /* Optimize heavy elements */
-  .card {
-    contain: layout style paint;
+  /* Prevent layout shift during loading */
+  .skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
   }
 }

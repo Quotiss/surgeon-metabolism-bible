@@ -1,15 +1,17 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Star, ArrowRight, Clock, Shield, Target } from "lucide-react";
 import FloatingCTA from "@/components/FloatingCTA";
+import LazySection from "@/components/LazySection";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useEffect } from "react";
 
 const Index = () => {
   const { trackCTAClick } = useAnalytics();
 
-  // Preload critical resources
+  // Preload critical resources and optimize initial render
   useEffect(() => {
     // Preload Gumroad domain for faster navigation
     const link = document.createElement('link');
@@ -17,20 +19,11 @@ const Index = () => {
     link.href = '//noahgordon.gumroad.com';
     document.head.appendChild(link);
 
-    // Performance optimization: lazy load non-critical content
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in');
-        }
-      });
-    });
-
-    document.querySelectorAll('.lazy-fade').forEach((el) => {
-      observer.observe(el);
-    });
-
-    return () => observer.disconnect();
+    return () => {
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+    };
   }, []);
 
   const handleCTAClick = (location: string = 'general') => {
@@ -43,8 +36,8 @@ const Index = () => {
       {/* Floating Mobile CTA */}
       <FloatingCTA onClick={() => handleCTAClick('floating_mobile')} />
 
-      {/* Header - Optimized for mobile */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-40 backdrop-blur-sm">
+      {/* Header - Critical above-the-fold content */}
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-40 backdrop-blur-sm header-nav">
         <div className="container mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between">
             <div className="font-bold text-lg md:text-xl text-slate-900">
@@ -60,8 +53,8 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section - Mobile optimized */}
-      <section className="py-12 md:py-20 px-4">
+      {/* Hero Section - Critical above-the-fold content */}
+      <section className="py-12 md:py-20 px-4 hero-section">
         <div className="container mx-auto max-w-6xl text-center">
           <Badge className="mb-4 bg-blue-100 text-blue-800 border-blue-200 text-xs md:text-sm">
             For Orthopedic Surgeons Only
@@ -106,8 +99,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Problem Section - Mobile optimized spacing */}
-      <section className="py-12 md:py-16 bg-slate-100 lazy-fade">
+      {/* Problem Section - Lazy loaded */}
+      <LazySection className="py-12 md:py-16 bg-slate-100">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -166,10 +159,10 @@ const Index = () => {
             </p>
           </div>
         </div>
-      </section>
+      </LazySection>
 
-      {/* Solution Section */}
-      <section className="py-16 lazy-fade">
+      {/* Solution Section - Lazy loaded */}
+      <LazySection className="py-16">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -212,10 +205,10 @@ const Index = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </LazySection>
 
-      {/* Science Behind the Reset Section */}
-      <section className="py-16 bg-slate-100 lazy-fade">
+      {/* Science Behind the Reset Section - Lazy loaded */}
+      <LazySection className="py-16 bg-slate-100">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -241,10 +234,10 @@ const Index = () => {
             </p>
           </div>
         </div>
-      </section>
+      </LazySection>
 
-      {/* What You Get - Mobile optimized */}
-      <section className="py-12 md:py-16 bg-slate-50 lazy-fade">
+      {/* What You Get - Lazy loaded */}
+      <LazySection className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -324,10 +317,10 @@ const Index = () => {
             </p>
           </div>
         </div>
-      </section>
+      </LazySection>
 
-      {/* Results Section */}
-      <section className="py-16 lazy-fade">
+      {/* Results Section - Lazy loaded */}
+      <LazySection className="py-16">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -404,10 +397,10 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </LazySection>
 
-      {/* Final CTA */}
-      <section className="py-16 bg-blue-600 text-white lazy-fade">
+      {/* Final CTA - Lazy loaded */}
+      <LazySection className="py-16 bg-blue-600 text-white">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-4">
             Ready to Reclaim Your Vitality?
@@ -429,76 +422,78 @@ const Index = () => {
             Instant download • 30-day money-back guarantee • For surgeons only
           </p>
         </div>
-      </section>
+      </LazySection>
 
-      {/* Footer */}
-      <footer className="py-16 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          
-          {/* Policy Sections */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      {/* Footer - Lazy loaded */}
+      <LazySection>
+        <footer className="py-16 bg-slate-900 text-white">
+          <div className="container mx-auto px-4 max-w-6xl">
             
-            {/* Terms of Service */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Terms of Service</h3>
-              <p className="text-slate-300 leading-relaxed">
-                By using this site or purchasing a product, you agree to not share, reproduce, or 
-                distribute any of the materials without written permission. This content is for 
-                educational purposes only and is not a substitute for medical advice. Use at your 
-                own discretion.
-              </p>
-            </div>
-
-            {/* Privacy Policy */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Privacy Policy</h3>
-              <p className="text-slate-300 leading-relaxed">
-                We respect your privacy. We collect minimal personal information (name, email, 
-                payment details) to fulfill your order and deliver your products. We do not sell or 
-                share your information with third parties. All data is handled through secure 
-                platforms like Gumroad and our email provider.
-              </p>
-            </div>
-
-            {/* Refund Policy */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Refund Policy</h3>
-              <p className="text-slate-300 leading-relaxed">
-                We offer a 30-day, 100% money-back guarantee. If you're not satisfied with your 
-                purchase for any reason, simply email us within 30 days of your order and we'll 
-                issue a full refund — no questions asked. Your satisfaction is our priority.
-              </p>
-            </div>
-
-          </div>
-
-          {/* Bottom Section */}
-          <div className="border-t border-slate-700 pt-8">
-            <div className="text-center mb-8">
-              <p className="text-slate-400 mb-6">
-                © 2024 Surgeon Metabolism Bible. All rights reserved.
-              </p>
+            {/* Policy Sections */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
               
-              {/* Citations */}
-              <div className="mb-8">
-                <h4 className="text-lg font-semibold mb-4">References</h4>
-                <div className="text-left max-w-4xl mx-auto space-y-3 text-sm text-slate-400">
-                  <p>
-                    <sup>1</sup> Filler K, Lyon D, Bennett J, McCain N, et al. Association of mitochondrial dysfunction and fatigue: A review of the literature. BBA Clin. 2014 Aug;1:12-23.
-                  </p>
-                  <p>
-                    <sup>2</sup> Boolani A, O'Connor P, Reid J, et al. Sleep Quality in Relation to Trait Energy and Fatigue. Front Psychol. 2022 Feb 15;13:799961.
-                  </p>
-                </div>
+              {/* Terms of Service */}
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Terms of Service</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  By using this site or purchasing a product, you agree to not share, reproduce, or 
+                  distribute any of the materials without written permission. This content is for 
+                  educational purposes only and is not a substitute for medical advice. Use at your 
+                  own discretion.
+                </p>
               </div>
-              
-              <p className="text-xs text-slate-500">
-                This product is not intended to diagnose, treat, cure, or prevent any disease.
-              </p>
+
+              {/* Privacy Policy */}
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Privacy Policy</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  We respect your privacy. We collect minimal personal information (name, email, 
+                  payment details) to fulfill your order and deliver your products. We do not sell or 
+                  share your information with third parties. All data is handled through secure 
+                  platforms like Gumroad and our email provider.
+                </p>
+              </div>
+
+              {/* Refund Policy */}
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Refund Policy</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  We offer a 30-day, 100% money-back guarantee. If you're not satisfied with your 
+                  purchase for any reason, simply email us within 30 days of your order and we'll 
+                  issue a full refund — no questions asked. Your satisfaction is our priority.
+                </p>
+              </div>
+
+            </div>
+
+            {/* Bottom Section */}
+            <div className="border-t border-slate-700 pt-8">
+              <div className="text-center mb-8">
+                <p className="text-slate-400 mb-6">
+                  © 2024 Surgeon Metabolism Bible. All rights reserved.
+                </p>
+                
+                {/* Citations */}
+                <div className="mb-8">
+                  <h4 className="text-lg font-semibold mb-4">References</h4>
+                  <div className="text-left max-w-4xl mx-auto space-y-3 text-sm text-slate-400">
+                    <p>
+                      <sup>1</sup> Filler K, Lyon D, Bennett J, McCain N, et al. Association of mitochondrial dysfunction and fatigue: A review of the literature. BBA Clin. 2014 Aug;1:12-23.
+                    </p>
+                    <p>
+                      <sup>2</sup> Boolani A, O'Connor P, Reid J, et al. Sleep Quality in Relation to Trait Energy and Fatigue. Front Psychol. 2022 Feb 15;13:799961.
+                    </p>
+                  </div>
+                </div>
+                
+                <p className="text-xs text-slate-500">
+                  This product is not intended to diagnose, treat, cure, or prevent any disease.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </LazySection>
     </div>
   );
 };
