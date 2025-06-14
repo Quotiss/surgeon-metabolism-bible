@@ -1,8 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Star, ArrowRight, Clock, Shield, Target } from "lucide-react";
+import { CheckCircle, Star, ArrowRight, Clock, Shield, Target, FileText, ShoppingCart, Gift } from "lucide-react";
 import FloatingCTA from "@/components/FloatingCTA";
 import LazySection from "@/components/LazySection";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -67,6 +66,15 @@ const Index = () => {
           <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Discover the protocol elite surgeons are using to reclaim their energy, focus, and vitality — without restrictive diets or broken health advice.
           </p>
+
+          <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-2 text-green-800 font-semibold text-sm md:text-base">
+              <FileText className="h-4 w-4 flex-shrink-0" />
+              <ShoppingCart className="h-4 w-4 flex-shrink-0" />
+              <Gift className="h-4 w-4 flex-shrink-0" />
+              <span>Get $127 worth of surgeon-specific protocols, grocery cheatsheets & bonus guides for $27 today.</span>
+            </div>
+          </div>
 
           <div className="flex flex-col gap-4 justify-center items-center mb-8 md:mb-12">
             <Button 
