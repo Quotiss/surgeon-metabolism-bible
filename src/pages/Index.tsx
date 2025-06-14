@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -57,7 +58,7 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl text-center">
           
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-            Your Metabolism's Been <span className="text-blue-600">Misfiring for Years</span> — and No One Told You Why
+            <span className="text-blue-600">Surgeons:</span> Your Metabolism's Been <span className="text-blue-600">Misfiring for Years</span> — and No One Told You Why
           </h1>
           
           <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
