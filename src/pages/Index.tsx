@@ -55,9 +55,6 @@ const Index = () => {
       {/* Hero Section - Critical above-the-fold content */}
       <section className="py-12 md:py-20 px-4 hero-section">
         <div className="container mx-auto max-w-6xl text-center">
-          <Badge className="mb-4 bg-blue-100 text-blue-800 border-blue-200 text-xs md:text-sm">
-            For Orthopedic Surgeons Only
-          </Badge>
           
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
             Your Metabolism's Been <span className="text-blue-600">Misfiring for Years</span> — and No One Told You Why
