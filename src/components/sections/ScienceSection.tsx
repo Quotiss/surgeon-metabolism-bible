@@ -55,7 +55,7 @@ const ScienceSection = () => {
         </div>
 
         <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg text-center">
-          <p className="text-base sm:text-lg text-slate-700 italic">
+          <p className="text-base sm:text-lg text-slate-900 font-bold">
             This information was previously locked away in expensive consultations with high-end metabolic specialists. Now it's yours for less than the cost of a single session with a nutritionist who doesn't understand surgeon physiology.
           </p>
         </div>
