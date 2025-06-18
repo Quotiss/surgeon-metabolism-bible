@@ -1,65 +1,35 @@
 
-import { Card, CardContent } from "@/components/ui/card";
 import LazySection from "@/components/LazySection";
 
 const ProblemSection = () => {
   return (
     <LazySection className="py-8 sm:py-12 md:py-16 bg-slate-100">
-      <div className="container mx-auto px-4 max-w-5xl">
+      <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
-            You're Successful in Surgery, But Your Body is Failing You
+            Here's What's Really Happening...
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-600">
-            Sound familiar? You're not alone. Here's what most surgeons are struggling with:
+        </div>
+
+        <div className="prose prose-lg max-w-none text-slate-700">
+          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            You're doing everything "right" - eating clean, hitting the gym when you can, even cutting calories. Yet you're still gaining weight around your midsection, hitting that 2 PM energy crash that makes you want to crawl under your desk, and wondering why your libido disappeared somewhere between residency and real life.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-          <Card className="p-4 sm:p-6 border-l-4 border-l-red-500 hover:shadow-lg transition-shadow duration-200">
-            <CardContent className="p-0">
-              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-slate-900">The Energy Crisis</h3>
-              <ul className="space-y-2 text-slate-700 text-sm sm:text-base">
-                <li className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Chronic fatigue that coffee can't fix</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Brain fog affecting your surgical precision</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>No energy left for family after long surgeries</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card className="p-4 sm:p-6 border-l-4 border-l-red-500 hover:shadow-lg transition-shadow duration-200">
-            <CardContent className="p-0">
-              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-slate-900">The Performance Decline</h3>
-              <ul className="space-y-2 text-slate-700 text-sm sm:text-base">
-                <li className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Weight gain despite restrictive diets</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Low libido and diminished performance</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Lost the respect and authority you once commanded</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="text-center mt-6 sm:mt-8 md:mt-12 p-4 sm:p-6 md:p-8 bg-white rounded-lg shadow-lg">
-          <p className="text-sm sm:text-base md:text-lg text-slate-700 italic">
-            "You've tried every diet, supplement, and biohack out there. Nothing works because you're treating symptoms, not the root cause."
+          
+          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            Sound familiar? You're not alone. <span className="font-semibold text-slate-900">94% of surgeons over 35 are quietly struggling with the same metabolic nightmare</span>, watching their bodies betray them despite their discipline and intelligence.
+          </p>
+          
+          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            Here's what's really happening: Your metabolism isn't broken because you lack willpower or eat too much. It's broken because you're following advice designed for 25-year-old personal trainers, not 45-year-old surgeons dealing with chronic stress, irregular sleep, and cortisol levels that would make an ER resident look relaxed.
+          </p>
+          
+          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            Every restrictive diet you've tried has made it WORSE. Every "eat less, move more" approach has slowed your metabolism further. The mainstream fitness industry has been feeding you protocols that actively sabotage high-stress professionals like you - and charging you premium prices for the privilege.
+          </p>
+          
+          <p className="text-base sm:text-lg leading-relaxed">
+            Meanwhile, a small group of elite surgeons discovered the real problem: <span className="font-semibold text-blue-600">insulin resistance triggered by surgical stress patterns, not overeating</span>. They're using a completely different approach - one that works WITH your schedule, not against it.
           </p>
         </div>
       </div>
