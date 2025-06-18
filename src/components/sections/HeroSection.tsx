@@ -17,16 +17,11 @@ const HeroSection = ({
           Discover the <span className="text-blue-600 font-bold">exact step-by-step blueprint</span> elite surgeons are using to eliminate energy crashes, supercharge their physique, and command respect in the OR in <span className="text-blue-600 font-bold">under 30 days</span>.
         </p>
 
-        
-
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 md:mb-12">
           <Button onClick={() => onCTAClick('hero')} size="lg" className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto w-full sm:w-auto transition-all duration-200 touch-manipulation font-semibold">
-            Get The Complete Protocol - $27
+            Get Instant Access Now
             <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
           </Button>
-          <div className="text-xs sm:text-sm text-slate-500 text-center">
-            ⚡ Instant download • 50-page eBook + bonuses
-          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-8 max-w-4xl mx-auto text-xs sm:text-sm md:text-base">
