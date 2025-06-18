@@ -46,23 +46,10 @@ const FooterSection = () => {
 
           {/* Bottom Section */}
           <div className="border-t border-slate-700 pt-6 sm:pt-8">
-            <div className="text-center mb-6 sm:mb-8">
+            <div className="text-center">
               <p className="text-slate-400 mb-4 sm:mb-6 text-sm sm:text-base">
                 © 2024 Surgeon Metabolism Bible. All rights reserved.
               </p>
-              
-              {/* Citations */}
-              <div className="mb-6 sm:mb-8">
-                <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">References</h4>
-                <div className="text-left max-w-4xl mx-auto space-y-2 sm:space-y-3 text-xs sm:text-sm text-slate-400">
-                  <p>
-                    <sup>1</sup> Filler K, Lyon D, Bennett J, McCain N, et al. Association of mitochondrial dysfunction and fatigue: A review of the literature. BBA Clin. 2014 Aug;1:12-23.
-                  </p>
-                  <p>
-                    <sup>2</sup> Boolani A, O'Connor P, Reid J, et al. Sleep Quality in Relation to Trait Energy and Fatigue. Front Psychol. 2022 Feb 15;13:799961.
-                  </p>
-                </div>
-              </div>
               
               <p className="text-xs text-slate-500">
                 This product is not intended to diagnose, treat, cure, or prevent any disease.
