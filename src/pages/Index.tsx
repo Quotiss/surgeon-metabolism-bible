@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -74,11 +73,11 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl text-center">
           
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
-            <span className="text-blue-600">Surgeons:</span> Your Metabolism's Been <span className="text-blue-600">Misfiring for Years</span> — and No One Told You Why
+            The <span className="text-blue-600">Metabolism Mistake</span> That's Keeping 9 Out of 10 Surgeons <span className="text-blue-600">Fat, Tired, and Frustrated</span> (and How To Fix It)
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-            Discover the protocol elite surgeons are using to reclaim their energy, focus, and vitality — without restrictive diets or broken health advice.
+            A 30-day surgeon-specific blueprint to reclaim vitality, supercharge your physique, and command respect.
           </p>
 
           <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-green-50 border border-green-200 rounded-lg max-w-2xl mx-auto">
