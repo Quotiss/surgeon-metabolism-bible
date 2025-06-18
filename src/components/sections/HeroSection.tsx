@@ -1,14 +1,12 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Shield, Target, FileText, ShoppingCart, Gift } from "lucide-react";
-
 interface HeroSectionProps {
   onCTAClick: (location: string) => void;
 }
-
-const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
-  return (
-    <section className="py-8 sm:py-12 md:py-20 px-4 hero-section">
+const HeroSection = ({
+  onCTAClick
+}: HeroSectionProps) => {
+  return <section className="py-8 sm:py-12 md:py-20 px-4 hero-section">
       <div className="container mx-auto max-w-6xl text-center">
         
         <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
@@ -19,21 +17,10 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
           Discover the <span className="text-blue-600 font-bold">exact step-by-step blueprint</span> elite surgeons are using to eliminate energy crashes, supercharge their physique, and command respect in the OR in <span className="text-blue-600 font-bold">under 30 days</span>.
         </p>
 
-        <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-green-50 border border-green-200 rounded-lg max-w-2xl mx-auto">
-          <div className="flex items-center justify-center gap-2 text-green-800 font-semibold text-xs sm:text-sm md:text-base">
-            <FileText className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
-            <ShoppingCart className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
-            <Gift className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
-            <span className="text-center">Get $127 worth of surgeon-specific protocols, grocery cheatsheets & bonus guides for $27 today.</span>
-          </div>
-        </div>
+        
 
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 md:mb-12">
-          <Button 
-            onClick={() => onCTAClick('hero')}
-            size="lg" 
-            className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto w-full sm:w-auto transition-all duration-200 touch-manipulation font-semibold"
-          >
+          <Button onClick={() => onCTAClick('hero')} size="lg" className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto w-full sm:w-auto transition-all duration-200 touch-manipulation font-semibold">
             Get The Complete Protocol - $27
             <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
           </Button>
@@ -57,8 +44,6 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
