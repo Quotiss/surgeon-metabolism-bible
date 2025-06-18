@@ -41,7 +41,7 @@ const SolutionSection = () => {
             <div className="flex items-start space-x-3 sm:space-x-4">
               <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <span className="font-semibold">surgeon-proof meal timing blueprint</span> that syncs perfectly with OR schedules and clinical rotations (zero meal prep required)
+                The <span className="font-semibold">surgeon-proof meal timing blueprint</span> that syncs perfectly with OR schedules and clinical rotations
               </p>
             </div>
             
