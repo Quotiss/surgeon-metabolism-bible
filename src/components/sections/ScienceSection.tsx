@@ -20,7 +20,7 @@ const ScienceSection = () => {
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The 3 physiological systems</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">surgeon training destroys (why your body is working against you)</p>
+            <p className="text-sm sm:text-base text-slate-600">surgeon training destroys and why your body is working against you</p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
@@ -30,7 +30,7 @@ const ScienceSection = () => {
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The 5 hidden saboteurs</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">in your daily routine (you're unknowingly doing #4 every morning)</p>
+            <p className="text-sm sm:text-base text-slate-600">in your daily routine that you're unknowingly doing every morning</p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
@@ -40,7 +40,7 @@ const ScienceSection = () => {
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The fuel rules</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">that flip your metabolism into overdrive (what elite surgeons eat that you don't)</p>
+            <p className="text-sm sm:text-base text-slate-600">that flip your metabolism into overdrive and what elite surgeons eat</p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
@@ -50,7 +50,7 @@ const ScienceSection = () => {
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The 4 resilience protocols</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">that make this bulletproof (even during your worst weeks)</p>
+            <p className="text-sm sm:text-base text-slate-600">that make this system bulletproof even during your worst weeks</p>
           </div>
         </div>
 
