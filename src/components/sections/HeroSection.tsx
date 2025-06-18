@@ -15,8 +15,8 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
           The <span className="text-blue-600">Metabolism Mistake</span> That's Keeping 9 Out of 10 Surgeons <span className="text-blue-600">Fat, Tired, and Frustrated</span> (and How To Fix It)
         </h1>
         
-        <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed italic">
-          A 30-day surgeon-specific blueprint to reclaim vitality, supercharge your physique, and command respect.
+        <p className="text-base sm:text-lg md:text-xl text-slate-700 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
+          Discover the <span className="text-blue-600">exact step-by-step blueprint</span> elite surgeons are using to eliminate energy crashes, supercharge their physique, and command respect in the OR in <span className="text-blue-600">under 30 days</span>.
         </p>
 
         <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-green-50 border border-green-200 rounded-lg max-w-2xl mx-auto">
