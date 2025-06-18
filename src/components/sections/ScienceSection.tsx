@@ -30,7 +30,7 @@ const ScienceSection = () => {
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The 5 hidden saboteurs</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">in your daily routine (you're unknowingly doing #3 every morning)</p>
+            <p className="text-sm sm:text-base text-slate-600">in your daily routine (you're unknowingly doing #4 every morning)</p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
