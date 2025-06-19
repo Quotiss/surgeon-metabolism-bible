@@ -17,19 +17,19 @@ const ProblemSection = () => {
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Sound familiar? You're not alone. <span className="font-semibold text-slate-900">94% of surgeons over 35 are quietly struggling with the same metabolic nightmare</span>, watching their bodies betray them despite their discipline and intelligence.
+            Sound familiar? You're not alone. <span className="font-bold text-blue-600">94% of surgeons over 35</span> are quietly struggling with the same metabolic nightmare, watching their bodies betray them <span className="font-bold text-blue-600">despite their discipline and intelligence</span>.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Here's what's really happening: Your metabolism isn't broken because you lack willpower or eat too much. It's broken because you're following advice designed for 25-year-old personal trainers, not 45-year-old surgeons dealing with chronic stress, irregular sleep, and cortisol levels that would make an ER resident look relaxed.
+            Here's what's really happening: Your metabolism isn't broken because you lack willpower or eat too much. It's broken because you're following advice designed for 25-year-old personal trainers, not 45-year-old surgeons dealing with <span className="font-bold text-blue-600">the chronic stress cascade</span> - irregular sleep, elevated cortisol, and adrenaline spikes that would make an ER resident look relaxed.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Every restrictive diet you've tried has made it WORSE. Every "eat less, move more" approach has slowed your metabolism further. The mainstream fitness industry has been feeding you protocols that actively sabotage high-stress professionals like you - and charging you premium prices for the privilege.
+            Every restrictive diet you've tried has made it WORSE. Every "eat less, move more" approach has slowed your metabolism further. The mainstream fitness industry has been feeding you protocols that actively sabotage high-stress professionals like you - completely ignoring <span className="font-bold text-blue-600">how surgical stress rewires your metabolic machinery</span>.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed">
-            Meanwhile, a small group of elite surgeons discovered the real problem: <span className="font-semibold text-blue-600">insulin resistance triggered by surgical stress patterns, not overeating</span>. They're using a completely different approach - one that works WITH your schedule, not against it.
+            Meanwhile, a small group of elite surgeons discovered the real problem: surgical stress creates a <span className="font-bold text-blue-600">perfect storm of disrupted circadian timing and metabolic fuel competition</span> - your body literally can't decide whether to burn fat or store it, leading to <span className="font-bold text-blue-600">metabolic gridlock</span> that normal diet advice can't touch. They're using a completely different approach - one that works WITH your stress physiology, not against it.
           </p>
         </div>
       </div>
