@@ -11,13 +11,6 @@ const FinalCTASection = ({ onCTAClick }: FinalCTASectionProps) => {
   return (
     <LazySection className="py-8 sm:py-12 md:py-16 bg-blue-600 text-white">
       <div className="container mx-auto px-4 max-w-4xl text-center">
-        <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-3 sm:mb-4">
-          Ready to Reclaim Your Vitality?
-        </h2>
-        <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90">
-          Stop accepting fatigue and low energy as "part of the job." You deserve to feel strong, sharp, and energized at every stage of your career.
-        </p>
-        
         <Button 
           onClick={() => onCTAClick('bottom_cta')}
           size="lg" 
