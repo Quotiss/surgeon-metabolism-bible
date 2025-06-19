@@ -20,7 +20,7 @@ const ResultsSection = ({ onCTAClick }: ResultsSectionProps) => {
         <ProductValueSection onCTAClick={onCTAClick} />
         <CTAButton 
           onClick={() => onCTAClick('main_cta')}
-          text="Get Instant Access Now - $27"
+          text="Get Instant Access Now"
         />
       </div>
     </LazySection>
