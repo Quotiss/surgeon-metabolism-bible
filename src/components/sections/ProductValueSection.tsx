@@ -1,4 +1,5 @@
 
+
 import ValueItem from "@/components/ui/ValueItem";
 
 interface ProductValueSectionProps {
@@ -33,7 +34,7 @@ const ProductValueSection = ({ onCTAClick }: ProductValueSectionProps) => {
 
         <div className="text-center mt-6">
           <p className="text-lg sm:text-xl font-bold text-slate-900">
-            Total Package Value: <span className="line-through opacity-75">$441</span> → Yours for $27
+            Total Package Value: <span className="line-through opacity-75">$441</span> → Yours for <span className="text-blue-600">$27</span>
           </p>
         </div>
       </div>
@@ -50,3 +51,4 @@ const ProductValueSection = ({ onCTAClick }: ProductValueSectionProps) => {
 };
 
 export default ProductValueSection;
+
