@@ -1,7 +1,6 @@
 
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, ArrowRight } from "lucide-react";
+import { Star } from "lucide-react";
 import LazySection from "@/components/LazySection";
 
 interface FeaturesSectionProps {
@@ -26,17 +25,11 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
             <CardContent className="p-0">
               <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
                 <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600" />
-                <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #1</h3>
+                <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #1: The Surgeon's Grocery Blueprint ($97 Value)</h3>
               </div>
-              <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-slate-900">
-                Full Done-For-You Grocery Guide and Shopping List
-              </h4>
               <p className="text-sm sm:text-base text-slate-600 mb-3 sm:mb-4">
-                Maximize efficiency and minimize stress in the grocery store. No BS framework.
+                Complete done-for-you shopping list organized by store sections for maximum efficiency. Never waste time wandering aisles again - get in, get the right stress-fighting foods, get out. Includes specific brands that work synergistically with your metabolic reset.
               </p>
-              <div className="bg-white p-3 sm:p-4 rounded-lg">
-                <p className="text-xs sm:text-sm text-slate-600 mb-1">Value: $47</p>
-              </div>
             </CardContent>
           </Card>
 
@@ -44,38 +37,19 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
             <CardContent className="p-0">
               <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
                 <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600" />
-                <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #2</h3>
+                <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #2: The Surgical Stress Supplement Stack ($147 Value)</h3>
               </div>
-              <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-slate-900">
-                Full Supplementation Guide
-              </h4>
               <p className="text-sm sm:text-base text-slate-600 mb-3 sm:mb-4">
-                For enhancing performance, energy, and libido that works synergistically with our mechanism.
+                The exact supplementation protocol elite surgeons use to amplify their metabolic results. Each supplement is chosen specifically to work with your stress physiology - not against it. Includes dosing, timing, and which combinations accelerate fat burning while supporting energy and recovery.
               </p>
-              <div className="bg-white p-3 sm:p-4 rounded-lg">
-                <p className="text-xs sm:text-sm text-slate-600 mb-1">Value: $97</p>
-              </div>
             </CardContent>
           </Card>
         </div>
 
         <div className="text-center mt-6 sm:mt-8">
-          <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg mb-6 sm:mb-8">
-            <p className="text-sm sm:text-base text-slate-600 mb-2">Total Bonus Value: $144</p>
-            <p className="text-2xl sm:text-3xl font-bold text-blue-600">Your Price: $27</p>
+          <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
+            <p className="text-lg sm:text-xl font-bold text-blue-600">Total Bonus Value: $244</p>
           </div>
-          
-          <Button 
-            onClick={() => onCTAClick('main_offer')}
-            size="lg" 
-            className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-12 py-3 md:py-4 h-auto w-full sm:w-auto transition-all duration-200 touch-manipulation font-semibold"
-          >
-            Get Instant Access - $27
-            <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
-          </Button>
-          <p className="text-xs sm:text-sm text-slate-500 mt-3 sm:mt-4">
-            Instant download • 30-day money-back guarantee
-          </p>
         </div>
       </div>
     </LazySection>
