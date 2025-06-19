@@ -1,5 +1,4 @@
 
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Carrot, Bean } from "lucide-react";
 import LazySection from "@/components/LazySection";
@@ -14,19 +13,16 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
-            Exclusive Bonuses Included
+            Plus you get these <span className="text-blue-600 font-bold">exclusive bonuses</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-600">
-            Everything you need to implement the system immediately
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           <Card className="p-4 sm:p-6 md:p-8 border-2 border-blue-200 bg-blue-50 hover:shadow-lg transition-shadow duration-200">
-            <CardContent className="p-0">
-              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+            <CardContent className="p-0 text-center">
+              <div className="flex items-center justify-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
                 <Carrot className="h-5 w-5 sm:h-6 sm:w-6 text-orange-600" />
-                <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #1: The Surgeon's Grocery Blueprint ($97 Value)</h3>
+                <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #1: The Surgeon's Grocery Blueprint <span className="text-blue-600 font-bold">($97 Value)</span></h3>
               </div>
               <p className="text-sm sm:text-base text-slate-600 mb-3 sm:mb-4">
                 Complete done-for-you shopping list organized by store sections for maximum efficiency. Never waste time wandering aisles again - get in, get the right stress-fighting foods, get out. Includes specific brands that work synergistically with your metabolic reset.
@@ -35,10 +31,10 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
           </Card>
 
           <Card className="p-4 sm:p-6 md:p-8 border-2 border-blue-200 bg-blue-50 hover:shadow-lg transition-shadow duration-200">
-            <CardContent className="p-0">
-              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+            <CardContent className="p-0 text-center">
+              <div className="flex items-center justify-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
                 <Bean className="h-5 w-5 sm:h-6 sm:w-6 text-green-600" />
-                <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #2: The Surgical Stress Supplement Stack ($147 Value)</h3>
+                <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #2: The Surgical Stress Supplement Stack <span className="text-blue-600 font-bold">($147 Value)</span></h3>
               </div>
               <p className="text-sm sm:text-base text-slate-600 mb-3 sm:mb-4">
                 The exact supplementation protocol elite surgeons use to amplify their metabolic results. Each supplement is chosen specifically to work with your stress physiology - not against it. Includes dosing, timing, and which combinations accelerate fat burning while supporting energy and recovery.
@@ -58,4 +54,3 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
 };
 
 export default FeaturesSection;
-
