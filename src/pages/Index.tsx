@@ -7,7 +7,6 @@ import SolutionSection from "@/components/sections/SolutionSection";
 import ScienceSection from "@/components/sections/ScienceSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import ResultsSection from "@/components/sections/ResultsSection";
-import FinalCTASection from "@/components/sections/FinalCTASection";
 import FooterSection from "@/components/sections/FooterSection";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useEffect } from "react";
@@ -74,11 +73,8 @@ const Index = () => {
       {/* What You Get */}
       <FeaturesSection onCTAClick={handleCTAClick} />
 
-      {/* Results Section */}
-      <ResultsSection />
-
-      {/* Final CTA */}
-      <FinalCTASection onCTAClick={handleCTAClick} />
+      {/* Main CTA Section (formerly Results Section) */}
+      <ResultsSection onCTAClick={handleCTAClick} />
 
       {/* Footer */}
       <FooterSection />
