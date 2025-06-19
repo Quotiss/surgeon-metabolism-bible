@@ -45,10 +45,15 @@ const ProductValueSection = ({ onCTAClick }: ProductValueSectionProps) => {
           onClick={() => onCTAClick('product_value_cta')}
           text="Get Instant Access Now"
         />
+        <div className="text-center mt-4">
+          <p className="text-sm text-slate-600">Instant download after purchase</p>
+          <p className="text-sm font-bold italic text-slate-900 mt-1">
+            Price increases to $97 in 24 hours
+          </p>
+        </div>
       </div>
     </div>
   );
 };
 
 export default ProductValueSection;
-
