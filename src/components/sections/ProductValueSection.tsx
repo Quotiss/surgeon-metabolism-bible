@@ -1,6 +1,5 @@
 
 import ValueItem from "@/components/ui/ValueItem";
-import CTAButton from "@/components/ui/CTAButton";
 
 interface ProductValueSectionProps {
   onCTAClick: (location: string) => void;
@@ -40,10 +39,6 @@ const ProductValueSection = ({ onCTAClick }: ProductValueSectionProps) => {
       </div>
 
       <div className="mt-8">
-        <CTAButton 
-          onClick={() => onCTAClick('product_value_cta')}
-          text="Get Instant Access Now"
-        />
         <div className="text-center mt-4">
           <p className="text-sm font-bold italic text-slate-900 mt-1">
             Price increases to $97 in 24 hours
