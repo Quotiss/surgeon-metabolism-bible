@@ -1,7 +1,12 @@
 
 import ValueItem from "@/components/ui/ValueItem";
+import CTAButton from "@/components/ui/CTAButton";
 
-const ProductValueSection = () => {
+interface ProductValueSectionProps {
+  onCTAClick: (location: string) => void;
+}
+
+const ProductValueSection = ({ onCTAClick }: ProductValueSectionProps) => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 md:p-10 mb-8">
       <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6 text-center">
@@ -26,12 +31,19 @@ const ProductValueSection = () => {
           value="Value: $147"
           description="Exact supplementation protocol elite surgeons use to amplify results"
         />
+
+        <div className="text-center mt-6 p-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg text-white">
+          <p className="text-lg sm:text-xl font-bold">
+            Total Package Value: <span className="line-through opacity-75">$441</span> → Yours for $27
+          </p>
+        </div>
       </div>
 
-      <div className="text-center mt-8 p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg text-white">
-        <p className="text-lg sm:text-xl font-bold mb-2">
-          Total Package Value: <span className="line-through opacity-75">$441</span> → Yours for $27
-        </p>
+      <div className="mt-8">
+        <CTAButton 
+          onClick={() => onCTAClick('product_value_cta')}
+          text="Get Instant Access Now"
+        />
       </div>
     </div>
   );

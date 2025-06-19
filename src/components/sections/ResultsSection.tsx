@@ -19,7 +19,7 @@ const ResultsSection = ({ onCTAClick }: ResultsSectionProps) => {
           </h2>
         </div>
 
-        <ProductValueSection />
+        <ProductValueSection onCTAClick={onCTAClick} />
         <ComparisonSection />
         <UrgencySection />
         <CTAButton 
