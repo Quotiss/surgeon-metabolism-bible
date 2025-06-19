@@ -4,13 +4,15 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/lovable-uploads/efffe43b-21cb-4252-9127-8747f276cf38.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     
-    <!-- Preload critical resources for faster loading -->
-    <link rel="preload" href="/src/main.tsx" as="script" crossorigin>
-    <link rel="preload" href="/src/index.css" as="style">
+    <!-- Critical resource hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//noahgordon.gumroad.com">
     <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="preload" href="/src/index.css" as="style">
+    <link rel="preload" href="/src/main.tsx" as="script" crossorigin>
     
     <!-- Facebook Domain Verification -->
     <meta name="facebook-domain-verification" content="nm9vl6b8tp3paqtr4zhfmy61xtt8h6" />
@@ -61,6 +63,12 @@
     <meta name="msapplication-TileColor" content="#2563eb" />
     <link rel="canonical" href="https://surgeon-metabolism-bible.lovable.app/" />
     
+    <!-- Performance and mobile optimizations -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -92,9 +100,33 @@
     }
     </script>
     
-    <!-- Preconnect to critical external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Critical CSS inlining hint -->
+    <style>
+      /* Critical path CSS - minimal styles for above-the-fold content */
+      body { 
+        margin: 0; 
+        font-family: system-ui, -apple-system, sans-serif; 
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .hero-section { 
+        min-height: 60vh; 
+        contain: layout style paint;
+      }
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e5e7eb;
+        border-top: 3px solid #2563eb;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 20px auto;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
   </head>
 
   <body>
@@ -104,9 +136,9 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
     
-    <!-- Fallback content for crawlers that don't execute JavaScript -->
+    <!-- Enhanced fallback content for crawlers -->
     <noscript>
-      <div style="padding: 20px; font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto;">
+      <div style="padding: 20px; font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; line-height: 1.6;">
         <h1>Surgeon Metabolism Bible - Restore Your Vitality & Energy</h1>
         <p>Metabolic and hormonal optimization for orthopedic surgeons. Fix fatigue, brain fog, and low libido using a surgeon-specific protocol.</p>
         <h2>Transform Your Health as a Surgeon</h2>
@@ -132,7 +164,21 @@
       </div>
     </noscript>
     
-    <div id="root"></div>
+    <div id="root">
+      <!-- Loading state -->
+      <div class="loading-spinner"></div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration for caching -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {
+            // Silently fail if SW not available
+          });
+        });
+      }
+    </script>
   </body>
 </html>
