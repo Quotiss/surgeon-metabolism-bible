@@ -1,4 +1,5 @@
 
+
 import ValueItem from "@/components/ui/ValueItem";
 import CTAButton from "@/components/ui/CTAButton";
 
@@ -32,8 +33,8 @@ const ProductValueSection = ({ onCTAClick }: ProductValueSectionProps) => {
           description="Exact supplementation protocol elite surgeons use to amplify results"
         />
 
-        <div className="text-center mt-6 p-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg text-white">
-          <p className="text-lg sm:text-xl font-bold">
+        <div className="text-center mt-6">
+          <p className="text-lg sm:text-xl font-bold text-slate-900">
             Total Package Value: <span className="line-through opacity-75">$441</span> → Yours for $27
           </p>
         </div>
@@ -50,3 +51,4 @@ const ProductValueSection = ({ onCTAClick }: ProductValueSectionProps) => {
 };
 
 export default ProductValueSection;
+
