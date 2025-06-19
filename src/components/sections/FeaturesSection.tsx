@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { carrot, bean } from "lucide-react";
 import LazySection from "@/components/LazySection";
 
 interface FeaturesSectionProps {
@@ -24,7 +24,7 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
           <Card className="p-4 sm:p-6 md:p-8 border-2 border-blue-200 bg-blue-50 hover:shadow-lg transition-shadow duration-200">
             <CardContent className="p-0">
               <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-                <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600" />
+                <carrot className="h-5 w-5 sm:h-6 sm:w-6 text-orange-600" />
                 <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #1: The Surgeon's Grocery Blueprint ($97 Value)</h3>
               </div>
               <p className="text-sm sm:text-base text-slate-600 mb-3 sm:mb-4">
@@ -36,7 +36,7 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
           <Card className="p-4 sm:p-6 md:p-8 border-2 border-blue-200 bg-blue-50 hover:shadow-lg transition-shadow duration-200">
             <CardContent className="p-0">
               <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-                <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600" />
+                <bean className="h-5 w-5 sm:h-6 sm:w-6 text-green-600" />
                 <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #2: The Surgical Stress Supplement Stack ($147 Value)</h3>
               </div>
               <p className="text-sm sm:text-base text-slate-600 mb-3 sm:mb-4">
