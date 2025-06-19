@@ -14,7 +14,7 @@ const SolutionSection = () => {
 
         <div className="prose prose-lg max-w-none text-slate-700 mb-8 sm:mb-12">
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            The Surgeon Metabolism Bible reveals the exact 30-day protocol these elite surgeons use to reverse metabolic damage while their peers stay stuck. This isn't another diet book - it's the underground system that fixes the root cause mechanism destroying surgeon metabolism.
+            The Surgeon Metabolism Bible reveals the exact 30-day protocol these elite surgeons use to <span className="font-bold text-blue-600">reverse stress-induced metabolic damage</span> while their peers stay stuck. This isn't another diet book - it's the <span className="font-bold text-blue-600">underground system</span> that <span className="font-bold text-blue-600">harnesses your surgical stress patterns</span> to actually accelerate fat burning and energy production.
           </p>
         </div>
 
@@ -27,28 +27,28 @@ const SolutionSection = () => {
             <div className="flex items-start space-x-3 sm:space-x-4">
               <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <span className="font-semibold">5-minute circadian reset ritual</span> that instantly primes your metabolism for all-day energy (works even after 16-hour surgeries)
+                The <span className="font-bold text-blue-600">5-minute circadian reset ritual</span> that reprograms your stress-damaged metabolism for all-day energy (works by resetting cortisol rhythm even after 16-hour surgeries)
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
               <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <span className="font-semibold">"inflammation foods"</span> secretly destroying your energy - 3 "healthy" staples keeping you chronically fatigued (eliminate these effortlessly)
+                The <span className="font-bold text-blue-600">"inflammation foods" secretly amplifying your stress response</span> - 3 "healthy" staples that trigger cortisol spikes and lock in fat storage (eliminate these effortlessly)
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
               <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <span className="font-semibold">surgeon-proof meal timing blueprint</span> that syncs perfectly with OR schedules and clinical rotations
+                The surgeon-proof meal timing blueprint that syncs with your stress hormone cycles instead of fighting them
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
               <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <span className="font-semibold">metabolic accelerator foods</span> nutritionists charge $500/session to reveal - that trigger instant fat burning on autopilot
+                The <span className="font-bold text-blue-600">metabolic accelerator foods</span> that actually use your elevated stress hormones as fuel for instant fat burning (nutritionists charge <span className="font-bold text-blue-600">$500/session</span> to reveal this)
               </p>
             </div>
           </div>

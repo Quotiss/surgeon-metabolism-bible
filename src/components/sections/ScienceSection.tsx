@@ -1,3 +1,4 @@
+
 import { Target, Shield, Zap, Heart } from "lucide-react";
 import LazySection from "@/components/LazySection";
 
@@ -17,9 +18,9 @@ const ScienceSection = () => {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-100 rounded-full flex items-center justify-center">
                 <Target className="h-4 w-4 sm:h-5 sm:w-5 text-red-600" />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">The 3 physiological systems</h3>
+              <h3 className="font-semibold text-base sm:text-lg">The 3 <span className="font-bold text-blue-600">stress-adapted physiological systems</span></h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">surgeon training destroys and why your body is working against you</p>
+            <p className="text-sm sm:text-base text-slate-600">that explain why surgeon training destroys normal metabolism (and how to reverse the damage)</p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
@@ -27,9 +28,9 @@ const ScienceSection = () => {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-100 rounded-full flex items-center justify-center">
                 <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-600" />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">The 5 hidden saboteurs</h3>
+              <h3 className="font-semibold text-base sm:text-lg">The 5 hidden stress amplifiers</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">in your daily routine that you're unknowingly doing every morning</p>
+            <p className="text-sm sm:text-base text-slate-600">in your daily routine that keep triggering metabolic shutdown (you're unknowingly doing #3 every morning)</p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
@@ -39,7 +40,7 @@ const ScienceSection = () => {
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The fuel rules</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">that flip your metabolism into overdrive and what elite surgeons eat</p>
+            <p className="text-sm sm:text-base text-slate-600">that <span className="font-bold text-blue-600">convert stress hormones into fat-burning fuel</span> instead of fat storage (what elite surgeons eat that you don't)</p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
@@ -47,17 +48,15 @@ const ScienceSection = () => {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 rounded-full flex items-center justify-center">
                 <Heart className="h-4 w-4 sm:h-5 sm:w-5 text-green-600" />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">The 4 resilience protocols</h3>
+              <h3 className="font-semibold text-base sm:text-lg">The 4 stress-resilience protocols</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">that make this system bulletproof even during your worst weeks</p>
+            <p className="text-sm sm:text-base text-slate-600">that make this system bulletproof even during your worst weeks (works with chaos, not against it)</p>
           </div>
         </div>
 
-        <div className="text-center">
-          <p className="text-base sm:text-lg text-slate-700">
-            This information was <span className="font-bold text-blue-600">previously locked away</span> in expensive consultations with high-end metabolic specialists. Now it's yours for <span className="font-bold text-blue-600">less than the cost</span> of a single session with a nutritionist who doesn't understand surgeon physiology.
-          </p>
-        </div>
+        <p className="text-base sm:text-lg text-slate-700 text-center">
+          This information was previously locked away in expensive consultations with high-end metabolic specialists who understand <span className="font-bold text-blue-600">surgical stress physiology</span>. Now it's yours for less than the cost of a single session with a nutritionist who doesn't understand how your profession rewires your metabolism.
+        </p>
       </div>
     </LazySection>
   );
