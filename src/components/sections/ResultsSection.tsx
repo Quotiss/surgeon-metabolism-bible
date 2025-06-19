@@ -1,7 +1,6 @@
 
 import LazySection from "@/components/LazySection";
 import ProductValueSection from "@/components/sections/ProductValueSection";
-import ComparisonSection from "@/components/sections/ComparisonSection";
 import CTAButton from "@/components/ui/CTAButton";
 
 interface ResultsSectionProps {
@@ -19,7 +18,6 @@ const ResultsSection = ({ onCTAClick }: ResultsSectionProps) => {
         </div>
 
         <ProductValueSection onCTAClick={onCTAClick} />
-        <ComparisonSection />
         <CTAButton 
           onClick={() => onCTAClick('main_cta')}
           text="Get Instant Access Now - $27"
