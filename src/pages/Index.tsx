@@ -1,3 +1,4 @@
+
 import FloatingCTA from "@/components/FloatingCTA";
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
@@ -9,10 +10,13 @@ import ResultsSection from "@/components/sections/ResultsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import FooterSection from "@/components/sections/FooterSection";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { createCTAHandler } from "@/utils/ctaUtils";
+import { CTA_LOCATIONS } from "@/lib/constants";
 import { useEffect } from "react";
 
 const Index = () => {
   const { trackCTAClick } = useAnalytics();
+  const handleCTAClick = createCTAHandler(trackCTAClick);
 
   // Enhanced preloading and optimization for mobile
   useEffect(() => {
@@ -45,15 +49,10 @@ const Index = () => {
     };
   }, []);
 
-  const handleCTAClick = (location: string = 'general') => {
-    trackCTAClick(location);
-    window.open("https://noahgordon.gumroad.com/l/surgeonsmetabolismbible", "_blank");
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Floating Mobile CTA */}
-      <FloatingCTA onClick={() => handleCTAClick('floating_mobile')} />
+      <FloatingCTA onClick={() => handleCTAClick(CTA_LOCATIONS.FLOATING_MOBILE)} />
 
       {/* Header */}
       <Header onCTAClick={handleCTAClick} />

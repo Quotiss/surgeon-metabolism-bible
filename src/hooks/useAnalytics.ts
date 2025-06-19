@@ -1,5 +1,6 @@
 
 import { useEffect } from 'react';
+import { META_PIXEL_EVENTS } from '@/lib/constants';
 
 declare global {
   interface Window {
@@ -26,7 +27,7 @@ export const useAnalytics = () => {
     
     // Fire Meta Pixel InitiateCheckout event
     if (window.fbq) {
-      window.fbq('track', 'InitiateCheckout', { source: location });
+      window.fbq('track', META_PIXEL_EVENTS.INITIATE_CHECKOUT, { source: location });
       console.log('Meta Pixel InitiateCheckout event fired for:', location);
     }
   };

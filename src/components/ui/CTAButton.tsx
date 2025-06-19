@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { GUARANTEE_TEXT } from "@/lib/constants";
 
 interface CTAButtonProps {
   onClick: () => void;
@@ -21,7 +22,7 @@ const CTAButton = ({ onClick, text, className = "" }: CTAButtonProps) => {
       </Button>
       
       <p className="text-xs sm:text-sm mt-4 text-slate-600">
-        Instant download • 30-day money-back guarantee • For surgeons only
+        {GUARANTEE_TEXT}
       </p>
     </div>
   );

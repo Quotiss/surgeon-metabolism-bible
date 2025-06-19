@@ -1,11 +1,9 @@
 
 import { Button } from "@/components/ui/button";
+import { CTA_LOCATIONS } from "@/lib/constants";
+import type { SectionProps } from "@/types/common";
 
-interface HeaderProps {
-  onCTAClick: (location: string) => void;
-}
-
-const Header = ({ onCTAClick }: HeaderProps) => {
+const Header = ({ onCTAClick }: SectionProps) => {
   return (
     <header className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 header-nav">
       <div className="container mx-auto px-4 py-3 md:py-4">
@@ -14,7 +12,7 @@ const Header = ({ onCTAClick }: HeaderProps) => {
             Surgeon Metabolism Bible
           </div>
           <Button 
-            onClick={() => onCTAClick('header')} 
+            onClick={() => onCTAClick(CTA_LOCATIONS.HEADER)} 
             className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 transition-all duration-200 touch-manipulation"
           >
             Get Access Now
