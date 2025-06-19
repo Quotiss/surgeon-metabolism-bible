@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Star, ArrowRight } from "lucide-react";
+import { Star, ArrowRight } from "lucide-react";
 import LazySection from "@/components/LazySection";
 
 interface FeaturesSectionProps {
@@ -11,72 +11,60 @@ interface FeaturesSectionProps {
 const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
   return (
     <LazySection className="py-8 sm:py-12 md:py-16 bg-slate-50">
-      <div className="container mx-auto px-4 max-w-5xl">
+      <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
-            What You Get in the Surgeon Metabolism Bible
+            Exclusive Bonuses Included
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-slate-600">
-            Everything you need to restore your vitality and reclaim your energy
+            Everything you need to implement the system immediately
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-          <Card className="p-4 sm:p-6 md:p-8 hover:shadow-lg transition-shadow duration-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+          <Card className="p-4 sm:p-6 md:p-8 border-2 border-blue-200 bg-blue-50 hover:shadow-lg transition-shadow duration-200">
             <CardContent className="p-0">
-              <h3 className="font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 text-slate-900">Core eBook (50 pages)</h3>
-              <ul className="space-y-2 sm:space-y-3">
-                <li className="flex items-start space-x-2 sm:space-x-3">
-                  <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">The 3 metabolic pillars every surgeon must master</span>
-                </li>
-                <li className="flex items-start space-x-2 sm:space-x-3">
-                  <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">How to fix insulin resistance in 21 days</span>
-                </li>
-                <li className="flex items-start space-x-2 sm:space-x-3">
-                  <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">The surgeon's guide to hormonal optimization</span>
-                </li>
-                <li className="flex items-start space-x-2 sm:space-x-3">
-                  <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">Energy restoration protocols that work in 48 hours</span>
-                </li>
-                <li className="flex items-start space-x-2 sm:space-x-3">
-                  <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm sm:text-base">Mental clarity enhancement strategies</span>
-                </li>
-              </ul>
+              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600" />
+                <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #1</h3>
+              </div>
+              <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-slate-900">
+                Full Done-For-You Grocery Guide and Shopping List
+              </h4>
+              <p className="text-sm sm:text-base text-slate-600 mb-3 sm:mb-4">
+                Maximize efficiency and minimize stress in the grocery store. No BS framework.
+              </p>
+              <div className="bg-white p-3 sm:p-4 rounded-lg">
+                <p className="text-xs sm:text-sm text-slate-600 mb-1">Value: $47</p>
+              </div>
             </CardContent>
           </Card>
 
           <Card className="p-4 sm:p-6 md:p-8 border-2 border-blue-200 bg-blue-50 hover:shadow-lg transition-shadow duration-200">
             <CardContent className="p-0">
-              <h3 className="font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 text-slate-900">Exclusive Bonuses</h3>
-              <ul className="space-y-2 sm:space-y-3">
-                <li className="flex items-start space-x-2 sm:space-x-3">
-                  <Star className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm sm:text-base"><strong>Grocery Guide:</strong> Done-for-you shopping list</span>
-                </li>
-                <li className="flex items-start space-x-2 sm:space-x-3">
-                  <Star className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm sm:text-base"><strong>Supplement Guide:</strong> Performance, energy & libido stack</span>
-                </li>
-                <li className="flex items-start space-x-2 sm:space-x-3">
-                  <Star className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm sm:text-base"><strong>Quick Start Protocol:</strong> See results in 7 days</span>
-                </li>
-              </ul>
-              
-              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-white rounded-lg">
-                <p className="text-xs sm:text-sm text-slate-600 mb-1 sm:mb-2">Total Value: $197</p>
-                <p className="text-2xl sm:text-3xl font-bold text-blue-600">Your Price: $27</p>
+              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600" />
+                <h3 className="font-bold text-lg sm:text-xl text-slate-900">Bonus #2</h3>
+              </div>
+              <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-slate-900">
+                Full Supplementation Guide
+              </h4>
+              <p className="text-sm sm:text-base text-slate-600 mb-3 sm:mb-4">
+                For enhancing performance, energy, and libido that works synergistically with our mechanism.
+              </p>
+              <div className="bg-white p-3 sm:p-4 rounded-lg">
+                <p className="text-xs sm:text-sm text-slate-600 mb-1">Value: $97</p>
               </div>
             </CardContent>
           </Card>
         </div>
 
-        <div className="text-center mt-6 sm:mt-8 md:mt-12">
+        <div className="text-center mt-6 sm:mt-8">
+          <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg mb-6 sm:mb-8">
+            <p className="text-sm sm:text-base text-slate-600 mb-2">Total Bonus Value: $144</p>
+            <p className="text-2xl sm:text-3xl font-bold text-blue-600">Your Price: $27</p>
+          </div>
+          
           <Button 
             onClick={() => onCTAClick('main_offer')}
             size="lg" 
