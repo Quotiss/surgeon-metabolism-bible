@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Clock } from 'lucide-react';
+import { timer } from 'lucide-react';
 import { getTimerEndTime, setTimerEndTime, calculateRemainingTime } from '@/utils/timerUtils';
 
 const CountdownTimer = () => {
@@ -50,48 +50,50 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 sm:p-6 mb-6">
-      <div className="flex items-center justify-center mb-4">
-        <Clock className="h-5 w-5 text-blue-600 mr-2" />
-        <p className="font-bold text-blue-800 text-base sm:text-lg">
+    <div className="bg-gradient-to-r from-slate-50 to-slate-100 border border-slate-200 rounded-lg p-4 text-center">
+      <div className="flex items-center justify-center mb-3">
+        <div className="w-5 h-5 bg-slate-600 rounded-full flex items-center justify-center mr-2">
+          <span className="text-white text-xs">⏰</span>
+        </div>
+        <p className="font-semibold text-slate-800 text-sm">
           Early-Adopter Pricing Expires In:
         </p>
       </div>
       
-      <div className="flex justify-center items-center space-x-4 mb-4">
+      <div className="flex justify-center items-center space-x-3 mb-3">
         <div className="text-center">
-          <div className="bg-blue-600 text-white rounded-lg px-3 py-2 min-w-[50px] shadow-md">
-            <span className="text-xl sm:text-2xl font-bold">
+          <div className="bg-slate-700 text-white rounded-md px-2 py-1 min-w-[40px] shadow-sm">
+            <span className="text-lg font-bold">
               {timeLeft.hours.toString().padStart(2, '0')}
             </span>
           </div>
-          <p className="text-xs text-blue-700 mt-1 font-medium">Hours</p>
+          <p className="text-xs text-slate-600 mt-1">hrs</p>
         </div>
         
-        <div className="text-blue-600 text-xl font-bold">:</div>
+        <div className="text-slate-600 text-lg font-bold">:</div>
         
         <div className="text-center">
-          <div className="bg-blue-600 text-white rounded-lg px-3 py-2 min-w-[50px] shadow-md">
-            <span className="text-xl sm:text-2xl font-bold">
+          <div className="bg-slate-700 text-white rounded-md px-2 py-1 min-w-[40px] shadow-sm">
+            <span className="text-lg font-bold">
               {timeLeft.minutes.toString().padStart(2, '0')}
             </span>
           </div>
-          <p className="text-xs text-blue-700 mt-1 font-medium">Minutes</p>
+          <p className="text-xs text-slate-600 mt-1">min</p>
         </div>
         
-        <div className="text-blue-600 text-xl font-bold">:</div>
+        <div className="text-slate-600 text-lg font-bold">:</div>
         
         <div className="text-center">
-          <div className="bg-blue-600 text-white rounded-lg px-3 py-2 min-w-[50px] shadow-md">
-            <span className="text-xl sm:text-2xl font-bold">
+          <div className="bg-slate-700 text-white rounded-md px-2 py-1 min-w-[40px] shadow-sm">
+            <span className="text-lg font-bold">
               {timeLeft.seconds.toString().padStart(2, '0')}
             </span>
           </div>
-          <p className="text-xs text-blue-700 mt-1 font-medium">Seconds</p>
+          <p className="text-xs text-slate-600 mt-1">sec</p>
         </div>
       </div>
       
-      <p className="text-center text-sm text-blue-800 font-medium">
+      <p className="text-xs text-slate-600">
         After timer expires, price increases to $97
       </p>
     </div>
