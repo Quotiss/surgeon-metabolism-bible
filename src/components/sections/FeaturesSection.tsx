@@ -41,12 +41,6 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
           </Card>
         </div>
 
-        <div className="text-center mt-6 sm:mt-8">
-          <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
-            <p className="text-lg sm:text-xl font-bold text-blue-600">Total Bonus Value: $244</p>
-          </div>
-        </div>
-
         <CaseStudy />
       </div>
     </LazySection>
