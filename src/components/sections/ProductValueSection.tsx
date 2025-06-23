@@ -8,88 +8,75 @@ import type { SectionProps } from "@/types/common";
 const ProductValueSection = ({ onCTAClick }: SectionProps) => {
   return (
     <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl p-6 sm:p-8 md:p-10 mb-8">
-      {/* Header */}
-      <div className="text-center mb-8">
-        <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
-          Get the Complete Package Today
-        </h3>
-        <p className="text-slate-600">Everything you need to transform your metabolism</p>
-      </div>
-      
-      {/* What's Included */}
+      {/* What You Get */}
       <div className="space-y-4 mb-8">
         <div className="flex items-start space-x-4 p-4 bg-blue-50 rounded-lg">
-          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <BookOpen className="h-5 w-5 text-blue-600" />
-          </div>
+          <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
           <div>
-            <h4 className="font-bold text-lg text-slate-900">
-              Surgeon Metabolism Bible <span className="text-blue-600">($197 value)</span>
+            <h4 className="font-bold text-lg text-slate-900 mb-1">
+              Surgeon Metabolism Bible
             </h4>
-            <p className="text-slate-600 text-sm mt-1">
+            <p className="text-slate-600 text-sm">
               Complete 30-day protocol that harnesses your surgical stress patterns for metabolic transformation
             </p>
           </div>
         </div>
 
         <div className="flex items-start space-x-4 p-4 bg-blue-50 rounded-lg">
-          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <ShoppingCart className="h-5 w-5 text-blue-600" />
-          </div>
+          <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
           <div>
-            <h4 className="font-bold text-lg text-slate-900">
-              Bonus #1: The Surgeon's Grocery Blueprint <span className="text-blue-600">($97 value)</span>
+            <h4 className="font-bold text-lg text-slate-900 mb-1">
+              Bonus #1: The Surgeon's Grocery Blueprint
             </h4>
-            <p className="text-slate-600 text-sm mt-1">
+            <p className="text-slate-600 text-sm">
               Done-for-you shopping list organized for maximum efficiency
             </p>
           </div>
         </div>
 
         <div className="flex items-start space-x-4 p-4 bg-blue-50 rounded-lg">
-          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <Pill className="h-5 w-5 text-blue-600" />
-          </div>
+          <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
           <div>
-            <h4 className="font-bold text-lg text-slate-900">
-              Bonus #2: The Surgical Stress Supplement Stack <span className="text-blue-600">($147 value)</span>
+            <h4 className="font-bold text-lg text-slate-900 mb-1">
+              Bonus #2: The Surgical Stress Supplement Stack
             </h4>
-            <p className="text-slate-600 text-sm mt-1">
+            <p className="text-slate-600 text-sm">
               Exact supplementation protocol elite surgeons use to amplify results
             </p>
           </div>
         </div>
       </div>
 
-      {/* Price Anchor */}
-      <div className="text-center mb-6">
-        <p className="text-lg font-medium text-slate-600 mb-2">
-          Total Package Value: <span className="line-through text-slate-400">${PRODUCT_PRICING.originalValue}</span>
-        </p>
-        <div className="bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-200 rounded-lg p-6 mb-4">
-          <p className="text-sm font-bold text-blue-800 mb-2 uppercase tracking-wide">
-            🎯 Early-Adopter Pricing (Limited Time)
+      {/* Price Section with Timer */}
+      <div className="bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-200 rounded-lg p-6 mb-6">
+        <div className="text-center mb-4">
+          <p className="text-lg text-slate-600 mb-1">
+            Total Package Value: <span className="line-through text-slate-400">${PRODUCT_PRICING.originalValue}</span>
           </p>
-          <p className="text-4xl sm:text-5xl font-black text-slate-900 mb-2">
-            Complete Package: $27
-          </p>
-          <p className="text-sm text-slate-600">
-            Regular price $97 • Save $70 today only
-          </p>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div>
+              <p className="text-3xl sm:text-4xl font-black text-slate-900 mb-1">
+                Complete Package: $27
+              </p>
+              <p className="text-sm text-slate-600">
+                Early-adopter price (reg. $97)
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+        
+        {/* Integrated Countdown Timer */}
+        <div className="mb-4">
+          <CountdownTimer />
+        </div>
 
-      {/* Countdown Timer */}
-      <div className="mb-6">
-        <CountdownTimer />
-      </div>
-
-      {/* CTA Button */}
-      <div className="text-center mb-4">
-        <CTAButton 
-          onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
-          text="Get Instant Access"
-        />
+        {/* CTA Button */}
+        <div className="text-center">
+          <CTAButton 
+            onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
+            text="Get Instant Access"
+          />
+        </div>
       </div>
 
       {/* Final Urgency Note */}

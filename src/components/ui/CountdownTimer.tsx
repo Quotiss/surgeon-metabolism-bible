@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { timer } from 'lucide-react';
+import { Timer } from 'lucide-react';
 import { getTimerEndTime, setTimerEndTime, calculateRemainingTime } from '@/utils/timerUtils';
 
 const CountdownTimer = () => {
