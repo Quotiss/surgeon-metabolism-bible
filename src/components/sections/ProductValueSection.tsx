@@ -51,23 +51,26 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
       </div>
 
       {/* Integrated Price + Timer + CTA Section */}
-      <div className="bg-gradient-to-r from-slate-900 to-blue-900 rounded-xl p-6 text-center text-white">
-        {/* Value Anchor */}
+      <div className="bg-slate-100 rounded-xl p-6 text-center border border-slate-200">
+        {/* Improved Price Comparison */}
         <div className="mb-4">
-          <p className="text-lg mb-2">
-            Total Package Value: <span className="line-through text-slate-300">$441</span>
-          </p>
-          <div className="mb-4">
-            <p className="text-4xl sm:text-5xl font-black mb-2">
-              Complete Package: $27
+          <div className="space-y-2 mb-4">
+            <p className="text-lg text-slate-700">
+              Total Package Value: <span className="font-semibold text-slate-900">$441</span>
             </p>
-            <p className="text-blue-200">
-              Early-adopter price (regular $97)
+            <p className="text-lg text-slate-700">
+              Regular Price: <span className="font-semibold text-slate-900">$97</span>
+            </p>
+            <p className="text-3xl sm:text-4xl font-black text-blue-600 mb-2">
+              Early-Adopter Price: $27
+            </p>
+            <p className="text-xl font-bold text-green-600">
+              You Save: $70 (today only)
             </p>
           </div>
         </div>
 
-        {/* Countdown Timer - Seamlessly Integrated */}
+        {/* Countdown Timer - Minimalist Design */}
         <div className="mb-6">
           <CountdownTimer />
         </div>
@@ -81,7 +84,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
         </div>
 
         {/* Final Urgency Note */}
-        <div className="text-sm text-blue-200">
+        <div className="text-sm text-slate-600">
           <p className="font-medium mb-1">
             ⚠️ Limited to first 500 surgeons only
           </p>

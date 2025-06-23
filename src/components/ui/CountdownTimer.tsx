@@ -50,50 +50,48 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-slate-50 to-slate-100 border border-slate-200 rounded-lg p-4 text-center">
+    <div className="border border-blue-200 rounded-lg p-4 text-center bg-white">
       <div className="flex items-center justify-center mb-3">
-        <div className="w-5 h-5 bg-slate-600 rounded-full flex items-center justify-center mr-2">
-          <span className="text-white text-xs">⏰</span>
-        </div>
-        <p className="font-semibold text-slate-800 text-sm">
+        <Timer className="h-4 w-4 text-blue-600 mr-2" />
+        <p className="font-medium text-slate-700 text-sm">
           Early-Adopter Pricing Expires In:
         </p>
       </div>
       
-      <div className="flex justify-center items-center space-x-3 mb-3">
+      <div className="flex justify-center items-center space-x-2 mb-2">
         <div className="text-center">
-          <div className="bg-slate-700 text-white rounded-md px-2 py-1 min-w-[40px] shadow-sm">
+          <div className="bg-blue-600 text-white rounded px-3 py-2 min-w-[45px]">
             <span className="text-lg font-bold">
               {timeLeft.hours.toString().padStart(2, '0')}
             </span>
           </div>
-          <p className="text-xs text-slate-600 mt-1">hrs</p>
+          <p className="text-xs text-slate-500 mt-1">hrs</p>
         </div>
         
-        <div className="text-slate-600 text-lg font-bold">:</div>
+        <div className="text-blue-600 text-lg font-bold">:</div>
         
         <div className="text-center">
-          <div className="bg-slate-700 text-white rounded-md px-2 py-1 min-w-[40px] shadow-sm">
+          <div className="bg-blue-600 text-white rounded px-3 py-2 min-w-[45px]">
             <span className="text-lg font-bold">
               {timeLeft.minutes.toString().padStart(2, '0')}
             </span>
           </div>
-          <p className="text-xs text-slate-600 mt-1">min</p>
+          <p className="text-xs text-slate-500 mt-1">min</p>
         </div>
         
-        <div className="text-slate-600 text-lg font-bold">:</div>
+        <div className="text-blue-600 text-lg font-bold">:</div>
         
         <div className="text-center">
-          <div className="bg-slate-700 text-white rounded-md px-2 py-1 min-w-[40px] shadow-sm">
+          <div className="bg-blue-600 text-white rounded px-3 py-2 min-w-[45px]">
             <span className="text-lg font-bold">
               {timeLeft.seconds.toString().padStart(2, '0')}
             </span>
           </div>
-          <p className="text-xs text-slate-600 mt-1">sec</p>
+          <p className="text-xs text-slate-500 mt-1">sec</p>
         </div>
       </div>
       
-      <p className="text-xs text-slate-600">
+      <p className="text-xs text-slate-500">
         After timer expires, price increases to $97
       </p>
     </div>
