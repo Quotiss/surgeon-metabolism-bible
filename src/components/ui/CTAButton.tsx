@@ -22,8 +22,7 @@ const CTAButton = memo(({ onClick, text, className = "" }: CTAButtonProps) => {
           minHeight: '48px'
         }}
       >
-        {text}
-        <ArrowRight className="ml-3 h-5 sm:h-6 w-5 sm:w-6" />
+        Get Instant Access → $27
       </Button>
       
       <p className="text-xs sm:text-sm mt-4 text-slate-600">
