@@ -10,7 +10,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
     <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl p-6 sm:p-8 md:p-10 mb-8">
       {/* What You Get - Benefit-driven layout */}
       <div className="grid gap-4 mb-8">
-        <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
+        <div className="flex items-start space-x-4 p-4">
           <BookOpen className="h-8 w-8 text-blue-600 flex-shrink-0 mt-1" />
           <div className="flex-1">
             <h4 className="font-bold text-xl text-slate-900 mb-2">
@@ -23,7 +23,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
           </div>
         </div>
 
-        <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-lg border border-green-200">
+        <div className="flex items-start space-x-4 p-4">
           <Gift className="h-8 w-8 text-green-600 flex-shrink-0 mt-1" />
           <div className="flex-1">
             <h4 className="font-bold text-xl text-slate-900 mb-2">
@@ -36,7 +36,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
           </div>
         </div>
 
-        <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200">
+        <div className="flex items-start space-x-4 p-4">
           <Pill className="h-8 w-8 text-purple-600 flex-shrink-0 mt-1" />
           <div className="flex-1">
             <h4 className="font-bold text-xl text-slate-900 mb-2">
