@@ -8,16 +8,6 @@ import type { SectionProps } from "@/types/common";
 const ProductValueSection = ({ onCTAClick }: SectionProps) => {
   return (
     <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl p-6 sm:p-8 md:p-10 mb-8">
-      {/* Header Section */}
-      <div className="text-center mb-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
-          Get the Complete Surgeon Metabolism Bible Today
-        </h2>
-        <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
-          Everything you need to access the proven metabolic system elite surgeons use to feel sharp, energized, and in control again
-        </p>
-      </div>
-
       {/* What You Get - Benefit-driven layout */}
       <div className="grid gap-4 mb-8">
         <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
