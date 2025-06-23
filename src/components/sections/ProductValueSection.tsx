@@ -31,17 +31,18 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
         />
 
         <div className="text-center mt-6 mb-6">
-          <p className="text-lg sm:text-xl font-bold text-slate-900 mb-2">
+          <p className="text-lg sm:text-xl font-bold text-slate-900 mb-4">
             Total Package Value: <span className="line-through opacity-75">${PRODUCT_PRICING.originalValue}</span>
           </p>
-          <div className="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-4 mb-4">
-            <p className="text-sm font-bold text-amber-800 mb-2">
-              🚨 EXCLUSIVE EARLY-ADOPTER PRICING 🚨
+          
+          <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 mb-6">
+            <p className="text-sm font-bold text-blue-800 mb-3 uppercase tracking-wide">
+              🎯 Exclusive Early-Adopter Pricing
             </p>
-            <p className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-2">
+            <p className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 mb-3">
               Complete Package: $27
             </p>
-            <p className="text-sm text-slate-700 font-medium">
+            <p className="text-sm text-slate-700 font-medium leading-relaxed">
               This is a limited-time introductory price for early adopters only. 
               Once we reach our target number of surgeons, the price will permanently increase to $97.
             </p>

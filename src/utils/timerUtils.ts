@@ -1,0 +1,38 @@
+
+const TIMER_KEY = 'surgeon_metabolism_timer_end';
+
+export const getTimerEndTime = (): Date | null => {
+  try {
+    const stored = localStorage.getItem(TIMER_KEY);
+    if (stored) {
+      return new Date(stored);
+    }
+  } catch (error) {
+    console.warn('Failed to get timer from localStorage:', error);
+  }
+  return null;
+};
+
+export const setTimerEndTime = (endTime: Date): void => {
+  try {
+    localStorage.setItem(TIMER_KEY, endTime.toISOString());
+  } catch (error) {
+    console.warn('Failed to save timer to localStorage:', error);
+  }
+};
+
+export const calculateRemainingTime = (endTime: Date) => {
+  const now = new Date().getTime();
+  const end = endTime.getTime();
+  const total = end - now;
+
+  if (total <= 0) {
+    return { total: 0, hours: 0, minutes: 0, seconds: 0 };
+  }
+
+  const hours = Math.floor((total % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((total % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((total % (1000 * 60)) / 1000);
+
+  return { total, hours, minutes, seconds };
+};
