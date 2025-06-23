@@ -47,8 +47,8 @@ const FloatingCTA = ({ onClick }: FloatingCTAProps) => {
 
   return (
     <div 
-      className={`fixed bottom-4 left-4 right-4 z-50 md:hidden transition-transform duration-300 ${
-        isScrollingUp ? 'transform translate-y-0' : 'transform translate-y-1'
+      className={`fixed bottom-4 left-4 right-4 z-50 md:hidden transition-all duration-500 ease-out ${
+        isScrollingUp ? 'transform translate-y-0 opacity-100' : 'transform translate-y-1 opacity-90'
       }`}
       style={{ 
         contain: 'layout style paint',
@@ -57,14 +57,16 @@ const FloatingCTA = ({ onClick }: FloatingCTAProps) => {
     >
       <Button 
         onClick={onClick}
-        className="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white shadow-lg text-base sm:text-lg py-4 h-auto animate-fade-in font-semibold transition-all duration-200 touch-manipulation border-0 rounded-lg"
+        className="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white shadow-lg hover:shadow-2xl text-base sm:text-lg py-4 h-auto animate-fade-in font-semibold transition-all duration-300 ease-out touch-manipulation border-0 rounded-lg hover:scale-[1.02] hover:-translate-y-1 active:scale-95 active:translate-y-0 transform"
         style={{ 
           minHeight: '48px',
           WebkitTapHighlightColor: 'transparent'
         }}
       >
-        Get Access Now - $27
-        <ArrowRight className="ml-2 h-5 w-5" />
+        <span className="flex items-center justify-center gap-2 transition-all duration-300 group">
+          Get Access Now - $27
+          <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+        </span>
       </Button>
     </div>
   );
