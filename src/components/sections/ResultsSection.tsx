@@ -1,7 +1,6 @@
 
 import LazySection from "@/components/LazySection";
 import ProductValueSection from "@/components/sections/ProductValueSection";
-import CTAButton from "@/components/ui/CTAButton";
 import { CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
 
@@ -19,10 +18,6 @@ const ResultsSection = ({ onCTAClick }: SectionProps) => {
         </div>
 
         <ProductValueSection onCTAClick={onCTAClick} />
-        <CTAButton 
-          onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
-          text="Get Instant Access Now"
-        />
       </div>
     </LazySection>
   );

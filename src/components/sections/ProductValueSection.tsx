@@ -1,6 +1,6 @@
 
 import CountdownTimer from "@/components/ui/CountdownTimer";
-import CTAButton from "@/components/ui/CTAButton";
+import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
@@ -51,8 +51,8 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
       </div>
 
       {/* Integrated Price + Timer + CTA Section */}
-      <div className="bg-slate-100 rounded-xl p-6 text-center border border-slate-200">
-        {/* Improved Price Comparison */}
+      <div className="bg-gray-100 rounded-xl p-6 text-center border border-slate-200">
+        {/* Price Comparison */}
         <div className="mb-4">
           <div className="space-y-2 mb-4">
             <p className="text-lg text-slate-700">
@@ -70,17 +70,30 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
           </div>
         </div>
 
-        {/* Countdown Timer - Minimalist Design */}
+        {/* Countdown Timer */}
         <div className="mb-6">
           <CountdownTimer />
         </div>
 
-        {/* CTA Button - Close proximity to price */}
+        {/* Regular Button instead of CTAButton */}
         <div className="mb-4">
-          <CTAButton 
+          <Button 
             onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
-            text="Get Instant Access Now"
-          />
+            size="lg" 
+            className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-base sm:text-lg md:text-xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 h-auto font-bold w-full sm:w-auto transition-all duration-300 ease-out touch-manipulation shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 transform"
+            style={{
+              WebkitTapHighlightColor: 'transparent',
+              minHeight: '48px'
+            }}
+          >
+            <span className="flex items-center gap-3 transition-all duration-300 group">
+              Get Instant Access
+              <span className="transform transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+              $27
+            </span>
+          </Button>
         </div>
 
         {/* Final Urgency Note */}
