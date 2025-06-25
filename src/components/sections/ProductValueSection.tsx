@@ -31,7 +31,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
             <p className="text-slate-700">
               Done-for-you shopping list organized for maximum efficiency
             </p>
-            <p className="text-sm text-green-600 font-medium mt-1">Value: $97</p>
+            <p className="text-sm text-green-600 font-bold mt-1">Value: $97</p>
           </div>
         </div>
 
