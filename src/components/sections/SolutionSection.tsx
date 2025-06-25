@@ -14,7 +14,7 @@ const SolutionSection = () => {
 
         <div className="prose prose-lg max-w-none text-slate-700 mb-8 sm:mb-12">
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            The Surgeon Metabolism Bible reveals the <span className="font-bold text-blue-600">exact 30-day protocol</span> these elite surgeons use to <span className="font-bold text-blue-600">reverse stress-induced metabolic damage</span> while their peers stay stuck. This isn't another diet book - it's the <span className="font-bold text-blue-600">underground system</span> that <span className="font-bold text-blue-600">harnesses your surgical stress patterns</span> to actually accelerate fat burning and energy production. Mainstream diet advice has lead you to believe that the same solutions work for everyone. This protocol isn't for the average person — it's built specifically for high-performance surgeons who want to regain their edge.
+            The Surgeon Metabolism Bible reveals the <span className="font-bold text-blue-600">exact 30-day protocol</span> these elite surgeons use to <span className="font-bold text-blue-600">reverse stress-induced metabolic damage</span> while their peers stay stuck. This isn't another diet book - it's the <span className="font-bold text-blue-600">underground system</span> that <span className="font-bold text-blue-600">harnesses your surgical stress patterns</span> to actually accelerate fat burning and energy production. Mainstream diet advice has lead you to believe that the same solutions work for everyone. This protocol isn't for the average person — it's <span className="font-bold text-blue-600">built specifically for high-performance surgeons</span> who want to regain their edge.
           </p>
         </div>
 
