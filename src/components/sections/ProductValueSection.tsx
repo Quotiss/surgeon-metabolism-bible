@@ -1,3 +1,4 @@
+
 import CountdownTimer from "@/components/ui/CountdownTimer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill } from "lucide-react";
@@ -44,7 +45,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
             <p className="text-slate-700">
               Exact supplementation protocol elite surgeons use to amplify results
             </p>
-            <p className="text-sm text-purple-600 font-medium mt-1">Value: $147</p>
+            <p className="text-sm text-purple-600 font-bold mt-1">Value: $147</p>
           </div>
         </div>
       </div>
