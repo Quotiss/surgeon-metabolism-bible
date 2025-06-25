@@ -1,7 +1,9 @@
+
 import LazySection from "@/components/LazySection";
 import ProductValueSection from "@/components/sections/ProductValueSection";
 import { CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
+
 const ResultsSection = ({
   onCTAClick
 }: SectionProps) => {
@@ -11,11 +13,14 @@ const ResultsSection = ({
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
             Get the Complete Surgeon Metabolism Bible Today
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">Everything you need to copy the proven metabolic system elite surgeons use to feel sharp, energized, and in control again. This isn't for the average person — it's built for surgical chaos.</p>
+          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
+            Everything you need to copy the proven metabolic system elite surgeons use to feel sharp, energized, and in control again. <span className="font-bold text-blue-600">This isn't for the average person — it's built for surgical chaos.</span>
+          </p>
         </div>
 
         <ProductValueSection onCTAClick={onCTAClick} />
       </div>
     </LazySection>;
 };
+
 export default ResultsSection;
