@@ -1,6 +1,15 @@
 
 const TIMER_KEY = 'surgeon_metabolism_timer_end';
 
+export const generateArbitraryStartTime = (): Date => {
+  // Generate random time between 16h 15m and 18h 45m
+  const minMinutes = 16 * 60 + 15; // 16 hours 15 minutes
+  const maxMinutes = 18 * 60 + 45; // 18 hours 45 minutes
+  const randomMinutes = Math.floor(Math.random() * (maxMinutes - minMinutes + 1)) + minMinutes;
+  
+  return new Date(Date.now() + randomMinutes * 60 * 1000);
+};
+
 export const getTimerEndTime = (): Date | null => {
   try {
     const stored = localStorage.getItem(TIMER_KEY);

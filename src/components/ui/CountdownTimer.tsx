@@ -1,20 +1,21 @@
 
 import { useState, useEffect } from 'react';
 import { Timer } from 'lucide-react';
-import { getTimerEndTime, setTimerEndTime, calculateRemainingTime } from '@/utils/timerUtils';
+import { getTimerEndTime, setTimerEndTime, calculateRemainingTime, generateArbitraryStartTime } from '@/utils/timerUtils';
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
-    hours: 23,
-    minutes: 59,
-    seconds: 59
+    hours: 17,
+    minutes: 23,
+    seconds: 45
   });
 
   useEffect(() => {
     // Initialize timer with localStorage persistence
     let endTime = getTimerEndTime();
     if (!endTime) {
-      endTime = new Date(Date.now() + 24 * 60 * 60 * 1000);
+      // Use arbitrary starting time instead of 24 hours
+      endTime = generateArbitraryStartTime();
       setTimerEndTime(endTime);
     }
 
@@ -27,8 +28,8 @@ const CountdownTimer = () => {
           seconds: remaining.seconds
         });
       } else {
-        // Timer expired - reset for next 24 hours
-        const newEndTime = new Date(Date.now() + 24 * 60 * 60 * 1000);
+        // Timer expired - reset with new arbitrary time
+        const newEndTime = generateArbitraryStartTime();
         setTimerEndTime(newEndTime);
         endTime = newEndTime;
         const newRemaining = calculateRemainingTime(endTime);
