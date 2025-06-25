@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
@@ -101,7 +102,9 @@ const CaseStudy = () => {
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
           What Surgeons Are Saying
         </h2>
-        <p className="text-slate-600 mt-2">Real results from busy orthopedic surgeons</p>
+        <p className="text-slate-600 mt-2">
+          Real results from busy orthopedic surgeons who <span className="font-bold text-blue-600">regained their edge</span>
+        </p>
       </div>
       
       <div className="relative max-w-4xl mx-auto">
