@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
@@ -68,6 +67,9 @@ const CaseStudy = () => {
     });
   };
 
+  // Check if any testimonial is expanded
+  const isAnyExpanded = expandedStates.some(state => state);
+
   useEffect(() => {
     if (!api) return;
 
@@ -79,17 +81,19 @@ const CaseStudy = () => {
       setExpandedStates(new Array(testimonials.length).fill(false));
     });
 
-    // Auto-scroll every 8 seconds
+    // Auto-scroll every 8 seconds, but only if no testimonial is expanded
     const autoScroll = setInterval(() => {
-      if (api.canScrollNext()) {
-        api.scrollNext();
-      } else {
-        api.scrollTo(0); // Loop back to first slide
+      if (!isAnyExpanded) {
+        if (api.canScrollNext()) {
+          api.scrollNext();
+        } else {
+          api.scrollTo(0); // Loop back to first slide
+        }
       }
     }, 8000);
 
     return () => clearInterval(autoScroll);
-  }, [api]);
+  }, [api, isAnyExpanded]);
 
   return (
     <div className="mt-12 sm:mt-16 md:mt-20">
