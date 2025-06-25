@@ -1,0 +1,136 @@
+
+/* Critical above-the-fold styles only */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --blue-600: 37.5 94.7% 53.3%;
+    --blue-700: 217.2 91.2% 59.8%;
+    --ring: 222.2 84% 4.9%;
+    --animation-duration: 0.3s;
+    --transition-duration: 0.2s;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    transform: translateZ(0);
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 80px;
+  }
+
+  /* Enhanced focus management */
+  *:focus {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Performance-optimized animations */
+  .lazy-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1), 
+                transform var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+  }
+
+  .lazy-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+    will-change: auto;
+  }
+
+  /* Mobile-optimized touch targets */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Optimized container queries */
+  .container-optimized {
+    @apply mx-auto px-4;
+    max-width: 1200px;
+  }
+
+  @media (max-width: 640px) {
+    .container-optimized {
+      @apply px-3;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container-optimized {
+      @apply px-6;
+    }
+  }
+
+  /* Performance-optimized cards */
+  .card-optimized {
+    contain: layout style paint;
+    transition: transform var(--transition-duration) ease-out;
+  }
+
+  .card-optimized:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Backdrop blur optimization */
+  .backdrop-blur-optimized {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Loading skeleton */
+  .skeleton-optimized {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+  }
+
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
