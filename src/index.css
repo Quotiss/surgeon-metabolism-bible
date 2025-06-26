@@ -1,48 +1,19 @@
 
 @import './styles/critical.css';
 
-/* Additional non-critical styles that can be loaded after */
+/* Non-critical styles loaded after critical path */
 @layer utilities {
   /* Print styles */
   @media print {
-    .no-print {
-      display: none !important;
-    }
-    
-    body {
-      color: black !important;
-      background: white !important;
-    }
-    
-    .card {
-      border: 1px solid #ccc !important;
-      break-inside: avoid;
-    }
+    .no-print { display: none !important; }
+    body { color: black !important; background: white !important; }
   }
 
-  /* Safe area support for modern mobile devices */
+  /* Safe area support for modern devices */
   @supports (padding: max(0px)) {
     .safe-area-inset {
       padding-left: max(1rem, env(safe-area-inset-left));
       padding-right: max(1rem, env(safe-area-inset-right));
-    }
-    
-    .safe-area-inset-bottom {
-      padding-bottom: max(1rem, env(safe-area-inset-bottom));
-    }
-  }
-
-  /* Additional mobile optimizations */
-  @media (max-width: 375px) {
-    .container-optimized {
-      @apply px-2;
-    }
-  }
-
-  /* Tablet-specific optimizations */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .touch-target {
-      min-height: 44px;
     }
   }
 }
