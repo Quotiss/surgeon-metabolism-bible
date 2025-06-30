@@ -1,24 +1,36 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ModeToggle } from "@/components/mode-toggle"
+import { useTracking } from 'react-tracking';
+import { Button } from "@/components/ui/button"
+import { createCTAHandler } from '@/utils/ctaUtils';
+import { useCheckout } from '@/contexts/CheckoutContext';
 
-import { Button } from "@/components/ui/button";
-import { CTA_LOCATIONS } from "@/lib/constants";
-import type { SectionProps } from "@/types/common";
+const Header = () => {
+  const { trackEvent } = useTracking();
+  const { openCheckout } = useCheckout();
 
-const Header = ({ onCTAClick }: SectionProps) => {
+  const trackCTAClick = (location: string) => {
+    trackEvent({
+      category: 'cta',
+      action: 'click',
+      label: `header_cta_${location}`,
+    });
+  };
+
+  const handleCTAClick = createCTAHandler(trackCTAClick, openCheckout);
+
   return (
-    <header className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 header-nav">
-      <div className="container mx-auto px-4 py-3 md:py-4">
-        <div className="flex items-center justify-between">
-          <div className="font-bold text-base sm:text-lg md:text-xl text-slate-900 truncate pr-4">
-            Surgeon Metabolism Bible
-          </div>
-          <Button 
-            onClick={() => onCTAClick(CTA_LOCATIONS.HEADER)} 
-            className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 transition-all duration-300 ease-out touch-manipulation hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg active:scale-95 active:translate-y-0 transform"
-          >
-            <span className="transition-all duration-300 group">
-              Get Access Now
-            </span>
+    <header className="bg-background sticky top-0 z-50 w-full border-b">
+      <div className="container flex h-16 items-center justify-between">
+        <Link to="/" className="font-semibold text-lg">
+          Polar
+        </Link>
+        <div className="flex items-center space-x-4">
+          <Button onClick={() => handleCTAClick('header')} variant="default" size="sm">
+            Sponsor
           </Button>
+          <ModeToggle />
         </div>
       </div>
     </header>
