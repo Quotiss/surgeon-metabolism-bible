@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { META_PIXEL_EVENTS } from '@/lib/constants';
 
@@ -42,14 +41,6 @@ export const useAnalytics = () => {
         error: event.detail.error,
         source: event.detail.source,
       });
-      
-      // Track Meta Pixel error event
-      if (window.fbq) {
-        window.fbq('track', 'CheckoutError', {
-          error_type: 'session_creation_failed',
-          source: event.detail.source,
-        });
-      }
     };
 
     const handleCheckoutStarted = (event: CustomEvent) => {
@@ -142,7 +133,7 @@ export const useAnalytics = () => {
       scroll_position: window.scrollY,
     });
     
-    // Fire Meta Pixel InitiateCheckout event
+    // Fire Meta Pixel InitiateCheckout event - SIMPLIFIED to only track this event
     if (window.fbq) {
       window.fbq('track', META_PIXEL_EVENTS.INITIATE_CHECKOUT, { 
         source: location,
@@ -153,16 +144,7 @@ export const useAnalytics = () => {
       console.log('Meta Pixel InitiateCheckout event fired for:', location);
     }
 
-    // Fire AddPaymentInfo event when checkout begins
-    if (window.fbq) {
-      window.fbq('track', META_PIXEL_EVENTS.ADD_PAYMENT_INFO, { 
-        source: location,
-        value: 27,
-        currency: 'USD',
-        embedded: true
-      });
-      console.log('Meta Pixel AddPaymentInfo event fired for:', location);
-    }
+    // REMOVED: AddPaymentInfo event - only tracking InitiateCheckout, PageView, and Purchase now
   };
 
   const trackPurchase = (source: string) => {
