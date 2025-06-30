@@ -1,12 +1,25 @@
+
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock, Shield, Target, FileText, ShoppingCart, Gift } from "lucide-react";
+import { ArrowRight, Clock, Shield, Target } from "lucide-react";
+import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
+import { useAnalytics } from "@/hooks/useAnalytics";
+
 interface HeroSectionProps {
   onCTAClick: (location: string) => void;
 }
-const HeroSection = ({
-  onCTAClick
-}: HeroSectionProps) => {
-  return <section className="py-8 sm:py-12 md:py-20 px-4 hero-section">
+
+const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
+  const { trackPageView } = useAnalytics();
+  const { elementRef } = useHeroVisibilityTracking(trackPageView, {
+    threshold: 0.5, // Hero section must be 50% visible
+    delay: 500 // Wait 500ms after visibility to ensure full render
+  });
+
+  return (
+    <section 
+      ref={elementRef}
+      className="py-8 sm:py-12 md:py-20 px-4 hero-section"
+    >
       <div className="container mx-auto max-w-6xl text-center">
         
         <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
@@ -39,6 +52,8 @@ const HeroSection = ({
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
