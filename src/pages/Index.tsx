@@ -1,4 +1,3 @@
-
 import { lazy, Suspense, useEffect } from "react";
 import FloatingCTA from "@/components/FloatingCTA";
 import Header from "@/components/Header";
@@ -7,6 +6,7 @@ import EmbeddedCheckout from "@/components/checkout/EmbeddedCheckout";
 import { Toaster } from "@/components/ui/sonner";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useEmbeddedCheckout } from "@/hooks/useEmbeddedCheckout";
+import { CheckoutProvider } from "@/contexts/CheckoutContext";
 import { createCTAHandler } from "@/utils/ctaUtils";
 import { preloadCheckoutResources } from "@/services/polarService";
 import { CTA_LOCATIONS } from "@/lib/constants";
@@ -68,10 +68,11 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      <FloatingCTA onClick={() => handleCTAClick(CTA_LOCATIONS.FLOATING_MOBILE)} />
-      <Header onCTAClick={handleCTAClick} />
-      <HeroSection onCTAClick={handleCTAClick} />
+    <CheckoutProvider defaultConfig={{ strategy: 'library', theme: 'light', layout: 'modal' }}>
+      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+        <FloatingCTA onClick={() => handleCTAClick(CTA_LOCATIONS.FLOATING_MOBILE)} />
+        <Header onCTAClick={handleCTAClick} />
+        <HeroSection onCTAClick={handleCTAClick} />
 
       <Suspense fallback={<SectionFallback />}>
         <ProblemSection />
@@ -101,19 +102,20 @@ const Index = () => {
         <FooterSection />
       </Suspense>
 
-      {/* Enhanced Embedded Checkout Modal */}
-      <EmbeddedCheckout
-        isOpen={isCheckoutOpen}
-        checkoutUrl={checkoutUrl}
-        isLoading={isLoading}
-        setIsLoading={setIsLoading}
-        onClose={closeEmbeddedCheckout}
-        onSuccess={handleCheckoutSuccess}
-      />
+        {/* Enhanced Embedded Checkout Modal */}
+        <EmbeddedCheckout
+          isOpen={isCheckoutOpen}
+          checkoutUrl={checkoutUrl}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+          onClose={closeEmbeddedCheckout}
+          onSuccess={handleCheckoutSuccess}
+        />
 
-      {/* Toast notifications */}
-      <Toaster />
-    </div>
+        {/* Toast notifications */}
+        <Toaster />
+      </div>
+    </CheckoutProvider>
   );
 };
 
