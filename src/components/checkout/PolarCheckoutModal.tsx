@@ -1,5 +1,5 @@
 
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { PolarEmbedCheckout } from '@polar-sh/checkout/embed';
 import { POLAR_CONFIG } from '@/lib/constants';
 import { toast } from 'sonner';

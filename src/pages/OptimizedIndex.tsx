@@ -1,157 +1,97 @@
-
-import { lazy, Suspense, useEffect } from "react";
-import FloatingCTA from "@/components/FloatingCTA";
+import React, { useState, useEffect, useCallback } from 'react';
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
-import OptimizedContainer from "@/components/ui/OptimizedContainer";
-import OptimizedLazySection from "@/components/OptimizedLazySection";
-import EmbeddedCheckout from "@/components/checkout/EmbeddedCheckout";
-import { useAnalytics } from "@/hooks/useAnalytics";
-import { useEmbeddedCheckout } from "@/hooks/useEmbeddedCheckout";
-import { usePerformanceMonitor } from "@/hooks/usePerformanceMonitor";
-import { CTA_LOCATIONS } from "@/lib/constants";
-
-// Lazy load with better chunking
-const ProblemSection = lazy(() => import("@/components/sections/ProblemSection"));
-const SolutionSection = lazy(() => import("@/components/sections/SolutionSection"));
-const ScienceSection = lazy(() => import("@/components/sections/ScienceSection"));
-const FeaturesSection = lazy(() => import("@/components/sections/FeaturesSection"));
-const ResultsSection = lazy(() => import("@/components/sections/ResultsSection"));
-const FAQSection = lazy(() => import("@/components/sections/FAQSection"));
-const FooterSection = lazy(() => import("@/components/sections/FooterSection"));
-
-// Optimized loading fallback
-const OptimizedSectionFallback = () => (
-  <div className="min-h-[300px] bg-slate-50 flex items-center justify-center">
-    <div className="skeleton-optimized w-full max-w-4xl h-64 mx-4"></div>
-  </div>
-);
+import ProblemSection from "@/components/sections/ProblemSection";
+import SolutionSection from "@/components/sections/SolutionSection";
+import ScienceSection from "@/components/sections/ScienceSection";
+import CaseStudy from "@/components/sections/CaseStudy";
+import ResultsSection from "@/components/sections/ResultsSection";
+import UrgencySection from "@/components/sections/UrgencySection";
+import FAQSection from "@/components/sections/FAQSection";
+import FooterSection from "@/components/sections/FooterSection";
+import FloatingCTA from "@/components/FloatingCTA";
+import { useEmbeddedCheckout } from '@/hooks/useEmbeddedCheckout';
+import { createCheckoutSession } from '@/services/polarService';
+import { useAnalytics } from '@/hooks/useAnalytics';
+import EmbeddedCheckout from '@/components/checkout/EmbeddedCheckout';
 
 const OptimizedIndex = () => {
-  const { trackCTAClick } = useAnalytics();
-  const { measureFunction } = usePerformanceMonitor();
   const { 
     isCheckoutOpen, 
     checkoutUrl, 
-    isLoading,
     openEmbeddedCheckout, 
     closeEmbeddedCheckout, 
     handleCheckoutSuccess,
-    setIsLoading 
+    isLoading,
+    setIsLoading
   } = useEmbeddedCheckout();
   
-  // Create async wrapper for CTA handler
-  const handleCTAClick = async (location: string) => {
+  const { trackPageView, trackCTAClick } = useAnalytics();
+
+  const handleCTAClick = useCallback(async (location: string = 'general') => {
     try {
       trackCTAClick(location);
       console.log('Initiating checkout for:', location);
       
-      // Note: This would need a proper checkout URL - currently just a placeholder
-      const checkoutUrl = 'https://example.com/checkout'; // Replace with actual checkout URL
-      openEmbeddedCheckout(checkoutUrl);
+      const session = await createCheckoutSession(location, true);
+      openEmbeddedCheckout(session.url);
       
     } catch (error) {
       console.error('Checkout failed:', error);
     }
-  };
+  }, [openEmbeddedCheckout, trackCTAClick]);
 
   useEffect(() => {
-    measureFunction('Page initialization', () => {
-      // Critical resource preloading
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'dns-prefetch';
-      preloadLink.href = '//noahgordon.gumroad.com';
-      document.head.appendChild(preloadLink);
-
-      // Optimize viewport for mobile
-      const viewport = document.querySelector('meta[name="viewport"]');
-      if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            trackPageView();
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: '0px',
+        threshold: 0.1,
       }
+    );
 
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontLink.as = 'style';
-      fontLink.onload = () => {
-        fontLink.rel = 'stylesheet';
-      };
-      document.head.appendChild(fontLink);
-
-      // Reduce motion preferences
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReducedMotion) {
-        document.documentElement.style.setProperty('--animation-duration', '0.01ms');
-      }
-    });
+    const heroSection = document.querySelector('#hero-section');
+    if (heroSection) {
+      observer.observe(heroSection);
+    }
 
     return () => {
-      // Cleanup preloaded resources if needed
+      if (heroSection) {
+        observer.unobserve(heroSection);
+      }
     };
-  }, [measureFunction]);
+  }, [trackPageView]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Floating Mobile CTA */}
-      <FloatingCTA onClick={() => handleCTAClick(CTA_LOCATIONS.FLOATING_MOBILE)} />
-
-      {/* Header - Critical, load immediately */}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <Header />
-
-      {/* Hero Section - Critical, load immediately */}
-      <HeroSection />
-
-      {/* Non-critical sections - optimized lazy loading */}
-      <OptimizedLazySection delay={100}>
-        <Suspense fallback={<OptimizedSectionFallback />}>
-          <ProblemSection />
-        </Suspense>
-      </OptimizedLazySection>
-
-      <OptimizedLazySection delay={200}>
-        <Suspense fallback={<OptimizedSectionFallback />}>
-          <SolutionSection />
-        </Suspense>
-      </OptimizedLazySection>
-
-      <OptimizedLazySection delay={300}>
-        <Suspense fallback={<OptimizedSectionFallback />}>
-          <ScienceSection />
-        </Suspense>
-      </OptimizedLazySection>
-
-      <OptimizedLazySection delay={400}>
-        <Suspense fallback={<OptimizedSectionFallback />}>
-          <FeaturesSection onCTAClick={handleCTAClick} />
-        </Suspense>
-      </OptimizedLazySection>
-
-      <OptimizedLazySection delay={500}>
-        <Suspense fallback={<OptimizedSectionFallback />}>
-          <ResultsSection onCTAClick={handleCTAClick} />
-        </Suspense>
-      </OptimizedLazySection>
-
-      <OptimizedLazySection delay={600}>
-        <Suspense fallback={<OptimizedSectionFallback />}>
-          <FAQSection />
-        </Suspense>
-      </OptimizedLazySection>
-
-      <OptimizedLazySection delay={700}>
-        <Suspense fallback={<OptimizedSectionFallback />}>
-          <FooterSection />
-        </Suspense>
-      </OptimizedLazySection>
-
-      {/* Embedded Checkout Modal */}
+      <main>
+        <HeroSection />
+        <ProblemSection />
+        <SolutionSection />
+        <ScienceSection />
+        <CaseStudy />
+        <ResultsSection />
+        <UrgencySection />
+        <FAQSection />
+        <FooterSection />
+      </main>
+      
+      <FloatingCTA onClick={handleCTAClick} />
+      
       <EmbeddedCheckout
         isOpen={isCheckoutOpen}
+        onClose={closeEmbeddedCheckout}
         checkoutUrl={checkoutUrl}
         isLoading={isLoading}
         setIsLoading={setIsLoading}
-        onClose={closeEmbeddedCheckout}
         onSuccess={handleCheckoutSuccess}
       />
     </div>
