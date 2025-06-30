@@ -1,10 +1,10 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+
+import { lazy, Suspense, useEffect } from "react";
 import FloatingCTA from "@/components/FloatingCTA";
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
-import PolarCheckoutModal from "@/components/checkout/PolarCheckoutModal";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { createCTAHandler, setGlobalCheckoutHandler } from "@/utils/ctaUtils";
+import { createCTAHandler } from "@/utils/ctaUtils";
 import { CTA_LOCATIONS } from "@/lib/constants";
 
 // Lazy load non-critical sections
@@ -24,21 +24,9 @@ const SectionFallback = () => (
 const Index = () => {
   const { trackCTAClick } = useAnalytics();
   const handleCTAClick = createCTAHandler(trackCTAClick);
-  
-  // Modal state
-  const [isCheckoutModalOpen, setIsCheckoutModalOpen] = useState(false);
-  const [checkoutSource, setCheckoutSource] = useState('');
 
-  // Set up global checkout handler
   useEffect(() => {
-    const openCheckout = (source: string) => {
-      setCheckoutSource(source);
-      setIsCheckoutModalOpen(true);
-    };
-    
-    setGlobalCheckoutHandler(openCheckout);
-    
-    // Preload critical resources only
+    // Preload Gumroad domain for faster checkout
     const link = document.createElement('link');
     link.rel = 'dns-prefetch';
     link.href = '//noahgordon.gumroad.com';
@@ -84,13 +72,6 @@ const Index = () => {
       <Suspense fallback={<SectionFallback />}>
         <FooterSection />
       </Suspense>
-
-      {/* Polar Checkout Modal */}
-      <PolarCheckoutModal
-        isOpen={isCheckoutModalOpen}
-        onClose={() => setIsCheckoutModalOpen(false)}
-        source={checkoutSource}
-      />
     </div>
   );
 };

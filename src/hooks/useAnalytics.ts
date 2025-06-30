@@ -13,13 +13,6 @@ export const useAnalytics = () => {
     // Log page load but don't track PageView yet - wait for Hero visibility
     console.log('Page loaded:', window.location.pathname);
     console.log('Waiting for Hero section to become visible before tracking PageView...');
-    
-    // Check for successful checkout in URL
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('checkout') === 'success') {
-      const source = urlParams.get('source') || 'unknown';
-      trackPurchase(source);
-    }
   }, []);
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
@@ -55,7 +48,7 @@ export const useAnalytics = () => {
       console.log('Meta Pixel InitiateCheckout event fired for:', location);
     }
 
-    // Fire AddPaymentInfo event when checkout begins
+    // Fire AddPaymentInfo event when user goes to checkout
     if (window.fbq) {
       window.fbq('track', META_PIXEL_EVENTS.ADD_PAYMENT_INFO, { 
         source: location,
@@ -64,28 +57,6 @@ export const useAnalytics = () => {
       });
       console.log('Meta Pixel AddPaymentInfo event fired for:', location);
     }
-  };
-
-  const trackPurchase = (source: string) => {
-    console.log('Tracking purchase completion for source:', source);
-    
-    // Fire Meta Pixel Purchase event
-    if (window.fbq) {
-      window.fbq('track', META_PIXEL_EVENTS.PURCHASE, {
-        source,
-        value: 27,
-        currency: 'USD',
-        content_type: 'product',
-        content_ids: ['surgeon-metabolism-bible']
-      });
-      console.log('Meta Pixel Purchase event fired for source:', source);
-    }
-
-    trackEvent('purchase_completed', { 
-      source,
-      value: 27,
-      currency: 'USD'
-    });
   };
 
   return { trackEvent, trackPageView, trackCTAClick };
