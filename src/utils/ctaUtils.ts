@@ -2,21 +2,28 @@
 import type { CTAClickHandler } from "@/types/common";
 import { createCheckoutSession } from "@/services/polarService";
 
-export const createCTAHandler = (trackCTAClick: (location: string) => void): CTAClickHandler => {
+export const createCTAHandler = (
+  trackCTAClick: (location: string) => void,
+  openEmbeddedCheckout: (url: string) => void
+): CTAClickHandler => {
   return async (location: string = 'general') => {
     try {
       trackCTAClick(location);
       
-      console.log('Initiating Polar checkout for:', location);
-      const checkoutSession = await createCheckoutSession(location);
+      console.log('Initiating embedded Polar checkout for:', location);
+      const checkoutSession = await createCheckoutSession(location, true);
       
-      // Open Polar checkout in new window
-      window.open(checkoutSession.url, "_blank");
+      // Open embedded checkout instead of new window
+      openEmbeddedCheckout(checkoutSession.url);
       
     } catch (error) {
       console.error('Checkout failed:', error);
-      // Fallback to alert for now - you could implement a toast notification here
-      alert('Checkout failed. Please try again.');
+      // Use toast notification instead of alert
+      if (typeof window !== 'undefined' && window.dispatchEvent) {
+        window.dispatchEvent(new CustomEvent('show-error-toast', {
+          detail: { message: 'Checkout failed. Please try again.' }
+        }));
+      }
     }
   };
 };

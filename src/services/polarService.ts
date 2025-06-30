@@ -11,9 +11,9 @@ export interface PolarCheckoutSession {
   url: string;
 }
 
-export const createCheckoutSession = async (source: string): Promise<PolarCheckoutSession> => {
+export const createCheckoutSession = async (source: string, embedded: boolean = true): Promise<PolarCheckoutSession> => {
   try {
-    console.log('Creating Polar checkout session for source:', source);
+    console.log('Creating Polar checkout session for source:', source, 'embedded:', embedded);
     
     const checkoutSession = await polar.checkouts.create({
       products: [POLAR_CONFIG.PRODUCT_ID],
@@ -24,6 +24,7 @@ export const createCheckoutSession = async (source: string): Promise<PolarChecko
         source,
         originalPrice: PRODUCT_PRICING.originalValue.toString(),
         currentPrice: PRODUCT_PRICING.currentPrice.toString(),
+        embedded: embedded.toString(),
       }
     });
 

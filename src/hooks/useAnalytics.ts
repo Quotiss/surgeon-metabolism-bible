@@ -20,6 +20,18 @@ export const useAnalytics = () => {
       const source = urlParams.get('source') || 'unknown';
       trackPurchase(source);
     }
+
+    // Listen for embedded checkout completion
+    const handleCheckoutSuccess = () => {
+      console.log('Embedded checkout completed successfully');
+      trackPurchase('embedded');
+    };
+
+    window.addEventListener('checkout-success', handleCheckoutSuccess);
+
+    return () => {
+      window.removeEventListener('checkout-success', handleCheckoutSuccess);
+    };
   }, []);
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
@@ -47,11 +59,14 @@ export const useAnalytics = () => {
   };
 
   const trackCTAClick = (location: string) => {
-    trackEvent('cta_click', { location });
+    trackEvent('cta_click', { location, embedded: true });
     
     // Fire Meta Pixel InitiateCheckout event
     if (window.fbq) {
-      window.fbq('track', META_PIXEL_EVENTS.INITIATE_CHECKOUT, { source: location });
+      window.fbq('track', META_PIXEL_EVENTS.INITIATE_CHECKOUT, { 
+        source: location,
+        embedded: true 
+      });
       console.log('Meta Pixel InitiateCheckout event fired for:', location);
     }
 
@@ -60,7 +75,8 @@ export const useAnalytics = () => {
       window.fbq('track', META_PIXEL_EVENTS.ADD_PAYMENT_INFO, { 
         source: location,
         value: 27,
-        currency: 'USD'
+        currency: 'USD',
+        embedded: true
       });
       console.log('Meta Pixel AddPaymentInfo event fired for:', location);
     }
@@ -76,7 +92,8 @@ export const useAnalytics = () => {
         value: 27,
         currency: 'USD',
         content_type: 'product',
-        content_ids: ['surgeon-metabolism-bible']
+        content_ids: ['surgeon-metabolism-bible'],
+        embedded: source === 'embedded'
       });
       console.log('Meta Pixel Purchase event fired for source:', source);
     }
@@ -84,7 +101,8 @@ export const useAnalytics = () => {
     trackEvent('purchase_completed', { 
       source,
       value: 27,
-      currency: 'USD'
+      currency: 'USD',
+      embedded: source === 'embedded'
     });
   };
 
