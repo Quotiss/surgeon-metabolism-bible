@@ -3,7 +3,6 @@ import { lazy, Suspense, useEffect } from "react";
 import FloatingCTA from "@/components/FloatingCTA";
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
-import OptimizedContainer from "@/components/ui/OptimizedContainer";
 import OptimizedLazySection from "@/components/OptimizedLazySection";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { usePerformanceMonitor } from "@/hooks/usePerformanceMonitor";
