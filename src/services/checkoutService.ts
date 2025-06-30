@@ -18,7 +18,7 @@ export interface CheckoutInstance {
   id: string;
   url: string;
   close: () => void;
-  addEventListener: (event: string, handler: (event: any) => void) => void;
+  addEventListener: (event: 'success' | 'close' | 'confirmed' | 'loaded', handler: (event: any) => void) => void;
 }
 
 class CheckoutService {
@@ -63,7 +63,7 @@ class CheckoutService {
       id: session.id,
       url: session.url,
       close: () => checkout.close(),
-      addEventListener: (event: string, handler: (event: any) => void) => {
+      addEventListener: (event: 'success' | 'close' | 'confirmed' | 'loaded', handler: (event: any) => void) => {
         checkout.addEventListener(event, handler);
       }
     };
@@ -80,7 +80,7 @@ class CheckoutService {
         // Will be handled by the modal/iframe component
         window.dispatchEvent(new CustomEvent('checkout-close'));
       },
-      addEventListener: (event: string, handler: (event: any) => void) => {
+      addEventListener: (event: 'success' | 'close' | 'confirmed' | 'loaded', handler: (event: any) => void) => {
         // Use window events for API approach
         window.addEventListener(`checkout-${event}`, handler);
       }
