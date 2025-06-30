@@ -21,22 +21,78 @@ export const useAnalytics = () => {
       trackPurchase(source);
     }
 
-    // Listen for embedded checkout completion
+    // Enhanced event listeners for checkout flow
     const handleCheckoutSuccess = () => {
       console.log('Embedded checkout completed successfully');
       trackPurchase('embedded');
     };
 
+    const handleCheckoutSessionCreated = (event: CustomEvent) => {
+      console.log('Checkout session created:', event.detail);
+      trackEvent('checkout_session_created', {
+        session_id: event.detail.sessionId,
+        source: event.detail.source,
+        embedded: event.detail.embedded,
+      });
+    };
+
+    const handleCheckoutSessionFailed = (event: CustomEvent) => {
+      console.log('Checkout session creation failed:', event.detail);
+      trackEvent('checkout_session_failed', {
+        error: event.detail.error,
+        source: event.detail.source,
+      });
+      
+      // Track Meta Pixel error event
+      if (window.fbq) {
+        window.fbq('track', 'CheckoutError', {
+          error_type: 'session_creation_failed',
+          source: event.detail.source,
+        });
+      }
+    };
+
+    const handleCheckoutStarted = (event: CustomEvent) => {
+      console.log('Checkout iframe started loading:', event.detail);
+      trackEvent('checkout_iframe_started', event.detail);
+    };
+
+    const handleCheckoutLoaded = (event: CustomEvent) => {
+      console.log('Checkout iframe loaded successfully:', event.detail);
+      trackEvent('checkout_iframe_loaded', {
+        load_time: event.detail.loadTime,
+        source: event.detail.source,
+      });
+    };
+
+    // Register all event listeners
     window.addEventListener('checkout-success', handleCheckoutSuccess);
+    window.addEventListener('checkout-session-created', handleCheckoutSessionCreated as EventListener);
+    window.addEventListener('checkout-session-failed', handleCheckoutSessionFailed as EventListener);
+    window.addEventListener('checkout-iframe-started', handleCheckoutStarted as EventListener);
+    window.addEventListener('checkout-iframe-loaded', handleCheckoutLoaded as EventListener);
 
     return () => {
       window.removeEventListener('checkout-success', handleCheckoutSuccess);
+      window.removeEventListener('checkout-session-created', handleCheckoutSessionCreated as EventListener);
+      window.removeEventListener('checkout-session-failed', handleCheckoutSessionFailed as EventListener);
+      window.removeEventListener('checkout-iframe-started', handleCheckoutStarted as EventListener);
+      window.removeEventListener('checkout-iframe-loaded', handleCheckoutLoaded as EventListener);
     };
   }, []);
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     console.log('Event tracked:', eventName, properties);
-    // Example: gtag('event', eventName, properties);
+    
+    // Add timestamp to all events
+    const eventData = {
+      ...properties,
+      timestamp: new Date().toISOString(),
+      user_agent: navigator.userAgent,
+      viewport: `${window.innerWidth}x${window.innerHeight}`,
+    };
+    
+    console.log('Enhanced event data:', eventData);
   };
 
   const trackPageView = () => {
@@ -50,22 +106,35 @@ export const useAnalytics = () => {
       console.warn('Meta Pixel (fbq) not available - PageView not tracked');
     }
 
-    // Track timing
+    // Track timing with performance metrics
     const loadTime = performance.now();
+    const navigationTiming = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    
     trackEvent('hero_visible', { 
       load_time: Math.round(loadTime),
-      path: window.location.pathname 
+      path: window.location.pathname,
+      dom_load_time: navigationTiming ? Math.round(navigationTiming.domContentLoadedEventEnd - navigationTiming.navigationStart) : null,
+      page_load_time: navigationTiming ? Math.round(navigationTiming.loadEventEnd - navigationTiming.navigationStart) : null,
     });
   };
 
   const trackCTAClick = (location: string) => {
-    trackEvent('cta_click', { location, embedded: true });
+    const clickTime = performance.now();
+    
+    trackEvent('cta_click', { 
+      location, 
+      embedded: true,
+      click_time: Math.round(clickTime),
+      scroll_position: window.scrollY,
+    });
     
     // Fire Meta Pixel InitiateCheckout event
     if (window.fbq) {
       window.fbq('track', META_PIXEL_EVENTS.INITIATE_CHECKOUT, { 
         source: location,
-        embedded: true 
+        embedded: true,
+        value: 27,
+        currency: 'USD',
       });
       console.log('Meta Pixel InitiateCheckout event fired for:', location);
     }
@@ -102,9 +171,23 @@ export const useAnalytics = () => {
       source,
       value: 27,
       currency: 'USD',
-      embedded: source === 'embedded'
+      embedded: source === 'embedded',
+      conversion_time: new Date().toISOString(),
     });
   };
 
-  return { trackEvent, trackPageView, trackCTAClick };
+  const trackCheckoutError = (error: string, source: string) => {
+    trackEvent('checkout_error', {
+      error,
+      source,
+      error_time: new Date().toISOString(),
+    });
+  };
+
+  return { 
+    trackEvent, 
+    trackPageView, 
+    trackCTAClick, 
+    trackCheckoutError 
+  };
 };

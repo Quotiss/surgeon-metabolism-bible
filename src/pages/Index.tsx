@@ -1,11 +1,14 @@
+
 import { lazy, Suspense, useEffect } from "react";
 import FloatingCTA from "@/components/FloatingCTA";
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import EmbeddedCheckout from "@/components/checkout/EmbeddedCheckout";
+import { Toaster } from "@/components/ui/sonner";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useEmbeddedCheckout } from "@/hooks/useEmbeddedCheckout";
 import { createCTAHandler } from "@/utils/ctaUtils";
+import { preloadCheckoutResources } from "@/services/polarService";
 import { CTA_LOCATIONS } from "@/lib/constants";
 
 // Lazy load non-critical sections
@@ -37,16 +40,30 @@ const Index = () => {
   const handleCTAClick = createCTAHandler(trackCTAClick, openEmbeddedCheckout);
 
   useEffect(() => {
-    // Preload critical resources only
-    const link = document.createElement('link');
-    link.rel = 'dns-prefetch';
-    link.href = '//noahgordon.gumroad.com';
-    document.head.appendChild(link);
+    // Preload critical resources
+    preloadCheckoutResources();
+    
+    // DNS prefetch for external resources
+    const prefetchDomains = [
+      '//polar.sh',
+      '//api.polar.sh'
+    ];
+    
+    prefetchDomains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = domain;
+      document.head.appendChild(link);
+    });
 
     return () => {
-      if (document.head.contains(link)) {
-        document.head.removeChild(link);
-      }
+      // Cleanup prefetch links
+      prefetchDomains.forEach(domain => {
+        const link = document.querySelector(`link[href="${domain}"]`);
+        if (link && document.head.contains(link)) {
+          document.head.removeChild(link);
+        }
+      });
     };
   }, []);
 
@@ -84,7 +101,7 @@ const Index = () => {
         <FooterSection />
       </Suspense>
 
-      {/* Embedded Checkout Modal */}
+      {/* Enhanced Embedded Checkout Modal */}
       <EmbeddedCheckout
         isOpen={isCheckoutOpen}
         checkoutUrl={checkoutUrl}
@@ -93,6 +110,9 @@ const Index = () => {
         onClose={closeEmbeddedCheckout}
         onSuccess={handleCheckoutSuccess}
       />
+
+      {/* Toast notifications */}
+      <Toaster />
     </div>
   );
 };
