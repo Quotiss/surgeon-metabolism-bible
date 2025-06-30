@@ -16,7 +16,7 @@ export const createCheckoutSession = async (source: string): Promise<PolarChecko
     console.log('Creating Polar checkout session for source:', source);
     
     const checkoutSession = await polar.checkouts.create({
-      productId: POLAR_CONFIG.PRODUCT_ID,
+      products: [POLAR_CONFIG.PRODUCT_ID],
       successUrl: `${window.location.origin}?checkout=success&source=${source}`,
       customerId: undefined, // Let Polar handle customer creation
       customerEmail: undefined, // Customer will enter during checkout
