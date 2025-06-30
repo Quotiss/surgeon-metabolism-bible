@@ -1,10 +1,8 @@
+
 import React from 'react';
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import PricingSection from "@/components/sections/PricingSection";
 import FAQSection from "@/components/sections/FAQSection";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { CheckoutProvider, useCheckout } from '@/contexts/CheckoutContext';
 import { useCheckoutEvents } from '@/hooks/useCheckoutEvents';
@@ -53,12 +51,9 @@ const Index = () => {
         <Header />
         <main>
           <HeroSection />
-          <FeaturesSection />
-          <TestimonialsSection />
-          <PricingSection />
+          <FeaturesSection onCTAClick={() => {}} />
           <FAQSection />
         </main>
-        <Footer />
         
         <CheckoutWrapper />
       </div>
