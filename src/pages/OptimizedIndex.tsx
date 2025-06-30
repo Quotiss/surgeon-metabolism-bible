@@ -1,3 +1,4 @@
+
 import { lazy, Suspense, useEffect } from "react";
 import FloatingCTA from "@/components/FloatingCTA";
 import Header from "@/components/Header";
@@ -8,7 +9,6 @@ import EmbeddedCheckout from "@/components/checkout/EmbeddedCheckout";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useEmbeddedCheckout } from "@/hooks/useEmbeddedCheckout";
 import { usePerformanceMonitor } from "@/hooks/usePerformanceMonitor";
-import { createCTAHandler } from "@/utils/ctaUtils";
 import { CTA_LOCATIONS } from "@/lib/constants";
 
 // Lazy load with better chunking
@@ -40,7 +40,20 @@ const OptimizedIndex = () => {
     setIsLoading 
   } = useEmbeddedCheckout();
   
-  const handleCTAClick = createCTAHandler(trackCTAClick, openEmbeddedCheckout);
+  // Create async wrapper for CTA handler
+  const handleCTAClick = async (location: string) => {
+    try {
+      trackCTAClick(location);
+      console.log('Initiating checkout for:', location);
+      
+      // Note: This would need a proper checkout URL - currently just a placeholder
+      const checkoutUrl = 'https://example.com/checkout'; // Replace with actual checkout URL
+      openEmbeddedCheckout(checkoutUrl);
+      
+    } catch (error) {
+      console.error('Checkout failed:', error);
+    }
+  };
 
   useEffect(() => {
     measureFunction('Page initialization', () => {
@@ -84,10 +97,10 @@ const OptimizedIndex = () => {
       <FloatingCTA onClick={() => handleCTAClick(CTA_LOCATIONS.FLOATING_MOBILE)} />
 
       {/* Header - Critical, load immediately */}
-      <Header onCTAClick={handleCTAClick} />
+      <Header />
 
       {/* Hero Section - Critical, load immediately */}
-      <HeroSection onCTAClick={handleCTAClick} />
+      <HeroSection />
 
       {/* Non-critical sections - optimized lazy loading */}
       <OptimizedLazySection delay={100}>
