@@ -1,18 +1,14 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button"
-import { createCTAHandler } from '@/utils/ctaUtils';
-import { useCheckout } from '@/contexts/CheckoutContext';
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
-  const { openCheckout } = useCheckout();
-
-  const trackCTAClick = (location: string) => {
-    console.log('CTA clicked:', location);
+  const handleCTAClick = () => {
+    if ((window as any).openPolarCheckout) {
+      (window as any).openPolarCheckout('header');
+    }
   };
-
-  const handleCTAClick = createCTAHandler(trackCTAClick, openCheckout);
 
   return (
     <header className="bg-background sticky top-0 z-50 w-full border-b">
@@ -21,7 +17,7 @@ const Header = () => {
           Metabolism Bible
         </Link>
         <div className="flex items-center space-x-4">
-          <Button onClick={() => handleCTAClick('header')} variant="default" size="sm">
+          <Button onClick={handleCTAClick} variant="default" size="sm">
             Get Access Now
           </Button>
         </div>

@@ -1,26 +1,18 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useAnalytics } from "@/hooks/useAnalytics";
-import { useCheckout } from '@/contexts/CheckoutContext';
+import { metaPixelService } from '@/services/metaPixelService';
 
 const HeroSection = () => {
-  const { openCheckout } = useCheckout();
-  const { trackCTAClick } = useAnalytics();
+  // Track page view when hero section mounts
+  useEffect(() => {
+    metaPixelService.trackPageView();
+  }, []);
 
-  const handleCTAClick = (location: string = 'general') => {
-    try {
-      trackCTAClick(location);
-      console.log('Initiating checkout for:', location);
-      
-      // Use the CheckoutProvider's openCheckout method directly
-      openCheckout(location);
-      
-    } catch (error) {
-      console.error('Checkout failed:', error);
-      
-      alert('Checkout failed. Please try again.');
+  const handleCTAClick = () => {
+    if ((window as any).openPolarCheckout) {
+      (window as any).openPolarCheckout('hero');
     }
   };
 
@@ -33,7 +25,7 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8">
           Transform your metabolism using the stress patterns of your surgical career
         </p>
-        <Button size="lg" onClick={() => handleCTAClick('hero')} className="bg-blue-600 text-white hover:bg-blue-700">
+        <Button size="lg" onClick={handleCTAClick} className="bg-blue-600 text-white hover:bg-blue-700">
           Get Instant Access - $27
         </Button>
       </div>
