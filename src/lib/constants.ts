@@ -1,3 +1,4 @@
+
 export const GUMROAD_URL = "https://noahgordon.gumroad.com/l/surgeonsmetabolismbible";
 
 export const GUARANTEE_TEXT = "Instant download • 30-day money-back guarantee • For surgeons only";
@@ -18,8 +19,8 @@ export const CTA_LOCATIONS = {
 
 export const META_PIXEL_EVENTS = {
   INITIATE_CHECKOUT: 'InitiateCheckout',
+  ADD_PAYMENT_INFO: 'AddPaymentInfo',
   PURCHASE: 'Purchase',
-  // REMOVED: ADD_PAYMENT_INFO - simplifying to only track 3 events as requested
 } as const;
 
 // Polar Configuration

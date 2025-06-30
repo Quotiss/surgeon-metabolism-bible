@@ -1,58 +1,100 @@
 
-import { Button } from "@/components/ui/button";
-import { CheckCircle } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import LazySection from "@/components/LazySection";
+import CaseStudy from "@/components/sections/CaseStudy";
+import { ShoppingCart, Pill, CheckCircle } from "lucide-react";
 
-const features = [
-  "Evidence-based metabolic strategies designed for surgical schedules",
-  "Quick energy optimization techniques between cases",
-  "Stress-adapted nutrition protocols for 12+ hour days",
-  "Recovery methods that work with unpredictable call schedules",
-  "Mental clarity enhancement for critical decision-making",
-  "Sustainable habits that fit your surgical lifestyle"
-];
+interface FeaturesSectionProps {
+  onCTAClick: (location: string) => void;
+}
 
-const FeaturesSection = () => {
-  const handleCTAClick = () => {
-    if ((window as any).openPolarCheckout) {
-      (window as any).openPolarCheckout('features');
-    }
-  };
-
+const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
   return (
-    <section className="py-16 md:py-24 bg-slate-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-            What You'll Get Inside The Surgeon's Metabolism Bible
+    <LazySection className="py-8 sm:py-12 md:py-16 bg-slate-50">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <div className="text-center mb-6 sm:mb-8 md:mb-12">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
+            Plus you get these <span className="text-blue-600 font-bold">exclusive bonuses</span>
           </h2>
-          
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-start gap-3 text-left">
-                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                <p className="text-slate-700 font-medium">{feature}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-blue-200">
-            <p className="text-2xl font-bold text-blue-600 mb-4">
-              Limited Time: $27 (Regular Price: $97)
-            </p>
-            <Button 
-              size="lg" 
-              onClick={handleCTAClick}
-              className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 text-lg"
-            >
-              Get Instant Access Now
-            </Button>
-            <p className="text-sm text-slate-600 mt-4">
-              Instant download • 30-day money-back guarantee • For surgeons only
-            </p>
-          </div>
         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+          <Card className="p-4 sm:p-6 md:p-8 border-2 border-blue-200 bg-blue-50 hover:shadow-lg transition-shadow duration-200">
+            <CardContent className="p-0">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <ShoppingCart className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="font-bold text-lg sm:text-xl text-slate-900">
+                  Bonus #1: The Surgeon's Grocery Blueprint <span className="text-blue-600 font-bold">($97 Value)</span>
+                </h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-slate-600">
+                    Complete done-for-you shopping list organized by store sections for maximum efficiency
+                  </p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-slate-600">
+                    Never waste time wandering aisles again - get in, get the right stress-fighting foods, get out
+                  </p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-slate-600">
+                    Includes specific brands that work synergistically with your metabolic reset
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="p-4 sm:p-6 md:p-8 border-2 border-blue-200 bg-blue-50 hover:shadow-lg transition-shadow duration-200">
+            <CardContent className="p-0">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Pill className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="font-bold text-lg sm:text-xl text-slate-900">
+                  Bonus #2: The Surgical Stress Supplement Stack <span className="text-blue-600 font-bold">($147 Value)</span>
+                </h3>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-slate-600">
+                    The exact supplementation protocol elite surgeons use to amplify their metabolic results
+                  </p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-slate-600">
+                    Each supplement is chosen specifically to work with your stress physiology - not against it
+                  </p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-slate-600">
+                    Includes dosing, timing, and which combinations accelerate fat burning while supporting energy and recovery
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <CaseStudy />
       </div>
-    </section>
+    </LazySection>
   );
 };
 

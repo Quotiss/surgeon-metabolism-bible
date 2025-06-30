@@ -1,24 +1,23 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
+import { CTA_LOCATIONS } from "@/lib/constants";
+import type { SectionProps } from "@/types/common";
 
-const Header = () => {
-  const handleCTAClick = () => {
-    if ((window as any).openPolarCheckout) {
-      (window as any).openPolarCheckout('header');
-    }
-  };
-
+const Header = ({ onCTAClick }: SectionProps) => {
   return (
-    <header className="bg-background sticky top-0 z-50 w-full border-b">
-      <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="font-semibold text-lg">
-          Metabolism Bible
-        </Link>
-        <div className="flex items-center space-x-4">
-          <Button onClick={handleCTAClick} variant="default" size="sm">
-            Get Access Now
+    <header className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 header-nav">
+      <div className="container mx-auto px-4 py-3 md:py-4">
+        <div className="flex items-center justify-between">
+          <div className="font-bold text-base sm:text-lg md:text-xl text-slate-900 truncate pr-4">
+            Surgeon Metabolism Bible
+          </div>
+          <Button 
+            onClick={() => onCTAClick(CTA_LOCATIONS.HEADER)} 
+            className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 transition-all duration-300 ease-out touch-manipulation hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg active:scale-95 active:translate-y-0 transform"
+          >
+            <span className="transition-all duration-300 group">
+              Get Access Now
+            </span>
           </Button>
         </div>
       </div>
