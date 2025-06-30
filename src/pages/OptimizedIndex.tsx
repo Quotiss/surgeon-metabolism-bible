@@ -1,11 +1,12 @@
-
 import { lazy, Suspense, useEffect } from "react";
 import FloatingCTA from "@/components/FloatingCTA";
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 import OptimizedLazySection from "@/components/OptimizedLazySection";
+import EmbeddedCheckout from "@/components/checkout/EmbeddedCheckout";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { useEmbeddedCheckout } from "@/hooks/useEmbeddedCheckout";
 import { usePerformanceMonitor } from "@/hooks/usePerformanceMonitor";
 import { createCTAHandler } from "@/utils/ctaUtils";
 import { CTA_LOCATIONS } from "@/lib/constants";
@@ -29,7 +30,17 @@ const OptimizedSectionFallback = () => (
 const OptimizedIndex = () => {
   const { trackCTAClick } = useAnalytics();
   const { measureFunction } = usePerformanceMonitor();
-  const handleCTAClick = createCTAHandler(trackCTAClick);
+  const { 
+    isCheckoutOpen, 
+    checkoutUrl, 
+    isLoading,
+    openEmbeddedCheckout, 
+    closeEmbeddedCheckout, 
+    handleCheckoutSuccess,
+    setIsLoading 
+  } = useEmbeddedCheckout();
+  
+  const handleCTAClick = createCTAHandler(trackCTAClick, openEmbeddedCheckout);
 
   useEffect(() => {
     measureFunction('Page initialization', () => {
@@ -120,6 +131,16 @@ const OptimizedIndex = () => {
           <FooterSection />
         </Suspense>
       </OptimizedLazySection>
+
+      {/* Embedded Checkout Modal */}
+      <EmbeddedCheckout
+        isOpen={isCheckoutOpen}
+        checkoutUrl={checkoutUrl}
+        isLoading={isLoading}
+        onClose={closeEmbeddedCheckout}
+        onSuccess={handleCheckoutSuccess}
+        setIsLoading={setIsLoading}
+      />
     </div>
   );
 };
