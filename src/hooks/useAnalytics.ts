@@ -65,12 +65,24 @@ export const useAnalytics = () => {
       });
     };
 
+    const handleCheckoutProgress = (event: CustomEvent) => {
+      console.log('Checkout progress:', event.detail);
+      trackEvent('checkout_progress', event.detail);
+    };
+
+    const handleCheckoutError = (event: CustomEvent) => {
+      console.log('Checkout error:', event.detail);
+      trackEvent('checkout_error', event.detail);
+    };
+
     // Register all event listeners
     window.addEventListener('checkout-success', handleCheckoutSuccess);
     window.addEventListener('checkout-session-created', handleCheckoutSessionCreated as EventListener);
     window.addEventListener('checkout-session-failed', handleCheckoutSessionFailed as EventListener);
     window.addEventListener('checkout-iframe-started', handleCheckoutStarted as EventListener);
     window.addEventListener('checkout-iframe-loaded', handleCheckoutLoaded as EventListener);
+    window.addEventListener('checkout-progress', handleCheckoutProgress as EventListener);
+    window.addEventListener('checkout-error', handleCheckoutError as EventListener);
 
     return () => {
       window.removeEventListener('checkout-success', handleCheckoutSuccess);
@@ -78,6 +90,8 @@ export const useAnalytics = () => {
       window.removeEventListener('checkout-session-failed', handleCheckoutSessionFailed as EventListener);
       window.removeEventListener('checkout-iframe-started', handleCheckoutStarted as EventListener);
       window.removeEventListener('checkout-iframe-loaded', handleCheckoutLoaded as EventListener);
+      window.removeEventListener('checkout-progress', handleCheckoutProgress as EventListener);
+      window.removeEventListener('checkout-error', handleCheckoutError as EventListener);
     };
   }, []);
 
@@ -106,15 +120,15 @@ export const useAnalytics = () => {
       console.warn('Meta Pixel (fbq) not available - PageView not tracked');
     }
 
-    // Track timing with performance metrics
+    // Track timing with performance metrics - using correct PerformanceNavigationTiming properties
     const loadTime = performance.now();
     const navigationTiming = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
     trackEvent('hero_visible', { 
       load_time: Math.round(loadTime),
       path: window.location.pathname,
-      dom_load_time: navigationTiming ? Math.round(navigationTiming.domContentLoadedEventEnd - navigationTiming.navigationStart) : null,
-      page_load_time: navigationTiming ? Math.round(navigationTiming.loadEventEnd - navigationTiming.navigationStart) : null,
+      dom_load_time: navigationTiming ? Math.round(navigationTiming.domContentLoadedEventEnd - navigationTiming.fetchStart) : null,
+      page_load_time: navigationTiming ? Math.round(navigationTiming.loadEventEnd - navigationTiming.fetchStart) : null,
     });
   };
 
@@ -184,10 +198,19 @@ export const useAnalytics = () => {
     });
   };
 
+  const trackConversionFunnel = (stage: string, data?: Record<string, any>) => {
+    trackEvent('conversion_funnel', {
+      stage,
+      ...data,
+      funnel_time: new Date().toISOString(),
+    });
+  };
+
   return { 
     trackEvent, 
     trackPageView, 
     trackCTAClick, 
-    trackCheckoutError 
+    trackCheckoutError,
+    trackConversionFunnel
   };
 };
