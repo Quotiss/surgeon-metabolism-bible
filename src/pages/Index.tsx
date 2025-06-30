@@ -89,9 +89,9 @@ const Index = () => {
         isOpen={isCheckoutOpen}
         checkoutUrl={checkoutUrl}
         isLoading={isLoading}
+        setIsLoading={setIsLoading}
         onClose={closeEmbeddedCheckout}
         onSuccess={handleCheckoutSuccess}
-        setIsLoading={setIsLoading}
       />
     </div>
   );
