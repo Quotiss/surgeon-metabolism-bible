@@ -51,7 +51,7 @@ const Index = () => {
         <Header />
         <main>
           <HeroSection />
-          <FeaturesSection onCTAClick={() => {}} />
+          <FeaturesSection />
           <FAQSection />
         </main>
         
