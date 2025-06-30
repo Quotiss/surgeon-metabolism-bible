@@ -64,7 +64,8 @@ class CheckoutService {
       url: session.url,
       close: () => checkout.close(),
       addEventListener: (event: 'success' | 'close' | 'confirmed' | 'loaded', handler: (event: any) => void) => {
-        checkout.addEventListener(event, handler);
+        // Cast the event to the specific type expected by the Polar library
+        checkout.addEventListener(event as any, handler);
       }
     };
   }
