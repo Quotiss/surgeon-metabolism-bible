@@ -10,7 +10,7 @@ const polar = new Polar({
 export interface CheckoutSession {
   id: string;
   url: string;
-  embed_url?: string;
+  client_secret?: string;
 }
 
 export const createCheckoutSession = async (source: string): Promise<CheckoutSession> => {
@@ -18,8 +18,11 @@ export const createCheckoutSession = async (source: string): Promise<CheckoutSes
     console.log('Creating Polar checkout session for source:', source);
     
     const response = await polar.checkouts.create({
-      productId: POLAR_CONFIG.PRODUCT_ID,
-      successUrl: `${window.location.origin}?checkout=success&source=${source}`,
+      products: [{
+        product_id: POLAR_CONFIG.PRODUCT_ID,
+        quantity: 1,
+      }],
+      success_url: `${window.location.origin}?checkout=success&source=${source}`,
       metadata: {
         source,
         timestamp: new Date().toISOString(),
@@ -31,7 +34,7 @@ export const createCheckoutSession = async (source: string): Promise<CheckoutSes
     return {
       id: response.id,
       url: response.url,
-      embed_url: response.embed_url,
+      client_secret: response.client_secret,
     };
   } catch (error) {
     console.error('Failed to create Polar checkout session:', error);

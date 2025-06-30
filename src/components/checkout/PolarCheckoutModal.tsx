@@ -94,7 +94,7 @@ const PolarCheckoutModal = ({ isOpen, onClose, source }: PolarCheckoutModalProps
           {checkoutSession && (
             <div className="h-full">
               <iframe
-                src={checkoutSession.embed_url || checkoutSession.url}
+                src={checkoutSession.url}
                 className="w-full h-full border-0 rounded-lg"
                 title="Polar Checkout"
                 allow="payment"
