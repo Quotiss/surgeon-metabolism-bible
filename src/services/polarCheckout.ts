@@ -3,55 +3,86 @@ import { PolarEmbedCheckout } from '@polar-sh/checkout/embed';
 import { POLAR_CONFIG } from '@/lib/constants';
 
 export interface PolarCheckoutOptions {
-  onSuccess?: () => void;
+  onSuccess?: (event?: any) => void;
   onError?: (error: any) => void;
   onClose?: () => void;
+  onLoaded?: () => void;
+  onConfirmed?: () => void;
 }
 
+// Global checkout instance management
+let activeCheckout: any = null;
+let isCheckoutOpening = false;
+
 export const openPolarCheckout = async (options: PolarCheckoutOptions = {}) => {
+  // Prevent multiple concurrent checkouts
+  if (isCheckoutOpening || activeCheckout) {
+    console.log('Checkout already opening or active, ignoring request');
+    return;
+  }
+
   try {
-    console.log('Opening Polar checkout modal with link:', POLAR_CONFIG.CHECKOUT_LINK);
+    isCheckoutOpening = true;
+    console.log('Creating Polar checkout with link:', POLAR_CONFIG.CHECKOUT_LINK);
     
-    // Create checkout with just the URL as a string parameter
-    const checkout = PolarEmbedCheckout.create(POLAR_CONFIG.CHECKOUT_LINK);
+    // Create checkout with proper API - await the Promise and pass theme as second param
+    const checkout = await PolarEmbedCheckout.create(
+      POLAR_CONFIG.CHECKOUT_LINK, 
+      POLAR_CONFIG.THEME
+    );
     
-    // Set up event listeners if the checkout object supports them
-    if (checkout && typeof checkout === 'object') {
-      // Try to set callbacks if they exist on the checkout object
-      if ('onSuccess' in checkout && typeof checkout.onSuccess === 'function') {
-        checkout.onSuccess = () => {
-          console.log('Polar checkout completed successfully');
-          options.onSuccess?.();
-        };
-      }
-      
-      if ('onError' in checkout && typeof checkout.onError === 'function') {
-        checkout.onError = (error: any) => {
-          console.error('Polar checkout error:', error);
-          options.onError?.(error);
-        };
-      }
-      
-      if ('onClose' in checkout && typeof checkout.onClose === 'function') {
-        checkout.onClose = () => {
-          console.log('Polar checkout modal closed');
-          options.onClose?.();
-        };
-      }
-      
-      // Try to open the checkout - check if method exists
-      if ('show' in checkout && typeof checkout.show === 'function') {
-        checkout.show();
-      } else if ('open' in checkout && typeof checkout.open === 'function') {
-        checkout.open();
-      } else {
-        console.warn('No open/show method found on checkout object');
-      }
-    }
+    activeCheckout = checkout;
+    
+    // Set up event listeners using the correct API
+    checkout.addEventListener('loaded', (event: any) => {
+      console.log('Polar checkout loaded successfully');
+      options.onLoaded?.();
+    });
+    
+    checkout.addEventListener('success', (event: any) => {
+      console.log('Polar checkout completed successfully', event.detail);
+      options.onSuccess?.(event);
+      cleanup();
+    });
+    
+    checkout.addEventListener('close', (event: any) => {
+      console.log('Polar checkout modal closed');
+      options.onClose?.();
+      cleanup();
+    });
+    
+    checkout.addEventListener('confirmed', (event: any) => {
+      console.log('Polar checkout confirmed, processing payment');
+      options.onConfirmed?.(event);
+    });
 
   } catch (error) {
     console.error('Failed to create Polar checkout:', error);
     options.onError?.(error);
+    cleanup();
     throw error;
+  } finally {
+    isCheckoutOpening = false;
   }
 };
+
+export const closePolarCheckout = () => {
+  if (activeCheckout) {
+    try {
+      activeCheckout.close();
+    } catch (error) {
+      console.error('Error closing checkout:', error);
+    }
+    cleanup();
+  }
+};
+
+const cleanup = () => {
+  activeCheckout = null;
+  isCheckoutOpening = false;
+};
+
+// Cleanup on page unload
+if (typeof window !== 'undefined') {
+  window.addEventListener('beforeunload', cleanup);
+}

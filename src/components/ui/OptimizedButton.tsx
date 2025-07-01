@@ -24,8 +24,8 @@ const OptimizedButton = forwardRef<HTMLButtonElement, OptimizedButtonProps>(
     loading = false
   }, ref) => {
     const variantClasses = {
-      primary: 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white',
-      secondary: 'bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-900'
+      primary: 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white disabled:bg-blue-400',
+      secondary: 'bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-900 disabled:bg-slate-50'
     };
 
     const sizeClasses = {
@@ -46,6 +46,7 @@ const OptimizedButton = forwardRef<HTMLButtonElement, OptimizedButtonProps>(
           'active:scale-95 active:translate-y-0',
           'hover:shadow-lg focus:shadow-lg',
           'font-semibold rounded-lg',
+          'disabled:transform-none disabled:shadow-none disabled:cursor-not-allowed',
           variantClasses[variant],
           sizeClasses[size],
           className
@@ -58,7 +59,7 @@ const OptimizedButton = forwardRef<HTMLButtonElement, OptimizedButtonProps>(
         {loading ? (
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-            Loading...
+            <span>Opening checkout...</span>
           </div>
         ) : (
           children
