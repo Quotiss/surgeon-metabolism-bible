@@ -1,5 +1,5 @@
 
-import { GUMROAD_URL } from "@/lib/constants";
+import { POLAR_CONFIG } from "@/lib/constants";
 import type { CTAClickHandler } from "@/types/common";
 
 export const createCTAHandler = (trackCTAClick: (location: string) => void): CTAClickHandler => {
@@ -10,8 +10,9 @@ export const createCTAHandler = (trackCTAClick: (location: string) => void): CTA
       // Track the click
       trackCTAClick(location);
       
-      // Redirect to Gumroad checkout
-      window.open(GUMROAD_URL, "_blank");
+      // TODO: Replace with Polar checkout modal in next phase
+      console.log('Opening Polar checkout for:', POLAR_CONFIG.CHECKOUT_LINK);
+      window.open(POLAR_CONFIG.CHECKOUT_LINK, "_blank");
       
     } catch (error) {
       console.error('CTA action failed:', error);
