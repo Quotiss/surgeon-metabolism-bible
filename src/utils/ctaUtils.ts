@@ -1,5 +1,6 @@
 
 import { POLAR_CONFIG } from "@/lib/constants";
+import { openPolarCheckout } from "@/services/polarCheckout";
 import type { CTAClickHandler } from "@/types/common";
 
 export const createCTAHandler = (trackCTAClick: (location: string) => void): CTAClickHandler => {
@@ -10,13 +11,26 @@ export const createCTAHandler = (trackCTAClick: (location: string) => void): CTA
       // Track the click
       trackCTAClick(location);
       
-      // TODO: Replace with Polar checkout modal in next phase
-      console.log('Opening Polar checkout for:', POLAR_CONFIG.CHECKOUT_LINK);
-      window.open(POLAR_CONFIG.CHECKOUT_LINK, "_blank");
+      // Open Polar checkout modal
+      await openPolarCheckout({
+        onSuccess: () => {
+          console.log('Purchase completed successfully!');
+          // You could add success tracking here
+        },
+        onError: (error) => {
+          console.error('Checkout failed:', error);
+          alert('Checkout failed. Please try again.');
+        },
+        onClose: () => {
+          console.log('Checkout modal closed');
+        }
+      });
       
     } catch (error) {
       console.error('CTA action failed:', error);
-      alert('Something went wrong. Please try again.');
+      // Fallback to direct link if modal fails
+      console.log('Falling back to direct checkout link');
+      window.open(POLAR_CONFIG.CHECKOUT_LINK, "_blank");
     }
   };
 };
