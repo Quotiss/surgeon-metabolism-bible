@@ -1,5 +1,5 @@
 
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense } from "react";
 import FloatingCTA from "@/components/FloatingCTA";
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
@@ -24,20 +24,6 @@ const SectionFallback = () => (
 const Index = () => {
   const { trackCTAClick } = useAnalytics();
   const handleCTAClick = createCTAHandler(trackCTAClick);
-
-  useEffect(() => {
-    // Preload Polar domain for faster checkout
-    const link = document.createElement('link');
-    link.rel = 'dns-prefetch';
-    link.href = '//buy.polar.sh';
-    document.head.appendChild(link);
-
-    return () => {
-      if (document.head.contains(link)) {
-        document.head.removeChild(link);
-      }
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">

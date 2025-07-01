@@ -2,7 +2,7 @@
 import CountdownTimer from "@/components/ui/CountdownTimer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill } from "lucide-react";
-import { PRODUCT_PRICING, CTA_LOCATIONS, POLAR_CONFIG } from "@/lib/constants";
+import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
 
 const ProductValueSection = ({ onCTAClick }: SectionProps) => {
@@ -75,11 +75,10 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
           <CountdownTimer />
         </div>
 
-        {/* Main CTA Button with Polar attributes */}
+        {/* Main CTA Button */}
         <div className="mb-4">
           <Button 
             onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
-            asChild
             size="lg" 
             className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-base sm:text-lg md:text-xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 h-auto font-bold w-full sm:w-auto transition-all duration-300 ease-out touch-manipulation shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 transform"
             style={{
@@ -87,19 +86,13 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
               minHeight: '48px'
             }}
           >
-            <a
-              data-polar-checkout
-              data-polar-checkout-theme="light"
-              href={POLAR_CONFIG.CHECKOUT_LINK}
-            >
-              <span className="flex items-center gap-3 transition-all duration-300 group">
-                Get Instant Access
-                <span className="transform transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-                $27
+            <span className="flex items-center gap-3 transition-all duration-300 group">
+              Get Instant Access
+              <span className="transform transition-transform duration-300 group-hover:translate-x-1">
+                →
               </span>
-            </a>
+              $27
+            </span>
           </Button>
         </div>
 

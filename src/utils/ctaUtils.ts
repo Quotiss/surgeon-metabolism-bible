@@ -1,4 +1,5 @@
 
+import { GUMROAD_CONFIG } from "@/lib/constants";
 import type { CTAClickHandler } from "@/types/common";
 
 // Debounce utility to prevent rapid clicks
@@ -21,8 +22,8 @@ export const createCTAHandler = (trackCTAClick: (location: string) => void): CTA
       // Track the click for analytics
       trackCTAClick(location);
       
-      // Polar checkout will handle the rest via HTML attributes
-      console.log('Polar checkout will open via data-polar-checkout attribute');
+      // Redirect to Gumroad product page
+      window.open(GUMROAD_CONFIG.PRODUCT_URL, '_blank');
       
     } catch (error) {
       console.error('CTA tracking failed:', error);
