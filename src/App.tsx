@@ -4,27 +4,15 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
+import { usePolarCheckout } from "@/hooks/usePolarCheckout";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
 const App = () => {
-  useEffect(() => {
-    // Initialize Polar checkout SDK
-    const initPolar = async () => {
-      try {
-        const { PolarEmbedCheckout } = await import('@polar-sh/checkout/embed');
-        PolarEmbedCheckout.init();
-        console.log('Polar checkout SDK initialized');
-      } catch (error) {
-        console.error('Failed to initialize Polar SDK:', error);
-      }
-    };
-
-    initPolar();
-  }, []);
+  // Initialize Polar checkout
+  usePolarCheckout();
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -34,7 +22,6 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

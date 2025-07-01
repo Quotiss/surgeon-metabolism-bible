@@ -4,6 +4,7 @@ import FloatingCTA from "@/components/FloatingCTA";
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { usePolarEvents } from "@/hooks/usePolarEvents";
 import { createCTAHandler } from "@/utils/ctaUtils";
 import { CTA_LOCATIONS } from "@/lib/constants";
 
@@ -24,12 +25,15 @@ const SectionFallback = () => (
 const Index = () => {
   const { trackCTAClick } = useAnalytics();
   const handleCTAClick = createCTAHandler(trackCTAClick);
+  
+  // Initialize Polar event tracking
+  usePolarEvents();
 
   useEffect(() => {
-    // Preload Gumroad domain for faster checkout
+    // Preload Polar domain for faster checkout
     const link = document.createElement('link');
     link.rel = 'dns-prefetch';
-    link.href = '//noahgordon.gumroad.com';
+    link.href = '//buy.polar.sh';
     document.head.appendChild(link);
 
     return () => {

@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
+import { POLAR_CONFIG } from "@/lib/constants";
 
 interface FloatingCTAProps {
   onClick: () => void;
@@ -57,16 +58,22 @@ const FloatingCTA = ({ onClick }: FloatingCTAProps) => {
     >
       <Button 
         onClick={onClick}
+        data-polar-checkout
+        data-polar-checkout-theme="light"
+        href={POLAR_CONFIG.CHECKOUT_LINK}
+        asChild
         className="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white shadow-lg hover:shadow-2xl text-base sm:text-lg py-4 h-auto animate-fade-in font-semibold transition-all duration-300 ease-out touch-manipulation border-0 rounded-lg hover:scale-[1.02] hover:-translate-y-1 active:scale-95 active:translate-y-0 transform"
         style={{ 
           minHeight: '48px',
           WebkitTapHighlightColor: 'transparent'
         }}
       >
-        <span className="flex items-center justify-center gap-2 transition-all duration-300 group">
-          Get Access Now - $27
-          <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
-        </span>
+        <a>
+          <span className="flex items-center justify-center gap-2 transition-all duration-300 group">
+            Get Access Now - $27
+            <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+          </span>
+        </a>
       </Button>
     </div>
   );
