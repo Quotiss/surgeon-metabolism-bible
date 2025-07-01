@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Shield, Target } from "lucide-react";
 import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { POLAR_CONFIG } from "@/lib/constants";
 
 interface HeroSectionProps {
   onCTAClick: (location: string) => void;
@@ -31,9 +32,20 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
         </p>
 
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 md:mb-12">
-          <Button onClick={() => onCTAClick('hero')} size="lg" className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto w-full sm:w-auto transition-all duration-200 touch-manipulation font-semibold">
-            Get Instant Access Now
-            <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
+          <Button 
+            onClick={() => onCTAClick('hero')} 
+            size="lg" 
+            asChild
+            className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto w-full sm:w-auto transition-all duration-200 touch-manipulation font-semibold"
+          >
+            <a
+              data-polar-checkout
+              data-polar-checkout-theme="light"
+              href={POLAR_CONFIG.CHECKOUT_LINK}
+            >
+              Get Instant Access Now
+              <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
+            </a>
           </Button>
         </div>
 
