@@ -69,7 +69,7 @@ export const openPolarCheckout = async (options: PolarCheckoutOptions = {}) => {
 export const closePolarCheckout = () => {
   if (activeCheckout) {
     try {
-      activeCheckout.close();
+      activeCheckout.close(); // Fixed: removed the argument
     } catch (error) {
       console.error('Error closing checkout:', error);
     }
