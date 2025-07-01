@@ -13,13 +13,14 @@ const Header = ({ onCTAClick }: SectionProps) => {
           </div>
           <Button 
             onClick={() => onCTAClick(CTA_LOCATIONS.HEADER)}
-            data-polar-checkout
-            data-polar-checkout-theme="light"
-            href={POLAR_CONFIG.CHECKOUT_LINK}
             asChild
             className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 transition-all duration-300 ease-out touch-manipulation hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg active:scale-95 active:translate-y-0 transform"
           >
-            <a>
+            <a
+              data-polar-checkout
+              data-polar-checkout-theme="light"
+              href={POLAR_CONFIG.CHECKOUT_LINK}
+            >
               <span className="transition-all duration-300 group">
                 Get Access Now
               </span>
