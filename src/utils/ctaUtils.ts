@@ -1,5 +1,10 @@
 
-import { GUMROAD_CONFIG } from "@/lib/constants";
+import { PolarEmbedCheckout } from "@polar-sh/checkout/embed";
+import {
+  POLAR_CHECKOUT_LINK,
+  POLAR_CHECKOUT_THEME,
+  PRODUCT_PRICE_USD,
+} from "@/lib/constants";
 import type { CTAClickHandler } from "@/types/common";
 
 // Debounce utility to prevent rapid clicks
@@ -22,11 +27,21 @@ export const createCTAHandler = (trackCTAClick: (location: string) => void): CTA
       // Track the click for analytics
       trackCTAClick(location);
       
-      // Redirect to Gumroad product page
-      window.open(GUMROAD_CONFIG.PRODUCT_URL, '_blank');
+      // Create Polar checkout
+      const checkout = await PolarEmbedCheckout.create(
+        POLAR_CHECKOUT_LINK,
+        POLAR_CHECKOUT_THEME
+      );
+
+      checkout.addEventListener("success", () => {
+        window.fbq?.("track", "Purchase", {
+          currency: "USD",
+          value: PRODUCT_PRICE_USD,
+        });
+      });
       
     } catch (error) {
-      console.error('CTA tracking failed:', error);
+      console.error('CTA checkout failed:', error);
     }
   };
 };
