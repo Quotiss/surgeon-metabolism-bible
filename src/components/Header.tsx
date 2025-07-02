@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { CTA_LOCATIONS, GUMROAD_CONFIG } from "@/lib/constants";
+import { CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
 
 const Header = ({ onCTAClick }: SectionProps) => {

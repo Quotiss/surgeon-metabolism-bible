@@ -42,13 +42,7 @@ export const useAnalytics = () => {
   const trackCTAClick = (location: string) => {
     trackEvent('cta_click', { location });
     
-    // Fire Meta Pixel InitiateCheckout event
-    if (window.fbq) {
-      window.fbq('track', META_PIXEL_EVENTS.INITIATE_CHECKOUT, { source: location });
-      console.log('Meta Pixel InitiateCheckout event fired for:', location);
-    }
-
-    // Fire AddPaymentInfo event when user goes to checkout
+    // Only track AddPaymentInfo when user goes to checkout - removed InitiateCheckout
     if (window.fbq) {
       window.fbq('track', META_PIXEL_EVENTS.ADD_PAYMENT_INFO, { 
         source: location,
