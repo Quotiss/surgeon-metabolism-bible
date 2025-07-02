@@ -4,6 +4,11 @@ export const GUMROAD_CONFIG = {
   PRODUCT_URL: "https://noahgordon.gumroad.com/l/surgeonsmetabolismbible",
 } as const;
 
+// Polar checkout configuration
+export const POLAR_CHECKOUT_LINK = "https://buy.polar.sh/polar_cl_TDPTM1gUs4Zjn40huVD0qoisBLTl8bCL32hRn0AvEpV";
+export const POLAR_CHECKOUT_THEME = "light";   // explicit
+export const PRODUCT_PRICE_USD = 27;        // fixed price
+
 export const GUARANTEE_TEXT = "Instant download • 30-day money-back guarantee • For surgeons only";
 
 export const PRODUCT_PRICING = {
