@@ -99,7 +99,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
         {/* Upsell Information */}
         <div className="mb-4">
           <p className="text-sm text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto italic">
-            Want Elite-Level Results? Upgrade to the <span className="font-bold text-blue-600">Full Precision Meal Protocol</span> in the next step - includes fully done-for-you meal plan and essential metabolic execution tools top surgeons use to improve results.
+            🔒 Want Elite-Level Results? Upgrade to the <span className="font-bold text-blue-600">Full Precision Meal Protocol</span> in the next step - includes fully done-for-you meal plan and essential metabolic execution tools top surgeons use to improve results. Offer expires at midnight.
           </p>
         </div>
 
