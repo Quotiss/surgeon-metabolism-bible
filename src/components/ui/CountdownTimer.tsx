@@ -92,9 +92,19 @@ const CountdownTimer = () => {
         </div>
       </div>
       
-      <p className="text-xs text-slate-500">
+      <p className="text-xs text-slate-500 mb-3">
         After timer expires, price increases to $97
       </p>
+
+      {/* Moved urgency texts from ProductValueSection */}
+      <div className="text-sm text-slate-600">
+        <p className="font-medium mb-1">
+          ⚠️ Limited to first 500 surgeons only
+        </p>
+        <p className="text-xs">
+          Early-adopter pricing will not be available again
+        </p>
+      </div>
     </div>
   );
 };
