@@ -1,5 +1,5 @@
 
-import { CheckCircle, Zap, Target, Clock } from "lucide-react";
+import { CheckCircle, Zap, Target, Clock, AlertTriangle, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
@@ -19,12 +19,20 @@ const ThankYou = () => {
               <CheckCircle className="h-10 w-10 text-green-600" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Welcome to Your Transformation!
+              Congratulations! But Don't Make The Same Mistake{" "}
+              <span className="text-blue-600 font-bold">97% of Surgeons</span>{" "}
+              Make Next...
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
-              Your Surgeon Metabolism Bible is being delivered to your inbox right now. 
-              But before you go...
-            </p>
+            <div className="flex items-center justify-center mb-4">
+              <AlertTriangle className="h-6 w-6 text-amber-500 mr-2" />
+              <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
+                Check your email for download links - but first, here's the{" "}
+                <span className="text-blue-600 font-bold">critical gap</span>{" "}
+                that determines{" "}
+                <span className="text-blue-600 font-bold">success or failure</span>
+              </p>
+              <TrendingUp className="h-6 w-6 text-blue-500 ml-2" />
+            </div>
           </div>
         </OptimizedContainer>
       </section>
