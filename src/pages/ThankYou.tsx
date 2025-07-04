@@ -1,5 +1,4 @@
-
-import { CheckCircle, Zap, Target, Clock, AlertTriangle, TrendingUp } from "lucide-react";
+import { CheckCircle, Zap, Target, Clock, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
@@ -24,7 +23,6 @@ const ThankYou = () => {
               Make Next...
             </h1>
             <div className="flex items-center justify-center mb-4">
-              <AlertTriangle className="h-5 w-5 text-amber-500 mr-3 flex-shrink-0" />
               <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
                 Check your email for download links - but first, here's the{" "}
                 <span className="text-blue-600 font-bold">critical gap</span>{" "}
