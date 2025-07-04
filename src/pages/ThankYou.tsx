@@ -1,4 +1,3 @@
-
 import { CheckCircle, Zap, Target, Clock, AlertTriangle, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
@@ -31,7 +30,6 @@ const ThankYou = () => {
                 that determines{" "}
                 <span className="text-blue-600 font-bold">success or failure</span>
               </p>
-              <TrendingUp className="h-6 w-6 text-blue-500 ml-2" />
             </div>
           </div>
         </OptimizedContainer>
