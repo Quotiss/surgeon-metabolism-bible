@@ -39,94 +39,85 @@ const ThankYou = () => {
         <OptimizedContainer size="md">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
-              You're 80% There... But Missing the Final Piece
+              The Fatal Result that kills results by day 3...
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
-              The Surgeon Metabolism Bible gives you the foundation, but top-performing surgeons 
-              need more than just knowledge—they need a complete execution system.
+              You now have the same protocol elite surgeons use - but here's where most fail
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-red-600 font-bold">×</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-slate-900 mb-2">
-                    Information Without Implementation
-                  </h4>
-                  <p className="text-slate-600">
-                    Having the knowledge but struggling to execute consistently
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-red-600 font-bold">×</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-slate-900 mb-2">
-                    Time-Consuming Meal Planning
-                  </h4>
-                  <p className="text-slate-600">
-                    Wasting precious hours figuring out what to eat and when
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-red-600 font-bold">×</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-slate-900 mb-2">
-                    Inconsistent Results
-                  </h4>
-                  <p className="text-slate-600">
-                    Starting strong but losing momentum without proper systems
-                  </p>
-                </div>
+          <div className="max-w-4xl mx-auto space-y-8">
+            {/* The Problem */}
+            <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+              <h3 className="text-xl font-bold text-red-900 mb-4">
+                The Implementation Wall
+              </h3>
+              <div className="space-y-4 text-slate-700">
+                <p>
+                  <span className="font-semibold text-red-700">97% of surgeons</span> hit the 
+                  "implementation wall" where decision fatigue kicks in.
+                </p>
+                <p>
+                  Without precision execution, the mechanisms don't activate to their fullest, 
+                  and you get <span className="font-semibold">mediocre results instead of transformation.</span>
+                </p>
+                <p className="text-red-700 font-semibold">
+                  The consequence? That $27 could become another failed investment, 
+                  leading to loss of self-respect for not following through 100%.
+                </p>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <CheckCircle className="h-8 w-8 text-green-600 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-slate-900 mb-2">
-                    Done-For-You Implementation
-                  </h4>
-                  <p className="text-slate-600">
-                    Complete meal plans and systems that eliminate guesswork
-                  </p>
+            {/* The Solution Bridge */}
+            <div className="text-center py-8">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
+                Bridge the Gap with Precision Implementation
+              </h3>
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                The difference between knowing and doing is having a foolproof execution system 
+                that eliminates decision fatigue entirely.
+              </p>
+            </div>
+
+            {/* Benefits Grid */}
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-green-50 p-6 rounded-lg text-center">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-6 w-6 text-green-600" />
                 </div>
+                <h4 className="font-bold text-slate-900 mb-2">
+                  Zero Decision Fatigue
+                </h4>
+                <p className="text-slate-600 text-sm">
+                  Every meal, every timing, every macro pre-calculated and ready to execute
+                </p>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <CheckCircle className="h-8 w-8 text-green-600 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-slate-900 mb-2">
-                    Time-Saving Automation
-                  </h4>
-                  <p className="text-slate-600">
-                    Pre-planned everything so you can focus on surgery, not meal prep
-                  </p>
+              <div className="bg-blue-50 p-6 rounded-lg text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="h-6 w-6 text-blue-600" />
                 </div>
+                <h4 className="font-bold text-slate-900 mb-2">
+                  Maximum Activation
+                </h4>
+                <p className="text-slate-600 text-sm">
+                  Mechanisms fire at full capacity when execution is precise and consistent
+                </p>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <CheckCircle className="h-8 w-8 text-green-600 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-slate-900 mb-2">
-                    Guaranteed Consistency
-                  </h4>
-                  <p className="text-slate-600">
-                    Foolproof systems that ensure long-term success
-                  </p>
+              <div className="bg-purple-50 p-6 rounded-lg text-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="h-6 w-6 text-purple-600" />
                 </div>
+                <h4 className="font-bold text-slate-900 mb-2">
+                  Guaranteed Results
+                </h4>
+                <p className="text-slate-600 text-sm">
+                  Transform your $27 investment into life-changing results through proven execution
+                </p>
               </div>
             </div>
           </div>
