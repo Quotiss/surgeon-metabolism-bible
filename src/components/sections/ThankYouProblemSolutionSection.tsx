@@ -1,4 +1,3 @@
-
 import { CheckCircle, X } from "lucide-react";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
@@ -26,7 +25,7 @@ const ThankYouProblemSolutionSection = () => {
           {/* Two Paths Comparison */}
           <div className="bg-slate-50 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-slate-900 text-center mb-8">
-              Two Paths Ahead
+              Two Paths Ahead: Choose Wisely
             </h3>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -41,35 +40,28 @@ const ThankYouProblemSolutionSection = () => {
                     <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <X className="h-4 w-4 text-red-600" />
                     </div>
-                    <p className="text-slate-700">Decision fatigue</p>
+                    <p className="text-slate-700">The <span className="font-bold text-red-600">medical system continues to steal</span> your energy and vitality</p>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <X className="h-4 w-4 text-red-600" />
                     </div>
-                    <p className="text-slate-700">Plateau with no tangible results to show</p>
+                    <p className="text-slate-700">Patients <span className="font-bold text-red-600">question your health advice</span></p>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <X className="h-4 w-4 text-red-600" />
                     </div>
-                    <p className="text-slate-700">Join the struggling 97%</p>
+                    <p className="text-slate-700">Wife sees you <span className="font-bold text-red-600">fall asleep on the couch again</span></p>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <X className="h-4 w-4 text-red-600" />
                     </div>
-                    <p className="text-slate-700">Another wasted investment</p>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <X className="h-4 w-4 text-red-600" />
-                    </div>
-                    <p className="text-slate-700">Another failed attempt chipping away at confidence</p>
+                    <p className="text-slate-700">Another <span className="font-bold text-red-600">diet failure damages your confidence</span></p>
                   </div>
                 </div>
               </div>
@@ -85,35 +77,35 @@ const ThankYouProblemSolutionSection = () => {
                     <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <CheckCircle className="h-4 w-4 text-green-600" />
                     </div>
-                    <p className="text-slate-700">Zero decision required</p>
+                    <p className="text-slate-700"><span className="font-bold text-green-600">Zero extra decisions</span></p>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <CheckCircle className="h-4 w-4 text-green-600" />
                     </div>
-                    <p className="text-slate-700">Elite-level transformation of energy and physique</p>
+                    <p className="text-slate-700">Limitless <span className="font-bold text-green-600">razor sharp mental clarity</span></p>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <CheckCircle className="h-4 w-4 text-green-600" />
                     </div>
-                    <p className="text-slate-700">Guarantee your success</p>
+                    <p className="text-slate-700">Practice with <span className="font-bold text-green-600">authentic authority</span></p>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <CheckCircle className="h-4 w-4 text-green-600" />
                     </div>
-                    <p className="text-slate-700">Be the energized one everyone admires</p>
+                    <p className="text-slate-700"><span className="font-bold text-green-600">Master your own body</span> and the essential levers for energy</p>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <CheckCircle className="h-4 w-4 text-green-600" />
                     </div>
-                    <p className="text-slate-700">Prove to yourself you can see through your commitments</p>
+                    <p className="text-slate-700">Prove you can <span className="font-bold text-green-600">see your commitments through</span></p>
                   </div>
                 </div>
               </div>
