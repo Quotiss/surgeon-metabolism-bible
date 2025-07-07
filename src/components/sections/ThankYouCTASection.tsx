@@ -1,5 +1,5 @@
 
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
@@ -10,36 +10,56 @@ const ThankYouCTASection = () => {
   };
 
   return (
-    <section className="py-12 bg-slate-900 text-white">
+    <section className="py-16 bg-slate-900 text-white">
       <OptimizedContainer size="md" className="text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-6">
-          Complete Your Transformation Today
-        </h2>
-        <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-          Don't let this opportunity slip away. Join the elite surgeons who have the complete system 
-          for effortless metabolic optimization.
-        </p>
+        <div className="mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Don't Risk Becoming Another Statistic
+          </h2>
+          <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed mb-8">
+            You're one decision away from joining the <span className="text-blue-400 font-bold">5% who execute flawlessly</span> or joining the majority who wonder why they never achieve results
+          </p>
+        </div>
         
-        <Button 
-          onClick={handleUpsellClick}
-          size="lg" 
-          className="bg-blue-600 hover:bg-blue-700 text-white text-xl px-12 py-6 h-auto font-bold mb-6 transform hover:scale-105 transition-all duration-300"
-        >
-          Yes, Upgrade My System Now - $97
-        </Button>
-        
-        <div className="flex items-center justify-center space-x-4 text-sm text-slate-400">
+        <div className="mb-12">
+          <Button 
+            onClick={handleUpsellClick}
+            size="lg" 
+            className="bg-blue-600 hover:bg-blue-700 text-white text-2xl px-16 py-8 h-auto font-bold mb-8 transform hover:scale-105 transition-all duration-300 shadow-2xl"
+          >
+            SECURE MY SUCCESS - $97
+          </Button>
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-lg text-slate-300 mb-8">
           <div className="flex items-center">
-            <CheckCircle className="h-4 w-4 mr-2" />
+            <Shield className="h-6 w-6 mr-3 text-green-400" />
+            <span>30-Day Money-Back Guarantee</span>
+          </div>
+          <div className="flex items-center">
+            <CheckCircle className="h-6 w-6 mr-3 text-green-400" />
             <span>Instant Access</span>
           </div>
-          <div className="flex items-center">
-            <CheckCircle className="h-4 w-4 mr-2" />
-            <span>One-Time Payment</span>
-          </div>
-          <div className="flex items-center">
-            <CheckCircle className="h-4 w-4 mr-2" />
-            <span>Complete System</span>
+        </div>
+
+        <div className="max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-slate-300 leading-relaxed">
+            Don't let implementation failure rob you of the transformation you deserve
+          </p>
+        </div>
+
+        {/* Reinforced Urgency */}
+        <div className="bg-red-900/30 border-2 border-red-500/50 rounded-xl p-8 max-w-2xl mx-auto">
+          <div className="mb-4">
+            <h3 className="text-2xl font-bold text-red-400 mb-4">
+              ⚠️ THIS OFFER EXPIRES WHEN YOU LEAVE
+            </h3>
+            <p className="text-lg text-red-300 font-semibold mb-4">
+              Don't join the 97% who hesitate and never get results
+            </p>
+            <p className="text-base text-slate-300">
+              Close this page and this opportunity disappears forever
+            </p>
           </div>
         </div>
       </OptimizedContainer>
