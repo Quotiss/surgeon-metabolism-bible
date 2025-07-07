@@ -19,7 +19,7 @@ const ThankYouProblemSolutionSection = () => {
           {/* Main Body Copy */}
           <div className="text-center">
             <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
-              The problem isn't the system - it's your execution. You know WHAT to do, but figuring out daily meal decisions while you juggle patients' lives leads to decision-fatigue overload. By day 3, most surgeons give up and their $27 investment becomes another failed attempt, and the cycle continues.
+              The problem isn't the system - it's your <span className="font-bold text-blue-600">execution</span>. You know WHAT to do, but figuring out daily meal decisions while you juggle patients' lives leads to <span className="font-bold text-blue-600">decision-fatigue overload</span>. By day 3, most surgeons give up and their $27 investment becomes <span className="font-bold text-blue-600">another failed attempt</span>, and the cycle continues.
             </p>
           </div>
 
