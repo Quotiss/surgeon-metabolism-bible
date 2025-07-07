@@ -34,7 +34,7 @@ const ThankYouValueStackSection = () => {
         </div>
 
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <CheckCircle className="h-5 w-5 text-green-600" />
@@ -44,7 +44,7 @@ const ThankYouValueStackSection = () => {
                   Complete Precision Meal Plan
                 </h4>
                 <p className="text-slate-600">
-                  Every meal completely mapped out, no stress
+                  Every meal strategically mapped to <span className="font-bold text-blue-600">natural energy cycles</span>. No more wasting mental resources. What nutritionists charge <span className="font-bold text-blue-600">$500/session</span> for, handed to you on a silver platter
                 </p>
               </div>
             </div>
@@ -58,7 +58,7 @@ const ThankYouValueStackSection = () => {
                   Mistake-Proof Timing
                 </h4>
                 <p className="text-slate-600">
-                  Impossible to sabotage results
+                  Exact nutritional timing to guarantee conversion into <span className="font-bold text-blue-600">fat-burning fuel</span>. This eliminates the <span className="font-bold text-blue-600">#1 reason surgeons plateau</span>
                 </p>
               </div>
             </div>
@@ -72,7 +72,7 @@ const ThankYouValueStackSection = () => {
                   Emergency Protocols
                 </h4>
                 <p className="text-slate-600">
-                  Stay on track when life demands resiliency
+                  <span className="font-bold text-blue-600">Bulletproof backup plans</span> for navigating the inevitable chaos - exact protocols for traveling, dining out, and maintaining <span className="font-bold text-blue-600">stress-free flexibility</span> while others break down at the first sign of slipping up
                 </p>
               </div>
             </div>
@@ -86,7 +86,7 @@ const ThankYouValueStackSection = () => {
                   Batch Prep Mastery
                 </h4>
                 <p className="text-slate-600">
-                  Minimal time investment, maximum efficiency and results
+                  Streamline your entire week in <span className="font-bold text-blue-600">under 2 hours</span>. Execute like an <span className="font-bold text-blue-600">elite performer</span> while colleagues are stuck wasting resources on simple decisions. This single system pays for itself in time savings - <span className="font-bold text-blue-600">your most important asset</span>.
                 </p>
               </div>
             </div>
