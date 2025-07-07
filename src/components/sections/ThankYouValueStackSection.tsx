@@ -1,8 +1,14 @@
 
 import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
 const ThankYouValueStackSection = () => {
+  const handleCTAClick = () => {
+    // TODO: Integrate with checkout
+    console.log("Value Stack CTA clicked");
+  };
+
   return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50">
       <OptimizedContainer size="md">
@@ -73,6 +79,17 @@ const ThankYouValueStackSection = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center mb-8">
+          <Button 
+            onClick={handleCTAClick}
+            size="lg" 
+            className="bg-blue-600 hover:bg-blue-700 text-white text-xl px-12 py-6 h-auto font-bold transform hover:scale-105 transition-all duration-300 shadow-lg"
+          >
+            SECURE MY SUCCESS - $97
+          </Button>
         </div>
 
         {/* Urgency Section */}

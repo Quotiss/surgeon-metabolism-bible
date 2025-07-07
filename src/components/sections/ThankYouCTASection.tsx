@@ -1,4 +1,3 @@
-
 import { CheckCircle, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
@@ -27,7 +26,7 @@ const ThankYouCTASection = () => {
             size="lg" 
             className="bg-blue-600 hover:bg-blue-700 text-white text-2xl px-16 py-8 h-auto font-bold mb-8 transform hover:scale-105 transition-all duration-300 shadow-2xl"
           >
-            SECURE MY SUCCESS - $97
+            JOIN THE ELITE 5% - $97
           </Button>
         </div>
 
