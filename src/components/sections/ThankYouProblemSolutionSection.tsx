@@ -1,5 +1,5 @@
 
-import { CheckCircle, Target, Zap, TrendingUp, X } from "lucide-react";
+import { CheckCircle, X } from "lucide-react";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
 const ThankYouProblemSolutionSection = () => {
@@ -134,59 +134,6 @@ const ThankYouProblemSolutionSection = () => {
             <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
               The exact done-for-you blueprint that guarantees implementation success from the Surgeon Metabolism Bible
             </p>
-          </div>
-
-          {/* The Solution Bridge */}
-          <div className="text-center py-8">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Target className="h-8 w-8 text-blue-600" />
-            </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-4">
-              Bridge the Gap with Precision Implementation
-            </h3>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              The difference between knowing and doing is having a foolproof execution system 
-              that eliminates decision fatigue entirely.
-            </p>
-          </div>
-
-          {/* Benefits Grid */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-green-50 p-6 rounded-lg text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="h-6 w-6 text-green-600" />
-              </div>
-              <h4 className="font-bold text-slate-900 mb-2">
-                Zero Decision Fatigue
-              </h4>
-              <p className="text-slate-600 text-sm">
-                Every meal, every timing, every macro pre-calculated and ready to execute
-              </p>
-            </div>
-
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="h-6 w-6 text-blue-600" />
-              </div>
-              <h4 className="font-bold text-slate-900 mb-2">
-                Maximum Activation
-              </h4>
-              <p className="text-slate-600 text-sm">
-                Mechanisms fire at full capacity when execution is precise and consistent
-              </p>
-            </div>
-
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="h-6 w-6 text-purple-600" />
-              </div>
-              <h4 className="font-bold text-slate-900 mb-2">
-                Guaranteed Results
-              </h4>
-              <p className="text-slate-600 text-sm">
-                Transform your $27 investment into life-changing results through proven execution
-              </p>
-            </div>
           </div>
         </div>
       </OptimizedContainer>
