@@ -1,3 +1,4 @@
+
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
@@ -92,7 +93,7 @@ const ThankYouValueStackSection = () => {
             >
               <span className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5" />
-                SECURE MY SUCCESS - $97
+                SECURE MY SUCCESS → $97
               </span>
             </Button>
           </div>

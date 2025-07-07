@@ -1,3 +1,4 @@
+
 import { CheckCircle, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
@@ -32,7 +33,7 @@ const ThankYouCTASection = () => {
             >
               <span className="flex items-center gap-3">
                 <Zap className="h-6 w-6 text-yellow-400" />
-                JOIN THE ELITE 5% - $97
+                JOIN THE ELITE 5% → $97
                 <Zap className="h-6 w-6 text-yellow-400" />
               </span>
             </Button>
