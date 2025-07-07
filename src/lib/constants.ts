@@ -6,7 +6,7 @@ export const GUMROAD_CONFIG = {
 
 // Polar checkout configuration
 export const POLAR_CHECKOUT_LINK = "https://buy.polar.sh/polar_cl_TDPTM1gUs4Zjn40huVD0qoisBLTl8bCL32hRn0AvEpV";
-export const POLAR_UPSELL_CHECKOUT_LINK = "https://buy.polar.sh/polar_cl_tAiSwipCCTQqyesRuORFdcNKbCc0dXmj40JfV0uGNIa";
+export const POLAR_UPSELL_CHECKOUT_LINK = "https://sandbox-api.polar.sh/v1/checkout-links/polar_cl_FvttiEWC3q8oGPaLsiy5fAAQOoaVp992ymyns44icMq/redirect";
 export const POLAR_CHECKOUT_THEME = "light";   // explicit
 export const PRODUCT_PRICE_USD = 27;        // fixed price
 
