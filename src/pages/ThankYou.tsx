@@ -39,7 +39,7 @@ const ThankYou = () => {
         <OptimizedContainer size="md">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
-              The Fatal Result that kills results by day 3...
+              The <span className="font-bold text-blue-600">Fatal Mistake</span> that kills results by day 3...
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
               You now have the same protocol elite surgeons use - but here's where most fail
