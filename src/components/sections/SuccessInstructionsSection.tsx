@@ -1,5 +1,5 @@
 
-import { CheckCircle, Download, BookOpen, Zap } from "lucide-react";
+import { CheckCircle, Download, BookOpen, Zap, Mail } from "lucide-react";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
 const SuccessInstructionsSection = () => {

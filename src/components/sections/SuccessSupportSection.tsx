@@ -1,5 +1,5 @@
 
-import { Mail, MessageCircle, Shield } from "lucide-react";
+import { Mail, MessageCircle, Shield, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
