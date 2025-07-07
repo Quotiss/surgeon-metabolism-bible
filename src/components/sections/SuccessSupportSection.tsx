@@ -1,11 +1,10 @@
-
 import { Mail, MessageCircle, Shield, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
 const SuccessSupportSection = () => {
   const handleSupportClick = () => {
-    window.location.href = "mailto:support@surgeonmetabolismbible.com?subject=Support Request - Order Confirmation";
+    window.location.href = "mailto:noahgordon2020@yahoo.com?subject=Support Request - Order Confirmation";
   };
 
   return (
@@ -19,7 +18,7 @@ const SuccessSupportSection = () => {
             Your success is our priority. If you have any questions or need assistance, don't hesitate to reach out.
           </p>
         </div>
-
+        
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8 max-w-2xl mx-auto">
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">

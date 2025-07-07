@@ -1,4 +1,3 @@
-
 import { CheckCircle, Download, BookOpen, Zap, Mail } from "lucide-react";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
@@ -26,7 +25,7 @@ const SuccessInstructionsSection = () => {
                 Check Your Email
               </h3>
               <p className="text-slate-700">
-                Look for an email from us with the subject "Your Surgeon Metabolism Bible - Download Links Inside". Check your spam folder if you don't see it within 5 minutes.
+                Look for an email from us with the subject "Your Surgeon Metabolism Bible order confirmation". Check your spam folder if you don't see it within 5 minutes.
               </p>
             </div>
           </div>
