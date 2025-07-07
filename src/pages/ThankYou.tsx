@@ -1,4 +1,5 @@
-import { CheckCircle, Zap, Target, Clock, TrendingUp } from "lucide-react";
+
+import { CheckCircle, Zap, Target, Clock, TrendingUp, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
@@ -47,21 +48,107 @@ const ThankYou = () => {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8">
-            {/* The Problem */}
-            <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-              <h3 className="text-xl font-bold text-red-900 mb-4">
-                The Implementation Wall
+            {/* Main Body Copy */}
+            <div className="text-center">
+              <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
+                The problem isn't the system - it's your execution. You know WHAT to do, but figuring out daily meal decisions while you juggle patients' lives leads to decision-fatigue overload. By day 3, most surgeons give up and their $27 investment becomes another failed attempt, and the cycle continues.
+              </p>
+            </div>
+
+            {/* Two Paths Comparison */}
+            <div className="bg-slate-50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-slate-900 text-center mb-8">
+                Two Paths Ahead
               </h3>
-              <div className="space-y-4 text-slate-700">
-                <p>
-                  You have the protocol but here's where the <span className="font-semibold text-red-700">97% fail</span>:
-                </p>
-                <p>
-                  They try to figure out implementation themselves, and hit decision fatigue by day 3. They don't have systems in place that will save them when things get tough.
-                </p>
-                <p>
-                  Elite surgeons don't wing it - they use a precise system that eliminates all meal planning, timing decisions, and guesswork.
-                </p>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Without Precision Implementation */}
+                <div className="bg-white border-2 border-red-200 rounded-lg p-6">
+                  <h4 className="text-xl font-bold text-red-700 mb-6 text-center">
+                    Without Precision Implementation
+                  </h4>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <X className="h-4 w-4 text-red-600" />
+                      </div>
+                      <p className="text-slate-700">Decision fatigue</p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <X className="h-4 w-4 text-red-600" />
+                      </div>
+                      <p className="text-slate-700">Plateau with no tangible results to show</p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <X className="h-4 w-4 text-red-600" />
+                      </div>
+                      <p className="text-slate-700">Join the struggling 97%</p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <X className="h-4 w-4 text-red-600" />
+                      </div>
+                      <p className="text-slate-700">Another wasted investment</p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <X className="h-4 w-4 text-red-600" />
+                      </div>
+                      <p className="text-slate-700">Another failed attempt chipping away at confidence</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* With Precision Implementation */}
+                <div className="bg-white border-2 border-green-200 rounded-lg p-6">
+                  <h4 className="text-xl font-bold text-green-700 mb-6 text-center">
+                    With Precision Implementation
+                  </h4>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                      </div>
+                      <p className="text-slate-700">Zero decision required</p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                      </div>
+                      <p className="text-slate-700">Elite-level transformation of energy and physique</p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                      </div>
+                      <p className="text-slate-700">Guarantee your success</p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                      </div>
+                      <p className="text-slate-700">Be the energized one everyone admires</p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                      </div>
+                      <p className="text-slate-700">Prove to yourself you can see through your commitments</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
