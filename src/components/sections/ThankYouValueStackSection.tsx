@@ -1,4 +1,3 @@
-
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
@@ -81,15 +80,22 @@ const ThankYouValueStackSection = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
+        {/* Enhanced CTA Button */}
         <div className="text-center mb-8">
-          <Button 
-            onClick={handleCTAClick}
-            size="lg" 
-            className="bg-blue-600 hover:bg-blue-700 text-white text-xl px-12 py-6 h-auto font-bold transform hover:scale-105 transition-all duration-300 shadow-lg"
-          >
-            SECURE MY SUCCESS - $97
-          </Button>
+          <div className="relative inline-block">
+            {/* Subtle glow effect behind button */}
+            <div className="absolute inset-0 bg-blue-400 rounded-lg blur-lg opacity-30 animate-pulse"></div>
+            <Button 
+              onClick={handleCTAClick}
+              size="lg" 
+              className="relative bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-xl px-12 py-6 h-auto font-bold transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500"
+            >
+              <span className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5" />
+                SECURE MY SUCCESS - $97
+              </span>
+            </Button>
+          </div>
         </div>
 
         {/* Urgency Section */}
