@@ -1,3 +1,4 @@
+
 import { CheckCircle, Shield, Zap, AlertTriangle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
@@ -115,7 +116,7 @@ const ThankYouCTASection = () => {
             Not ready for the implementation system?
           </p>
           <Button 
-            onClick={handleContinueClick}
+            onClick={handleSkipClick}
             variant="outline"
             size="lg"
             className="text-slate-700 border-slate-300 hover:bg-slate-50"
