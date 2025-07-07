@@ -152,6 +152,22 @@ const ThankYou = () => {
               </div>
             </div>
 
+            {/* New Body Copy Section */}
+            <div className="text-center py-8">
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">
+                What Elite Surgeons know that you don't...
+              </h3>
+              <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mb-6">
+                Elite surgeons don't wing implementation. They use a completely done-for-you system that eliminates all meal planning, timing decisions, and guesswork while integrating seamlessly into your chaotic schedule.
+              </p>
+              <h4 className="text-xl font-bold text-blue-600 mb-4">
+                Introducing: The Elite 14-Day Implementation System
+              </h4>
+              <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
+                The exact done-for-you blueprint that guarantees implementation success from the Surgeon Metabolism Bible
+              </p>
+            </div>
+
             {/* The Solution Bridge */}
             <div className="text-center py-8">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
