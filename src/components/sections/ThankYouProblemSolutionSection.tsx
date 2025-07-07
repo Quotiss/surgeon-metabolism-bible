@@ -118,14 +118,8 @@ const ThankYouProblemSolutionSection = () => {
             <h3 className="text-2xl font-bold text-slate-900 mb-6">
               What Elite Surgeons know that you don't...
             </h3>
-            <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mb-6">
-              <span className="font-bold text-blue-600">Elite surgeons</span> don't wing implementation. They use a completely <span className="font-bold text-blue-600">done-for-you system</span> that eliminates all meal planning, timing decisions, and guesswork while <span className="font-bold text-blue-600">integrating seamlessly</span> into your chaotic schedule.
-            </p>
-            <h4 className="text-xl font-bold text-blue-600 mb-4">
-              Introducing: The Elite 14-Day Implementation System
-            </h4>
             <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed">
-              The exact done-for-you blueprint that guarantees implementation success from the Surgeon Metabolism Bible
+              <span className="font-bold text-blue-600">Elite surgeons</span> don't wing implementation. They use a completely <span className="font-bold text-blue-600">done-for-you system</span> that eliminates all meal planning, timing decisions, and guesswork while <span className="font-bold text-blue-600">integrating seamlessly</span> into your chaotic schedule.
             </p>
           </div>
         </div>
