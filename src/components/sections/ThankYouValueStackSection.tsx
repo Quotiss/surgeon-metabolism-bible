@@ -1,11 +1,29 @@
+
 import { CheckCircle, Target, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
+import { PolarEmbedCheckout } from "@polar-sh/checkout/embed";
+import { POLAR_UPSELL_CHECKOUT_LINK, POLAR_CHECKOUT_THEME } from "@/lib/constants";
 
 const ThankYouValueStackSection = () => {
-  const handleCTAClick = () => {
-    // TODO: Integrate with checkout
-    console.log("Value Stack CTA clicked");
+  const handleCTAClick = async () => {
+    try {
+      console.log("Upsell CTA clicked");
+      
+      const checkout = await PolarEmbedCheckout.create(
+        POLAR_UPSELL_CHECKOUT_LINK,
+        POLAR_CHECKOUT_THEME
+      );
+
+      checkout.addEventListener("success", () => {
+        window.fbq?.("track", "Purchase", {
+          currency: "USD",
+          value: 97,
+        });
+      });
+    } catch (error) {
+      console.error('Upsell checkout failed:', error);
+    }
   };
 
   return (
