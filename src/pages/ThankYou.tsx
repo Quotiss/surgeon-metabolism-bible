@@ -54,16 +54,13 @@ const ThankYou = () => {
               </h3>
               <div className="space-y-4 text-slate-700">
                 <p>
-                  <span className="font-semibold text-red-700">97% of surgeons</span> hit the 
-                  "implementation wall" where decision fatigue kicks in.
+                  You have the protocol but here's where the <span className="font-semibold text-red-700">97% fail</span>:
                 </p>
                 <p>
-                  Without precision execution, the mechanisms don't activate to their fullest, 
-                  and you get <span className="font-semibold">mediocre results instead of transformation.</span>
+                  They try to figure out implementation themselves, and hit decision fatigue by day 3. They don't have systems in place that will save them when things get tough.
                 </p>
-                <p className="text-red-700 font-semibold">
-                  The consequence? That $27 could become another failed investment, 
-                  leading to loss of self-respect for not following through 100%.
+                <p>
+                  Elite surgeons don't wing it - they use a precise system that eliminates all meal planning, timing decisions, and guesswork.
                 </p>
               </div>
             </div>
