@@ -1,3 +1,4 @@
+
 import { CheckCircle, X } from "lucide-react";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
@@ -118,7 +119,7 @@ const ThankYouProblemSolutionSection = () => {
               What Elite Surgeons know that you don't...
             </h3>
             <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mb-6">
-              Elite surgeons don't wing implementation. They use a completely done-for-you system that eliminates all meal planning, timing decisions, and guesswork while integrating seamlessly into your chaotic schedule.
+              <span className="font-bold text-blue-600">Elite surgeons</span> don't wing implementation. They use a completely <span className="font-bold text-blue-600">done-for-you system</span> that eliminates all meal planning, timing decisions, and guesswork while <span className="font-bold text-blue-600">integrating seamlessly</span> into your chaotic schedule.
             </p>
             <h4 className="text-xl font-bold text-blue-600 mb-4">
               Introducing: The Elite 14-Day Implementation System
