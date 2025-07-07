@@ -1,4 +1,3 @@
-
 import { CheckCircle, Shield, Zap, AlertTriangle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
@@ -29,7 +28,7 @@ const ThankYouCTASection = () => {
     }
   };
 
-  const handleContinueClick = () => {
+  const handleSkipClick = () => {
     navigate('/success');
   };
 
@@ -60,6 +59,16 @@ const ThankYouCTASection = () => {
                 <Zap className="h-6 w-6 text-yellow-400" />
               </span>
             </Button>
+          </div>
+          
+          {/* Skip Link */}
+          <div className="mt-4">
+            <button 
+              onClick={handleSkipClick}
+              className="text-slate-500 hover:text-slate-700 text-sm underline transition-colors"
+            >
+              No thanks, I'll risk it
+            </button>
           </div>
         </div>
 

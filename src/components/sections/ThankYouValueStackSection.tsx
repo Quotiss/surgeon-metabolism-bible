@@ -1,11 +1,13 @@
-
 import { CheckCircle, Target, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 import { PolarEmbedCheckout } from "@polar-sh/checkout/embed";
 import { POLAR_UPSELL_CHECKOUT_LINK, POLAR_CHECKOUT_THEME } from "@/lib/constants";
+import { useNavigate } from "react-router-dom";
 
 const ThankYouValueStackSection = () => {
+  const navigate = useNavigate();
+
   const handleCTAClick = async () => {
     try {
       console.log("Upsell CTA clicked");
@@ -24,6 +26,10 @@ const ThankYouValueStackSection = () => {
     } catch (error) {
       console.error('Upsell checkout failed:', error);
     }
+  };
+
+  const handleSkipClick = () => {
+    navigate('/success');
   };
 
   return (
@@ -125,6 +131,16 @@ const ThankYouValueStackSection = () => {
                 SECURE MY SUCCESS → $97
               </span>
             </Button>
+          </div>
+          
+          {/* Skip Link */}
+          <div className="mt-4">
+            <button 
+              onClick={handleSkipClick}
+              className="text-slate-500 hover:text-slate-700 text-sm underline transition-colors"
+            >
+              No thanks, I'll risk it
+            </button>
           </div>
         </div>
 
