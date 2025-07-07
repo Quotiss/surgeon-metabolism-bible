@@ -1,5 +1,4 @@
-
-import { CheckCircle, Shield, Zap } from "lucide-react";
+import { CheckCircle, Shield, Zap, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
@@ -56,13 +55,18 @@ const ThankYouCTASection = () => {
           </p>
         </div>
 
-        {/* Reinforced Urgency */}
-        <div className="bg-red-50 border-2 border-red-200 rounded-xl p-8 max-w-2xl mx-auto">
+        {/* Updated Urgency Box with Neutral Colors */}
+        <div className="bg-gradient-to-r from-slate-100 to-slate-200 border-2 border-slate-300 rounded-xl p-8 max-w-2xl mx-auto">
+          <div className="flex justify-center mb-4">
+            <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+              <AlertTriangle className="h-6 w-6 text-amber-600" />
+            </div>
+          </div>
           <div className="mb-4">
-            <h3 className="text-2xl font-bold text-red-600 mb-4">
+            <h3 className="text-2xl font-bold text-slate-800 mb-4">
               ⚠️ THIS OFFER EXPIRES WHEN YOU LEAVE
             </h3>
-            <p className="text-lg text-red-700 font-semibold mb-4">
+            <p className="text-lg text-slate-700 font-semibold mb-4">
               Don't join the 97% who hesitate and never get results
             </p>
             <p className="text-base text-slate-600">
