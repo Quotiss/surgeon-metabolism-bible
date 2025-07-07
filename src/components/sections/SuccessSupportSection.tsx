@@ -1,11 +1,14 @@
-import { Mail, MessageCircle, Shield, CheckCircle } from "lucide-react";
+
+import { Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
+import GuaranteeSection from "@/components/ui/GuaranteeSection";
+import { memo, useCallback } from "react";
 
-const SuccessSupportSection = () => {
-  const handleSupportClick = () => {
+const SuccessSupportSection = memo(() => {
+  const handleSupportClick = useCallback(() => {
     window.location.href = "mailto:noahgordon2020@yahoo.com?subject=Support Request - Order Confirmation";
-  };
+  }, []);
 
   return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-slate-50">
@@ -44,16 +47,7 @@ const SuccessSupportSection = () => {
           </Button>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-slate-600">
-          <div className="flex items-center">
-            <Shield className="h-5 w-5 mr-2 text-green-500" />
-            <span>30-Day Money-Back Guarantee</span>
-          </div>
-          <div className="flex items-center">
-            <CheckCircle className="h-5 w-5 mr-2 text-green-500" />
-            <span>Lifetime Access</span>
-          </div>
-        </div>
+        <GuaranteeSection showLifetimeAccess={true} />
 
         <div className="mt-8 p-6 bg-green-50 border border-green-200 rounded-xl max-w-2xl mx-auto">
           <p className="text-lg font-semibold text-green-800 mb-2">
@@ -66,6 +60,8 @@ const SuccessSupportSection = () => {
       </OptimizedContainer>
     </section>
   );
-};
+});
+
+SuccessSupportSection.displayName = 'SuccessSupportSection';
 
 export default SuccessSupportSection;

@@ -1,42 +1,58 @@
+
 import { CheckCircle, Target, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
-import { PolarEmbedCheckout } from "@polar-sh/checkout/embed";
-import { POLAR_UPSELL_CHECKOUT_LINK, POLAR_CHECKOUT_THEME } from "@/lib/constants";
+import { POLAR_UPSELL_CHECKOUT_LINK } from "@/lib/constants";
+import { usePolarCheckout } from "@/hooks/usePolarCheckout";
 import { useNavigate } from "react-router-dom";
+import { memo, useCallback } from "react";
 
-const ThankYouValueStackSection = () => {
+const valueItems = [
+  {
+    title: "Complete Precision Meal Plan",
+    description: "Every meal strategically mapped to natural energy cycles. No more wasting mental resources. What nutritionists charge $500/session for, handed to you on a silver platter"
+  },
+  {
+    title: "Mistake-Proof Timing",
+    description: "Exact nutritional timing to guarantee conversion into fat-burning fuel. This eliminates the #1 reason surgeons plateau"
+  },
+  {
+    title: "Emergency Protocols",
+    description: "Bulletproof backup plans for navigating the inevitable chaos - exact protocols for traveling, dining out, and maintaining stress-free flexibility while others break down at the first sign of slipping up"
+  },
+  {
+    title: "Batch Prep Mastery",
+    description: "Streamline your entire week in under 2 hours. Execute like an elite performer while colleagues are stuck wasting resources on simple decisions. This single system pays for itself in time savings - your most important asset."
+  }
+];
+
+const ThankYouValueStackSection = memo(() => {
   const navigate = useNavigate();
 
-  const handleCTAClick = async () => {
-    try {
-      console.log("Upsell CTA clicked");
-      
-      const checkout = await PolarEmbedCheckout.create(
-        POLAR_UPSELL_CHECKOUT_LINK,
-        POLAR_CHECKOUT_THEME
-      );
+  const handleUpsellSuccess = useCallback(() => {
+    window.fbq?.("track", "Purchase", {
+      currency: "USD",
+      value: 97,
+    });
+  }, []);
 
-      checkout.addEventListener("success", () => {
-        window.fbq?.("track", "Purchase", {
-          currency: "USD",
-          value: 97,
-        });
-      });
-    } catch (error) {
-      console.error('Upsell checkout failed:', error);
-    }
-  };
+  const { createCheckout } = usePolarCheckout({
+    onSuccess: handleUpsellSuccess
+  });
 
-  const handleSkipClick = () => {
+  const handleCTAClick = useCallback(async () => {
+    console.log("Upsell CTA clicked");
+    await createCheckout(POLAR_UPSELL_CHECKOUT_LINK);
+  }, [createCheckout]);
+
+  const handleSkipClick = useCallback(() => {
     navigate('/success');
-  };
+  }, [navigate]);
 
   return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50">
       <OptimizedContainer size="md">
         <div className="text-center mb-12">
-          {/* Visual Element */}
           <div className="flex justify-center mb-6">
             <div className="relative">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
@@ -58,68 +74,33 @@ const ThankYouValueStackSection = () => {
 
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="space-y-8">
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <CheckCircle className="h-5 w-5 text-green-600" />
+            {valueItems.map((item, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg text-slate-900 mb-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-slate-600">
+                    {item.description.split('$500/session').map((part, i) => 
+                      i === 0 ? part : (
+                        <span key={i}>
+                          <span className="font-bold text-blue-600">$500/session</span>
+                          {part}
+                        </span>
+                      )
+                    )}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="font-bold text-lg text-slate-900 mb-2">
-                  Complete Precision Meal Plan
-                </h4>
-                <p className="text-slate-600">
-                  Every meal strategically mapped to <span className="font-bold text-blue-600">natural energy cycles</span>. No more wasting mental resources. What nutritionists charge <span className="font-bold text-blue-600">$500/session</span> for, handed to you on a silver platter
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <CheckCircle className="h-5 w-5 text-green-600" />
-              </div>
-              <div>
-                <h4 className="font-bold text-lg text-slate-900 mb-2">
-                  Mistake-Proof Timing
-                </h4>
-                <p className="text-slate-600">
-                  Exact nutritional timing to guarantee conversion into <span className="font-bold text-blue-600">fat-burning fuel</span>. This eliminates the <span className="font-bold text-blue-600">#1 reason surgeons plateau</span>
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <CheckCircle className="h-5 w-5 text-green-600" />
-              </div>
-              <div>
-                <h4 className="font-bold text-lg text-slate-900 mb-2">
-                  Emergency Protocols
-                </h4>
-                <p className="text-slate-600">
-                  <span className="font-bold text-blue-600">Bulletproof backup plans</span> for navigating the inevitable chaos - exact protocols for traveling, dining out, and maintaining <span className="font-bold text-blue-600">stress-free flexibility</span> while others break down at the first sign of slipping up
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <CheckCircle className="h-5 w-5 text-green-600" />
-              </div>
-              <div>
-                <h4 className="font-bold text-lg text-slate-900 mb-2">
-                  Batch Prep Mastery
-                </h4>
-                <p className="text-slate-600">
-                  Streamline your entire week in <span className="font-bold text-blue-600">under 2 hours</span>. Execute like an <span className="font-bold text-blue-600">elite performer</span> while colleagues are stuck wasting resources on simple decisions. This single system pays for itself in time savings - <span className="font-bold text-blue-600">your most important asset</span>.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Enhanced CTA Button */}
         <div className="text-center mb-8">
           <div className="relative inline-block">
-            {/* Subtle glow effect behind button */}
             <div className="absolute inset-0 bg-blue-400 rounded-lg blur-lg opacity-30 animate-pulse"></div>
             <Button 
               onClick={handleCTAClick}
@@ -133,7 +114,6 @@ const ThankYouValueStackSection = () => {
             </Button>
           </div>
           
-          {/* Skip Link */}
           <div className="mt-4">
             <button 
               onClick={handleSkipClick}
@@ -144,7 +124,6 @@ const ThankYouValueStackSection = () => {
           </div>
         </div>
 
-        {/* Updated Urgency Section */}
         <div className="bg-gradient-to-r from-slate-50 to-slate-100 border border-slate-200 rounded-xl p-8 text-center">
           <div className="flex justify-center mb-4">
             <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
@@ -185,6 +164,8 @@ const ThankYouValueStackSection = () => {
       </OptimizedContainer>
     </section>
   );
-};
+});
+
+ThankYouValueStackSection.displayName = 'ThankYouValueStackSection';
 
 export default ThankYouValueStackSection;

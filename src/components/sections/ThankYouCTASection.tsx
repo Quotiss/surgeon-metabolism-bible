@@ -2,36 +2,34 @@
 import { CheckCircle, Shield, Zap, AlertTriangle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
-import { PolarEmbedCheckout } from "@polar-sh/checkout/embed";
-import { POLAR_UPSELL_CHECKOUT_LINK, POLAR_CHECKOUT_THEME } from "@/lib/constants";
+import GuaranteeSection from "@/components/ui/GuaranteeSection";
+import { POLAR_UPSELL_CHECKOUT_LINK } from "@/lib/constants";
+import { usePolarCheckout } from "@/hooks/usePolarCheckout";
 import { useNavigate } from "react-router-dom";
+import { memo, useCallback } from "react";
 
-const ThankYouCTASection = () => {
+const ThankYouCTASection = memo(() => {
   const navigate = useNavigate();
 
-  const handleUpsellClick = async () => {
-    try {
-      console.log("Upsell CTA clicked");
-      
-      const checkout = await PolarEmbedCheckout.create(
-        POLAR_UPSELL_CHECKOUT_LINK,
-        POLAR_CHECKOUT_THEME
-      );
+  const handleUpsellSuccess = useCallback(() => {
+    window.fbq?.("track", "Purchase", {
+      currency: "USD",
+      value: 97,
+    });
+  }, []);
 
-      checkout.addEventListener("success", () => {
-        window.fbq?.("track", "Purchase", {
-          currency: "USD",
-          value: 97,
-        });
-      });
-    } catch (error) {
-      console.error('Upsell checkout failed:', error);
-    }
-  };
+  const { createCheckout } = usePolarCheckout({
+    onSuccess: handleUpsellSuccess
+  });
 
-  const handleSkipClick = () => {
+  const handleUpsellClick = useCallback(async () => {
+    console.log("Upsell CTA clicked");
+    await createCheckout(POLAR_UPSELL_CHECKOUT_LINK);
+  }, [createCheckout]);
+
+  const handleSkipClick = useCallback(() => {
     navigate('/success');
-  };
+  }, [navigate]);
 
   return (
     <section className="py-16 bg-white">
@@ -47,7 +45,6 @@ const ThankYouCTASection = () => {
         
         <div className="mb-12">
           <div className="relative inline-block">
-            {/* Reduced glow effect for final CTA */}
             <div className="absolute inset-0 bg-blue-400 rounded-xl blur-lg opacity-20"></div>
             <Button 
               onClick={handleUpsellClick}
@@ -62,7 +59,6 @@ const ThankYouCTASection = () => {
             </Button>
           </div>
           
-          {/* Skip Link */}
           <div className="mt-4">
             <button 
               onClick={handleSkipClick}
@@ -73,16 +69,7 @@ const ThankYouCTASection = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-lg text-slate-600 mb-8">
-          <div className="flex items-center">
-            <Shield className="h-6 w-6 mr-3 text-green-500" />
-            <span>30-Day Money-Back Guarantee</span>
-          </div>
-          <div className="flex items-center">
-            <CheckCircle className="h-6 w-6 mr-3 text-green-500" />
-            <span>Instant Access</span>
-          </div>
-        </div>
+        <GuaranteeSection className="text-lg mb-8" />
 
         <div className="max-w-3xl mx-auto mb-8">
           <p className="text-lg text-slate-600 leading-relaxed">
@@ -90,7 +77,6 @@ const ThankYouCTASection = () => {
           </p>
         </div>
 
-        {/* Updated Urgency Box with Neutral Colors */}
         <div className="bg-gradient-to-r from-slate-100 to-slate-200 border-2 border-slate-300 rounded-xl p-8 max-w-2xl mx-auto mb-8">
           <div className="flex justify-center mb-4">
             <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
@@ -110,7 +96,6 @@ const ThankYouCTASection = () => {
           </div>
         </div>
 
-        {/* Continue Button for those who don't want upsell */}
         <div className="border-t border-slate-200 pt-8">
           <p className="text-slate-600 mb-4">
             Not ready for the implementation system?
@@ -128,6 +113,8 @@ const ThankYouCTASection = () => {
       </OptimizedContainer>
     </section>
   );
-};
+});
+
+ThankYouCTASection.displayName = 'ThankYouCTASection';
 
 export default ThankYouCTASection;
