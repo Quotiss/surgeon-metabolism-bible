@@ -1,11 +1,14 @@
 
-import { CheckCircle, Shield, Zap, AlertTriangle } from "lucide-react";
+import { CheckCircle, Shield, Zap, AlertTriangle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 import { PolarEmbedCheckout } from "@polar-sh/checkout/embed";
 import { POLAR_UPSELL_CHECKOUT_LINK, POLAR_CHECKOUT_THEME } from "@/lib/constants";
+import { useNavigate } from "react-router-dom";
 
 const ThankYouCTASection = () => {
+  const navigate = useNavigate();
+
   const handleUpsellClick = async () => {
     try {
       console.log("Upsell CTA clicked");
@@ -24,6 +27,10 @@ const ThankYouCTASection = () => {
     } catch (error) {
       console.error('Upsell checkout failed:', error);
     }
+  };
+
+  const handleContinueClick = () => {
+    navigate('/success');
   };
 
   return (
@@ -74,7 +81,7 @@ const ThankYouCTASection = () => {
         </div>
 
         {/* Updated Urgency Box with Neutral Colors */}
-        <div className="bg-gradient-to-r from-slate-100 to-slate-200 border-2 border-slate-300 rounded-xl p-8 max-w-2xl mx-auto">
+        <div className="bg-gradient-to-r from-slate-100 to-slate-200 border-2 border-slate-300 rounded-xl p-8 max-w-2xl mx-auto mb-8">
           <div className="flex justify-center mb-4">
             <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
               <AlertTriangle className="h-6 w-6 text-amber-600" />
@@ -91,6 +98,22 @@ const ThankYouCTASection = () => {
               Close this page and this opportunity disappears forever
             </p>
           </div>
+        </div>
+
+        {/* Continue Button for those who don't want upsell */}
+        <div className="border-t border-slate-200 pt-8">
+          <p className="text-slate-600 mb-4">
+            Not ready for the implementation system?
+          </p>
+          <Button 
+            onClick={handleContinueClick}
+            variant="outline"
+            size="lg"
+            className="text-slate-700 border-slate-300 hover:bg-slate-50"
+          >
+            Continue to Download Instructions
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Button>
         </div>
       </OptimizedContainer>
     </section>
