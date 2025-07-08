@@ -14,7 +14,7 @@ const ResultsSection = ({
             Get the Complete Surgeon Metabolism Bible Today
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
-            Everything you need to copy the proven metabolic system elite surgeons use to feel sharp, energized, and in control again. <span className="font-bold text-blue-600">This isn't for the average person — it's built for surgical chaos.</span>
+            Everything you need to copy the <span className="font-bold text-blue-600">proven metabolic protocol</span> elite surgeons are using to reclaim their edge, <span className="font-bold text-blue-600">dominate</span> their competition, and take back <span className="font-bold text-blue-600">control</span>. <span className="font-bold text-blue-600">This isn't for the average person</span> — it's built for those who seek to <span className="font-bold text-blue-600">thrive</span> in surgical chaos.
           </p>
         </div>
 
