@@ -16,7 +16,7 @@ const ProblemSection = () => {
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Sound familiar? You're not alone. <span className="font-bold text-blue-600">94% of surgeons over 35</span> are quietly struggling with the same hormonal nightmare, angrily feeling their bodies betray them despite their discipline and intelligence that's been the cornerstone of their careers.
+            Sound familiar? You're not alone. <span className="font-bold text-blue-600">94% of surgeons over 35</span> are quietly struggling with the same hormonal nightmare, angrily feeling their bodies betray them despite their discipline and intelligence that's been the cornerstone of their careers. You gave everything to this profession—discipline, sleep, your twenties—believing it would be worth it. But now your body's unraveling, your energy's crashing, and the system that once rewarded your grind? It's nowhere to be found.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
