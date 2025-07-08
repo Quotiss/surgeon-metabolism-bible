@@ -1,4 +1,5 @@
 
+
 import LazySection from "@/components/LazySection";
 
 const ProblemSection = () => {
@@ -37,7 +38,7 @@ const ProblemSection = () => {
           </p>
 
           <p className="text-base sm:text-lg leading-relaxed">
-            You've had flashes of the man you've always envisioned — an <span className="font-bold text-blue-600">envious physique</span>, a <span className="font-bold text-blue-600">commanding aura</span>, and an <span className="font-bold text-blue-600">internal confidence that exudes authority</span> to your colleagues. That guy's not gone. He's just been held back by the system that promised you everything.
+            You've had flashes of the man you've always envisioned — an <span className="font-bold text-blue-600">envious physique</span>, a <span className="font-bold text-blue-600">commanding aura</span>, and an <span className="font-bold text-blue-600">internal confidence that exudes authority</span> to your colleagues. That guy's not gone. He's just been held back by the system that promised you everything. This time, you just need the guide that blueprint that's meant <span className="italic font-bold text-blue-600">for you</span>.
           </p>
         </div>
       </div>
@@ -46,3 +47,4 @@ const ProblemSection = () => {
 };
 
 export default ProblemSection;
+
