@@ -1,9 +1,8 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import type { CarouselApi } from "@/components/ui/carousel";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, CheckCircle } from "lucide-react";
 
 const testimonials = [
   {
@@ -119,7 +118,13 @@ const CaseStudy = () => {
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index}>
-                <Card className="p-6 sm:p-8 md:p-10 border-2 border-slate-200 bg-white shadow-lg">
+                <Card className="p-6 sm:p-8 md:p-10 border-2 border-slate-200 bg-white shadow-lg relative">
+                  {/* Verified Badge */}
+                  <div className="absolute top-4 right-4 flex items-center gap-1 bg-green-50 border border-green-200 rounded-full px-2 py-1">
+                    <CheckCircle className="h-3 w-3 text-green-600" />
+                    <span className="text-xs font-medium text-green-700">Verified</span>
+                  </div>
+                  
                   <CardContent className="p-0">
                     <div className="flex flex-col md:flex-row gap-6 items-start">
                       <div className="flex-shrink-0">
