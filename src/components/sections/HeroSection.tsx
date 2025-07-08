@@ -27,7 +27,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl text-slate-800 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-          Discover the <span className="text-blue-600 font-bold">exact step-by-step blueprint</span> elite surgeons are using to eliminate energy crashes, supercharge their physique, and command respect in the OR in <span className="text-blue-600 font-bold">under 30 days</span>.
+          Discover the <span className="text-blue-600 font-bold">exact step-by-step blueprint</span> elite surgeons are using to <span className="text-blue-600 font-bold">reclaim</span> their energy, <span className="text-blue-600 font-bold">command respect</span> in the OR, and build a <span className="text-blue-600 font-bold">lean, powerful</span> physique—in <span className="text-blue-600 font-bold">under 30 days</span>.
         </p>
 
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 md:mb-12">
