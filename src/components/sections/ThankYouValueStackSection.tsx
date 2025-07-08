@@ -1,5 +1,4 @@
-
-import { CheckCircle, Target, AlertTriangle } from "lucide-react";
+import { CheckCircle, Target, AlertTriangle, BookOpen, Clock, MapPin, ChefHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 import { POLAR_UPSELL_CHECKOUT_LINK } from "@/lib/constants";
@@ -10,19 +9,23 @@ import { memo, useCallback } from "react";
 const valueItems = [
   {
     title: "Complete Precision Meal Plan",
-    description: "Every meal strategically mapped to natural energy cycles. No more wasting mental resources. What nutritionists charge $500/session for, handed to you on a silver platter"
+    description: "Every meal strategically mapped to natural energy cycles. No more wasting mental resources. What nutritionists charge $500/session for, handed to you on a silver platter",
+    icon: ChefHat
   },
   {
     title: "Mistake-Proof Timing",
-    description: "Exact nutritional timing to guarantee conversion into fat-burning fuel. This eliminates the #1 reason surgeons plateau"
+    description: "Exact nutritional timing to guarantee conversion into fat-burning fuel. This eliminates the #1 reason surgeons plateau",
+    icon: Clock
   },
   {
     title: "Emergency Protocols",
-    description: "Bulletproof backup plans for navigating the inevitable chaos - exact protocols for traveling, dining out, and maintaining stress-free flexibility while others break down at the first sign of slipping up"
+    description: "Bulletproof backup plans for navigating the inevitable chaos - exact protocols for traveling, dining out, and maintaining stress-free flexibility while others break down at the first sign of slipping up",
+    icon: MapPin
   },
   {
     title: "Batch Prep Mastery",
-    description: "Streamline your entire week in under 2 hours. Execute like an elite performer while colleagues are stuck wasting resources on simple decisions. This single system pays for itself in time savings - your most important asset."
+    description: "Streamline your entire week in under 2 hours. Execute like an elite performer while colleagues are stuck wasting resources on simple decisions. This single system pays for itself in time savings - your most important asset.",
+    icon: BookOpen
   }
 ];
 
@@ -74,28 +77,31 @@ const ThankYouValueStackSection = memo(() => {
 
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="space-y-8">
-            {valueItems.map((item, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
+            {valueItems.map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <IconComponent className="h-5 w-5 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg text-slate-900 mb-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-slate-600">
+                      {item.description.split('$500/session').map((part, i) => 
+                        i === 0 ? part : (
+                          <span key={i}>
+                            <span className="font-bold text-blue-600">$500/session</span>
+                            {part}
+                          </span>
+                        )
+                      )}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-lg text-slate-900 mb-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-slate-600">
-                    {item.description.split('$500/session').map((part, i) => 
-                      i === 0 ? part : (
-                        <span key={i}>
-                          <span className="font-bold text-blue-600">$500/session</span>
-                          {part}
-                        </span>
-                      )
-                    )}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
