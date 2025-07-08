@@ -1,4 +1,3 @@
-
 import { CheckCircle, Target, AlertTriangle, BookOpen, Clock, MapPin, ChefHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
@@ -83,6 +82,7 @@ const ThankYouValueStackSection = memo(() => {
   return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50">
       <OptimizedContainer size="md">
+        
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
             <div className="relative">
@@ -102,6 +102,8 @@ const ThankYouValueStackSection = memo(() => {
             The exact done-for-you blueprint that guarantees implementation success from the Surgeon Metabolism Bible
           </p>
         </div>
+
+        
 
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="space-y-8">
@@ -129,6 +131,8 @@ const ThankYouValueStackSection = memo(() => {
           </div>
         </div>
 
+        
+
         <div className="text-center mb-8">
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-blue-400 rounded-lg blur-lg opacity-30 animate-pulse"></div>
@@ -155,6 +159,7 @@ const ThankYouValueStackSection = memo(() => {
         </div>
 
         <div className="bg-gradient-to-r from-slate-50 to-slate-100 border border-slate-200 rounded-xl p-8 text-center">
+          
           <div className="flex justify-center mb-4">
             <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
               <AlertTriangle className="h-6 w-6 text-amber-600" />
@@ -182,7 +187,7 @@ const ThankYouValueStackSection = memo(() => {
           </div>
           
           <div className="space-y-4">
-            <p className="text-lg font-semibold text-slate-800">
+            <p className="text-lg font-bold text-red-600">
               This offer expires the moment you leave the page. It won't be offered again.
             </p>
             
