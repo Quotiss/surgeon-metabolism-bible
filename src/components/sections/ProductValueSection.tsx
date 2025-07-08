@@ -16,7 +16,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
               Surgeon Metabolism Bible
             </h4>
             <p className="text-slate-700">
-              Complete 30-day protocol that harnesses your surgical stress patterns for metabolic transformation
+              Complete 30-Day protocol that harnesses your unique surgical stress patterns for physical transformation
             </p>
             <p className="text-sm text-blue-600 font-bold mt-1">Value: $197</p>
           </div>
