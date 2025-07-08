@@ -1,5 +1,5 @@
 
-import { CheckCircle } from "lucide-react";
+import { Clock, Zap, Calendar, Flame } from "lucide-react";
 import LazySection from "@/components/LazySection";
 
 const SolutionSection = () => {
@@ -25,28 +25,28 @@ const SolutionSection = () => {
           
           <div className="space-y-4 sm:space-y-6">
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
+              <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
                 The <span className="font-bold text-blue-600">5-minute circadian reset ritual</span> that reprograms your stress-damaged metabolism for all-day energy (works by resetting cortisol rhythm even after 16-hour surgeries)
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
+              <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-red-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
                 The <span className="font-bold text-blue-600">"inflammation foods" secretly amplifying your stress response</span> - 3 "healthy" staples that trigger cortisol spikes and lock in fat storage (eliminate these effortlessly)
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
+              <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
                 The surgeon-proof meal timing blueprint that syncs with your stress hormone cycles instead of fighting them
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
+              <Flame className="h-5 w-5 sm:h-6 sm:w-6 text-orange-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
                 The <span className="font-bold text-blue-600">metabolic accelerator foods</span> that actually use your elevated stress hormones as fuel for instant fat burning (nutritionists charge <span className="font-bold text-blue-600">$500/session</span> to reveal this)
               </p>
