@@ -1,3 +1,4 @@
+
 import LazySection from "@/components/LazySection";
 
 const ProblemSection = () => {
@@ -20,7 +21,11 @@ const ProblemSection = () => {
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Here's what's really happening: Your metabolism isn't broken because you lack willpower or eat too much. It's broken because you've been fed protocols that actively sabotage high-stress, high-stakes performers like you who struggle with the chronic stress cascade-irregular sleep, elevated cortisol, and adrenaline spikes that wreck mental clarity. The people you've been taking advice from simply don't understand <span className="font-bold text-blue-600">the chaos you have to navigate</span>. The good thing is, <span className="font-bold text-blue-600">it's not your fault</span>.
+            Here's what's really happening: Your metabolism isn't broken because you lack willpower or eat too much. It's broken because you've been fed protocols that actively sabotage high-stress, high-stakes performers like you who struggle with the chronic stress cascade-irregular sleep, elevated cortisol, and adrenaline spikes that wreck mental clarity. The people you've been taking advice from simply don't understand <span className="font-bold text-blue-600">the chaos you have to navigate</span>.
+          </p>
+          
+          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            The good thing is, this isn't your failure. It's the cost of trusting a system that was never built for men like you. But you can flip the script — fast.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
