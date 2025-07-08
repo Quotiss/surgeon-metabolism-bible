@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import LazySection from "@/components/LazySection";
 import CaseStudy from "@/components/sections/CaseStudy";
-import { ShoppingCart, Pill, MapPin, Clock, Package } from "lucide-react";
+import { ShoppingCart, Pill, Check } from "lucide-react";
 
 interface FeaturesSectionProps {
   onCTAClick: (location: string) => void;
@@ -32,21 +32,27 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
               
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="h-3 w-3 text-white font-bold" />
+                  </div>
                   <p className="text-sm sm:text-base text-slate-600">
                     Complete done-for-you shopping list organized by store sections for maximum efficiency
                   </p>
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <Clock className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="h-3 w-3 text-white font-bold" />
+                  </div>
                   <p className="text-sm sm:text-base text-slate-600">
                     Never waste time wandering aisles again - get in, get the right stress-fighting foods, get out
                   </p>
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <Package className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="h-3 w-3 text-white font-bold" />
+                  </div>
                   <p className="text-sm sm:text-base text-slate-600">
                     Includes specific brands that work synergistically with your metabolic reset
                   </p>
@@ -68,21 +74,27 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
               
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <Pill className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="h-3 w-3 text-white font-bold" />
+                  </div>
                   <p className="text-sm sm:text-base text-slate-600">
                     The exact supplementation protocol elite surgeons use to amplify their metabolic results
                   </p>
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <ShoppingCart className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="h-3 w-3 text-white font-bold" />
+                  </div>
                   <p className="text-sm sm:text-base text-slate-600">
                     Each supplement is chosen specifically to work with your stress physiology - not against it
                   </p>
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <Clock className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="h-3 w-3 text-white font-bold" />
+                  </div>
                   <p className="text-sm sm:text-base text-slate-600">
                     Includes dosing, timing, and which combinations accelerate fat burning while supporting energy and recovery
                   </p>
