@@ -1,5 +1,3 @@
-
-
 import LazySection from "@/components/LazySection";
 
 const ProblemSection = () => {
@@ -14,7 +12,7 @@ const ProblemSection = () => {
 
         <div className="prose prose-lg max-w-none text-slate-700">
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            You're doing everything "right" - eating clean, hitting the gym when you can, even cutting calories. Yet you're still gaining weight that your wife's been hassling you about, hitting that 2 PM energy crash that wreaks havoc on your motivation, and wondering why your sex drive disappeared somewhere between residency and real life.
+            You're doing everything "right" - eating clean, hitting the gym when you can, even cutting calories. Yet you're still gaining weight your wife subtly mentions, crashing at 2 PM like clockwork, wondering where your motivation—and your sex drive—went.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
@@ -43,4 +41,3 @@ const ProblemSection = () => {
 };
 
 export default ProblemSection;
-
