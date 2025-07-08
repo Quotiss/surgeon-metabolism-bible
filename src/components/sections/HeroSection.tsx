@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Shield, Target } from "lucide-react";
 import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
@@ -22,7 +23,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       <div className="container mx-auto max-w-6xl text-center">
         
         <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
-          <span className="text-blue-600 font-bold">The Metabolism Mistake</span> That's Making 9 Out of 10 Surgeons Look <span className="text-blue-600 font-bold">Tired</span>, <span className="text-blue-600 font-bold">Feel Flat</span>, and <span className="text-blue-600 font-bold">Fade from the Room</span> (and <span className="text-blue-600 font-bold">How To Fix It</span>)
+          <span className="text-blue-600 font-bold">The Metabolism Mistake</span> That's Making 9 Out of 10 Surgeons Look <span className="text-blue-600 font-bold">Tired</span>, <span className="text-blue-600 font-bold">Feel Flat</span>, and <span className="text-blue-600 font-bold">Fade from the Room</span> (and How To Fix It)
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl text-slate-800 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
