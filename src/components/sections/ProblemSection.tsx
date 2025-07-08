@@ -1,4 +1,5 @@
 
+
 import LazySection from "@/components/LazySection";
 
 const ProblemSection = () => {
@@ -29,11 +30,11 @@ const ProblemSection = () => {
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            You've had flashes of the man you've always envisioned — an <span className="font-bold text-blue-600">envious physique</span>, a <span className="font-bold text-blue-600">commanding aura</span>, and an <span className="font-bold text-blue-600">internal confidence that exudes authority</span> to your colleagues. That guy's not gone. He's just been held back by the system that promised you everything.
-          </p>
-          
-          <p className="text-base sm:text-lg leading-relaxed">
             Meanwhile, a small group of elite surgeons discovered the real problem: surgical stress creates a <span className="font-bold text-blue-600">perfect storm of disrupted circadian timing and metabolic fuel competition</span> - your body literally can't decide whether to burn fat or store it, leading to <span className="font-bold text-blue-600">metabolic gridlock</span> that normal diet advice can't touch. They're using a completely different approach - one that works WITH your stress physiology, not against it.
+          </p>
+
+          <p className="text-base sm:text-lg leading-relaxed">
+            You've had flashes of the man you've always envisioned — an <span className="font-bold text-blue-600">envious physique</span>, a <span className="font-bold text-blue-600">commanding aura</span>, and an <span className="font-bold text-blue-600">internal confidence that exudes authority</span> to your colleagues. That guy's not gone. He's just been held back by the system that promised you everything.
           </p>
         </div>
       </div>
@@ -42,3 +43,4 @@ const ProblemSection = () => {
 };
 
 export default ProblemSection;
+
