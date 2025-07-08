@@ -16,7 +16,7 @@ const ProblemSection = () => {
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Sound familiar? You're not alone. <span className="font-bold text-blue-600">94% of surgeons over 35</span> are quietly struggling with the same metabolic nightmare, watching their bodies betray them <span className="font-bold text-blue-600">despite their discipline and intelligence</span>.
+            Sound familiar? You're not alone. <span className="font-bold text-blue-600">94% of surgeons over 35</span> are quietly struggling with the same hormonal nightmare, angrily feeling their bodies betray them despite their discipline and intelligence that's been the cornerstone of their careers.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
