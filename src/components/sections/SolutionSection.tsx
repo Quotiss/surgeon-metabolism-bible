@@ -32,21 +32,21 @@ const SolutionSection = () => {
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-red-600 mt-0.5 flex-shrink-0" />
+              <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
                 The <span className="font-bold text-blue-600">"inflammation foods" secretly amplifying your stress response</span> - 3 "healthy" staples that trigger cortisol spikes and lock in fat storage (eliminate these effortlessly)
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
+              <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
                 The surgeon-proof meal timing blueprint that syncs with your stress hormone cycles instead of fighting them
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <Flame className="h-5 w-5 sm:h-6 sm:w-6 text-orange-600 mt-0.5 flex-shrink-0" />
+              <Flame className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
                 The <span className="font-bold text-blue-600">metabolic accelerator foods</span> that actually use your elevated stress hormones as fuel for instant fat burning (nutritionists charge <span className="font-bold text-blue-600">$500/session</span> to reveal this)
               </p>
