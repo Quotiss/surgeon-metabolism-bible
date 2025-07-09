@@ -14,7 +14,23 @@ const SolutionSection = () => {
 
         <div className="prose prose-lg max-w-none text-slate-700 mb-8 sm:mb-12">
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            The Surgeon Metabolism Bible reveals the <span className="font-bold text-blue-600">exact 30-day protocol</span> these elite surgeons use to <span className="font-bold text-blue-600">reverse stress-induced metabolic damage</span> while their peers stay stuck. This isn't another diet book - it's the <span className="font-bold text-blue-600">underground system</span> that <span className="font-bold text-blue-600">harnesses your surgical stress patterns</span> to actually accelerate fat burning and energy production. Mainstream diet advice has lead you to believe that the same solutions work for everyone. This protocol isn't for the average person — it's <span className="font-bold text-blue-600">built specifically for high-performance surgeons</span> who want to regain their edge.
+            But here's what the <span className="font-bold text-blue-600">elite 6%</span> discovered: Your <span className="font-bold text-blue-600">surgical stress isn't your enemy—it's your unique edge</span>.
+          </p>
+          
+          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            Instead of fighting against the demands of your profession, these <span className="font-bold text-blue-600">top performers</span> learned to <span className="font-bold text-blue-600">harness that same intense pressure and convert it into raw metabolic fuel</span>. They're <span className="font-bold text-blue-600">strolling into the OR with endless energy and poise</span>. <span className="font-bold text-blue-600">Commanding respect</span> in every department meeting. <span className="font-bold text-blue-600">Controlling conversations</span> at medical conferences while their colleagues struggle to keep up.
+          </p>
+          
+          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            Imagine <span className="font-bold text-blue-600">striding through the hospital corridors with the same confidence and charisma</span> you had in residency. <span className="font-bold text-blue-600">Practically bulletproof</span>. But now backed by decades of expertise and mastery. <span className="font-bold text-blue-600">Effortlessly executing complex procedures with laser focus and presence</span>. Returning home <span className="font-bold text-blue-600">invigorated instead of depleted</span>, entertaining your wife like the man she married, not the exhausted shell you've become.
+          </p>
+          
+          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            Envision looking in the mirror and seeing <span className="font-bold text-blue-600">the physique that matches your surgical discipline</span>. <span className="font-bold text-blue-600">Stepping into rooms and immediately turning heads</span> without saying a word. <span className="font-bold text-blue-600">Outlasting surgeons half your age</span> and watching them scramble to keep up with your pace.
+          </p>
+          
+          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            This isn't fantasy. This is what happens when you <span className="font-bold text-blue-600">stop fighting your surgical stress and start weaponizing it</span>.
           </p>
         </div>
 
