@@ -23,11 +23,11 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       <div className="container mx-auto max-w-6xl text-center">
         
         <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
-          <span className="text-blue-600 font-bold">The Metabolism Mistake</span> That's Making 9 Out of 10 Surgeons Look <span className="text-blue-600 font-bold">Tired</span>, <span className="text-blue-600 font-bold">Feel Flat</span>, and <span className="text-blue-600 font-bold">Fade from the Room</span> (and How To Fix It)
+          The <span className="text-blue-600 font-bold">Underground</span> Metabolic Protocol That's Giving Elite Surgeons <span className="text-blue-600 font-bold">Unfair Advantages</span> in the OR (And How You Can <span className="text-blue-600 font-bold">Copy Their Exact System</span>)
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl text-slate-800 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-          Discover the <span className="text-blue-600 font-bold">exact step-by-step blueprint</span> elite surgeons are using to <span className="text-blue-600 font-bold">reclaim</span> their energy, <span className="text-blue-600 font-bold">command respect</span> in the OR, and build a <span className="text-blue-600 font-bold">lean, powerful</span> physique—in <span className="text-blue-600 font-bold">under 30 days</span>.
+          While <span className="text-blue-600 font-bold">94% of surgeons</span> are burning out from surgical stress, a small group of <span className="text-blue-600 font-bold">elite performers</span> discovered how to <span className="text-blue-600 font-bold">weaponize</span> that same stress into metabolic fuel—restoring the <span className="text-blue-600 font-bold">commanding presence</span> and <span className="text-blue-600 font-bold">physical dominance</span> that matches their surgical mastery
         </p>
 
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 md:mb-12">
