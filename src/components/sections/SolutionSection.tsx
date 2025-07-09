@@ -14,23 +14,23 @@ const SolutionSection = () => {
 
         <div className="prose prose-lg max-w-none text-slate-700 mb-8 sm:mb-12">
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            But here's what the <span className="font-bold text-blue-600">elite 6%</span> discovered: Your <span className="font-bold text-blue-600">surgical stress isn't your enemy—it's your unique edge</span>.
+            But here's what the elite 6% discovered: Your surgical stress isn't your enemy—it's <span className="font-bold text-blue-600">your unique edge</span>.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Instead of fighting against the demands of your profession, these <span className="font-bold text-blue-600">top performers</span> learned to <span className="font-bold text-blue-600">harness that same intense pressure and convert it into raw metabolic fuel</span>. They're <span className="font-bold text-blue-600">strolling into the OR with endless energy and poise</span>. <span className="font-bold text-blue-600">Commanding respect</span> in every department meeting. <span className="font-bold text-blue-600">Controlling conversations</span> at medical conferences while their colleagues struggle to keep up.
+            Instead of fighting <span className="font-bold text-blue-600">against</span> the demands of your profession, these top performers learned to harness that <span className="font-bold text-blue-600">same intense pressure</span> and convert it into <span className="font-bold text-blue-600">raw metabolic fuel</span>. They're strolling into the OR with <span className="font-bold text-blue-600">endless energy and poise</span>. <span className="font-bold text-blue-600">Commanding respect</span> in every department meeting. <span className="font-bold text-blue-600">Controlling conversations</span> at medical conferences while their colleagues struggle to keep up.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Imagine <span className="font-bold text-blue-600">striding through the hospital corridors with the same confidence and charisma</span> you had in residency. <span className="font-bold text-blue-600">Practically bulletproof</span>. But now backed by decades of expertise and mastery. <span className="font-bold text-blue-600">Effortlessly executing complex procedures with laser focus and presence</span>. Returning home <span className="font-bold text-blue-600">invigorated instead of depleted</span>, entertaining your wife like the man she married, not the exhausted shell you've become.
+            Imagine <span className="font-bold text-blue-600">striding through the hospital corridors with the same confidence and charisma</span> you had in residency. <span className="font-bold text-blue-600">Practically bulletproof</span>. But now backed by decades of expertise and mastery. Effortlessly executing complex procedures with <span className="font-bold text-blue-600">laser focus and presence</span>. Returning home <span className="font-bold text-blue-600">invigorated</span> instead of depleted, <span className="font-bold text-blue-600">entertaining</span> your wife like the man you married, not the exhausted shell you've become.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Envision looking in the mirror and seeing <span className="font-bold text-blue-600">the physique that matches your surgical discipline</span>. <span className="font-bold text-blue-600">Stepping into rooms and immediately turning heads</span> without saying a word. <span className="font-bold text-blue-600">Outlasting surgeons half your age</span> and watching them scramble to keep up with your pace.
+            Envision looking in the mirror and seeing the <span className="font-bold text-blue-600">powerful physique that matches your surgical discipline</span>. Stepping into rooms and <span className="font-bold text-blue-600">immediately turning heads</span> without saying a word. <span className="font-bold text-blue-600">Outlasting</span> surgeons half your age and watching them scramble to keep up with your pace.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            This isn't fantasy. This is what happens when you <span className="font-bold text-blue-600">stop fighting your surgical stress and start weaponizing it</span>.
+            This isn't fantasy. This is what happens when you stop fighting your surgical stress and <span className="font-bold text-blue-600">start weaponizing it</span>.
           </p>
         </div>
 
