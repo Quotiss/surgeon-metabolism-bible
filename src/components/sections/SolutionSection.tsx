@@ -8,13 +8,13 @@ const SolutionSection = () => {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
-            Introducing the Surgeon Metabolism Bible
+            But Here's What the Top 6% Know...
           </h2>
         </div>
 
         <div className="prose prose-lg max-w-none text-slate-700 mb-8 sm:mb-12">
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            But here's what the elite 6% discovered: Your surgical stress isn't your enemy—it's <span className="font-bold text-blue-600">your unique edge</span>.
+            Your surgical stress isn't your enemy—it's <span className="font-bold text-blue-600">your unique edge</span>.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
