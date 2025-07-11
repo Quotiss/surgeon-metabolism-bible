@@ -1,5 +1,7 @@
+
 import { Clock, Zap, Calendar, Flame } from "lucide-react";
 import LazySection from "@/components/LazySection";
+import HighlightedText from "@/components/ui/HighlightedText";
 
 const SolutionSection = () => {
   return (
@@ -13,55 +15,56 @@ const SolutionSection = () => {
 
         <div className="prose prose-lg max-w-none text-slate-700 mb-8 sm:mb-12">
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Your surgical stress isn't your enemy—it's <span className="font-bold text-blue-600">your unique edge</span>.
+            Your surgical stress isn't your enemy—it's <HighlightedText>your unique edge</HighlightedText>.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Instead of fighting <span className="font-bold text-blue-600">against</span> the demands of your profession, these top performers learned to harness that <span className="font-bold text-blue-600">same intense pressure</span> and convert it into <span className="font-bold text-blue-600">raw metabolic fuel</span>. They're strolling into the OR with <span className="font-bold text-blue-600">endless energy and poise</span>. <span className="font-bold text-blue-600">Commanding respect</span> in every department meeting. <span className="font-bold text-blue-600">Controlling conversations</span> at medical conferences while their colleagues struggle to keep up.
+            Instead of fighting <HighlightedText>against</HighlightedText> the demands of your profession, these top performers learned to harness that <HighlightedText>same intense pressure</HighlightedText> and convert it into <HighlightedText>raw metabolic fuel</HighlightedText>. They're strolling into the OR with <HighlightedText>endless energy and poise</HighlightedText>. <HighlightedText>Commanding respect</HighlightedText> in every department meeting. <HighlightedText>Controlling conversations</HighlightedText> at medical conferences while their colleagues struggle to keep up.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Imagine <span className="font-bold text-blue-600">striding through the hospital corridors with the same confidence and charisma</span> you had in residency. <span className="font-bold text-blue-600">Practically bulletproof</span>. But now backed by decades of expertise and mastery. Effortlessly executing complex procedures with <span className="font-bold text-blue-600">laser focus and presence</span>. Returning home <span className="font-bold text-blue-600">invigorated</span> instead of depleted, <span className="font-bold text-blue-600">entertaining</span> your wife like the man you married, not the exhausted shell you've become.
+            Imagine <HighlightedText>striding through the hospital corridors with the same confidence and charisma</HighlightedText> you had in residency. <HighlightedText>Practically bulletproof</HighlightedText>. But now backed by decades of expertise and mastery. Effortlessly executing complex procedures with <HighlightedText>laser focus and presence</HighlightedText>. Returning home <HighlightedText>invigorated</HighlightedText> instead of depleted, <HighlightedText>entertaining</HighlightedText> your wife like the man you married, not the exhausted shell you've become.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Envision looking in the mirror and seeing the <span className="font-bold text-blue-600">powerful physique that matches your surgical discipline</span>. Stepping into rooms and <span className="font-bold text-blue-600">immediately turning heads</span> without saying a word. <span className="font-bold text-blue-600">Outlasting</span> surgeons half your age and watching them scramble to keep up with your pace.
+            Envision looking in the mirror and seeing the <HighlightedText>powerful physique that matches your surgical discipline</HighlightedText>. Stepping into rooms and <HighlightedText>immediately turning heads</HighlightedText> without saying a word. <HighlightedText>Outlasting</HighlightedText> surgeons half your age and watching them scramble to keep up with your pace.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            This isn't fantasy. This is what happens when you stop fighting your surgical stress and <span className="font-bold text-blue-600">start weaponizing it</span>.
+            This isn't fantasy. This is what happens when you stop fighting your surgical stress and <HighlightedText>start weaponizing it</HighlightedText>.
           </p>
         </div>
 
         {/* Bridge Section */}
         <div className="mb-8 sm:mb-12">
           <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
-            How Top Surgeons Build <span className="font-bold text-blue-600">Bulletproof Resilience</span> (and Why They're <span className="font-bold text-blue-600">Winning</span>)
+            How Top Surgeons Build <HighlightedText>Bulletproof Resilience</HighlightedText> (and Why They're <HighlightedText>Winning</HighlightedText>)
           </h3>
           
           <div className="prose prose-lg max-w-none text-slate-700">
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              Thankfully, there's a <span className="font-bold text-blue-600">hidden secret</span> that most surgeons haven't unlocked yet — your metabolism isn't broken, it's just been running on survival mode, red-lining just to keep you alive, instead of an <span className="font-bold text-blue-600">effortless dominance mode</span>.
+              Thankfully, there's a <HighlightedText>hidden secret</HighlightedText> that most surgeons haven't unlocked yet — your metabolism isn't broken, it's just been running on survival mode, red-lining just to keep you alive, instead of an <HighlightedText>effortless dominance mode</HighlightedText>.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              Here's what happens when you flip that switch: By <span className="font-bold text-blue-600">optimizing your circadian timing</span> and aligning your fuel intake for <span className="font-bold text-blue-600">metabolic supremacy</span>, your body starts recovering faster than surgeons half your age. You're constantly <span className="font-bold text-blue-600">invigorated</span>. Exuding the most <span className="font-bold text-blue-600">nonchalant competence and authority</span>. Burning fat effortlessly while you sleep. Waking up <span className="font-bold text-blue-600">refreshed</span> after even the most brutally demanding days instead of needing three cups of coffee just to utter coherent sentences.
+              Here's what happens when you flip that switch: By <HighlightedText>optimizing your circadian timing</HighlightedText> and aligning your fuel intake for <HighlightedText>metabolic supremacy</HighlightedText>, your body starts recovering faster than surgeons half your age. You're constantly <HighlightedText>invigorated</HighlightedText>. Exuding the most <HighlightedText>nonchalant competence and authority</HighlightedText>. Burning fat effortlessly while you sleep. Waking up <HighlightedText>refreshed</HighlightedText> after even the most brutally demanding days instead of needing three cups of coffee just to utter coherent sentences.
             </p>
+          </div>
         </div>
 
-        {/* New Product Introduction Section */}
+        {/* Product Introduction Section */}
         <div className="mb-8 sm:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
-            Introducing the <span className="font-bold text-blue-600">Surgeon Metabolism Bible</span>
+            Introducing the <HighlightedText>Surgeon Metabolism Bible</HighlightedText>
           </h2>
           
           <div className="prose prose-lg max-w-none text-slate-700">
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              Everything you need to copy the <span className="font-bold text-blue-600">proven metabolic protocol</span> elite surgeons are using to reclaim their edge, shed stubborn weight, and take back control of their health. This isn't for the average person — it's built for those who seek to <span className="font-bold text-blue-600">thrive in surgical chaos</span> and channel their stress into <span className="font-bold text-blue-600">cutting through brain fog</span>, <span className="font-bold text-blue-600">wielding a commanding physique</span>, and <span className="font-bold text-blue-600">radiating physical supremacy</span>.
+              Everything you need to copy the <HighlightedText>proven metabolic protocol</HighlightedText> elite surgeons are using to reclaim their edge, shed stubborn weight, and take back control of their health. This isn't for the average person — it's built for those who seek to <HighlightedText>thrive in surgical chaos</HighlightedText> and channel their stress into <HighlightedText>cutting through brain fog</HighlightedText>, <HighlightedText>wielding a commanding physique</HighlightedText>, and <HighlightedText>radiating physical supremacy</HighlightedText>.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              The Surgeon Metabolism Bible reveals the exact <span className="font-bold text-blue-600">30-day blueprint</span> these elite surgeons use to reverse stress-induced metabolic damage while their peers stay stuck. This isn't another diet book - it's the <span className="font-bold text-blue-600">underground system</span> that channels your surgical stress patterns to actually strip away fat, generate endless mental energy, and restore your physical vitality. This is the gateway to reclaiming the <span className="font-bold text-blue-600">biological superiority</span> that the system has taken from you.
+              The Surgeon Metabolism Bible reveals the exact <HighlightedText>30-day blueprint</HighlightedText> these elite surgeons use to reverse stress-induced metabolic damage while their peers stay stuck. This isn't another diet book - it's the <HighlightedText>underground system</HighlightedText> that channels your surgical stress patterns to actually strip away fat, generate endless mental energy, and restore your physical vitality. This is the gateway to reclaiming the <HighlightedText>biological superiority</HighlightedText> that the system has taken from you.
             </p>
           </div>
         </div>
@@ -75,14 +78,14 @@ const SolutionSection = () => {
             <div className="flex items-start space-x-3 sm:space-x-4">
               <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <span className="font-bold text-blue-600">5-minute circadian reset ritual</span> that reprograms your stress-damaged metabolism for all-day energy (works by resetting cortisol rhythm even after 16-hour surgeries)
+                The <HighlightedText>5-minute circadian reset ritual</HighlightedText> that reprograms your stress-damaged metabolism for all-day energy (works by resetting cortisol rhythm even after 16-hour surgeries)
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
               <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <span className="font-bold text-blue-600">"inflammation foods" secretly amplifying your stress response</span> - 3 "healthy" staples that trigger cortisol spikes and lock in fat storage (eliminate these effortlessly)
+                The <HighlightedText>"inflammation foods" secretly amplifying your stress response</HighlightedText> - 3 "healthy" staples that trigger cortisol spikes and lock in fat storage (eliminate these effortlessly)
               </p>
             </div>
             
@@ -96,7 +99,7 @@ const SolutionSection = () => {
             <div className="flex items-start space-x-3 sm:space-x-4">
               <Flame className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <span className="font-bold text-blue-600">metabolic accelerator foods</span> that actually use your elevated stress hormones as fuel for instant fat burning (nutritionists charge <span className="font-bold text-blue-600">$500/session</span> to reveal this)
+                The <HighlightedText>metabolic accelerator foods</HighlightedText> that actually use your elevated stress hormones as fuel for instant fat burning (nutritionists charge <HighlightedText>$500/session</HighlightedText> to reveal this)
               </p>
             </div>
           </div>
