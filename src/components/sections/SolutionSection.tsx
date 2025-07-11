@@ -22,7 +22,7 @@ const SolutionSection = () => {
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Imagine <span className="font-bold text-blue-600">striding through the hospital corridors with the same confidence and charisma</span> you had in residency. <span className="font-bold text-blue-600">Practically bulletproof</span>. But now backed by decades of expertise and mastery. Effortlessly executing complex procedures with <span className="font-bold text-blue-600">laser focus and presence</span>. Returning home <span className="font-bold text-blue-600">invigorated</span> instead of depleted, <span className="font-bold text-blue-600">entertaining</span> your wife like the man she married, not the exhausted shell you've become.
+            Imagine <span className="font-bold text-blue-600">striding through the hospital corridors with the same confidence and charisma</span> you had in residency. <span className="font-bold text-blue-600">Practically bulletproof</span>. But now backed by decades of expertise and mastery. Effortlessly executing complex procedures with <span className="font-bold text-blue-600">laser focus and presence</span>. Returning home <span className="font-bold text-blue-600">invigorated</span> instead of depleted, <span className="font-bold text-blue-600">entertaining</span> your wife like the man you married, not the exhausted shell you've become.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
@@ -37,32 +37,32 @@ const SolutionSection = () => {
         {/* New Bridge Section */}
         <div className="mb-8 sm:mb-12">
           <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
-            How Top Surgeons Build Bulletproof Resilience (and Why They're Winning)
+            How Top Surgeons Build <span className="font-bold text-blue-600">Bulletproof Resilience</span> (and Why They're <span className="font-bold text-blue-600">Winning</span>)
           </h3>
           
           <div className="prose prose-lg max-w-none text-slate-700">
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              Thankfully, there's a hidden secret that most surgeons haven't unlocked yet — your metabolism isn't broken, it's just been running on survival mode, red-lining just to keep you alive, instead of an effortless dominance mode.
+              Thankfully, there's a <span className="font-bold text-blue-600">hidden secret</span> that most surgeons haven't unlocked yet — your metabolism isn't broken, it's just been running on survival mode, red-lining just to keep you alive, instead of an <span className="font-bold text-blue-600">effortless dominance mode</span>.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              Here's what happens when you flip that switch: By optimizing your circadian timing and aligning your fuel intake for metabolic supremacy, your body starts recovering faster than surgeons half your age. You're constantly invigorated. Exuding the most nonchalant competence and authority. Burning fat effortlessly while you sleep. Waking up refreshed after even the most brutally demanding days instead of needing three cups of coffee just to utter coherent sentences.
+              Here's what happens when you flip that switch: By <span className="font-bold text-blue-600">optimizing your circadian timing</span> and aligning your fuel intake for <span className="font-bold text-blue-600">metabolic supremacy</span>, your body starts recovering faster than surgeons half your age. You're constantly <span className="font-bold text-blue-600">invigorated</span>. Exuding the most <span className="font-bold text-blue-600">nonchalant competence and authority</span>. Burning fat effortlessly while you sleep. Waking up <span className="font-bold text-blue-600">refreshed</span> after even the most brutally demanding days instead of needing three cups of coffee just to utter coherent sentences.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              You'll find yourself shedding stubborn weight that's clung to you for years. The musculature you've trained for all these years will finally reveal itself. Your thoughts become crystal clear during complex decision-making because your stress hormones start fueling mental sharpness instead. Bouncing back from soul-crushing shifts like they're routine warm-ups. Feeling genuinely excited about conquering new challenges that used to drain you completely.
+              You'll find yourself shedding stubborn weight that's clung to you for years. The musculature you've trained for all these years will finally reveal itself. Your thoughts become <span className="font-bold text-blue-600">crystal clear</span> during complex decision-making because your stress hormones start fueling <span className="font-bold text-blue-600">mental sharpness</span> instead. Bouncing back from soul-crushing shifts like they're routine warm-ups. Feeling genuinely excited about <span className="font-bold text-blue-600">conquering new challenges</span> that used to drain you completely.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              Your family notices the change first. You're laughing again at dinner conversations. Playing with your kids instead of collapsing on the couch. Initiating intimacy with your wife because your raw drive is back in full force. All this happens because your body finally has the stress resiliency and metabolic capacity it desperately needed.
+              Your family notices the change first. You're laughing again at dinner conversations. Playing with your kids instead of collapsing on the couch. Initiating intimacy with your wife because your <span className="font-bold text-blue-600">raw drive</span> is back in full force. All this happens because your body finally has the <span className="font-bold text-blue-600">stress resiliency</span> and metabolic capacity it desperately needed.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              This isn't about managing stress—it's about reclaiming your hijacked metabolism and constructing a biological organism so resilient that surgical pressure transforms itself into your unique competitive advantage over the rest.
+              This isn't about managing stress—it's about <span className="font-bold text-blue-600">reclaiming</span> your hijacked metabolism and constructing a biological organism so resilient that surgical pressure <span className="font-bold text-blue-600">transforms itself</span> into your <span className="font-bold text-blue-600">unique competitive advantage</span> over the rest.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 font-semibold">
-              The step-by-step blueprint for this metabolic transformation is found inside the Surgeon Metabolism Bible.
+              The <span className="font-bold text-blue-600">step-by-step blueprint</span> for this metabolic transformation is found inside the <span className="font-bold text-blue-600">Surgeon Metabolism Bible</span>.
             </p>
           </div>
         </div>
