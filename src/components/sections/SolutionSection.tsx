@@ -1,4 +1,3 @@
-
 import { Clock, Zap, Calendar, Flame } from "lucide-react";
 import LazySection from "@/components/LazySection";
 
@@ -48,23 +47,6 @@ const SolutionSection = () => {
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
               Here's what happens when you flip that switch: By <span className="font-bold text-blue-600">optimizing your circadian timing</span> and aligning your fuel intake for <span className="font-bold text-blue-600">metabolic supremacy</span>, your body starts recovering faster than surgeons half your age. You're constantly <span className="font-bold text-blue-600">invigorated</span>. Exuding the most <span className="font-bold text-blue-600">nonchalant competence and authority</span>. Burning fat effortlessly while you sleep. Waking up <span className="font-bold text-blue-600">refreshed</span> after even the most brutally demanding days instead of needing three cups of coffee just to utter coherent sentences.
             </p>
-            
-            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              You'll find yourself shedding stubborn weight that's clung to you for years. The musculature you've trained for all these years will finally reveal itself. Your thoughts become <span className="font-bold text-blue-600">crystal clear</span> during complex decision-making because your stress hormones start fueling <span className="font-bold text-blue-600">mental sharpness</span> instead. Bouncing back from soul-crushing shifts like they're routine warm-ups. Feeling genuinely excited about <span className="font-bold text-blue-600">conquering new challenges</span> that used to drain you completely.
-            </p>
-            
-            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              Your family notices the change first. You're laughing again at dinner conversations. Playing with your kids instead of collapsing on the couch. Initiating intimacy with your wife because your <span className="font-bold text-blue-600">raw drive</span> is back in full force. All this happens because your body finally has the <span className="font-bold text-blue-600">stress resiliency</span> and metabolic capacity it desperately needed.
-            </p>
-            
-            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              This isn't about managing stress—it's about <span className="font-bold text-blue-600">reclaiming</span> your hijacked metabolism and constructing a biological organism so resilient that surgical pressure <span className="font-bold text-blue-600">transforms itself</span> into your <span className="font-bold text-blue-600">unique competitive advantage</span> over the rest.
-            </p>
-            
-            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 font-semibold">
-              The <span className="font-bold text-blue-600">step-by-step blueprint</span> for this metabolic transformation is found inside the <span className="font-bold text-blue-600">Surgeon Metabolism Bible</span>.
-            </p>
-          </div>
         </div>
 
         {/* New Product Introduction Section */}
@@ -75,11 +57,11 @@ const SolutionSection = () => {
           
           <div className="prose prose-lg max-w-none text-slate-700">
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              Everything you need to copy the proven metabolic protocol elite surgeons are using to reclaim their edge, shed stubborn weight, and take back control of their health. This isn't for the average person — it's built for those who seek to thrive in surgical chaos and channel their stress into cutting through brain fog, wielding a commanding physique, and radiating physical supremacy.
+              Everything you need to copy the <span className="font-bold text-blue-600">proven metabolic protocol</span> elite surgeons are using to reclaim their edge, shed stubborn weight, and take back control of their health. This isn't for the average person — it's built for those who seek to <span className="font-bold text-blue-600">thrive in surgical chaos</span> and channel their stress into <span className="font-bold text-blue-600">cutting through brain fog</span>, <span className="font-bold text-blue-600">wielding a commanding physique</span>, and <span className="font-bold text-blue-600">radiating physical supremacy</span>.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              The Surgeon Metabolism Bible reveals the exact 30-day blueprint these elite surgeons use to reverse stress-induced metabolic damage while their peers stay stuck. This isn't another diet book - it's the underground system that channels your surgical stress patterns to actually strip away fat, generate endless mental energy, and restore your physical vitality. This is the gateway to reclaiming the biological superiority that the system has taken from you.
+              The Surgeon Metabolism Bible reveals the exact <span className="font-bold text-blue-600">30-day blueprint</span> these elite surgeons use to reverse stress-induced metabolic damage while their peers stay stuck. This isn't another diet book - it's the <span className="font-bold text-blue-600">underground system</span> that channels your surgical stress patterns to actually strip away fat, generate endless mental energy, and restore your physical vitality. This is the gateway to reclaiming the <span className="font-bold text-blue-600">biological superiority</span> that the system has taken from you.
             </p>
           </div>
         </div>
