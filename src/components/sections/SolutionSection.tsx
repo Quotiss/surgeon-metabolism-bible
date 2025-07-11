@@ -1,5 +1,5 @@
 
-import { Clock, Zap, Calendar, Flame } from "lucide-react";
+import { Zap, Flame, Clock, Apple, Shield } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
 
@@ -76,30 +76,37 @@ const SolutionSection = () => {
           
           <div className="space-y-4 sm:space-y-6">
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
+              <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <HighlightedText>5-minute circadian reset ritual</HighlightedText> that reprograms your stress-damaged metabolism for all-day energy (works by resetting cortisol rhythm even after 16-hour surgeries)
+                <HighlightedText>Bulletproof energy</HighlightedText> that lasts through 12-hour surgery days
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
+              <Flame className="h-5 w-5 sm:h-6 sm:w-6 text-red-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <HighlightedText>"inflammation foods" secretly amplifying your stress response</HighlightedText> - 3 "healthy" staples that trigger cortisol spikes and lock in fat storage (eliminate these effortlessly)
+                How to convert <HighlightedText>surgical stress into raw fat-burning fuel</HighlightedText>
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
+              <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The surgeon-proof meal timing blueprint that syncs with your stress hormone cycles instead of fighting them
+                The <HighlightedText>circadian hack</HighlightedText> that eliminates 2PM energy crashes
               </p>
             </div>
             
             <div className="flex items-start space-x-3 sm:space-x-4">
-              <Flame className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
+              <Apple className="h-5 w-5 sm:h-6 sm:w-6 text-purple-600 mt-0.5 flex-shrink-0" />
               <p className="text-sm sm:text-base leading-relaxed">
-                The <HighlightedText>metabolic accelerator foods</HighlightedText> that actually use your elevated stress hormones as fuel for instant fat burning (nutritionists charge <HighlightedText>$500/session</HighlightedText> to reveal this)
+                Secret <HighlightedText>nutrition timing</HighlightedText> to supercharge your physique
+              </p>
+            </div>
+            
+            <div className="flex items-start space-x-3 sm:space-x-4">
+              <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
+              <p className="text-sm sm:text-base leading-relaxed">
+                Why <HighlightedText>elite surgeons never feel "burnt out"</HighlightedText>
               </p>
             </div>
           </div>
