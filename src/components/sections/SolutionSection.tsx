@@ -1,5 +1,5 @@
 
-import { Zap, Flame, Clock, Apple, Shield } from "lucide-react";
+import { Check, BookOpen } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
 
@@ -69,43 +69,70 @@ const SolutionSection = () => {
           </div>
         </div>
 
-        <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
-          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6">
-            What You'll Learn:
-          </h3>
+        <div className="bg-gradient-to-br from-slate-50 to-white p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-100">
+          {/* Header with Icon */}
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="flex justify-center items-center mb-3 sm:mb-4">
+              <BookOpen className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 mr-3" />
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
+                What You'll Learn
+              </h3>
+            </div>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto rounded-full"></div>
+          </div>
           
-          <div className="space-y-4 sm:space-y-6">
-            <div className="flex items-start space-x-3 sm:space-x-4">
-              <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600 mt-0.5 flex-shrink-0" />
-              <p className="text-sm sm:text-base leading-relaxed">
+          <div className="space-y-5 sm:space-y-6">
+            <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
+              <div className="flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 bg-green-600 rounded-full flex items-center justify-center">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+                </div>
+              </div>
+              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
                 <HighlightedText>Bulletproof energy</HighlightedText> that lasts through 12-hour surgery days
               </p>
             </div>
             
-            <div className="flex items-start space-x-3 sm:space-x-4">
-              <Flame className="h-5 w-5 sm:h-6 sm:w-6 text-red-600 mt-0.5 flex-shrink-0" />
-              <p className="text-sm sm:text-base leading-relaxed">
+            <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
+              <div className="flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 bg-green-600 rounded-full flex items-center justify-center">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+                </div>
+              </div>
+              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
                 How to convert <HighlightedText>surgical stress into raw fat-burning fuel</HighlightedText>
               </p>
             </div>
             
-            <div className="flex items-start space-x-3 sm:space-x-4">
-              <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mt-0.5 flex-shrink-0" />
-              <p className="text-sm sm:text-base leading-relaxed">
+            <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
+              <div className="flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 bg-green-600 rounded-full flex items-center justify-center">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+                </div>
+              </div>
+              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
                 The <HighlightedText>circadian hack</HighlightedText> that eliminates 2PM energy crashes
               </p>
             </div>
             
-            <div className="flex items-start space-x-3 sm:space-x-4">
-              <Apple className="h-5 w-5 sm:h-6 sm:w-6 text-purple-600 mt-0.5 flex-shrink-0" />
-              <p className="text-sm sm:text-base leading-relaxed">
+            <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
+              <div className="flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 bg-green-600 rounded-full flex items-center justify-center">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+                </div>
+              </div>
+              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
                 Secret <HighlightedText>nutrition timing</HighlightedText> to supercharge your physique
               </p>
             </div>
             
-            <div className="flex items-start space-x-3 sm:space-x-4">
-              <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-0.5 flex-shrink-0" />
-              <p className="text-sm sm:text-base leading-relaxed">
+            <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
+              <div className="flex-shrink-0 mt-0.5">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 bg-green-600 rounded-full flex items-center justify-center">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+                </div>
+              </div>
+              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
                 Why <HighlightedText>elite surgeons never feel "burnt out"</HighlightedText>
               </p>
             </div>
