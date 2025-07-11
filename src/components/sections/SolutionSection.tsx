@@ -1,5 +1,5 @@
 
-import { Check, BookOpen } from "lucide-react";
+import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
 
@@ -87,8 +87,8 @@ const SolutionSection = () => {
           <div className="space-y-5 sm:space-y-6">
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-md">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
+                  <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
@@ -98,8 +98,8 @@ const SolutionSection = () => {
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-md">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
+                  <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
@@ -109,8 +109,8 @@ const SolutionSection = () => {
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-md">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
+                  <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
@@ -120,8 +120,8 @@ const SolutionSection = () => {
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-md">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
+                  <Apple className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
@@ -131,8 +131,8 @@ const SolutionSection = () => {
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-md">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
+                  <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
