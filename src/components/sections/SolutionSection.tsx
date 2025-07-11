@@ -22,7 +22,7 @@ const SolutionSection = () => {
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Imagine <span className="font-bold text-blue-600">striding through the hospital corridors with the same confidence and charisma</span> you had in residency. <span className="font-bold text-blue-600">Practically bulletproof</span>. But now backed by decades of expertise and mastery. Effortlessly executing complex procedures with <span className="font-bold text-blue-600">laser focus and presence</span>. Returning home <span className="font-bold text-blue-600">invigorated</span> instead of depleted, <span className="font-bold text-blue-600">entertaining</span> your wife like the man you married, not the exhausted shell you've become.
+            Imagine <span className="font-bold text-blue-600">striding through the hospital corridors with the same confidence and charisma</span> you had in residency. <span className="font-bold text-blue-600">Practically bulletproof</span>. But now backed by decades of expertise and mastery. Effortlessly executing complex procedures with <span className="font-bold text-blue-600">laser focus and presence</span>. Returning home <span className="font-bold text-blue-600">invigorated</span> instead of depleted, <span className="font-bold text-blue-600">entertaining</span> your wife like the man she married, not the exhausted shell you've become.
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
@@ -32,6 +32,39 @@ const SolutionSection = () => {
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
             This isn't fantasy. This is what happens when you stop fighting your surgical stress and <span className="font-bold text-blue-600">start weaponizing it</span>.
           </p>
+        </div>
+
+        {/* New Bridge Section */}
+        <div className="mb-8 sm:mb-12">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
+            How Top Surgeons Build Bulletproof Resilience (and Why They're Winning)
+          </h3>
+          
+          <div className="prose prose-lg max-w-none text-slate-700">
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              Thankfully, there's a hidden secret that most surgeons haven't unlocked yet — your metabolism isn't broken, it's just been running on survival mode, red-lining just to keep you alive, instead of an effortless dominance mode.
+            </p>
+            
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              Here's what happens when you flip that switch: By optimizing your circadian timing and aligning your fuel intake for metabolic supremacy, your body starts recovering faster than surgeons half your age. You're constantly invigorated. Exuding the most nonchalant competence and authority. Burning fat effortlessly while you sleep. Waking up refreshed after even the most brutally demanding days instead of needing three cups of coffee just to utter coherent sentences.
+            </p>
+            
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              You'll find yourself shedding stubborn weight that's clung to you for years. The musculature you've trained for all these years will finally reveal itself. Your thoughts become crystal clear during complex decision-making because your stress hormones start fueling mental sharpness instead. Bouncing back from soul-crushing shifts like they're routine warm-ups. Feeling genuinely excited about conquering new challenges that used to drain you completely.
+            </p>
+            
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              Your family notices the change first. You're laughing again at dinner conversations. Playing with your kids instead of collapsing on the couch. Initiating intimacy with your wife because your raw drive is back in full force. All this happens because your body finally has the stress resiliency and metabolic capacity it desperately needed.
+            </p>
+            
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              This isn't about managing stress—it's about reclaiming your hijacked metabolism and constructing a biological organism so resilient that surgical pressure transforms itself into your unique competitive advantage over the rest.
+            </p>
+            
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 font-semibold">
+              The step-by-step blueprint for this metabolic transformation is found inside the Surgeon Metabolism Bible.
+            </p>
+          </div>
         </div>
 
         <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
