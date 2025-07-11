@@ -34,7 +34,7 @@ const SolutionSection = () => {
           </p>
         </div>
 
-        {/* New Bridge Section */}
+        {/* Bridge Section */}
         <div className="mb-8 sm:mb-12">
           <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
             How Top Surgeons Build <span className="font-bold text-blue-600">Bulletproof Resilience</span> (and Why They're <span className="font-bold text-blue-600">Winning</span>)
@@ -63,6 +63,23 @@ const SolutionSection = () => {
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 font-semibold">
               The <span className="font-bold text-blue-600">step-by-step blueprint</span> for this metabolic transformation is found inside the <span className="font-bold text-blue-600">Surgeon Metabolism Bible</span>.
+            </p>
+          </div>
+        </div>
+
+        {/* New Product Introduction Section */}
+        <div className="mb-8 sm:mb-12">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
+            Introducing the Surgeon Metabolism Bible
+          </h3>
+          
+          <div className="prose prose-lg max-w-none text-slate-700">
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              Everything you need to copy the proven metabolic protocol elite surgeons are using to reclaim their edge, shed stubborn weight, and take back control of their health. This isn't for the average person — it's built for those who seek to thrive in surgical chaos and channel their stress into cutting through brain fog, wielding a commanding physique, and radiating physical supremacy.
+            </p>
+            
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              The Surgeon Metabolism Bible reveals the exact 30-day blueprint these elite surgeons use to reverse stress-induced metabolic damage while their peers stay stuck. This isn't another diet book - it's the underground system that channels your surgical stress patterns to actually strip away fat, generate endless mental energy, and restore your physical vitality. This is the gateway to reclaiming the biological superiority that the system has taken from you.
             </p>
           </div>
         </div>
