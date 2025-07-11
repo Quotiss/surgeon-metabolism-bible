@@ -74,18 +74,21 @@ const SolutionSection = () => {
           <div className="text-center mb-6 sm:mb-8">
             <div className="flex justify-center items-center mb-3 sm:mb-4">
               <BookOpen className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 mr-3" />
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
-                What You'll Learn
-              </h3>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
+                What You'll Discover
+              </h2>
             </div>
+            <p className="text-base sm:text-lg text-slate-600 mb-4">
+              exact blueprint found in the 5-module system
+            </p>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto rounded-full"></div>
           </div>
           
           <div className="space-y-5 sm:space-y-6">
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
-                <div className="w-6 h-6 sm:w-7 sm:h-7 bg-green-600 rounded-full flex items-center justify-center">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
@@ -95,8 +98,8 @@ const SolutionSection = () => {
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
-                <div className="w-6 h-6 sm:w-7 sm:h-7 bg-green-600 rounded-full flex items-center justify-center">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
@@ -106,8 +109,8 @@ const SolutionSection = () => {
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
-                <div className="w-6 h-6 sm:w-7 sm:h-7 bg-green-600 rounded-full flex items-center justify-center">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
@@ -117,8 +120,8 @@ const SolutionSection = () => {
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
-                <div className="w-6 h-6 sm:w-7 sm:h-7 bg-green-600 rounded-full flex items-center justify-center">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
@@ -128,8 +131,8 @@ const SolutionSection = () => {
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
-                <div className="w-6 h-6 sm:w-7 sm:h-7 bg-green-600 rounded-full flex items-center justify-center">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold" />
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-md">
+                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
