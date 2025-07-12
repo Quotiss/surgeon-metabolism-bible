@@ -1,4 +1,5 @@
 
+
 import CountdownTimer from "@/components/ui/CountdownTimer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill } from "lucide-react";
@@ -51,22 +52,24 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
       </div>
 
       {/* Integrated Price + Timer + CTA Section */}
-      <div className="bg-gray-100 rounded-xl p-6 text-center border border-slate-200">
+      <div className="bg-slate-50 rounded-xl p-6 text-center border border-slate-200">
         {/* Price Comparison */}
-        <div className="mb-4">
-          <div className="space-y-2 mb-4">
-            <p className="text-lg text-slate-700">
-              Total Package Value: <span className="font-semibold text-slate-900">$621</span>
+        <div className="mb-6">
+          <div className="space-y-3 mb-6">
+            <p className="text-lg text-slate-600">
+              Total Package Value: <span className="font-bold text-slate-900">$621</span>
             </p>
-            <p className="text-lg text-slate-700">
-              Regular Price: <span className="font-semibold text-slate-900">$97</span>
+            <p className="text-lg text-slate-600">
+              Regular Price: <span className="font-bold text-slate-900">$97</span>
             </p>
-            <p className="text-3xl sm:text-4xl font-black text-blue-600 mb-2">
-              Early-Adopter Price: $27
-            </p>
-            <p className="text-xl font-bold text-green-600">
-              You Save: $70 (today only)
-            </p>
+            <div className="border-t border-slate-200 pt-4">
+              <p className="text-2xl sm:text-3xl font-black text-blue-600 mb-2">
+                Founding Surgeon Access: $27
+              </p>
+              <p className="text-lg font-bold text-green-600">
+                You Save: $70 (today only)
+              </p>
+            </div>
           </div>
         </div>
 
@@ -76,7 +79,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
         </div>
 
         {/* Main CTA Button */}
-        <div className="mb-4">
+        <div className="mb-6">
           <Button 
             onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
             size="lg" 
@@ -97,8 +100,8 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
         </div>
 
         {/* Upsell Teaser */}
-        <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 mb-4">
-          <p className="text-sm text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto">
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <p className="text-sm text-slate-700 font-medium leading-relaxed">
             🔒 Want faster, frictionless results? A limited number of surgeons will get the chance to upgrade to the <span className="font-bold text-blue-600">Full Precision Meal Protocol</span> after checkout - includes done-for-you meal plans and essential metabolic execution tools top surgeons use to supercharge results.
           </p>
         </div>
@@ -108,3 +111,4 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
 };
 
 export default ProductValueSection;
+
