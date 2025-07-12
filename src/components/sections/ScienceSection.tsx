@@ -1,4 +1,3 @@
-
 import { Target, Shield, Zap, Heart, CheckCircle } from "lucide-react";
 import LazySection from "@/components/LazySection";
 
@@ -75,7 +74,7 @@ const ScienceSection = () => {
         </div>
 
         <p className="text-base sm:text-lg text-slate-700 text-center">
-          This information was previously locked away in expensive consultations with high-end metabolic specialists who understand <span className="font-bold text-blue-600">surgical stress physiology</span>. Now it's yours for <span className="font-bold text-blue-600">less than the cost of a single session</span> with a nutritionist who doesn't understand how your profession rewires your metabolism.
+          This isn't information you'll find in medical journals or mainstream health advice. Elite surgeons have been quietly sharing these protocols through private networks for years, paying top metabolic specialists $500+ per session to customize these systems. Most surgeons will never discover this exists—which is exactly why it works.
         </p>
       </div>
     </LazySection>
