@@ -14,53 +14,63 @@ const ScienceSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
-            <div className="flex items-center space-x-3 mb-3 sm:mb-4">
+            <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 mb-3 sm:mb-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-100 rounded-full flex items-center justify-center">
                 <Target className="h-4 w-4 sm:h-5 sm:w-5 text-red-600" />
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The Metabolic Breakdown Assessment</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">Discover what's stealing your energy and vitality</p>
+            <p className="text-sm sm:text-base text-slate-600 text-center">
+              <span className="font-bold text-red-600">Discover</span> what's <span className="font-bold">stealing your energy</span> and vitality
+            </p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
-            <div className="flex items-center space-x-3 mb-3 sm:mb-4">
+            <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 mb-3 sm:mb-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-100 rounded-full flex items-center justify-center">
                 <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-600" />
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The Energy Saboteur Elimination Guide</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">Remove hidden killers destroying your performance</p>
+            <p className="text-sm sm:text-base text-slate-600 text-center">
+              <span className="font-bold text-yellow-600">Remove</span> hidden killers <span className="font-bold">destroying your performance</span>
+            </p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
-            <div className="flex items-center space-x-3 mb-3 sm:mb-4">
+            <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 mb-3 sm:mb-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center">
                 <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The Circadian Command Protocol</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">Reset your biological clock for surgical dominance</p>
+            <p className="text-sm sm:text-base text-slate-600 text-center">
+              <span className="font-bold text-blue-600">Reset</span> your biological clock for <span className="font-bold">surgical dominance</span>
+            </p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
-            <div className="flex items-center space-x-3 mb-3 sm:mb-4">
+            <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 mb-3 sm:mb-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 rounded-full flex items-center justify-center">
                 <Heart className="h-4 w-4 sm:h-5 sm:w-5 text-green-600" />
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The Performance Fuel System</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">Precise nutrition timing for endless energy</p>
+            <p className="text-sm sm:text-base text-slate-600 text-center">
+              <span className="font-bold text-green-600">Precise nutrition timing</span> for <span className="font-bold">endless energy</span>
+            </p>
           </div>
 
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg md:col-span-2 md:max-w-md md:mx-auto">
-            <div className="flex items-center space-x-3 mb-3 sm:mb-4">
+            <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 mb-3 sm:mb-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-purple-100 rounded-full flex items-center justify-center">
                 <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-purple-600" />
               </div>
               <h3 className="font-semibold text-base sm:text-lg">The Bulletproof Implementation Framework</h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-600">Surgeon-specific protocols that actually stick</p>
+            <p className="text-sm sm:text-base text-slate-600 text-center">
+              <span className="font-bold text-purple-600">Surgeon-specific protocols</span> that <span className="font-bold">actually stick</span>
+            </p>
           </div>
         </div>
 
