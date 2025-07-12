@@ -1,3 +1,4 @@
+
 import { Target, Shield, Zap, Heart, CheckCircle } from "lucide-react";
 import LazySection from "@/components/LazySection";
 
@@ -74,7 +75,7 @@ const ScienceSection = () => {
         </div>
 
         <p className="text-base sm:text-lg text-slate-700 text-center">
-          This isn't information you'll find in medical journals or mainstream health advice. Elite surgeons have been quietly sharing these protocols through private networks for years, paying top metabolic specialists $500+ per session to customize these systems. Most surgeons will never discover this exists—which is exactly why it works.
+          This isn't information you'll find in <span className="font-semibold text-slate-800">medical journals</span> or <span className="font-semibold text-slate-800">mainstream health advice</span>. <span className="font-bold text-blue-600">Elite surgeons</span> have been quietly sharing these protocols through <span className="font-semibold text-purple-600">private networks</span> for years, paying top metabolic specialists <span className="font-bold text-red-600">$500+ per session</span> to customize these systems. <span className="font-bold text-slate-900">Most surgeons will never discover this exists</span>—which is exactly why <span className="font-bold text-green-600">it works</span>.
         </p>
       </div>
     </LazySection>
