@@ -1,3 +1,4 @@
+
 import CountdownTimer from "@/components/ui/CountdownTimer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill } from "lucide-react";
@@ -16,9 +17,9 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
               Surgeon Metabolism Bible
             </h4>
             <p className="text-slate-700">
-              Complete 30-Day protocol that harnesses your unique surgical stress patterns for physical transformation
+              Complete metabolic blueprint that converts your surgical stress into the competitive advantage that separates elite performers from burnt-out colleagues
             </p>
-            <p className="text-sm text-blue-600 font-bold mt-1">Value: $197</p>
+            <p className="text-sm text-blue-600 font-bold mt-1">Value: $297</p>
           </div>
         </div>
 
@@ -29,9 +30,9 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
               Bonus #1: The Surgeon's Grocery Blueprint
             </h4>
             <p className="text-slate-700">
-              Done-for-you shopping list organized for maximum efficiency
+              Complete done-for-you grocery blueprint that eliminates decision fatigue and maximizes metabolic efficiency for busy surgeons
             </p>
-            <p className="text-sm text-green-600 font-bold mt-1">Value: $97</p>
+            <p className="text-sm text-green-600 font-bold mt-1">Value: $127</p>
           </div>
         </div>
 
@@ -42,9 +43,9 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
               Bonus #2: The Surgical Stress Supplement Stack
             </h4>
             <p className="text-slate-700">
-              Exact supplementation protocol elite surgeons use to amplify results
+              The precise supplement stack elite surgeons use to accelerate fat burning, enhance recovery, and maintain peak performance under extreme stress
             </p>
-            <p className="text-sm text-purple-600 font-bold mt-1">Value: $147</p>
+            <p className="text-sm text-purple-600 font-bold mt-1">Value: $197</p>
           </div>
         </div>
       </div>
@@ -55,7 +56,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
         <div className="mb-4">
           <div className="space-y-2 mb-4">
             <p className="text-lg text-slate-700">
-              Total Package Value: <span className="font-semibold text-slate-900">$441</span>
+              Total Package Value: <span className="font-semibold text-slate-900">$621</span>
             </p>
             <p className="text-lg text-slate-700">
               Regular Price: <span className="font-semibold text-slate-900">$97</span>
