@@ -1,4 +1,3 @@
-
 import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
@@ -37,9 +36,9 @@ const SolutionSection = () => {
 
         {/* Bridge Section */}
         <div className="mb-8 sm:mb-12">
-          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
             How Top Surgeons Build <HighlightedText>Bulletproof Resilience</HighlightedText> (and Why They're <HighlightedText>Winning</HighlightedText>)
-          </h3>
+          </h2>
           
           <div className="prose prose-lg max-w-none text-slate-700">
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
