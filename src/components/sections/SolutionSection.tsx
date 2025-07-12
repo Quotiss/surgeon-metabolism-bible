@@ -73,7 +73,7 @@ const SolutionSection = () => {
           <div className="text-center mb-6 sm:mb-8">
             <div className="flex justify-center items-center mb-3 sm:mb-4">
               <BookOpen className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 mr-3" />
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900">
                 What You'll Discover
               </h2>
             </div>
