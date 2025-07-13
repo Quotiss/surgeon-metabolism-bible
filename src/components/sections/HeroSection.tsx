@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock, Shield, Target } from "lucide-react";
+import { ArrowRight, Clock, Shield, Target, CheckCircle } from "lucide-react";
 import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
@@ -39,6 +39,11 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
             Get Instant Access Now
             <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
           </Button>
+          
+          <div className="flex items-center justify-center space-x-2 text-sm sm:text-base text-slate-600">
+            <CheckCircle className="h-4 sm:h-5 w-4 sm:w-5 text-green-600 flex-shrink-0" />
+            <span>$27 Full Access • Limited to First 500 Surgeons • 30-day 100% money back guarantee</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-8 max-w-4xl mx-auto text-xs sm:text-sm md:text-base">
