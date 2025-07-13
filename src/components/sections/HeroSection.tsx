@@ -27,7 +27,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl text-slate-800 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-          While <span className="text-blue-600 font-bold">94% of surgeons</span> are burning out from surgical stress, a small group of <span className="text-blue-600 font-bold">elite performers</span> discovered how to <span className="text-blue-600 font-bold">weaponize</span> that same stress into metabolic fuel—restoring the <span className="text-blue-600 font-bold">commanding presence</span> and <span className="text-blue-600 font-bold">physical dominance</span> that matches their surgical mastery
+          Without having to uproot your entire routine, give up your favorite foods, or avoid social events because of your "weird diet"
         </p>
 
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 md:mb-12">
