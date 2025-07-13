@@ -23,7 +23,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       <div className="container mx-auto max-w-6xl text-center">
         
         <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
-          The <span className="text-blue-600 font-bold">Underground</span> Metabolic Protocol That's Giving Elite Surgeons <span className="text-blue-600 font-bold">Unfair Advantages</span> in the OR (And How You Can <span className="text-blue-600 font-bold">Copy Their Exact System</span>)
+          The <span className="text-blue-600 font-bold">Hidden</span> Metabolic Protocol That's Giving Elite Surgeons <span className="text-blue-600 font-bold">Unfair Advantages</span> in the OR (And How You Can <span className="text-blue-600 font-bold">Copy Their Exact System</span>)
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl text-slate-800 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
