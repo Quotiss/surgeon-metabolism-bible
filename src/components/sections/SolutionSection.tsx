@@ -1,4 +1,4 @@
-import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield, Target, Lightbulb } from "lucide-react";
+import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
 
@@ -7,16 +7,9 @@ const SolutionSection = () => {
     <LazySection className="py-8 sm:py-12 md:py-16">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
-          <div className="bg-gradient-to-r from-green-50/80 to-blue-50/60 rounded-xl p-6 sm:p-8 border border-green-100/50">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                <Lightbulb className="h-6 w-6 text-green-600" />
-              </div>
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900">
-                But Here's What You've Missed...
-              </h2>
-            </div>
-          </div>
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
+            But Here's What You've Missed...
+          </h2>
         </div>
 
         <div className="prose prose-lg max-w-none text-slate-700 mb-8 sm:mb-12">
@@ -45,16 +38,9 @@ const SolutionSection = () => {
 
         {/* Bridge Section */}
         <div className="mb-8 sm:mb-12">
-          <div className="bg-gradient-to-r from-blue-50/60 to-slate-50/40 rounded-xl p-6 sm:p-8 border border-blue-100/50">
-            <div className="flex items-center justify-center mb-4 sm:mb-6">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                <Target className="h-5 w-5 text-blue-600" />
-              </div>
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 text-center">
-                The Exact Mechanisms These Surgeons Are Using to Dominate...
-              </h2>
-            </div>
-          </div>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
+            The Exact Mechanisms These Surgeons Are Using to Dominate...
+          </h2>
           
           <div className="prose prose-lg max-w-none text-slate-700">
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
@@ -75,16 +61,9 @@ const SolutionSection = () => {
 
         {/* Product Introduction Section */}
         <div className="mb-8 sm:mb-12">
-          <div className="bg-gradient-to-r from-blue-50/80 to-indigo-50/60 rounded-xl p-6 sm:p-8 border border-blue-200/50">
-            <div className="flex items-center justify-center mb-4 sm:mb-6">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                <BookOpen className="h-6 w-6 text-blue-600" />
-              </div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 text-center">
-                Introducing the <HighlightedText>Surgeon Metabolism Bible</HighlightedText>
-              </h2>
-            </div>
-          </div>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
+            Introducing the <HighlightedText>Surgeon Metabolism Bible</HighlightedText>
+          </h2>
           
           <div className="prose prose-lg max-w-none text-slate-700">
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">

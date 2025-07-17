@@ -1,22 +1,14 @@
 
 import LazySection from "@/components/LazySection";
-import { AlertTriangle } from "lucide-react";
 
 const ProblemSection = () => {
   return (
     <LazySection className="py-8 sm:py-12 md:py-16 bg-slate-100">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
-          <div className="bg-gradient-to-r from-red-50/80 to-slate-50/60 rounded-xl p-6 sm:p-8 border border-red-100/50">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                <AlertTriangle className="h-6 w-6 text-red-600" />
-              </div>
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900">
-                Here's What's Really Happening to <span className="text-blue-600 font-bold">Elite Surgeons</span> Like You…
-              </h2>
-            </div>
-          </div>
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
+            Here's What's Really Happening to <span className="text-blue-600 font-bold">Elite Surgeons</span> Like You…
+          </h2>
         </div>
 
         <div className="prose prose-lg max-w-none text-slate-700">
