@@ -42,7 +42,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
           
           <div className="flex items-center justify-center space-x-2 text-sm sm:text-base text-slate-600">
             <CheckCircle className="h-4 sm:h-5 w-4 sm:w-5 text-green-600 flex-shrink-0" />
-            <span className="font-bold">$27 Full Access • Limited to First 500 Surgeons • 30-day 100% money back guarantee</span>
+            <span className="font-bold">$27 Full Access • ⚠️ Limited to First 500 Surgeons • <span className="text-green-600">30-day 100% money back guarantee</span></span>
           </div>
         </div>
 
