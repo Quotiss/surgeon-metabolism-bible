@@ -93,7 +93,7 @@ const SolutionSection = () => {
               </h2>
             </div>
             <p className="text-base sm:text-lg text-slate-600 mb-4">
-              exact blueprint found in the 5-module system
+              The exact system turning <span className="font-bold">exhausted, burnt-out surgeons</span> into <span className="font-bold">lean, sharp, and powerful operators</span>
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto rounded-full"></div>
           </div>
