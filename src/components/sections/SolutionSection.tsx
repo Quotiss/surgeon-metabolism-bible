@@ -1,3 +1,4 @@
+
 import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
@@ -8,7 +9,7 @@ const SolutionSection = () => {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
-            But Here's What the Top 6% Know...
+            But Here's What You've Missed...
           </h2>
         </div>
 
