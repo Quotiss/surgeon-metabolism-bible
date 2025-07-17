@@ -1,9 +1,11 @@
-
 import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield, Stethoscope } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
+import OptimizedButton from "@/components/ui/OptimizedButton";
+import { CTA_LOCATIONS } from "@/lib/constants";
+import type { SectionProps } from "@/types/common";
 
-const SolutionSection = () => {
+const SolutionSection = ({ onCTAClick }: SectionProps) => {
   return (
     <LazySection className="py-8 sm:py-12 md:py-16">
       <div className="container mx-auto px-4 max-w-4xl">
@@ -153,6 +155,24 @@ const SolutionSection = () => {
                 Why <HighlightedText>elite surgeons never feel "burnt out"</HighlightedText>
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* New CTA Section */}
+        <div className="text-center mt-8 sm:mt-12">
+          <OptimizedButton
+            onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)}
+            variant="primary"
+            size="lg"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-bold mb-3"
+          >
+            Get Instant Access Now →
+          </OptimizedButton>
+          <div className="flex items-center justify-center gap-2">
+            <Check className="h-4 w-4 text-blue-600" />
+            <p className="text-sm text-slate-600">
+              Join the Elite and Reclaim your Vitality
+            </p>
           </div>
         </div>
       </div>
