@@ -23,11 +23,11 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       <div className="container mx-auto max-w-6xl text-center">
         
         <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
-          The <span className="text-blue-600 font-bold">Hidden</span> Metabolic Protocol That's Giving Elite Surgeons <span className="text-blue-600 font-bold">Unfair Advantages</span> in the OR (And How You Can <span className="text-blue-600 font-bold">Copy Their Exact System</span>)
+          The <span className="text-blue-600 font-bold">Hidden</span> Metabolic Protocol <span className="text-blue-600 font-bold">Elite Surgeons</span> Are Using to Gain <span className="text-blue-600 font-bold">Unfair Advantages</span> in the OR (and How To <span className="text-blue-600 font-bold">Steal Their Exact System</span>)
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl text-slate-800 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-          Without having to uproot your entire routine, give up your favorite foods, or avoid social events because of your "weird diet"
+          Without overhauling your routine that barely keeps you functioning, eliminating your favorite foods, or avoiding social events because of your "weird diet"
         </p>
 
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 md:mb-12">
