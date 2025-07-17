@@ -36,7 +36,6 @@ const SolutionSection = () => {
           </div>
         </div>
 
-        {/* Bridge Section */}
         <div className="mb-8 sm:mb-12">
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
             The Exact Mechanisms These Surgeons Are Using to Dominate...
@@ -53,13 +52,12 @@ const SolutionSection = () => {
             
             <div className="bg-gradient-to-r from-blue-50/50 to-slate-50/30 border-l-4 border-blue-500/30 rounded-r-lg p-4 sm:p-6 my-6 sm:my-8">
               <p className="text-base sm:text-lg leading-relaxed mb-0 font-medium text-slate-800">
-                Luckily, there's a simple blueprint to making this your reality, and sustaining it — without making massive overhauls to your chaotic schedule and giving up the few pleasures you have left that get you through each day.
+                Luckily, there's a <HighlightedText>simple blueprint</HighlightedText> to making this your reality, and sustaining it — <HighlightedText>without</HighlightedText> making massive overhauls to your chaotic schedule and giving up the few pleasures you have left that get you through each day.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Product Introduction Section */}
         <div className="mb-8 sm:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
             Introducing the <HighlightedText>Surgeon Metabolism Bible</HighlightedText>
@@ -77,7 +75,6 @@ const SolutionSection = () => {
         </div>
 
         <div className="bg-gradient-to-br from-slate-50 to-white p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-100">
-          {/* Header with Icon */}
           <div className="text-center mb-6 sm:mb-8">
             <div className="flex justify-center items-center mb-3 sm:mb-4">
               <BookOpen className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 mr-3" />
