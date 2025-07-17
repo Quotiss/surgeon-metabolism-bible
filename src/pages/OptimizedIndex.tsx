@@ -86,7 +86,7 @@ const OptimizedIndex = () => {
 
       <OptimizedLazySection delay={200}>
         <Suspense fallback={<OptimizedSectionFallback />}>
-          <SolutionSection />
+          <SolutionSection onCTAClick={handleCTAClick} />
         </Suspense>
       </OptimizedLazySection>
 
