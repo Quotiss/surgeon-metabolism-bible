@@ -50,6 +50,10 @@ const SolutionSection = () => {
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
               Here's what happens when you flip that switch: By <HighlightedText>optimizing your circadian timing</HighlightedText> and aligning your fuel intake for <HighlightedText>metabolic supremacy</HighlightedText>, your body starts recovering faster than surgeons half your age. You're constantly <HighlightedText>invigorated</HighlightedText>. Exuding the most <HighlightedText>nonchalant competence and authority</HighlightedText>. Burning fat effortlessly while you sleep. Waking up <HighlightedText>refreshed</HighlightedText> after even the most brutally demanding days instead of needing three cups of coffee just to utter coherent sentences.
             </p>
+            
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              Luckily, there's a simple blueprint to making this your reality, and sustaining it — without making massive overhauls to your chaotic schedule and giving up the few pleasures you have left that get you through each day.
+            </p>
           </div>
         </div>
 
