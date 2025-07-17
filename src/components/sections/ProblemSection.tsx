@@ -33,7 +33,7 @@ const ProblemSection = () => {
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Now you're the surgeon who <span className="text-blue-600 font-bold">trudges through your day</span> instead of commanding it. Who gets irritated by simple questions from residents who used to <span className="text-blue-600 font-bold">respect your endless patience</span>. Whose wife's <span className="text-blue-600 font-bold">disappointed sighs</span> have become the soundtrack to your evenings.
+            Now, you're the surgeon who <span className="text-blue-600 font-bold">dreads walking out the front door</span> each day for another <span className="text-blue-600 font-bold">monotonous, soul-sucking day</span> of clinic. The constant feeling that you're <span className="text-blue-600 font-bold">meant for more</span> while you feel like a <span className="text-blue-600 font-bold">slave to your own body</span> eats away at your raw passion each minute. You're trying to <span className="text-blue-600 font-bold">wear the mask of enthusiasm and authority</span>, but the <span className="text-blue-600 font-bold">cracks are showing</span> to those you care about most.
           </p>
 
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
