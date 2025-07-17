@@ -59,9 +59,11 @@ const SolutionSection = () => {
         </div>
 
         <div className="mb-8 sm:mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
-            Introducing the <HighlightedText>Surgeon Metabolism Bible</HighlightedText>
-          </h2>
+          <div className="bg-gradient-to-r from-blue-50/30 via-white to-blue-50/30 p-6 sm:p-8 rounded-2xl border border-blue-100/50 shadow-sm mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
+              Introducing the <HighlightedText>Surgeon Metabolism Bible</HighlightedText>
+            </h2>
+          </div>
           
           <div className="prose prose-lg max-w-none text-slate-700">
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
