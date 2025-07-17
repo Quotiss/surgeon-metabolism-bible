@@ -39,7 +39,7 @@ const SolutionSection = () => {
         {/* Bridge Section */}
         <div className="mb-8 sm:mb-12">
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
-            How Top Surgeons Build <HighlightedText>Bulletproof Resilience</HighlightedText> (and Why They're <HighlightedText>Winning</HighlightedText>)
+            The Exact Mechanisms These Surgeons Are Using to Dominate...
           </h2>
           
           <div className="prose prose-lg max-w-none text-slate-700">
