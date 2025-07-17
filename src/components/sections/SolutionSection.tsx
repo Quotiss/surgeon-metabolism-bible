@@ -1,4 +1,3 @@
-
 import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
@@ -31,7 +30,7 @@ const SolutionSection = () => {
           </p>
           
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            This isn't fantasy. This is what happens when you stop fighting your surgical stress and <HighlightedText>start weaponizing it</HighlightedText>.
+            This isn't fantasy. This is exactly how the <HighlightedText>select few have rewired and weaponized their biology</HighlightedText> to leave their colleagues in the dust - leaving everyone <HighlightedText>stunned by their mere existence</HighlightedText>.
           </p>
         </div>
 
