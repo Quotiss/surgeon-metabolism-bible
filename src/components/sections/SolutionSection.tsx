@@ -1,3 +1,4 @@
+
 import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
@@ -44,7 +45,7 @@ const SolutionSection = () => {
           
           <div className="prose prose-lg max-w-none text-slate-700">
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              Thankfully, there's a <HighlightedText>hidden secret</HighlightedText> that most surgeons haven't unlocked yet — your metabolism isn't broken, it's just been running on survival mode, red-lining just to keep you alive, instead of an <HighlightedText>effortless dominance mode</HighlightedText>.
+              Here's the <HighlightedText>hidden biological truth</HighlightedText> most surgeons overlook — your metabolism isn't broken, it's just been running on survival mode, constantly red-lining to keep you alive. Optimizing this exact mechanism is the key to unlocking the <HighlightedText>formidable physique</HighlightedText> you've spent years trying to reveal, and restoring the <HighlightedText>vitality and dominance</HighlightedText> of an elite performer like yourself.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
