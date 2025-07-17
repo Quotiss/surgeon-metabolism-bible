@@ -43,6 +43,10 @@ const ProblemSection = () => {
           <p className="text-base sm:text-lg leading-relaxed">
             The gap between <span className="text-blue-600 font-bold">who you know you are</span> and <span className="text-blue-600 font-bold">how you feel</span> is getting <span className="text-blue-600 font-bold">impossible to ignore</span>.
           </p>
+
+          <p className="text-base sm:text-lg leading-relaxed mt-4 sm:mt-6">
+            There's a silver-lining though. You're <span className="text-blue-600 font-bold">inches away from flipping the script</span> and <span className="text-blue-600 font-bold">reclaiming control</span>...
+          </p>
         </div>
       </div>
     </LazySection>
