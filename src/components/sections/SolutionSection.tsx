@@ -1,4 +1,4 @@
-import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield } from "lucide-react";
+import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield, Stethoscope } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
 
@@ -60,9 +60,12 @@ const SolutionSection = () => {
 
         <div className="mb-8 sm:mb-12">
           <div className="bg-gradient-to-r from-blue-50/30 via-white to-blue-50/30 p-6 sm:p-8 rounded-2xl border border-blue-100/50 shadow-sm mb-6 sm:mb-8">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
-              Introducing the <HighlightedText variant="gradient">Surgeon Metabolism Bible</HighlightedText>
-            </h2>
+            <div className="flex justify-center items-center mb-4 sm:mb-6">
+              <Stethoscope className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 mr-4" />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 text-center">
+                Introducing the <HighlightedText variant="gradient">Surgeon Metabolism Bible</HighlightedText>
+              </h2>
+            </div>
           </div>
           
           <div className="prose prose-lg max-w-none text-slate-700">
