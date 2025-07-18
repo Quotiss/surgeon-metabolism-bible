@@ -152,7 +152,7 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
-                Why <HighlightedText>elite surgeons never feel "burnt out"</HighlightedText>
+                <HighlightedText>Optimizing your hormonal pathways to leave your wife in awe of your superhuman libido and vitality</HighlightedText>
               </p>
             </div>
           </div>
