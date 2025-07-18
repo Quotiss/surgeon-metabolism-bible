@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import LazySection from "@/components/LazySection";
 import CaseStudy from "@/components/sections/CaseStudy";
-import { ShoppingCart, Pill, Check } from "lucide-react";
+import { ShoppingCart, Pill, Gift } from "lucide-react";
 
 interface FeaturesSectionProps {
   onCTAClick: (location: string) => void;
@@ -13,9 +13,12 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
     <LazySection className="py-8 sm:py-12 md:py-16 bg-slate-50">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
-            Plus you get these <span className="text-blue-600 font-bold">exclusive bonuses</span>
-          </h2>
+          <div className="flex justify-center items-center mb-3 sm:mb-4">
+            <Gift className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 mr-3" />
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900">
+              You Also Unlock Instant Access to <span className="text-blue-600 font-bold">2 Additional Bonuses</span>
+            </h2>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
@@ -26,37 +29,22 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
                   <ShoppingCart className="h-5 w-5 text-white" />
                 </div>
                 <h3 className="font-bold text-lg sm:text-xl text-slate-900">
-                  Bonus #1: The Surgeon's Grocery Blueprint <span className="text-blue-600 font-bold">($97 Value)</span>
+                  <span className="text-blue-600">Quick Start Bonus #1:</span> The Surgeon's Grocery Blueprint <span className="text-blue-600 font-bold">($97 Value)</span>
                 </h3>
               </div>
               
               <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="h-3 w-3 text-white font-bold" />
-                  </div>
-                  <p className="text-sm sm:text-base text-slate-600">
-                    Complete done-for-you shopping list organized by store sections for maximum efficiency
-                  </p>
-                </div>
+                <p className="text-sm sm:text-base text-slate-600">
+                  <span className="font-bold text-blue-600">MUST HAVE</span> done-for-you shopping list designed for fast-moving surgeons who don't have any time to waste
+                </p>
                 
-                <div className="flex items-start space-x-3">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="h-3 w-3 text-white font-bold" />
-                  </div>
-                  <p className="text-sm sm:text-base text-slate-600">
-                    Never waste time wandering aisles again - get in, get the right stress-fighting foods, get out
-                  </p>
-                </div>
+                <p className="text-sm sm:text-base text-slate-600">
+                  <span className="font-bold text-blue-600">100% clarity, zero decision-making blueprint</span> for choosing the highest-quality foods and nutrients
+                </p>
                 
-                <div className="flex items-start space-x-3">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="h-3 w-3 text-white font-bold" />
-                  </div>
-                  <p className="text-sm sm:text-base text-slate-600">
-                    Includes specific brands that work synergistically with your metabolic reset
-                  </p>
-                </div>
+                <p className="text-sm sm:text-base text-slate-600">
+                  Never waste time wandering the aisles frustrated again - <span className="font-bold text-blue-600">get in, get out. Move with purpose.</span>
+                </p>
               </div>
             </CardContent>
           </Card>
@@ -68,37 +56,22 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
                   <Pill className="h-5 w-5 text-white" />
                 </div>
                 <h3 className="font-bold text-lg sm:text-xl text-slate-900">
-                  Bonus #2: The Surgical Stress Supplement Stack <span className="text-blue-600 font-bold">($147 Value)</span>
+                  <span className="text-blue-600">Quick Start Bonus #2:</span> The Surgical Stress Supplement Stack <span className="text-blue-600 font-bold">($147 Value)</span>
                 </h3>
               </div>
               
               <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="h-3 w-3 text-white font-bold" />
-                  </div>
-                  <p className="text-sm sm:text-base text-slate-600">
-                    The exact supplementation protocol elite surgeons use to amplify their metabolic results
-                  </p>
-                </div>
+                <p className="text-sm sm:text-base text-slate-600">
+                  Revealing the <span className="font-bold text-blue-600">exact supplementation protocol elite surgeons use</span> to amplify their results and maximize performance
+                </p>
                 
-                <div className="flex items-start space-x-3">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="h-3 w-3 text-white font-bold" />
-                  </div>
-                  <p className="text-sm sm:text-base text-slate-600">
-                    Each supplement is chosen specifically to work with your stress physiology - not against it
-                  </p>
-                </div>
+                <p className="text-sm sm:text-base text-slate-600">
+                  Specifically designed to work <span className="font-bold text-blue-600">with your stress physiology and chaotic lifestyle</span>, not against it.
+                </p>
                 
-                <div className="flex items-start space-x-3">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="h-3 w-3 text-white font-bold" />
-                  </div>
-                  <p className="text-sm sm:text-base text-slate-600">
-                    Includes dosing, timing, and which combinations accelerate fat burning while supporting energy and recovery
-                  </p>
-                </div>
+                <p className="text-sm sm:text-base text-slate-600">
+                  Leveraging <span className="font-bold text-blue-600">exact timing and frequency</span> to accelerate calorie-burning and nutrient uptake, while elevating mental clarity and recovery.
+                </p>
               </div>
             </CardContent>
           </Card>
