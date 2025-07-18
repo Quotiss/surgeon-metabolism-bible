@@ -108,7 +108,7 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
-                <HighlightedText>Bulletproof energy</HighlightedText> that lasts through 12-hour surgery days
+                Building <HighlightedText>bulletproof energy that laughs in the face of your usual 2PM crash</HighlightedText>
               </p>
             </div>
             
