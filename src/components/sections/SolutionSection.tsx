@@ -1,3 +1,4 @@
+
 import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield, Stethoscope, Battery, Heart } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
@@ -172,11 +173,20 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
             >
               Get Instant Access Now →
             </OptimizedButton>
-            <div className="flex items-center justify-center gap-2">
-              <Check className="h-5 w-5 text-blue-600" />
-              <p className="text-sm sm:text-base text-slate-600 font-medium">
-                Join the Elite and Reclaim your Vitality
-              </p>
+            <div className="space-y-2">
+              <div className="flex items-center justify-center gap-2">
+                <Check className="h-5 w-5 text-blue-600" />
+                <p className="text-sm sm:text-base text-slate-600 font-medium">
+                  Join the Elite and Reclaim your Vitality
+                </p>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <Shield className="h-4 w-4 text-green-600" />
+                <p className="text-sm text-slate-600">
+                  <span className="font-bold">$27 Full Access • ⚠️ Limited Availability • </span>
+                  <span className="text-green-600 font-bold">30-day 100% money back guarantee</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
