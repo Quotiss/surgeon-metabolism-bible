@@ -130,7 +130,7 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
-                The <HighlightedText>circadian hack</HighlightedText> that eliminates 2PM energy crashes
+                Harnessing <HighlightedText>your circadian timing to supercharge your physique</HighlightedText> (only 10 minutes per day)
               </p>
             </div>
             
