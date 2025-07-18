@@ -1,4 +1,3 @@
-
 import { Target, Shield, Zap, Heart, CheckCircle, BookOpen, Clock } from "lucide-react";
 import LazySection from "@/components/LazySection";
 
@@ -79,9 +78,11 @@ const ScienceSection = () => {
           </div>
         </div>
 
-        <p className="text-base sm:text-lg text-slate-700 text-center">
-          This isn't information you'll find within <span className="font-bold">mainstream health advice</span>. <span className="font-bold text-blue-600">Elite surgeons</span> have been quietly sharing this <span className="font-bold text-blue-600">blueprint</span> for years, paying top metabolic specialists <span className="font-bold text-blue-600">$500+ per session</span> to share their systems. <span className="font-bold">Most surgeons will never discover this exists</span> — which is why the fact <span className="font-bold text-blue-600">you're reading this means you're ready to join the top-performers who commit to not settling for mediocrity</span>.
-        </p>
+        <div className="bg-gradient-to-r from-blue-50/50 to-slate-50/30 border-l-4 border-blue-500/30 rounded-r-lg p-4 sm:p-6 my-6 sm:my-8">
+          <p className="text-base sm:text-lg text-slate-800 font-medium leading-relaxed mb-0">
+            This isn't information you'll find within <span className="font-bold">mainstream health advice</span>. <span className="font-bold text-blue-600">Elite surgeons</span> have been quietly sharing this <span className="font-bold text-blue-600">blueprint</span> for years, paying top metabolic specialists <span className="font-bold text-blue-600">$500+ per session</span> to share their systems. <span className="font-bold">Most surgeons will never discover this exists</span> — which is why the fact <span className="font-bold text-blue-600">you're reading this means you're ready to join the top-performers who commit to not settling for mediocrity</span>.
+          </p>
+        </div>
       </div>
     </LazySection>
   );
