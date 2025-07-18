@@ -1,4 +1,4 @@
-import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield, Stethoscope } from "lucide-react";
+import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield, Stethoscope, Battery, Heart } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
 import OptimizedButton from "@/components/ui/OptimizedButton";
@@ -104,11 +104,11 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
-                  <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
+                  <Battery className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
-              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
-                Building <HighlightedText>bulletproof energy that laughs in the face of your usual 2PM crash</HighlightedText>
+              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-semibold">
+                Building <span className="font-bold text-blue-600">bulletproof energy</span> that laughs in the face of your usual 2PM crash
               </p>
             </div>
             
@@ -118,41 +118,41 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
                   <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
-              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
-                Channeling <HighlightedText>surgical stress into raw calorie-burning fuel</HighlightedText>
+              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-semibold">
+                Channeling surgical stress into <span className="font-bold text-blue-600">raw calorie-burning fuel</span>
               </p>
             </div>
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
-                  <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
+                  <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
-              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
-                Harnessing <HighlightedText>your circadian timing to supercharge your physique</HighlightedText> (only 10 minutes per day)
+              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-semibold">
+                Harnessing your circadian timing to <span className="font-bold text-blue-600">supercharge your physique</span> (only 10 minutes per day)
               </p>
             </div>
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
-                  <Apple className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
+                  <Stethoscope className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
-              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
-                Implementing <HighlightedText>precision nutrition timing to outperform your colleagues in the OR</HighlightedText>
+              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-semibold">
+                Implementing precision nutrition timing to <span className="font-bold text-blue-600">outperform your colleagues</span> in the OR
               </p>
             </div>
             
             <div className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex-shrink-0 mt-0.5">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
-                  <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
+                  <Heart className="h-4 w-4 sm:h-5 sm:w-5 text-white font-bold stroke-[3]" />
                 </div>
               </div>
-              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
-                <HighlightedText>Optimizing your hormonal pathways to leave your wife in awe of your superhuman libido and vitality</HighlightedText>
+              <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-semibold">
+                Optimizing your hormonal pathways to leave your wife in awe of your <span className="font-bold text-blue-600">superhuman libido and vitality</span>
               </p>
             </div>
           </div>
