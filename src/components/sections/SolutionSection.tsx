@@ -14,7 +14,7 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
             But Here's What You've Missed...
           </h2>
         </div>
-
+        
         <div className="prose prose-lg max-w-none text-slate-700 mb-8 sm:mb-12">
           <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
             Your surgical stress isn't your enemy—it's <HighlightedText>your unique edge</HighlightedText>.
@@ -119,7 +119,7 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
-                How to convert <HighlightedText>surgical stress into raw fat-burning fuel</HighlightedText>
+                Channeling <HighlightedText>surgical stress into raw calorie-burning fuel</HighlightedText>
               </p>
             </div>
             
