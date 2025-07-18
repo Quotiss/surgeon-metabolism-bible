@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import type { CarouselApi } from "@/components/ui/carousel";
-import { ChevronDown, ChevronUp, CheckCircle } from "lucide-react";
+import { ChevronDown, ChevronUp, CheckCircle, MessageSquare, Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -98,11 +98,14 @@ const CaseStudy = () => {
   return (
     <div className="mt-12 sm:mt-16 md:mt-20">
       <div className="text-center mb-6 sm:mb-8">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
-          What Surgeons Are Saying
-        </h2>
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <MessageSquare className="h-6 w-6 text-blue-600" />
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
+            What are other surgeons saying about this system?
+          </h2>
+        </div>
         <p className="text-slate-600 mt-2">
-          Real results from busy orthopedic surgeons who <span className="font-bold text-blue-600">regained their edge</span>
+          Actual results from top-performing surgeons who <span className="font-bold text-blue-600">committed to excellence</span>
         </p>
       </div>
       
@@ -136,9 +139,19 @@ const CaseStudy = () => {
                       </div>
                       <div className="flex-1">
                         <div className="mb-4">
-                          <h3 className="font-semibold text-blue-600 text-lg">
-                            {testimonial.name}
-                          </h3>
+                          <div className="flex items-center gap-2 mb-1">
+                            <h3 className="font-semibold text-blue-600 text-lg">
+                              {testimonial.name}
+                            </h3>
+                            <div className="flex gap-0.5">
+                              {[...Array(5)].map((_, starIndex) => (
+                                <Star
+                                  key={starIndex}
+                                  className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                                />
+                              ))}
+                            </div>
+                          </div>
                           <p className="text-slate-500 text-sm">
                             {testimonial.age}-year-old {testimonial.specialty}
                           </p>
