@@ -141,7 +141,7 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
                 </div>
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
-                Secret <HighlightedText>nutrition timing</HighlightedText> to supercharge your physique
+                Implementing <HighlightedText>precision nutrition timing to outperform your colleagues in the OR</HighlightedText>
               </p>
             </div>
             
