@@ -101,7 +101,7 @@ const CaseStudy = () => {
         <div className="flex items-center justify-center gap-2 mb-2">
           <MessageSquare className="h-6 w-6 text-blue-600" />
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
-            What Are Other Surgeons Saying About This System?
+            What Are Other Surgeons <span className="text-blue-600">Saying</span> About This System?
           </h2>
         </div>
         <p className="text-slate-600 mt-2">
