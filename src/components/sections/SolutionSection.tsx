@@ -160,19 +160,24 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
 
         {/* New CTA Section */}
         <div className="text-center mt-8 sm:mt-12">
-          <OptimizedButton
-            onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)}
-            variant="primary"
-            size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-bold mb-3"
-          >
-            Get Instant Access Now →
-          </OptimizedButton>
-          <div className="flex items-center justify-center gap-2">
-            <Check className="h-4 w-4 text-blue-600" />
-            <p className="text-sm text-slate-600">
-              Join the Elite and Reclaim your Vitality
+          <div className="bg-gradient-to-r from-blue-50/80 to-slate-50/60 border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6">
+            <p className="text-sm sm:text-base font-bold text-amber-700 mb-4 tracking-wide uppercase">
+              ⚡ Limited to First 500 Surgeons Only
             </p>
+            <OptimizedButton
+              onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)}
+              variant="primary"
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
+            >
+              Get Instant Access Now →
+            </OptimizedButton>
+            <div className="flex items-center justify-center gap-2">
+              <Check className="h-5 w-5 text-blue-600" />
+              <p className="text-sm sm:text-base text-slate-600 font-medium">
+                Join the Elite and Reclaim your Vitality
+              </p>
+            </div>
           </div>
         </div>
       </div>
