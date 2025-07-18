@@ -1,5 +1,5 @@
 
-import { Target, Shield, Zap, Heart, CheckCircle } from "lucide-react";
+import { Target, Shield, Zap, Heart, CheckCircle, BookOpen } from "lucide-react";
 import LazySection from "@/components/LazySection";
 
 const ScienceSection = () => {
@@ -7,9 +7,14 @@ const ScienceSection = () => {
     <LazySection className="py-8 sm:py-12 md:py-16 bg-slate-100">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
-            Inside the Complete System
-          </h2>
+          <div className="flex items-center justify-center gap-3 mb-3 sm:mb-4">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full flex items-center justify-center">
+              <BookOpen className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900">
+              Inside the Complete System
+            </h2>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
@@ -18,10 +23,10 @@ const ScienceSection = () => {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center">
                 <Target className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">The Metabolic Breakdown Assessment</h3>
+              <h3 className="font-bold text-base sm:text-lg text-blue-600">The Metabolic Breakdown Assessment</h3>
             </div>
             <p className="text-sm sm:text-base text-slate-600 text-center">
-              <span className="font-bold text-blue-600">Discover</span> the root causes and disrupted systems <span className="font-bold">stealing your energy, hiding your muscle, and keeping you foggy</span>
+              Discover the root causes and disrupted systems <span className="font-bold">stealing your energy, hiding your muscle, and keeping you foggy</span>
             </p>
           </div>
 
@@ -30,10 +35,10 @@ const ScienceSection = () => {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center">
                 <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">The Energy Saboteur Elimination Guide</h3>
+              <h3 className="font-bold text-base sm:text-lg text-blue-600">The Energy Saboteur Elimination Guide</h3>
             </div>
             <p className="text-sm sm:text-base text-slate-600 text-center">
-              <span className="font-bold text-blue-600">Eliminating</span> the hidden killers that are <span className="font-bold">sabotaging your performance and stopping your dominance</span>
+              Eliminating the hidden killers that are <span className="font-bold">sabotaging your performance and stopping your dominance</span>
             </p>
           </div>
 
@@ -42,10 +47,10 @@ const ScienceSection = () => {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center">
                 <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">The Circadian Command Protocol</h3>
+              <h3 className="font-bold text-base sm:text-lg text-blue-600">The Circadian Command Protocol</h3>
             </div>
             <p className="text-sm sm:text-base text-slate-600 text-center">
-              <span className="font-bold text-blue-600">Optimizing</span> your biological clock for <span className="font-bold">superhuman energy levels, effortless calorie-burning, and deep recovery</span>
+              Optimizing your biological clock for <span className="font-bold">superhuman energy levels, effortless calorie-burning, and deep recovery</span>
             </p>
           </div>
 
@@ -54,10 +59,10 @@ const ScienceSection = () => {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center">
                 <Heart className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">The Performance Fuel System</h3>
+              <h3 className="font-bold text-base sm:text-lg text-blue-600">The Performance Fuel System</h3>
             </div>
             <p className="text-sm sm:text-base text-slate-600 text-center">
-              <span className="font-bold text-blue-600">Revealing</span> the critical nutrition framework that <span className="font-bold">elite surgeons use to realize their maximum potential performance in the OR</span>
+              Revealing the critical nutrition framework that <span className="font-bold">elite surgeons use to realize their maximum potential performance in the OR</span>
             </p>
           </div>
 
@@ -66,10 +71,10 @@ const ScienceSection = () => {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center">
                 <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-base sm:text-lg">The Bulletproof Implementation Framework</h3>
+              <h3 className="font-bold text-base sm:text-lg text-blue-600">The Surgical Implementation Framework</h3>
             </div>
             <p className="text-sm sm:text-base text-slate-600 text-center">
-              <span className="font-bold text-blue-600">Surgeon-specific protocols</span> that <span className="font-bold">actually stick</span>
+              Integrating the entire system for results that stick, specifically engineered to work within your <span className="font-bold">ruthlessly chaotic surgical schedule for maximum efficiency and minimal decision-making</span>
             </p>
           </div>
         </div>
