@@ -8,7 +8,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
     <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl p-6 sm:p-8 md:p-10 mb-8">
       {/* Header Section */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
           Join The <span className="text-blue-600 font-bold">Elite Surgeons</span> Who <span className="bg-blue-600 text-white px-1 py-0.5 rounded">Invest In Themselves</span>
         </h2>
         <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
