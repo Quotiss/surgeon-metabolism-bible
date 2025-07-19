@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
@@ -15,7 +16,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
           Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
         </h3>
         <p className="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
-          The exact tools and protocols you need to effortlessly reveal muscle, reclaim your mental edge, dominate your peers, and take back control of your internal energy that the system stole from you. Built specifically for those who seek to thrive in surgical chaos, and are committed to excellence.
+          The <span className="font-bold">exact tools</span> and protocols you need to effortlessly reveal muscle, reclaim your mental edge, dominate your peers, and take back control of your internal energy that the system <span className="font-bold">stole from you</span>. Built specifically for those who seek to thrive in surgical chaos, and are <span className="font-bold">committed to excellence</span>.
         </p>
       </div>
 
