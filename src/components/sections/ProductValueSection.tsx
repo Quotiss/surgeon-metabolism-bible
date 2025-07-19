@@ -10,7 +10,7 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
       {/* Header Section */}
       <div className="text-center mb-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2">
-          Join The <span className="text-blue-600 font-bold">Elite Surgeons</span> Who Invest In Themselves
+          Join The <span className="text-blue-600 font-bold">Elite Surgeons</span> Who <span className="bg-blue-600 text-white px-2 py-1 rounded">Invest In Themselves</span>
         </h2>
         <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
           Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
