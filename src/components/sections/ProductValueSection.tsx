@@ -10,13 +10,13 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
       {/* Header Section */}
       <div className="text-center mb-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2">
-          Join the Elite
+          Join the Elite Surgeons who invest in themselves
         </h2>
         <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
           Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
         </h3>
         <p className="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
-          The exact tools and protocols you need to effortlessly reveal muscle, reclaim your mental edge, dominate your peers, and take back control of your energy that the system stole from you. Built specifically for those who seek to thrive in surgical chaos and are committed to excellence.
+          The exact tools and protocols you need to effortlessly reveal muscle, reclaim your mental edge, dominate your peers, and take back control of your internal energy that the system stole from you. Built specifically for those who seek to thrive in surgical chaos, and are committed to excellence.
         </p>
       </div>
 
