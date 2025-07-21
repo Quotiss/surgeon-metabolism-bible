@@ -59,18 +59,18 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-slate-50/80 to-blue-50/60 border-2 border-blue-200/50 rounded-2xl p-4 sm:p-6 md:p-8 mb-6 mx-2 sm:mx-0">
-        <p className="text-sm sm:text-base font-bold text-amber-700 mb-4 tracking-wide uppercase text-center">
+      <div className="bg-gradient-to-r from-slate-50/80 to-blue-50/60 border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6 mx-2 sm:mx-0">
+        <p className="text-sm sm:text-base font-bold text-amber-700 mb-6 tracking-wide uppercase text-center">
           ⚡ Limited to First 500 Surgeons Only
         </p>
         
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-6 max-w-md mx-auto">
           <MobileCTAButton 
             onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
             size="large"
           />
           
-          <MobileGuarantee />
+          <MobileGuarantee showFullDetails={false} />
         </div>
       </div>
     </MobileOptimizedSection>

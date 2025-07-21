@@ -44,21 +44,13 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       </p>
 
       {/* CTA Section */}
-      <div className="flex flex-col gap-4 justify-center items-center mb-6 sm:mb-8 md:mb-12">
+      <div className="flex flex-col gap-6 justify-center items-center mb-8 sm:mb-12 max-w-lg mx-auto px-4">
         <MobileCTAButton 
           onClick={() => onCTAClick('hero')}
           size="large"
         />
         
-        <div className="flex items-center justify-center space-x-2 text-sm sm:text-base text-slate-600 mb-2 px-2">
-          <CheckCircle className="h-4 sm:h-5 w-4 sm:w-5 text-green-600 flex-shrink-0" />
-          <span className="font-bold text-center">
-            $27 Full Access • ⚠️ Limited to First 500 Surgeons •{" "}
-            <span className="text-green-600">30-day 100% money back guarantee</span>
-          </span>
-        </div>
-        
-        <MobileGuarantee showFullDetails={false} />
+        <MobileGuarantee showFullDetails={true} />
       </div>
 
       {/* Trust Indicators */}

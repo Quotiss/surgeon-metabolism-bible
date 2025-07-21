@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill, Star, Check, Shield } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
-import SecurityBadge from "@/components/ui/SecurityBadge";
+import MobileCTAButton from "@/components/ui/MobileCTAButton";
+import MobileGuarantee from "@/components/ui/MobileGuarantee";
 import type { SectionProps } from "@/types/common";
 
 const ProductValueSection = ({
@@ -91,34 +92,17 @@ const ProductValueSection = ({
 
         {/* Main CTA Button */}
         <div className="bg-gradient-to-r from-blue-50/80 to-slate-50/60 border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6">
-          <p className="text-sm sm:text-base font-bold text-amber-700 mb-4 tracking-wide uppercase">
+          <p className="text-sm sm:text-base font-bold text-amber-700 mb-6 tracking-wide uppercase">
             ⚡ Limited to First 500 Surgeons Only
           </p>
-          <Button onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
-            Get Instant Access Now →
-          </Button>
-          <div className="space-y-2 mb-4">
-            <div className="flex items-center justify-center gap-2">
-              <Check className="h-5 w-5 text-blue-600" />
-              <p className="text-sm sm:text-base text-slate-600 font-medium">
-                Join the Elite and Reclaim your Vitality
-              </p>
-            </div>
-            <div className="flex items-center justify-center gap-2">
-              <Shield className="h-4 w-4 text-green-600" />
-              <p className="text-sm text-slate-600">
-                <span className="font-bold">$27 Full Access • ⚠️ Limited Availability • </span>
-                <span className="text-green-600 font-bold">30-day 100% money back guarantee</span>
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center justify-center gap-4">
-            <SecurityBadge />
-            <img 
-              src="/lovable-uploads/36484096-74f6-40bb-988c-86af5ddd059a.png" 
-              alt="30 Days Money Back Guarantee" 
-              className="w-24 h-24 object-contain"
+          
+          <div className="flex flex-col items-center gap-6 max-w-md mx-auto">
+            <MobileCTAButton 
+              onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
+              size="large"
             />
+            
+            <MobileGuarantee showFullDetails={true} />
           </div>
         </div>
       </div>

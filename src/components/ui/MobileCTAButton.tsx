@@ -22,7 +22,7 @@ const MobileCTAButton = forwardRef<HTMLButtonElement, MobileCTAButtonProps>(
     className = '',
     showArrow = true
   }, ref) => {
-    const baseClasses = "w-full sm:w-auto touch-manipulation font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl";
+    const baseClasses = "w-full touch-manipulation font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-xl";
     
     const variantClasses = {
       primary: "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white border-2 border-blue-500",
@@ -30,8 +30,8 @@ const MobileCTAButton = forwardRef<HTMLButtonElement, MobileCTAButtonProps>(
     };
 
     const sizeClasses = {
-      default: "px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg",
-      large: "px-8 py-4 text-lg sm:px-12 sm:py-6 sm:text-xl"
+      default: "px-6 py-4 text-lg min-h-[56px]",
+      large: "px-8 py-5 text-xl min-h-[64px]"
     };
 
     return (
@@ -46,8 +46,10 @@ const MobileCTAButton = forwardRef<HTMLButtonElement, MobileCTAButtonProps>(
         )}
         style={{ WebkitTapHighlightColor: 'transparent' }}
       >
-        {children}
-        {showArrow && <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />}
+        <span className="flex items-center justify-center gap-2 leading-tight">
+          {children}
+          {showArrow && <ArrowRight className="h-5 w-5 flex-shrink-0" />}
+        </span>
       </Button>
     );
   }
