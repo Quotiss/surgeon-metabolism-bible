@@ -1,4 +1,3 @@
-
 import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield, Stethoscope, Battery, Heart } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
@@ -86,7 +85,7 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
               <div className="flex items-start space-x-4">
                 <Zap className="h-8 w-8 text-blue-600 flex-shrink-0 mt-1" />
                 <p className="text-lg text-slate-700 leading-relaxed text-left">
-                  Additionally, you'll get an <span className="font-bold text-blue-600">instant taste</span> of what it feels like to embody the <span className="font-bold">confidence, sharpness, and motivation</span> of <span className="font-bold text-blue-600">elite surgeon</span> you know you're destined to be. Inside the Surgeon Metabolism Bible, you'll run through the <span className="font-bold text-blue-600">24 Hour Surgeon-Shift Protocol</span> — a step-by-step, time-efficient protocol that guarantees <span className="font-bold">increased mental clarity, vitality, and deep recovery</span> — in <span className="font-bold text-blue-600">only 24 hours</span>
+                  Additionally, you'll get an <span className="font-bold text-blue-600">instant taste</span> of what it feels like to embody the <span className="font-bold">confidence, sharpness, and motivation</span> of <span className="font-bold text-blue-600">the elite surgeon</span> you know you're destined to be. Inside the Surgeon Metabolism Bible, you'll run through the <span className="font-bold text-blue-600">24 Hour Surgeon-Shift Protocol</span> — a step-by-step, time-efficient protocol that guarantees <span className="font-bold">increased mental clarity, vitality, and deep recovery</span> — in <span className="font-bold text-blue-600">only 24 hours</span>
                 </p>
               </div>
             </div>
