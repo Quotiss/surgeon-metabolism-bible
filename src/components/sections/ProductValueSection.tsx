@@ -117,7 +117,7 @@ const ProductValueSection = ({
             <img 
               src="/lovable-uploads/36484096-74f6-40bb-988c-86af5ddd059a.png" 
               alt="30 Days Money Back Guarantee" 
-              className="w-12 h-12 object-contain"
+              className="w-24 h-24 object-contain"
             />
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import { Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SecurityBadge from "@/components/ui/SecurityBadge";
@@ -18,7 +17,6 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
           />
         </div>
 
-        {/* Header */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 leading-tight text-slate-900">
           Your purchase is backed by our{" "}
           <span className="text-blue-600 font-black">
@@ -90,7 +88,7 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
             <img 
               src="/lovable-uploads/36484096-74f6-40bb-988c-86af5ddd059a.png" 
               alt="30 Days Money Back Guarantee" 
-              className="w-12 h-12 object-contain"
+              className="w-24 h-24 object-contain"
             />
           </div>
         </div>
