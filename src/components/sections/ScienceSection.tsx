@@ -16,6 +16,19 @@ const ScienceSection = () => {
           </div>
         </div>
 
+        {/* Special Featured Protocol - Stands out */}
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6 sm:p-8 rounded-xl shadow-xl mb-8 sm:mb-12 border-2 border-blue-500">
+          <div className="flex flex-col items-center text-center space-y-4">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <Clock className="h-6 w-6 sm:h-7 sm:w-7 text-blue-600" />
+            </div>
+            <h3 className="font-bold text-lg sm:text-xl text-white">The 24-Hour Surgeon Shift Protocol</h3>
+            <p className="text-base sm:text-lg text-blue-50 leading-relaxed">
+              A complete 24-hour step-by-step protocol guaranteed to give you a taste of <span className="font-bold text-white">razor-sharp mental clarity, sustained physical energy, and powerful attention and focus</span> that'll have you <span className="font-bold text-white">lapping your peers all day</span>.
+            </p>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
           <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
             <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 mb-3 sm:mb-4">
