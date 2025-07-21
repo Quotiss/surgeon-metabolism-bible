@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill, Star, Check, Shield } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
@@ -82,9 +81,7 @@ const ProductValueSection = ({
               <p className="text-lg font-bold text-green-600 mb-2">
                 (Save $70 TODAY)
               </p>
-              <p className="text-sm text-amber-600 font-medium">
-                Discount limited to first 500 surgeons only
-              </p>
+              
             </div>
           </div>
         </div>
@@ -94,11 +91,7 @@ const ProductValueSection = ({
           <p className="text-sm sm:text-base font-bold text-amber-700 mb-4 tracking-wide uppercase">
             ⚡ Limited to First 500 Surgeons Only
           </p>
-          <Button 
-            onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} 
-            size="lg" 
-            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
-          >
+          <Button onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
             Get Instant Access Now →
           </Button>
           <div className="space-y-2">
