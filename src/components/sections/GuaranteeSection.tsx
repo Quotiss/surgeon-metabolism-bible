@@ -11,22 +11,11 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
       <div className="container mx-auto px-4 max-w-4xl text-center">
         {/* Guarantee Badge */}
         <div className="flex justify-center mb-8">
-          <div className="relative">
-            <div className="w-32 h-32 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-2xl">
-              <div className="w-24 h-24 bg-slate-900 rounded-full flex flex-col items-center justify-center">
-                <div className="text-orange-400 text-xs font-bold mb-1">30 DAYS</div>
-                <Shield className="h-6 w-6 text-orange-400" />
-              </div>
-            </div>
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-              <div className="bg-slate-800 text-orange-400 px-4 py-1 text-sm font-bold rounded-full border-2 border-orange-400">
-                MONEY BACK
-              </div>
-              <div className="bg-slate-800 text-orange-400 px-3 py-1 text-xs font-bold rounded-full border border-orange-400 mt-1">
-                GUARANTEE
-              </div>
-            </div>
-          </div>
+          <img 
+            src="/lovable-uploads/d8d4eb4c-c865-49cb-9cca-9201328face7.png" 
+            alt="30 Days Money Back Guarantee" 
+            className="w-48 h-48 object-contain"
+          />
         </div>
 
         {/* Header */}
