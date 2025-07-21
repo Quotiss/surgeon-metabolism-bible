@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { CheckCircle, BookOpen, Gift, Pill, Star } from "lucide-react";
+import { CheckCircle, BookOpen, Gift, Pill, Star, Check, Shield } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
 const ProductValueSection = ({
@@ -47,7 +48,7 @@ const ProductValueSection = ({
               Quick Start Bonus #1: The Surgeon's Grocery Blueprint
             </h4>
             <p className="text-slate-700 mb-3">
-              MUST HAVE done-for-you shopping list designed for fast-moving surgeons who don't have any time to waste. Designed for maximum efficiency.
+              MUST HAVE done-for-you shopping template designed for fast-moving surgeons who don't have any time to waste. Designed for maximum efficiency.
             </p>
             <p className="text-sm text-blue-600 font-bold">Value: $97</p>
           </div>
@@ -89,23 +90,33 @@ const ProductValueSection = ({
         </div>
 
         {/* Main CTA Button */}
-        <div className="mb-6">
-          <Button onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} size="lg" className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-base sm:text-lg md:text-xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 h-auto font-bold w-full sm:w-auto transition-all duration-300 ease-out touch-manipulation shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 transform" style={{
-          WebkitTapHighlightColor: 'transparent',
-          minHeight: '48px'
-        }}>
-            <span className="flex items-center gap-3 transition-all duration-300 group">
-              Get Instant Access
-              <span className="transform transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-              $27
-            </span>
+        <div className="bg-gradient-to-r from-blue-50/80 to-slate-50/60 border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6">
+          <p className="text-sm sm:text-base font-bold text-amber-700 mb-4 tracking-wide uppercase">
+            ⚡ Limited to First 500 Surgeons Only
+          </p>
+          <Button 
+            onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} 
+            size="lg" 
+            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
+          >
+            Get Instant Access Now →
           </Button>
+          <div className="space-y-2">
+            <div className="flex items-center justify-center gap-2">
+              <Check className="h-5 w-5 text-blue-600" />
+              <p className="text-sm sm:text-base text-slate-600 font-medium">
+                Join the Elite and Reclaim your Vitality
+              </p>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <Shield className="h-4 w-4 text-green-600" />
+              <p className="text-sm text-slate-600">
+                <span className="font-bold">$27 Full Access • ⚠️ Limited Availability • </span>
+                <span className="text-green-600 font-bold">30-day 100% money back guarantee</span>
+              </p>
+            </div>
+          </div>
         </div>
-
-        {/* Upsell Teaser */}
-        
       </div>
     </div>;
 };
