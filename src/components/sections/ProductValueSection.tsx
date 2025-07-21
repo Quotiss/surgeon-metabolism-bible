@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill, Star, Check, Shield } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
@@ -113,7 +112,14 @@ const ProductValueSection = ({
               </p>
             </div>
           </div>
-          <SecurityBadge />
+          <div className="flex items-center justify-center gap-4">
+            <SecurityBadge />
+            <img 
+              src="/lovable-uploads/36484096-74f6-40bb-988c-86af5ddd059a.png" 
+              alt="30 Days Money Back Guarantee" 
+              className="w-12 h-12 object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>

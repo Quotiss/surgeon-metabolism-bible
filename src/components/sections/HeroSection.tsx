@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Shield, Target, CheckCircle } from "lucide-react";
 import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
@@ -46,7 +45,14 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
             <span className="font-bold">$27 Full Access • ⚠️ Limited to First 500 Surgeons • <span className="text-green-600">30-day 100% money back guarantee</span></span>
           </div>
           
-          <SecurityBadge />
+          <div className="flex items-center justify-center gap-4">
+            <SecurityBadge />
+            <img 
+              src="/lovable-uploads/36484096-74f6-40bb-988c-86af5ddd059a.png" 
+              alt="30 Days Money Back Guarantee" 
+              className="w-12 h-12 object-contain"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-8 max-w-4xl mx-auto text-xs sm:text-sm md:text-base">

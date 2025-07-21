@@ -26,7 +26,6 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
           </span>
         </h2>
 
-        {/* Main Content */}
         <div className="text-left max-w-3xl mx-auto space-y-6 text-lg leading-relaxed mb-8 text-slate-700">
           <p>
             Before making a serious commitment like this to take your health and performance to a whole new level, 
@@ -86,7 +85,14 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
               </p>
             </div>
           </div>
-          <SecurityBadge />
+          <div className="flex items-center justify-center gap-4">
+            <SecurityBadge />
+            <img 
+              src="/lovable-uploads/36484096-74f6-40bb-988c-86af5ddd059a.png" 
+              alt="30 Days Money Back Guarantee" 
+              className="w-12 h-12 object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>
