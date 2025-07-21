@@ -1,3 +1,4 @@
+
 import { Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SecurityBadge from "@/components/ui/SecurityBadge";
@@ -35,7 +36,7 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
           </p>
           
           <p>
-            <span className="font-bold text-blue-600">Here's what I've arranged:</span>
+            Here's what I've arranged:
           </p>
           
           <p>
@@ -45,11 +46,11 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
           
           <p>
             If you're not happy for any reason at all, shoot us an email at{" "}
-            <span className="text-blue-600 font-bold">support@surgeonmetabolismbible.com</span>{" "}
+            support@surgeonmetabolismbible.com{" "}
             and request a refund within 30 days.
           </p>
           
-          <p className="text-blue-600 font-bold text-xl">
+          <p className="text-xl">
             We'll refund you the $27, no questions asked.
           </p>
           
@@ -57,7 +58,7 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
             <span className="font-bold text-blue-600">Sound fair enough?</span>
           </p>
           
-          <p className="text-blue-600 font-bold">
+          <p>
             Hit the button below to secure your copy of the Surgeon Metabolism Bible today!
           </p>
         </div>
