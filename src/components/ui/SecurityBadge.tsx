@@ -7,9 +7,9 @@ interface SecurityBadgeProps {
 
 const SecurityBadge = ({ className = "" }: SecurityBadgeProps) => {
   return (
-    <div className={`flex items-center justify-center gap-2 text-sm text-slate-600 ${className}`}>
+    <div className={`flex items-center justify-center gap-2 text-xs text-slate-600 ${className}`}>
       <div className="flex items-center gap-1">
-        <Lock className="h-4 w-4 text-green-600" />
+        <Lock className="h-3 w-3 text-green-600" />
         <span className="font-medium">100% Secure Checkout</span>
       </div>
       <span className="text-slate-400">•</span>
