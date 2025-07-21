@@ -1,6 +1,7 @@
 
+
 import { Button } from "@/components/ui/button";
-import { CheckCircle, BookOpen, Gift, Pill } from "lucide-react";
+import { CheckCircle, BookOpen, Gift, Pill, Zap } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
 
@@ -15,9 +16,19 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
         <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
           Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
         </h3>
-        <p className="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed mb-6">
           The <span className="font-bold">exact tools</span> and protocols you need to effortlessly reveal muscle, reclaim your mental edge, dominate your peers, and take back control of your internal energy that the system <span className="font-bold">stole from you</span>. Built specifically for those who seek to thrive in surgical chaos, and are <span className="font-bold">committed to excellence</span>.
         </p>
+        
+        {/* Quick-Win Paragraph */}
+        <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 max-w-4xl mx-auto">
+          <div className="flex items-start space-x-4">
+            <Zap className="h-8 w-8 text-blue-600 flex-shrink-0 mt-1" />
+            <p className="text-lg text-slate-700 leading-relaxed text-left">
+              Additionally, you'll get an <span className="font-bold text-blue-600">instant taste</span> of what it feels like to embody the <span className="font-bold">confidence, sharpness, and motivation</span> of <span className="font-bold text-blue-600">elite surgeon</span> you know you're destined to be. Inside the Surgeon Metabolism Bible, you'll run through the <span className="font-bold text-blue-600">24 Hour Surgeon-Shift Protocol</span> — a step-by-step, time-efficient protocol that guarantees <span className="font-bold">increased mental clarity, vitality, and deep recovery</span> — in <span className="font-bold text-blue-600">only 24 hours</span>
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Product Components */}
@@ -116,3 +127,4 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
 };
 
 export default ProductValueSection;
+
