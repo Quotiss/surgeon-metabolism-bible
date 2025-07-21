@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { CheckCircle, BookOpen, Gift, Pill } from "lucide-react";
+import { CheckCircle, BookOpen, Gift, Pill, Star } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
 
@@ -30,6 +31,12 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
             <p className="text-slate-700 mb-3">
               Comprehensive 5-module eBook covering the exact metabolic protocols to regain your competitive edge WITHOUT uprooting your life
             </p>
+            <div className="flex items-start space-x-2 mb-3">
+              <Star className="h-4 w-4 text-blue-600 flex-shrink-0 mt-0.5" />
+              <p className="text-slate-700 font-medium">
+                Includes the 24-Hour Surgeon-Shift Protocol for a taste of the system that gets results in ONE DAY.
+              </p>
+            </div>
             <p className="text-sm text-blue-600 font-bold">Value: $297</p>
           </div>
         </div>
