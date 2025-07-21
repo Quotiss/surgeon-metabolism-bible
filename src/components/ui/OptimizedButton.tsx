@@ -35,36 +35,39 @@ const OptimizedButton = forwardRef<HTMLButtonElement, OptimizedButtonProps>(
     };
 
     return (
-      <Button
-        ref={ref}
-        onClick={onClick}
-        disabled={disabled || loading}
-        className={cn(
-          'touch-target',
-          'transition-all duration-200 ease-out',
-          'transform hover:scale-105 hover:-translate-y-0.5',
-          'active:scale-95 active:translate-y-0',
-          'hover:shadow-lg focus:shadow-lg',
-          'font-semibold rounded-lg',
-          'disabled:transform-none disabled:shadow-none disabled:cursor-not-allowed',
-          variantClasses[variant],
-          sizeClasses[size],
-          className
-        )}
-        style={{
-          WebkitTapHighlightColor: 'transparent',
-          touchAction: 'manipulation'
-        }}
-      >
-        {loading ? (
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-            <span>Opening checkout...</span>
-          </div>
-        ) : (
-          children
-        )}
-      </Button>
+      <div className="flex items-center justify-center w-full">
+        <Button
+          ref={ref}
+          onClick={onClick}
+          disabled={disabled || loading}
+          className={cn(
+            'touch-target',
+            'transition-all duration-200 ease-out',
+            'transform hover:scale-105 hover:-translate-y-0.5',
+            'active:scale-95 active:translate-y-0',
+            'hover:shadow-lg focus:shadow-lg',
+            'font-semibold rounded-lg',
+            'disabled:transform-none disabled:shadow-none disabled:cursor-not-allowed',
+            'flex items-center justify-center',
+            variantClasses[variant],
+            sizeClasses[size],
+            className
+          )}
+          style={{
+            WebkitTapHighlightColor: 'transparent',
+            touchAction: 'manipulation'
+          }}
+        >
+          {loading ? (
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+              <span>Opening checkout...</span>
+            </div>
+          ) : (
+            children
+          )}
+        </Button>
+      </div>
     );
   }
 );
