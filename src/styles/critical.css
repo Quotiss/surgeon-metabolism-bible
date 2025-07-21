@@ -1,5 +1,5 @@
 
-/* Minimal critical CSS for above-the-fold content */
+/* Mobile-first critical CSS for above-the-fold content */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,11 +23,20 @@
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
+    font-size: 16px; /* Base font size for mobile readability */
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  /* Mobile-first viewport optimizations */
+  @supports (height: 100dvh) {
+    .min-h-screen {
+      min-height: 100dvh;
+    }
   }
 
   /* Reduce motion for accessibility */
@@ -42,11 +51,11 @@
 }
 
 @layer utilities {
-  /* Performance-optimized animations */
+  /* Mobile-optimized animations */
   .lazy-fade-in {
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
   }
 
   .lazy-fade-in.visible {
@@ -54,22 +63,70 @@
     transform: translateY(0);
   }
 
-  /* Mobile-optimized touch targets */
+  /* Enhanced mobile touch targets */
   .touch-target {
     min-height: 48px;
     min-width: 48px;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
   }
 
-  /* Optimized container */
+  /* Mobile-first container */
   .container-optimized {
-    @apply mx-auto px-4 max-w-6xl;
+    @apply mx-auto px-3 max-w-6xl;
   }
 
-  @media (max-width: 640px) {
+  @media (min-width: 640px) {
     .container-optimized {
-      @apply px-3;
+      @apply px-4;
     }
+  }
+
+  @media (min-width: 768px) {
+    .container-optimized {
+      @apply px-6;
+    }
+  }
+
+  /* Mobile text optimization */
+  .mobile-heading {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  .mobile-body {
+    @apply text-base sm:text-lg;
+    line-height: 1.6;
+  }
+
+  /* Mobile button optimization */
+  .mobile-cta {
+    @apply w-full sm:w-auto px-6 py-4 text-lg font-semibold rounded-lg;
+    @apply transform transition-all duration-300 ease-out;
+    @apply hover:scale-105 active:scale-95;
+    @apply focus:outline-none focus:ring-4 focus:ring-blue-200;
+    min-height: 56px; /* Larger touch target for mobile */
+  }
+
+  /* Safe area support for mobile devices */
+  .safe-area-inset {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  /* Mobile skeleton loading */
+  .skeleton-optimized {
+    @apply bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200;
+    @apply animate-pulse rounded-lg;
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite ease-in-out;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
   }
 }
