@@ -1,12 +1,11 @@
-
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill, Star } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
-
-const ProductValueSection = ({ onCTAClick }: SectionProps) => {
-  return (
-    <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl p-6 sm:p-8 md:p-10 mb-8">
+const ProductValueSection = ({
+  onCTAClick
+}: SectionProps) => {
+  return <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl p-6 sm:p-8 md:p-10 mb-8">
       {/* Header Section */}
       <div className="text-center mb-8">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
@@ -91,15 +90,10 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
 
         {/* Main CTA Button */}
         <div className="mb-6">
-          <Button 
-            onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
-            size="lg" 
-            className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-base sm:text-lg md:text-xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 h-auto font-bold w-full sm:w-auto transition-all duration-300 ease-out touch-manipulation shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 transform"
-            style={{
-              WebkitTapHighlightColor: 'transparent',
-              minHeight: '48px'
-            }}
-          >
+          <Button onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} size="lg" className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-base sm:text-lg md:text-xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 h-auto font-bold w-full sm:w-auto transition-all duration-300 ease-out touch-manipulation shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 transform" style={{
+          WebkitTapHighlightColor: 'transparent',
+          minHeight: '48px'
+        }}>
             <span className="flex items-center gap-3 transition-all duration-300 group">
               Get Instant Access
               <span className="transform transition-transform duration-300 group-hover:translate-x-1">
@@ -111,14 +105,8 @@ const ProductValueSection = ({ onCTAClick }: SectionProps) => {
         </div>
 
         {/* Upsell Teaser */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <p className="text-sm text-slate-700 font-medium leading-relaxed">
-            🔒 Want faster, frictionless results? A limited number of surgeons will get the chance to upgrade to the <span className="font-bold text-blue-600">Full Precision Meal Protocol</span> after checkout - includes done-for-you meal plans and essential metabolic execution tools top surgeons use to supercharge results.
-          </p>
-        </div>
+        
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ProductValueSection;
