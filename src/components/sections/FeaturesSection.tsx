@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import LazySection from "@/components/LazySection";
 import CaseStudy from "@/components/sections/CaseStudy";
@@ -42,7 +41,7 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
                 <div className="flex items-start gap-2">
                   <Check className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
                   <p className="text-sm sm:text-base text-slate-600">
-                    <span className="font-bold text-blue-600">MUST HAVE</span> done-for-you shopping list designed for fast-moving surgeons who don't have any time to waste
+                    <span className="font-bold text-blue-600">MUST HAVE</span> done-for-you shopping template designed for fast-moving surgeons who don't have any time to waste
                   </p>
                 </div>
                 
