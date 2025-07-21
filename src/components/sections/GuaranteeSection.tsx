@@ -7,7 +7,7 @@ import type { SectionProps } from "@/types/common";
 
 const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
   return (
-    <section className="py-12 sm:py-16 bg-gradient-to-b from-slate-900 to-blue-900 text-white">
+    <section className="py-12 sm:py-16 bg-white">
       <div className="container mx-auto px-4 max-w-4xl text-center">
         {/* Guarantee Badge */}
         <div className="flex justify-center mb-8">
@@ -19,55 +19,55 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
         </div>
 
         {/* Header */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 leading-tight text-slate-900">
           Your purchase is backed by our{" "}
-          <span className="bg-gradient-to-r from-red-400 to-blue-400 bg-clip-text text-transparent font-black">
+          <span className="text-blue-600 font-black">
             UNCONDITIONAL MONEY BACK GUARANTEE
           </span>
         </h2>
 
         {/* Main Content */}
-        <div className="text-left max-w-3xl mx-auto space-y-6 text-lg leading-relaxed mb-8">
-          <p className="text-slate-200">
+        <div className="text-left max-w-3xl mx-auto space-y-6 text-lg leading-relaxed mb-8 text-slate-700">
+          <p>
             Before making a serious commitment like this to take your health and performance to a whole new level, 
             I'd like to know what I'm buying and that it's backed by a solid money-back guarantee.
           </p>
           
-          <p className="text-slate-200">
+          <p>
             Even though it's only $27, you worked for that money and it counts.
           </p>
           
-          <p className="text-slate-200">
-            <span className="font-bold text-white">Here's what I've arranged:</span>
+          <p>
+            <span className="font-bold text-blue-600">Here's what I've arranged:</span>
           </p>
           
-          <p className="text-slate-200">
+          <p>
             Purchase the Surgeon Metabolism Bible, run the included 24-hour Surgeon Shift Protocol, 
             read the modules, but more importantly, apply what I give you in there.
           </p>
           
-          <p className="text-slate-200">
+          <p>
             If you're not happy for any reason at all, shoot us an email at{" "}
-            <span className="text-blue-400 font-bold">support@surgeonmetabolismbible.com</span>{" "}
+            <span className="text-blue-600 font-bold">support@surgeonmetabolismbible.com</span>{" "}
             and request a refund within 30 days.
           </p>
           
-          <p className="text-white font-bold text-xl">
+          <p className="text-blue-600 font-bold text-xl">
             We'll refund you the $27, no questions asked.
           </p>
           
-          <p className="text-slate-200">
-            <span className="font-bold text-white">Sound fair enough?</span>
+          <p>
+            <span className="font-bold text-blue-600">Sound fair enough?</span>
           </p>
           
-          <p className="text-white font-bold">
+          <p className="text-blue-600 font-bold">
             Hit the button below to secure your copy of the Surgeon Metabolism Bible today!
           </p>
         </div>
 
         {/* CTA Button */}
-        <div className="bg-gradient-to-r from-blue-50/10 to-slate-50/10 border-2 border-blue-200/30 rounded-2xl p-6 sm:p-8 mb-6">
-          <p className="text-sm sm:text-base font-bold text-amber-400 mb-4 tracking-wide uppercase">
+        <div className="bg-slate-50 border-2 border-blue-200 rounded-2xl p-6 sm:p-8 mb-6">
+          <p className="text-sm sm:text-base font-bold text-amber-600 mb-4 tracking-wide uppercase">
             ⚡ Limited to First 500 Surgeons Only
           </p>
           <Button 
@@ -79,10 +79,10 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
           </Button>
           <div className="space-y-2 mb-4">
             <div className="flex items-center justify-center gap-2">
-              <Shield className="h-4 w-4 text-green-400" />
-              <p className="text-sm text-slate-300">
+              <Shield className="h-4 w-4 text-green-500" />
+              <p className="text-sm text-slate-600">
                 <span className="font-bold">$27 Full Access • ⚠️ Limited Availability • </span>
-                <span className="text-green-400 font-bold">30-day 100% money back guarantee</span>
+                <span className="text-green-500 font-bold">30-day 100% money back guarantee</span>
               </p>
             </div>
           </div>
