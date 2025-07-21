@@ -1,5 +1,4 @@
 
-
 import {
   Accordion,
   AccordionContent,
@@ -48,13 +47,13 @@ const FAQSection = ({ onCTAClick }: SectionProps) => {
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 mb-8">
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b border-blue-200 last:border-b-0">
-                <AccordionTrigger className="text-left text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 px-4 py-4 rounded-t-lg [&[data-state=open]]:rounded-b-none">
+              <AccordionItem key={index} value={`item-${index}`} className="border-0">
+                <AccordionTrigger className="text-left text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 px-6 py-4 rounded-lg [&[data-state=open]]:rounded-b-none transition-colors">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="bg-blue-600 text-white px-4 pb-4 rounded-b-lg">
+                <AccordionContent className="bg-white text-slate-900 px-6 py-4 rounded-b-lg border border-t-0 border-blue-200">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -85,4 +84,3 @@ const FAQSection = ({ onCTAClick }: SectionProps) => {
 };
 
 export default FAQSection;
-
