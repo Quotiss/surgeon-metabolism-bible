@@ -1,11 +1,15 @@
+
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill, Star, Check, Shield } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
+import SecurityBadge from "@/components/ui/SecurityBadge";
 import type { SectionProps } from "@/types/common";
+
 const ProductValueSection = ({
   onCTAClick
 }: SectionProps) => {
-  return <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl p-6 sm:p-8 md:p-10 mb-8">
+  return (
+    <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl p-6 sm:p-8 md:p-10 mb-8">
       {/* Header Section */}
       <div className="text-center mb-8">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
@@ -94,7 +98,7 @@ const ProductValueSection = ({
           <Button onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
             Get Instant Access Now →
           </Button>
-          <div className="space-y-2">
+          <div className="space-y-2 mb-4">
             <div className="flex items-center justify-center gap-2">
               <Check className="h-5 w-5 text-blue-600" />
               <p className="text-sm sm:text-base text-slate-600 font-medium">
@@ -109,8 +113,11 @@ const ProductValueSection = ({
               </p>
             </div>
           </div>
+          <SecurityBadge />
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default ProductValueSection;

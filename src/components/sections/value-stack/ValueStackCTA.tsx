@@ -1,6 +1,7 @@
 
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SecurityBadge from "@/components/ui/SecurityBadge";
 import { memo, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { POLAR_UPSELL_CHECKOUT_LINK } from "@/lib/constants";
@@ -44,6 +45,8 @@ const ValueStackCTA = memo(() => {
           </span>
         </Button>
       </div>
+      
+      <SecurityBadge className="mt-4 mb-4" />
       
       <div className="mt-4">
         <button 
