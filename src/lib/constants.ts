@@ -1,4 +1,3 @@
-
 // Gumroad product configuration
 export const GUMROAD_CONFIG = {
   PRODUCT_URL: "https://noahgordon.gumroad.com/l/surgeonsmetabolismbible",
@@ -24,6 +23,7 @@ export const CTA_LOCATIONS = {
   FEATURES: 'features',
   MAIN_CTA: 'main_cta',
   FLOATING_MOBILE: 'floating_mobile',
+  FAQ_CTA: 'faq_cta',
 } as const;
 
 export const META_PIXEL_EVENTS = {

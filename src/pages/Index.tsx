@@ -57,7 +57,7 @@ const Index = () => {
       </Suspense>
 
       <Suspense fallback={<SectionFallback />}>
-        <FAQSection />
+        <FAQSection onCTAClick={handleCTAClick} />
       </Suspense>
 
       <Suspense fallback={<SectionFallback />}>
