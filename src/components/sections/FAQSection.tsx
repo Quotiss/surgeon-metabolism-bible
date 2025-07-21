@@ -1,13 +1,17 @@
 
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 import LazySection from "@/components/LazySection";
+import { CTA_LOCATIONS } from "@/lib/constants";
+import type { SectionProps } from "@/types/common";
 
-const FAQSection = () => {
+const FAQSection = ({ onCTAClick }: SectionProps) => {
   const faqs = [
     {
       question: "What if this doesn't work for me?",
@@ -38,21 +42,42 @@ const FAQSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Frequently Asked Questions
           </h2>
+          <p className="text-lg text-slate-600">
+            Need help? support@surgeon-reset.org
+          </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8">
+        <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 mb-8">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b border-slate-200 last:border-b-0">
-                <AccordionTrigger className="text-left text-lg font-semibold text-slate-900 hover:text-blue-600 py-4">
+              <AccordionItem key={index} value={`item-${index}`} className="border-b border-blue-200 last:border-b-0">
+                <AccordionTrigger className="text-left text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 px-4 py-4 rounded-t-lg [&[data-state=open]]:rounded-b-none">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pb-4">
+                <AccordionContent className="bg-blue-600 text-white px-4 pb-4 rounded-b-lg">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+
+        {/* CTA Button Section */}
+        <div className="text-center">
+          <Button 
+            onClick={() => onCTAClick?.(CTA_LOCATIONS.FAQ_CTA)} 
+            size="lg" 
+            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
+          >
+            Get Instant Access Now →
+          </Button>
+          <div className="flex justify-center">
+            <img 
+              src="/lovable-uploads/36484096-74f6-40bb-988c-86af5ddd059a.png" 
+              alt="30 Days Money Back Guarantee" 
+              className="w-24 h-24 object-contain"
+            />
+          </div>
         </div>
       </div>
     </LazySection>
@@ -60,3 +85,4 @@ const FAQSection = () => {
 };
 
 export default FAQSection;
+
