@@ -30,8 +30,8 @@ const MobileCTAButton = forwardRef<HTMLButtonElement, MobileCTAButtonProps>(
     };
 
     const sizeClasses = {
-      default: "px-4 py-3 text-base min-h-[48px]",
-      large: "px-6 py-4 text-lg min-h-[56px]"
+      default: "px-4 py-3 text-sm sm:text-base min-h-[48px]",
+      large: "px-6 py-4 text-base sm:text-lg min-h-[56px]"
     };
 
     return (
@@ -42,11 +42,12 @@ const MobileCTAButton = forwardRef<HTMLButtonElement, MobileCTAButtonProps>(
           baseClasses,
           variantClasses[variant],
           sizeClasses[size],
+          "flex items-center justify-center",
           className
         )}
         style={{ WebkitTapHighlightColor: 'transparent' }}
       >
-        <span className="flex items-center justify-center gap-2 text-center leading-none">
+        <span className="flex items-center justify-center gap-2 text-center leading-tight whitespace-nowrap">
           {children}
           {showArrow && <ArrowRight className="h-4 w-4 flex-shrink-0" />}
         </span>
