@@ -13,6 +13,7 @@ const SolutionSection = lazy(() => import("@/components/sections/SolutionSection
 const ScienceSection = lazy(() => import("@/components/sections/ScienceSection"));
 const FeaturesSection = lazy(() => import("@/components/sections/FeaturesSection"));
 const ResultsSection = lazy(() => import("@/components/sections/ResultsSection"));
+const GuaranteeSection = lazy(() => import("@/components/sections/GuaranteeSection"));
 const FAQSection = lazy(() => import("@/components/sections/FAQSection"));
 const FooterSection = lazy(() => import("@/components/sections/FooterSection"));
 
@@ -49,6 +50,10 @@ const Index = () => {
 
       <Suspense fallback={<SectionFallback />}>
         <ResultsSection onCTAClick={handleCTAClick} />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback />}>
+        <GuaranteeSection onCTAClick={handleCTAClick} />
       </Suspense>
 
       <Suspense fallback={<SectionFallback />}>

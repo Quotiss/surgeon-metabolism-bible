@@ -15,6 +15,7 @@ const SolutionSection = lazy(() => import("@/components/sections/SolutionSection
 const ScienceSection = lazy(() => import("@/components/sections/ScienceSection"));
 const FeaturesSection = lazy(() => import("@/components/sections/FeaturesSection"));
 const ResultsSection = lazy(() => import("@/components/sections/ResultsSection"));
+const GuaranteeSection = lazy(() => import("@/components/sections/GuaranteeSection"));
 const FAQSection = lazy(() => import("@/components/sections/FAQSection"));
 const FooterSection = lazy(() => import("@/components/sections/FooterSection"));
 
@@ -105,6 +106,12 @@ const OptimizedIndex = () => {
       <OptimizedLazySection delay={500}>
         <Suspense fallback={<OptimizedSectionFallback />}>
           <ResultsSection onCTAClick={handleCTAClick} />
+        </Suspense>
+      </OptimizedLazySection>
+
+      <OptimizedLazySection delay={550}>
+        <Suspense fallback={<OptimizedSectionFallback />}>
+          <GuaranteeSection onCTAClick={handleCTAClick} />
         </Suspense>
       </OptimizedLazySection>
 
