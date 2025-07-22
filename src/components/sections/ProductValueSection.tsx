@@ -93,17 +93,19 @@ const ProductValueSection = ({
 
         {/* Main CTA Button */}
         <div className="bg-gradient-to-r from-blue-50/80 to-slate-50/60 border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6">
-          <p className="text-sm sm:text-base font-bold text-amber-700 mb-6 tracking-wide uppercase">
+          <p className="text-sm sm:text-base font-bold text-amber-700 mb-6 tracking-wide uppercase text-center">
             ⚡ Limited to First 500 Surgeons Only
           </p>
           
-          <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
+          <div className="space-y-4 max-w-md mx-auto">
             <CTAButton 
               onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
               size="large"
             />
             
-            <CTASecurity />
+            <div className="text-center">
+              <CTASecurity />
+            </div>
             
             <CTAGuarantee showBadge={true} />
           </div>
