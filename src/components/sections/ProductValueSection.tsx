@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill, Star, Check, Shield } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
-import CTAButton from "@/components/cta/CTAButton";
-import CTASecurity from "@/components/cta/CTASecurity";
-import CTAGuarantee from "@/components/cta/CTAGuarantee";
+import CompleteCTA from "@/components/cta/CompleteCTA";
 import type { SectionProps } from "@/types/common";
 
 const ProductValueSection = ({
@@ -73,43 +71,33 @@ const ProductValueSection = ({
       </div>
 
       {/* Pricing Section */}
-      <div className="bg-slate-50 rounded-xl p-6 text-center border border-slate-200">
-        <div className="mb-6">
-          <div className="space-y-3 mb-6">
-            <p className="text-lg text-slate-600">
-              Total Package Value: <span className="font-bold text-slate-900">$521</span>
-            </p>
-            <div className="border-t border-slate-200 pt-4">
-              <p className="text-2xl sm:text-3xl font-black text-blue-600 mb-2">
-                ONLY: <span className="line-through text-slate-500 mr-2">$97</span> $27
-              </p>
-              <p className="text-lg font-bold text-green-600 mb-2">
-                (Save $70 TODAY)
-              </p>
-              
-            </div>
-          </div>
-        </div>
-
-        {/* Main CTA Button */}
-        <div className="bg-gradient-to-r from-blue-50/80 to-slate-50/60 border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6">
-          <p className="text-sm sm:text-base font-bold text-amber-700 mb-6 tracking-wide uppercase text-center">
-            ⚡ Limited to First 500 Surgeons Only
+      <div className="bg-slate-50 rounded-xl p-6 text-center border border-slate-200 mb-8">
+        <div className="space-y-4">
+          <p className="text-lg text-slate-600">
+            Total Package Value: <span className="font-bold text-slate-900">$521</span>
           </p>
-          
-          <div className="space-y-4 max-w-md mx-auto">
-            <CTAButton 
-              onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
-              size="large"
-            />
-            
-            <div className="text-center">
-              <CTASecurity />
-            </div>
-            
-            <CTAGuarantee showBadge={true} />
+          <div className="border-t border-slate-200 pt-4">
+            <p className="text-2xl sm:text-3xl font-black text-blue-600 mb-2">
+              ONLY: <span className="line-through text-slate-500 mr-2">$97</span> $27
+            </p>
+            <p className="text-lg font-bold text-green-600">
+              (Save $70 TODAY)
+            </p>
           </div>
         </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-blue-50/80 to-slate-50/60 border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 max-w-lg mx-auto">
+        <p className="text-sm sm:text-base font-bold text-amber-700 mb-6 tracking-wide uppercase text-center">
+          ⚡ Limited to First 500 Surgeons Only
+        </p>
+        
+        <CompleteCTA 
+          onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
+          size="large"
+          showPricing={false}
+        />
       </div>
     </div>
   );
