@@ -99,7 +99,7 @@ const CaseStudy = () => {
     <div className="mt-12 sm:mt-16 md:mt-20">
       <div className="text-center mb-6 sm:mb-8">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <MessageSquare className="h-6 w-6 text-blue-600" />
+          <MessageSquare className="h-8 w-8 text-blue-600" />
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
             What Are Other Surgeons <span className="text-blue-600">Saying</span> About This System?
           </h2>
