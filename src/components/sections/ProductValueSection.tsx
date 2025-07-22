@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill, Star, Check, Shield } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
-import MobileCTAButton from "@/components/ui/MobileCTAButton";
-import MobileGuarantee from "@/components/ui/MobileGuarantee";
+import CompleteCTA from "@/components/cta/CompleteCTA";
 import type { SectionProps } from "@/types/common";
 
 const ProductValueSection = ({
@@ -97,12 +96,11 @@ const ProductValueSection = ({
           </p>
           
           <div className="flex flex-col items-center gap-6 max-w-md mx-auto">
-            <MobileCTAButton 
-              onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
+            <CompleteCTA 
+              onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
               size="large"
+              showPricing={true}
             />
-            
-            <MobileGuarantee showFullDetails={true} />
           </div>
         </div>
       </div>

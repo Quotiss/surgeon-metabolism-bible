@@ -3,8 +3,7 @@ import { CheckCircle, Clock, Shield, Target } from "lucide-react";
 import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import MobileOptimizedSection from "@/components/ui/MobileOptimizedSection";
-import MobileCTAButton from "@/components/ui/MobileCTAButton";
-import MobileGuarantee from "@/components/ui/MobileGuarantee";
+import CompleteCTA from "@/components/cta/CompleteCTA";
 
 interface HeroSectionProps {
   onCTAClick: (location: string) => void;
@@ -45,12 +44,11 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
 
       {/* CTA Section */}
       <div className="flex flex-col gap-6 justify-center items-center mb-8 sm:mb-12 max-w-lg mx-auto px-4">
-        <MobileCTAButton 
-          onClick={() => onCTAClick('hero')}
+        <CompleteCTA 
+          onCTAClick={() => onCTAClick('hero')}
           size="large"
+          showPricing={true}
         />
-        
-        <MobileGuarantee showFullDetails={true} />
       </div>
 
       {/* Trust Indicators */}

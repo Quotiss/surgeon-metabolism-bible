@@ -1,7 +1,8 @@
 
 import MobileOptimizedSection from "@/components/ui/MobileOptimizedSection";
-import MobileCTAButton from "@/components/ui/MobileCTAButton";
-import MobileGuarantee from "@/components/ui/MobileGuarantee";
+import CTAButton from "@/components/cta/CTAButton";
+import CTASecurity from "@/components/cta/CTASecurity";
+import CTAGuarantee from "@/components/cta/CTAGuarantee";
 import { CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
 
@@ -64,13 +65,15 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
           ⚡ Limited to First 500 Surgeons Only
         </p>
         
-        <div className="flex flex-col items-center gap-6 max-w-md mx-auto">
-          <MobileCTAButton 
+        <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
+          <CTAButton 
             onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
             size="large"
           />
           
-          <MobileGuarantee showFullDetails={false} />
+          <CTASecurity />
+          
+          <CTAGuarantee showBadge={false} />
         </div>
       </div>
     </MobileOptimizedSection>
