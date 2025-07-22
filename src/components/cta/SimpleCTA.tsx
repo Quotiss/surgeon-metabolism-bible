@@ -1,0 +1,37 @@
+import CTAButton from './CTAButton';
+import CTASecurity from './CTASecurity';
+
+interface SimpleCTAProps {
+  onCTAClick: () => void;
+  buttonText?: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'default' | 'large';
+  loading?: boolean;
+  className?: string;
+}
+
+const SimpleCTA = ({ 
+  onCTAClick, 
+  buttonText = "Get Instant Access Now",
+  variant = 'primary',
+  size = 'default',
+  loading = false,
+  className = ""
+}: SimpleCTAProps) => {
+  return (
+    <div className={`space-y-3 ${className}`}>
+      <CTAButton
+        onClick={onCTAClick}
+        variant={variant}
+        size={size}
+        loading={loading}
+      >
+        {buttonText}
+      </CTAButton>
+      
+      <CTASecurity />
+    </div>
+  );
+};
+
+export default SimpleCTA;
