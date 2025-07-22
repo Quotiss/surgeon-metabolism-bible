@@ -13,7 +13,7 @@ const ProductValueSection = ({
       {/* Header Section */}
       <div className="text-center mb-10 sm:mb-12">
         <h2 className="mobile-h2 text-slate-900 mb-6 leading-tight">
-          Join The <span className="text-blue-600 font-bold">Elite Surgeons</span> Who <span className="bg-blue-600 text-white px-1 py-0.5 rounded">Invest In Themselves</span>
+          Join The <span className="text-blue-600 font-bold">Elite Surgeons</span> Who Invest In Themselves
         </h2>
         <h3 className="mobile-h3 text-slate-900 mb-6">
           Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
