@@ -20,7 +20,7 @@ const ProblemSection = () => {
             But the system that forged you into a <span className="text-blue-600 font-bold">surgical weapon</span> is now <span className="text-blue-600 font-bold">systematically destroying</span> the very vitality that made you unstoppable in the first place.
           </p>
           
-          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+          <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
             <span className="text-blue-600 font-bold">This isn't your failure. This is systematic betrayal.</span>
           </p>
           
