@@ -12,9 +12,9 @@ interface MobileOptimizedSectionProps {
 const MobileOptimizedSection = forwardRef<HTMLElement, MobileOptimizedSectionProps>(
   ({ children, className = '', padding = 'md', background = 'white' }, ref) => {
     const paddingClasses = {
-      sm: 'py-6 px-3 sm:py-8 sm:px-4',
-      md: 'py-8 px-3 sm:py-12 sm:px-4 md:py-16',
-      lg: 'py-10 px-3 sm:py-16 sm:px-4 md:py-20'
+      sm: 'py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-8',
+      md: 'py-12 px-4 sm:py-16 sm:px-6 md:py-20 md:px-8',
+      lg: 'py-16 px-4 sm:py-20 sm:px-6 md:py-24 md:px-8'
     };
 
     const backgroundClasses = {

@@ -23,7 +23,7 @@
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
-    font-size: 16px; /* Base font size for mobile readability */
+    font-size: 18px; /* Increased base font size for better mobile readability */
   }
 
   html {
@@ -72,48 +72,89 @@
     cursor: pointer;
   }
 
-  /* Mobile-first container */
+  /* Mobile-first container with better spacing */
   .container-optimized {
-    @apply mx-auto px-3 max-w-6xl;
+    @apply mx-auto px-4 max-w-6xl;
   }
 
   @media (min-width: 640px) {
-    .container-optimized {
-      @apply px-4;
-    }
-  }
-
-  @media (min-width: 768px) {
     .container-optimized {
       @apply px-6;
     }
   }
 
-  /* Mobile text optimization */
-  .mobile-heading {
+  @media (min-width: 768px) {
+    .container-optimized {
+      @apply px-8;
+    }
+  }
+
+  /* Enhanced mobile typography hierarchy */
+  .mobile-h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  .mobile-h2 {
     @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
     line-height: 1.2;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+  }
+
+  .mobile-h3 {
+    @apply text-xl sm:text-2xl md:text-3xl;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  .mobile-h4 {
+    @apply text-lg sm:text-xl md:text-2xl;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  /* Enhanced mobile body text */
+  .mobile-body-large {
+    @apply text-lg sm:text-xl md:text-2xl;
+    line-height: 1.6;
   }
 
   .mobile-body {
-    @apply text-base sm:text-lg;
+    @apply text-base sm:text-lg md:text-xl;
+    line-height: 1.7;
+  }
+
+  .mobile-body-small {
+    @apply text-sm sm:text-base md:text-lg;
     line-height: 1.6;
+  }
+
+  /* Mobile section spacing */
+  .mobile-section-padding {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+
+  .mobile-content-spacing {
+    @apply space-y-6 sm:space-y-8 md:space-y-10;
   }
 
   /* Mobile button optimization */
   .mobile-cta {
-    @apply w-full sm:w-auto px-6 py-4 text-lg font-semibold rounded-lg;
+    @apply w-full sm:w-auto px-8 py-4 text-lg sm:text-xl font-semibold rounded-xl;
     @apply transform transition-all duration-300 ease-out;
     @apply hover:scale-105 active:scale-95;
     @apply focus:outline-none focus:ring-4 focus:ring-blue-200;
-    min-height: 56px; /* Larger touch target for mobile */
+    min-height: 60px; /* Larger touch target for mobile */
   }
 
   /* Safe area support for mobile devices */
   .safe-area-inset {
-    padding-left: max(1rem, env(safe-area-inset-left));
-    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
     padding-bottom: max(1rem, env(safe-area-inset-bottom));
   }
 
