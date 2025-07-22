@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill, Star, Check, Shield } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
-import CompleteCTA from "@/components/cta/CompleteCTA";
+import CTAButton from "@/components/cta/CTAButton";
+import CTASecurity from "@/components/cta/CTASecurity";
+import CTAGuarantee from "@/components/cta/CTAGuarantee";
 import type { SectionProps } from "@/types/common";
 
 const ProductValueSection = ({
@@ -95,12 +97,15 @@ const ProductValueSection = ({
             ⚡ Limited to First 500 Surgeons Only
           </p>
           
-          <div className="flex flex-col items-center gap-6 max-w-md mx-auto">
-            <CompleteCTA 
-              onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
+          <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
+            <CTAButton 
+              onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
               size="large"
-              showPricing={true}
             />
+            
+            <CTASecurity />
+            
+            <CTAGuarantee showBadge={true} />
           </div>
         </div>
       </div>
