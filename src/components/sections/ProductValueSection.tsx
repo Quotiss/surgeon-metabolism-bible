@@ -1,15 +1,12 @@
-
 import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill, Star, Check, Shield } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
 import CompleteCTA from "@/components/cta/CompleteCTA";
 import type { SectionProps } from "@/types/common";
-
 const ProductValueSection = ({
   onCTAClick
 }: SectionProps) => {
-  return (
-    <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl p-6 sm:p-8 md:p-10 mb-8">
+  return <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl p-6 sm:p-8 md:p-10 mb-8">
       {/* Header Section */}
       <div className="text-center mb-10 sm:mb-12">
         <h2 className="mobile-h2 text-slate-900 mb-6 leading-tight">
@@ -19,7 +16,7 @@ const ProductValueSection = ({
           Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
         </h3>
         <div className="flex items-center justify-center gap-3 mb-4">
-          <CheckCircle className="h-6 w-6 text-blue-600" />
+          
           <p className="mobile-body text-slate-600 max-w-5xl mx-auto leading-relaxed">
             The <span className="font-bold">exact tools</span> and protocols you need to effortlessly reveal muscle, reclaim your mental edge, dominate your peers, and take back control of your internal energy that the system <span className="font-bold">stole from you</span>. Built specifically for those who seek to thrive in surgical chaos, and are <span className="font-bold">committed to excellence</span>.
           </p>
@@ -97,14 +94,8 @@ const ProductValueSection = ({
           ⚡ Limited to First 500 Surgeons Only
         </p>
         
-        <CompleteCTA 
-          onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
-          size="large"
-          showPricing={false}
-        />
+        <CompleteCTA onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} size="large" showPricing={false} />
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ProductValueSection;
