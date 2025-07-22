@@ -3,7 +3,7 @@ import { CheckCircle, Shield, Zap, AlertTriangle, ArrowRight } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 import GuaranteeSection from "@/components/ui/GuaranteeSection";
-import SecurityBadge from "@/components/ui/SecurityBadge";
+import CTASecurity from "@/components/cta/CTASecurity";
 import { POLAR_UPSELL_CHECKOUT_LINK } from "@/lib/constants";
 import { usePolarCheckout } from "@/hooks/usePolarCheckout";
 import { useNavigate } from "react-router-dom";
@@ -60,7 +60,7 @@ const ThankYouCTASection = memo(() => {
             </Button>
           </div>
           
-          <SecurityBadge className="mb-4" />
+          <CTASecurity className="mb-4" />
           
           <div className="mt-4">
             <button 
