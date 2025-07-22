@@ -18,9 +18,12 @@ const ProductValueSection = ({
         <h3 className="mobile-h3 text-slate-900 mb-6">
           Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
         </h3>
-        <p className="mobile-body text-slate-600 max-w-5xl mx-auto leading-relaxed">
-          The <span className="font-bold">exact tools</span> and protocols you need to effortlessly reveal muscle, reclaim your mental edge, dominate your peers, and take back control of your internal energy that the system <span className="font-bold">stole from you</span>. Built specifically for those who seek to thrive in surgical chaos, and are <span className="font-bold">committed to excellence</span>.
-        </p>
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <CheckCircle className="h-6 w-6 text-blue-600" />
+          <p className="mobile-body text-slate-600 max-w-5xl mx-auto leading-relaxed">
+            The <span className="font-bold">exact tools</span> and protocols you need to effortlessly reveal muscle, reclaim your mental edge, dominate your peers, and take back control of your internal energy that the system <span className="font-bold">stole from you</span>. Built specifically for those who seek to thrive in surgical chaos, and are <span className="font-bold">committed to excellence</span>.
+          </p>
+        </div>
       </div>
 
       {/* Product Components */}
