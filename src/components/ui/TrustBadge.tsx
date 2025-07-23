@@ -17,7 +17,7 @@ const TrustBadge = () => {
         {surgeonImages.map((image, index) => (
           <Avatar 
             key={index} 
-            className={`w-12 h-12 border-2 border-white shadow-md ${index > 0 ? '-ml-3' : ''}`}
+            className={`w-12 h-12 border-2 border-blue-600 shadow-md ${index > 0 ? '-ml-3' : ''}`}
           >
             <AvatarImage 
               src={image} 
@@ -42,7 +42,7 @@ const TrustBadge = () => {
       </div>
 
       {/* Trust Text */}
-      <p className="text-slate-600 font-medium text-sm text-center">
+      <p className="text-slate-600 font-bold text-sm text-center">
         TRUSTED BY 500+ SURGEONS
       </p>
     </div>
