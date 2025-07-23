@@ -30,6 +30,11 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       padding="lg"
       background="gradient"
     >
+      {/* Trust Badge */}
+      <div className="mb-6 sm:mb-8">
+        <TrustBadge />
+      </div>
+
       {/* Main Headline */}
       <h1 className="mobile-h1 text-slate-900 mb-6 sm:mb-8 leading-tight">
         The <span className="text-blue-600 font-bold">Hidden</span> Metabolic Protocol{" "}
@@ -39,14 +44,9 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       </h1>
       
       {/* Subheadline */}
-      <p className="mobile-body-large text-slate-800 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed">
+      <p className="mobile-body-large text-slate-800 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed">
         Without overhauling your routine that barely keeps you functioning, eliminating your favorite foods, or avoiding social events because of your "weird diet"
       </p>
-
-      {/* Trust Badge */}
-      <div className="mb-8 sm:mb-10">
-        <TrustBadge />
-      </div>
 
       {/* CTA Section */}
       <div className="flex flex-col gap-6 justify-center items-center mb-10 sm:mb-12 max-w-lg mx-auto">
