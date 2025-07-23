@@ -1,5 +1,6 @@
 import { Target, Shield, Zap, Heart, CheckCircle, BookOpen, Clock } from "lucide-react";
 import LazySection from "@/components/LazySection";
+import TrustBadge from "@/components/ui/TrustBadge";
 
 const ScienceSection = () => {
   return (
@@ -95,6 +96,11 @@ const ScienceSection = () => {
           <p className="text-base sm:text-lg text-slate-800 font-medium leading-relaxed mb-0">
             This isn't information you'll find within <span className="font-bold">mainstream health advice</span>. <span className="font-bold text-blue-600">Elite surgeons</span> have been quietly sharing this <span className="font-bold text-blue-600">blueprint</span> for years, paying top metabolic specialists <span className="font-bold text-blue-600">$500+ per session</span> to share their systems. <span className="font-bold">Most surgeons will never discover this exists</span> — which is why the fact <span className="font-bold text-blue-600">you're reading this means you're ready to join the top-performers who commit to not settling for mediocrity</span>.
           </p>
+        </div>
+
+        {/* Trust Badge */}
+        <div className="flex justify-center mt-8 sm:mt-12">
+          <TrustBadge />
         </div>
       </div>
     </LazySection>
