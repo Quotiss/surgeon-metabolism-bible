@@ -52,7 +52,7 @@ const ProductValueSection = ({
               <img 
                 src="/lovable-uploads/6cdd542e-6d8d-4bfb-bbce-616c53019b5a.png" 
                 alt="The Surgeon Metabolism Bible 5-Module eBook on laptop"
-                className="w-full max-w-md lg:max-w-lg h-auto rounded-lg shadow-lg"
+                className="w-full max-w-xl lg:max-w-3xl h-auto rounded-lg shadow-lg"
               />
             </div>
           </div>
