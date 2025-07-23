@@ -25,22 +25,36 @@ const ProductValueSection = ({
 
       {/* Product Components */}
       <div className="grid gap-6 sm:gap-8 mb-10 sm:mb-12">
-        <div className="flex items-start space-x-4 sm:space-x-6 p-6 sm:p-8 bg-blue-50 rounded-lg border border-blue-200">
-          <BookOpen className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 flex-shrink-0 mt-1" />
-          <div className="flex-1">
-            <h4 className="mobile-h4 text-blue-600 mb-3">
-              Surgeon Metabolism Bible 5-module eBook
-            </h4>
-            <p className="mobile-body-small text-slate-700 mb-4">
-              Comprehensive 5-module eBook covering the exact metabolic protocols to regain your competitive edge WITHOUT uprooting your life
-            </p>
-            <div className="flex items-start space-x-2 mb-4">
-              <Star className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-              <p className="mobile-body-small text-slate-700 font-medium">
-                Includes the 24-Hour Surgeon-Shift Protocol for a taste of the system that gets results in ONE DAY.
-              </p>
+        <div className="p-6 sm:p-8 bg-blue-50 rounded-lg border border-blue-200">
+          <div className="flex flex-col lg:flex-row items-start gap-6">
+            {/* Icon and Text Content */}
+            <div className="flex items-start space-x-4 sm:space-x-6 flex-1">
+              <BookOpen className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 flex-shrink-0 mt-1" />
+              <div className="flex-1">
+                <h4 className="mobile-h4 text-blue-600 mb-3">
+                  Surgeon Metabolism Bible 5-module eBook
+                </h4>
+                <p className="mobile-body-small text-slate-700 mb-4">
+                  Comprehensive 5-module eBook covering the exact metabolic protocols to regain your competitive edge WITHOUT uprooting your life
+                </p>
+                <div className="flex items-start space-x-2 mb-4">
+                  <Star className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <p className="mobile-body-small text-slate-700 font-medium">
+                    Includes the 24-Hour Surgeon-Shift Protocol for a taste of the system that gets results in ONE DAY.
+                  </p>
+                </div>
+                <p className="text-sm sm:text-base text-blue-600 font-bold">Value: $297</p>
+              </div>
             </div>
-            <p className="text-sm sm:text-base text-blue-600 font-bold">Value: $297</p>
+            
+            {/* Product Image */}
+            <div className="w-full lg:w-80 flex justify-center lg:justify-end">
+              <img 
+                src="/lovable-uploads/6cdd542e-6d8d-4bfb-bbce-616c53019b5a.png" 
+                alt="The Surgeon Metabolism Bible 5-Module eBook on laptop"
+                className="w-full max-w-xs lg:max-w-sm h-auto rounded-lg shadow-md"
+              />
+            </div>
           </div>
         </div>
 
