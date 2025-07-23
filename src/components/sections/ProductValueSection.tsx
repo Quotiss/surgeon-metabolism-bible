@@ -48,11 +48,11 @@ const ProductValueSection = ({
             </div>
             
             {/* Product Image */}
-            <div className="w-full lg:w-80 flex justify-center lg:justify-end">
+            <div className="w-full lg:w-96 flex justify-center lg:justify-end">
               <img 
                 src="/lovable-uploads/6cdd542e-6d8d-4bfb-bbce-616c53019b5a.png" 
                 alt="The Surgeon Metabolism Bible 5-Module eBook on laptop"
-                className="w-full max-w-xs lg:max-w-sm h-auto rounded-lg shadow-md"
+                className="w-full max-w-md lg:max-w-lg h-auto rounded-lg shadow-lg"
               />
             </div>
           </div>
