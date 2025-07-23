@@ -4,6 +4,7 @@ import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import MobileOptimizedSection from "@/components/ui/MobileOptimizedSection";
 import CompleteCTA from "@/components/cta/CompleteCTA";
+import TrustBadge from "@/components/ui/TrustBadge";
 
 interface HeroSectionProps {
   onCTAClick: (location: string) => void;
@@ -38,9 +39,14 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       </h1>
       
       {/* Subheadline */}
-      <p className="mobile-body-large text-slate-800 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed">
+      <p className="mobile-body-large text-slate-800 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed">
         Without overhauling your routine that barely keeps you functioning, eliminating your favorite foods, or avoiding social events because of your "weird diet"
       </p>
+
+      {/* Trust Badge */}
+      <div className="mb-8 sm:mb-10">
+        <TrustBadge />
+      </div>
 
       {/* CTA Section */}
       <div className="flex flex-col gap-6 justify-center items-center mb-10 sm:mb-12 max-w-lg mx-auto">
