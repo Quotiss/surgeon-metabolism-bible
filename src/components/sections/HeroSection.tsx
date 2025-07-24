@@ -47,9 +47,10 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       {/* Main Headline */}
       <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-2 sm:mb-4 leading-tight font-bold px-2 sm:px-4">
         The <span className="text-blue-600 font-bold">Hidden</span> Metabolic Protocol{" "}
-        <span className="text-blue-600 font-bold">Elite Surgeons</span> Are Using to Gain{" "}
-        <span className="text-blue-600 font-bold">Unfair Advantages</span> in the OR (and How To{" "}
-        <span className="text-blue-600 font-bold">Steal Their Exact System</span>)
+        <span className="text-blue-600 font-bold">Elite Surgeons</span> Are Using to{" "}
+        <span className="text-blue-600 font-bold">Supercharge Their Physiques</span> and{" "}
+        <span className="text-blue-600 font-bold">Reclaim Their Mental Energy</span> in Under{" "}
+        <span className="text-blue-600 font-bold">30 Days</span>
       </h1>
       
       {/* Subheadline */}
