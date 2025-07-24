@@ -26,7 +26,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
   return (
     <>
       {/* Product Name Header */}
-      <div className="bg-blue-600 h-18 flex items-center justify-center w-full">
+      <div className="bg-blue-600 h-32 flex items-center justify-center w-full">
         <h2 className="text-white font-bold text-sm sm:text-base">
           Surgeon Metabolism Bible
         </h2>
