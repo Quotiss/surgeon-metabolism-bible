@@ -15,9 +15,7 @@ const CTAPricing = ({
   return <div className={`flex items-center justify-center gap-2 text-center ${className}`}>
       
       <div className="text-xs sm:text-sm leading-tight">
-        <div className="font-bold text-slate-800">
-          $27 Full Access • ⚠️ Limited to First 500 Surgeons
-        </div>
+        
       </div>
     </div>;
 };
