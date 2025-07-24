@@ -58,7 +58,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       </p>
 
       {/* CTA Section */}
-      <div className="flex flex-col gap-6 justify-center items-center mb-10 sm:mb-12 max-w-lg mx-auto">
+      <div className="flex flex-col gap-4 justify-center items-center mb-10 sm:mb-12 max-w-lg mx-auto">
         <CompleteCTA 
           onCTAClick={() => onCTAClick('hero')}
           size="large"
@@ -66,18 +66,18 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
         />
         
         {/* Call to Action Text with Arrow */}
-        <div className="relative flex flex-col items-center gap-2">
+        <div className="relative flex flex-col items-center gap-3 mt-2">
           {/* Upward Arrow */}
-          <div className="text-blue-600 transform rotate-180">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="animate-pulse">
-              <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <div className="text-blue-600 animate-bounce">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="transform rotate-180">
+              <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
           
-          {/* Highlighted Text */}
-          <h3 className="text-base sm:text-lg font-bold text-center text-slate-900 bg-gradient-to-r from-yellow-200 to-yellow-300 bg-opacity-50 px-3 py-1 rounded-lg border border-yellow-400/30">
-            <span className="text-blue-600 font-bold">Secure your copy</span> of the Surgeon Metabolism Bible plus{" "}
-            <span className="text-blue-600 font-bold">2 Additional Bonuses!</span>
+          {/* Bold H3 Text */}
+          <h3 className="text-lg sm:text-xl font-bold text-center text-slate-900 max-w-md leading-tight">
+            <span className="text-blue-600">Secure Your Copy</span> of the Surgeon Metabolism Bible plus{" "}
+            <span className="text-blue-600">2 Additional Bonuses!</span>
           </h3>
         </div>
       </div>
