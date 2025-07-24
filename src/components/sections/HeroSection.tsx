@@ -62,7 +62,9 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
         <CompleteCTA 
           onCTAClick={() => onCTAClick('hero')}
           size="large"
-          showPricing={true}
+          showPricing={false}
+          showSecurity={false}
+          showGuarantee={false}
         />
         
         {/* Call to Action Text with Arrow */}

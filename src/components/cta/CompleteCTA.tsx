@@ -9,6 +9,8 @@ interface CompleteCTAProps {
   variant?: 'primary' | 'secondary';
   size?: 'default' | 'large';
   showPricing?: boolean;
+  showSecurity?: boolean;
+  showGuarantee?: boolean;
   loading?: boolean;
   className?: string;
 }
@@ -19,6 +21,8 @@ const CompleteCTA = ({
   variant = 'primary',
   size = 'default',
   showPricing = true,
+  showSecurity = true,
+  showGuarantee = true,
   loading = false,
   className = ""
 }: CompleteCTAProps) => {
@@ -37,9 +41,13 @@ const CompleteCTA = ({
         {buttonText}
       </CTAButton>
       
-      <CTASecurity className="mt-3" />
+      {showSecurity && (
+        <CTASecurity className="mt-3" />
+      )}
       
-      <CTAGuarantee showBadge={true} className="mt-3" />
+      {showGuarantee && (
+        <CTAGuarantee showBadge={true} className="mt-3" />
+      )}
     </div>
   );
 };
