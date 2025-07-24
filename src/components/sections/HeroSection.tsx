@@ -1,5 +1,5 @@
 
-import { CheckCircle, Clock, Shield, Target } from "lucide-react";
+import { CheckCircle, Clock, Shield, Target, Lock } from "lucide-react";
 import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import MobileOptimizedSection from "@/components/ui/MobileOptimizedSection";
@@ -67,14 +67,10 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
           showGuarantee={false}
         />
         
-        {/* Call to Action Text with Arrow */}
-        <div className="relative flex flex-col items-center gap-3 mt-2">
-          {/* Upward Arrow */}
-          <div className="text-blue-600 animate-bounce">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="transform rotate-180">
-              <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
+        {/* Call to Action Text with Lock Icon */}
+        <div className="flex items-center justify-center gap-4 mt-2">
+          {/* Large Blue Lock Icon */}
+          <Lock className="h-8 w-8 text-blue-600 flex-shrink-0" />
           
           {/* Bold H3 Text */}
           <h3 className="text-lg sm:text-xl font-bold text-center text-slate-900 max-w-md leading-tight">
