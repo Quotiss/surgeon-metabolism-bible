@@ -1,7 +1,6 @@
 
 import { lazy, Suspense } from "react";
 import FloatingCTA from "@/components/FloatingCTA";
-import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { createCTAHandler } from "@/utils/ctaUtils";
@@ -29,7 +28,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <FloatingCTA onClick={() => handleCTAClick(CTA_LOCATIONS.FLOATING_MOBILE)} />
-      <Header onCTAClick={handleCTAClick} />
       <HeroSection onCTAClick={handleCTAClick} />
 
       <Suspense fallback={<SectionFallback />}>
