@@ -39,13 +39,13 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
         background="gradient"
       >
         {/* Trust Badge */}
-        <div className="mb-3 sm:mb-6">
+        <div className="mb-2 sm:mb-4">
           <TrustBadge size="medium" className="sm:hidden" />
           <TrustBadge size="large" className="hidden sm:block" />
         </div>
 
       {/* Main Headline */}
-      <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-3 sm:mb-6 leading-tight font-bold px-4">
+      <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-2 sm:mb-4 leading-tight font-bold px-2 sm:px-4">
         The <span className="text-blue-600 font-bold">Hidden</span> Metabolic Protocol{" "}
         <span className="text-blue-600 font-bold">Elite Surgeons</span> Are Using to Gain{" "}
         <span className="text-blue-600 font-bold">Unfair Advantages</span> in the OR (and How To{" "}
@@ -53,7 +53,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       </h1>
       
       {/* Subheadline */}
-      <p className="text-sm sm:text-lg md:text-xl text-slate-800 mb-4 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
+      <p className="text-sm sm:text-lg md:text-xl text-slate-800 mb-3 sm:mb-6 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
         Without overhauling your routine that barely keeps you functioning, eliminating your favorite foods, or avoiding social events because of your "weird diet"
       </p>
 
