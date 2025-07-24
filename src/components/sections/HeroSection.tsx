@@ -38,12 +38,6 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
         padding="lg"
         background="gradient"
       >
-        {/* Trust Badge */}
-        <div className="mb-2 sm:mb-4">
-          <TrustBadge size="medium" className="sm:hidden" />
-          <TrustBadge size="large" className="hidden sm:block" />
-        </div>
-
       {/* Main Headline */}
       <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-2 sm:mb-4 leading-tight font-bold px-2 sm:px-4">
         The <span className="text-blue-600 font-bold">Hidden</span> Metabolic Protocol{" "}
