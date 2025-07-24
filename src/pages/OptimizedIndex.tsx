@@ -1,6 +1,6 @@
 
 import { lazy, Suspense, useEffect } from "react";
-import FloatingCTA from "@/components/FloatingCTA";
+
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import OptimizedLazySection from "@/components/OptimizedLazySection";
@@ -69,8 +69,6 @@ const OptimizedIndex = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Floating Mobile CTA */}
-      <FloatingCTA onClick={() => handleCTAClick(CTA_LOCATIONS.FLOATING_MOBILE)} />
 
       {/* Header - Critical, load immediately */}
       <Header onCTAClick={handleCTAClick} />
