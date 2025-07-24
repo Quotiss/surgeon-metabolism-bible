@@ -64,6 +64,22 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
           size="large"
           showPricing={true}
         />
+        
+        {/* Call to Action Text with Arrow */}
+        <div className="relative flex flex-col items-center gap-2">
+          {/* Upward Arrow */}
+          <div className="text-blue-600 transform rotate-180">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="animate-pulse">
+              <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          
+          {/* Highlighted Text */}
+          <h3 className="text-base sm:text-lg font-bold text-center text-slate-900 bg-gradient-to-r from-yellow-200 to-yellow-300 bg-opacity-50 px-3 py-1 rounded-lg border border-yellow-400/30">
+            <span className="text-blue-600 font-bold">Secure your copy</span> of the Surgeon Metabolism Bible plus{" "}
+            <span className="text-blue-600 font-bold">2 Additional Bonuses!</span>
+          </h3>
+        </div>
       </div>
 
       {/* Trust Indicators */}

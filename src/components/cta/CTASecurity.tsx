@@ -5,6 +5,11 @@ interface CTASecurityProps {
 const CTASecurity = ({
   className = ""
 }: CTASecurityProps) => {
-  return;
+  return (
+    <div className={`flex items-center justify-center gap-2 text-sm text-slate-600 ${className}`}>
+      <Lock className="h-4 w-4" />
+      <span>Secure checkout</span>
+    </div>
+  );
 };
 export default CTASecurity;
