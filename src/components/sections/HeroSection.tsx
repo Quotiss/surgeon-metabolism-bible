@@ -1,35 +1,30 @@
+
 import { CheckCircle, Clock, Shield, Target } from "lucide-react";
 import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import MobileOptimizedSection from "@/components/ui/MobileOptimizedSection";
 import CompleteCTA from "@/components/cta/CompleteCTA";
 import TrustBadge from "@/components/ui/TrustBadge";
+
 interface HeroSectionProps {
   onCTAClick: (location: string) => void;
 }
-const HeroSection = ({
-  onCTAClick
-}: HeroSectionProps) => {
-  const {
-    trackPageView
-  } = useAnalytics();
-  const {
-    elementRef
-  } = useHeroVisibilityTracking(trackPageView, {
+
+const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
+  const { trackPageView } = useAnalytics();
+  const { elementRef } = useHeroVisibilityTracking(trackPageView, {
     threshold: 0.5,
     delay: 500
   });
-  const trustIndicators = [{
-    icon: Clock,
-    text: "No time-wasting fluff"
-  }, {
-    icon: Shield,
-    text: "Evidence-based approach"
-  }, {
-    icon: Target,
-    text: "Surgeon-specific protocol"
-  }];
-  return <>
+
+  const trustIndicators = [
+    { icon: Clock, text: "No time-wasting fluff" },
+    { icon: Shield, text: "Evidence-based approach" },
+    { icon: Target, text: "Surgeon-specific protocol" }
+  ];
+
+  return (
+    <>
       {/* Product Name Header */}
       <div className="bg-blue-600 h-16 flex items-center justify-center w-full">
         <h2 className="text-white font-bold text-sm sm:text-base">
@@ -37,7 +32,12 @@ const HeroSection = ({
         </h2>
       </div>
 
-      <MobileOptimizedSection ref={elementRef} className="hero-section text-center" padding="lg" background="gradient">
+      <MobileOptimizedSection 
+        ref={elementRef}
+        className="hero-section text-center"
+        padding="lg"
+        background="gradient"
+      >
         {/* Trust Badge */}
         <div className="mb-2 sm:mb-4">
           <TrustBadge size="medium" className="sm:hidden" />
@@ -58,18 +58,44 @@ const HeroSection = ({
       </p>
 
       {/* CTA Section */}
-      <div className="flex flex-col gap-6 justify-center items-center mb-10 sm:mb-12 max-w-lg mx-auto">
-        <CompleteCTA onCTAClick={() => onCTAClick('hero')} size="large" showPricing={true} />
+      <div className="flex flex-col gap-4 justify-center items-center mb-10 sm:mb-12 max-w-lg mx-auto">
+        <CompleteCTA 
+          onCTAClick={() => onCTAClick('hero')}
+          size="large"
+          showPricing={false}
+          showSecurity={false}
+          showGuarantee={false}
+        />
+        
+        {/* Call to Action Text with Arrow */}
+        <div className="relative flex flex-col items-center gap-3 mt-2">
+          {/* Upward Arrow */}
+          <div className="text-blue-600 animate-bounce">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="transform rotate-180">
+              <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          
+          {/* Bold H3 Text */}
+          <h3 className="text-lg sm:text-xl font-bold text-center text-slate-900 max-w-md leading-tight">
+            <span className="text-blue-600">Secure Your Copy</span> of the Surgeon Metabolism Bible plus{" "}
+            <span className="text-blue-600">2 Additional Bonuses!</span>
+          </h3>
+        </div>
       </div>
 
       {/* Trust Indicators */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
-        {trustIndicators.map((indicator, index) => <div key={index} className="flex items-center justify-center space-x-3 p-4 sm:p-5 rounded-lg bg-white/70 backdrop-blur-sm">
+        {trustIndicators.map((indicator, index) => (
+          <div key={index} className="flex items-center justify-center space-x-3 p-4 sm:p-5 rounded-lg bg-white/70 backdrop-blur-sm">
             <indicator.icon className="h-5 sm:h-6 w-5 sm:w-6 text-blue-600 flex-shrink-0" />
-            
-          </div>)}
+            <span className="text-slate-600 mobile-body-small font-medium">{indicator.text}</span>
+          </div>
+        ))}
       </div>
       </MobileOptimizedSection>
-    </>;
+    </>
+  );
 };
+
 export default HeroSection;
