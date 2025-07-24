@@ -24,16 +24,24 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
   ];
 
   return (
-    <MobileOptimizedSection 
-      ref={elementRef}
-      className="hero-section text-center"
-      padding="lg"
-      background="gradient"
-    >
-      {/* Trust Badge */}
-      <div className="mb-6 sm:mb-8">
-        <TrustBadge />
+    <>
+      {/* Product Name Header */}
+      <div className="fixed top-0 left-0 right-0 bg-blue-600 h-12 flex items-center justify-center z-50">
+        <h2 className="text-white font-bold text-sm sm:text-base">
+          Surgeon Metabolism Bible
+        </h2>
       </div>
+
+      <MobileOptimizedSection 
+        ref={elementRef}
+        className="hero-section text-center pt-16"
+        padding="lg"
+        background="gradient"
+      >
+        {/* Trust Badge */}
+        <div className="mb-6 sm:mb-8">
+          <TrustBadge size="large" />
+        </div>
 
       {/* Main Headline */}
       <h1 className="mobile-h1 text-slate-900 mb-6 sm:mb-8 leading-tight">
@@ -66,7 +74,8 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
           </div>
         ))}
       </div>
-    </MobileOptimizedSection>
+      </MobileOptimizedSection>
+    </>
   );
 };
 
