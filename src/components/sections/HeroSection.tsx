@@ -26,7 +26,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
   return (
     <>
       {/* Product Name Header */}
-      <div className="fixed top-0 left-0 right-0 bg-blue-600 h-12 flex items-center justify-center z-50">
+      <div className="bg-blue-600 h-18 flex items-center justify-center w-full">
         <h2 className="text-white font-bold text-sm sm:text-base">
           Surgeon Metabolism Bible
         </h2>
@@ -34,7 +34,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
 
       <MobileOptimizedSection 
         ref={elementRef}
-        className="hero-section text-center pt-16"
+        className="hero-section text-center"
         padding="lg"
         background="gradient"
       >
