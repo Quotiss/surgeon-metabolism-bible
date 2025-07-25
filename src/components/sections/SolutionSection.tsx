@@ -207,7 +207,7 @@ const SolutionSection = ({
 
         {/* New CTA Section */}
         <div className="text-center mt-8 sm:mt-12">
-          <div className="border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6">
+          <div className="p-6 sm:p-8 mb-6">
             <OptimizedButton 
               onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} 
               variant="primary" 
@@ -224,7 +224,7 @@ const SolutionSection = ({
               Reclaim your energy and physique in 30 days or less
             </p>
             
-            <div className="flex items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <TrustBadge size="medium" />
               <img 
                 src="/lovable-uploads/5a79b5e8-8c21-4078-a3fe-4150e6d0be4b.png" 
