@@ -54,7 +54,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
 
       {/* Transition Arrow */}
       <div className="flex justify-center py-8 sm:py-12">
-        <ChevronDown className="h-8 w-8 sm:h-10 sm:w-10 text-slate-400 animate-bounce" />
+        <ChevronDown className="h-8 w-8 sm:h-10 sm:w-10 text-slate-400" />
       </div>
 
       </MobileOptimizedSection>
