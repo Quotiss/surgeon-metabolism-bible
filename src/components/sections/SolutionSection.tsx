@@ -226,7 +226,7 @@ const SolutionSection = ({
             </OptimizedButton>
             
             <p className="text-base sm:text-lg text-slate-600 font-semibold mb-6">
-              Reclaim your energy and physique in 30 days or less
+              Reclaim Your Energy And Physique In 30 Days Or Less
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
