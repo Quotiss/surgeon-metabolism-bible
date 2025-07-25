@@ -25,58 +25,65 @@ const ProductValueSection = ({
 
       {/* Product Components */}
       <div className="grid gap-6 sm:gap-8 mb-10 sm:mb-12">
-        <div className="p-6 sm:p-8 bg-blue-50 rounded-lg border border-blue-200">
-          <div className="flex flex-col lg:flex-row items-start gap-6">
+        {/* Main Product - eBook */}
+        <div className="p-4 sm:p-6 lg:p-8 bg-blue-50 rounded-lg border border-blue-200">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
             {/* Icon and Text Content */}
-            <div className="flex items-start space-x-4 sm:space-x-6 flex-1">
-              <BookOpen className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 flex-shrink-0 mt-1" />
-              <div className="flex-1">
-                <h4 className="mobile-h4 text-blue-600 mb-3">
-                  Surgeon Metabolism Bible 5-module eBook
-                </h4>
-                <p className="mobile-body-small text-slate-700 mb-4">
-                  Comprehensive 5-module eBook covering the exact metabolic protocols to regain your competitive edge WITHOUT uprooting your life
-                </p>
-                <div className="flex items-start space-x-2 mb-4">
-                  <Star className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <p className="mobile-body-small text-slate-700 font-medium">
-                    Includes the <span className="text-blue-600 font-bold">24-Hour Surgeon-Shift Protocol</span> for a taste of the system that gets results in <span className="text-blue-600 font-bold">ONE DAY</span>.
+            <div className="w-full lg:flex-1 text-center lg:text-left px-2 sm:px-4 lg:px-0">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6">
+                <BookOpen className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600 flex-shrink-0" />
+                <div className="flex-1 max-w-2xl lg:max-w-none">
+                  <h4 className="mobile-h4 text-blue-600 mb-3">
+                    Surgeon Metabolism Bible 5-module eBook
+                  </h4>
+                  <p className="mobile-body-small text-slate-700 mb-4">
+                    Comprehensive 5-module eBook covering the exact metabolic protocols to regain your competitive edge WITHOUT uprooting your life
                   </p>
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-y-2 sm:space-y-0 sm:space-x-2 mb-4">
+                    <Star className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                    <p className="mobile-body-small text-slate-700 font-medium">
+                      Includes the <span className="text-blue-600 font-bold">24-Hour Surgeon-Shift Protocol</span> for a taste of the system that gets results in <span className="text-blue-600 font-bold">ONE DAY</span>.
+                    </p>
+                  </div>
                 </div>
-                
               </div>
             </div>
             
             {/* Product Image */}
-            <div className="w-full lg:w-96 flex justify-center lg:justify-end">
-              <img src="/lovable-uploads/6cdd542e-6d8d-4bfb-bbce-616c53019b5a.png" alt="The Surgeon Metabolism Bible 5-Module eBook on laptop" className="w-full max-w-xl lg:max-w-3xl h-auto rounded-lg shadow-lg" />
+            <div className="w-full lg:w-96 flex justify-center">
+              <img src="/lovable-uploads/6cdd542e-6d8d-4bfb-bbce-616c53019b5a.png" alt="The Surgeon Metabolism Bible 5-Module eBook on laptop" className="w-full max-w-sm sm:max-w-md lg:max-w-3xl h-auto rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
 
-        <div className="flex items-start space-x-4 sm:space-x-6 p-6 sm:p-8 bg-blue-50 rounded-lg border border-blue-200">
-          <Gift className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 flex-shrink-0 mt-1" />
-          <div className="flex-1">
-            <h4 className="mobile-h4 text-blue-600 mb-3">
-              Quick Start Bonus #1: The Surgeon's Grocery Blueprint
-            </h4>
-            <p className="mobile-body-small text-slate-700 mb-4">
-              MUST HAVE done-for-you shopping template designed for fast-moving surgeons who don't have any time to waste. Designed for maximum efficiency.
-            </p>
-            <p className="text-sm sm:text-base text-blue-600 font-bold">Value: $97</p>
+        {/* Bonus Items */}
+        <div className="p-4 sm:p-6 lg:p-8 bg-blue-50 rounded-lg border border-blue-200">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6 text-center sm:text-left px-2 sm:px-4 lg:px-0">
+            <Gift className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600 flex-shrink-0" />
+            <div className="flex-1 max-w-2xl lg:max-w-none">
+              <h4 className="mobile-h4 text-blue-600 mb-3">
+                Quick Start Bonus #1: The Surgeon's Grocery Blueprint
+              </h4>
+              <p className="mobile-body-small text-slate-700 mb-4">
+                MUST HAVE done-for-you shopping template designed for fast-moving surgeons who don't have any time to waste. Designed for maximum efficiency.
+              </p>
+              <p className="text-sm sm:text-base text-blue-600 font-bold">Value: $97</p>
+            </div>
           </div>
         </div>
 
-        <div className="flex items-start space-x-4 sm:space-x-6 p-6 sm:p-8 bg-blue-50 rounded-lg border border-blue-200">
-          <Pill className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 flex-shrink-0 mt-1" />
-          <div className="flex-1">
-            <h4 className="mobile-h4 text-blue-600 mb-3">
-              Quick Start Bonus #2: The Surgical Stress Supplement Stack
-            </h4>
-            <p className="mobile-body-small text-slate-700 mb-4">
-              Revealing the exact supplementation protocol elite surgeons use to amplify their results and maximize performance. Designed specifically for your stress physiology and recovery demands.
-            </p>
-            <p className="text-sm sm:text-base text-blue-600 font-bold">Value: $147</p>
+        <div className="p-4 sm:p-6 lg:p-8 bg-blue-50 rounded-lg border border-blue-200">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6 text-center sm:text-left px-2 sm:px-4 lg:px-0">
+            <Pill className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600 flex-shrink-0" />
+            <div className="flex-1 max-w-2xl lg:max-w-none">
+              <h4 className="mobile-h4 text-blue-600 mb-3">
+                Quick Start Bonus #2: The Surgical Stress Supplement Stack
+              </h4>
+              <p className="mobile-body-small text-slate-700 mb-4">
+                Revealing the exact supplementation protocol elite surgeons use to amplify their results and maximize performance. Designed specifically for your stress physiology and recovery demands.
+              </p>
+              <p className="text-sm sm:text-base text-blue-600 font-bold">Value: $147</p>
+            </div>
           </div>
         </div>
       </div>
