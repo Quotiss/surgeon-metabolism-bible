@@ -207,27 +207,30 @@ const SolutionSection = ({
 
         {/* New CTA Section */}
         <div className="text-center mt-8 sm:mt-12">
-          <div className="bg-gradient-to-r from-blue-50/80 to-slate-50/60 border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6">
-            <p className="text-sm sm:text-base font-bold text-amber-700 mb-4 tracking-wide uppercase">
-              ⚡ Limited to First 500 Surgeons Only
-            </p>
-            <OptimizedButton onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} variant="primary" size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
-              Get Instant Access Now →
+          <div className="border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6">
+            <OptimizedButton 
+              onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} 
+              variant="primary" 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold mb-3 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
+            >
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-base sm:text-xl font-bold">Yes! I Want Instant Access Now</span>
+                <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
+              </div>
             </OptimizedButton>
-            <div className="space-y-2">
-              <div className="flex items-center justify-center gap-2">
-                <Check className="h-5 w-5 text-blue-600" />
-                <p className="text-sm sm:text-base text-slate-600 font-medium">
-                  Join the Elite and Reclaim your Vitality
-                </p>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <Shield className="h-4 w-4 text-green-600" />
-                <p className="text-sm text-slate-600">
-                  <span className="font-bold">$27 Full Access • ⚠️ Limited Availability • </span>
-                  <span className="text-green-600 font-bold">30-day 100% money back guarantee</span>
-                </p>
-              </div>
+            
+            <p className="text-sm sm:text-base text-slate-600 font-medium mb-6">
+              Reclaim your energy and physique in 30 days or less
+            </p>
+            
+            <div className="flex items-center justify-center gap-6">
+              <TrustBadge size="medium" />
+              <img 
+                src="/lovable-uploads/5a79b5e8-8c21-4078-a3fe-4150e6d0be4b.png" 
+                alt="30-Day Money Back Guarantee" 
+                className="h-16 w-auto"
+              />
             </div>
           </div>
         </div>
