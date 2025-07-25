@@ -40,7 +40,7 @@ const ProductValueSection = ({
                 <div className="flex items-start space-x-2 mb-4">
                   <Star className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <p className="mobile-body-small text-slate-700 font-medium">
-                    Includes the 24-Hour Surgeon-Shift Protocol for a taste of the system that gets results in ONE DAY.
+                    Includes the <span className="text-blue-600 font-bold">24-Hour Surgeon-Shift Protocol</span> for a taste of the system that gets results in <span className="text-blue-600 font-bold">ONE DAY</span>.
                   </p>
                 </div>
                 
