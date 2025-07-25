@@ -102,9 +102,7 @@ const SolutionSection = ({
               </div>
             </div>
             
-            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              This is the gateway to reclaiming your <HighlightedText>biological superiority</HighlightedText>.
-            </p>
+            
           </div>
         </div>
 
