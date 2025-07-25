@@ -99,6 +99,9 @@ const ProductValueSection = ({
           showGuarantee={false} 
           buttonText="Yes! I Want Instant Access Now" 
         />
+        <p className="text-center font-bold text-slate-900 mobile-body">
+          Reclaim Your Energy and Physique in 30 Days Or Less
+        </p>
         <TrustBadge />
       </div>
     </div>;
