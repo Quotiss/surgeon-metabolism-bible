@@ -88,6 +88,10 @@ const SolutionSection = ({
               Organized into <HighlightedText>five unique, actionable modules</HighlightedText>, the <HighlightedText variant="gradient">Surgeon Metabolism Bible</HighlightedText> eBook is specifically designed to show you how to <HighlightedText>harness the surgical stress</HighlightedText> that's keeping you exhausted, out-of-shape, and constantly unmotivated into <HighlightedText>raw metabolic fuel</HighlightedText>, optimizing the biological mechanisms that <strong>shred pounds</strong> in your sleep and turn you into the <strong>commanding</strong> surgeon who has <strong>bulletproof</strong> resiliency, energy, and stamina. Not to mention turning you into a <strong>formidable force in the bedroom</strong>.
             </p>
             
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              The best part? 30 days is all it takes to reverse the biological damage the system has done to you.
+            </p>
+            
             {/* Quick-Win Paragraph */}
             <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 max-w-4xl mx-auto my-6 sm:my-8">
               <div className="flex items-start space-x-4">
