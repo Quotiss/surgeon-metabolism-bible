@@ -1,6 +1,7 @@
-import { Target, Shield, Zap, Heart, CheckCircle, BookOpen, Clock } from "lucide-react";
+import { Target, Shield, Zap, Heart, CheckCircle, BookOpen, Clock, ArrowRight } from "lucide-react";
 import LazySection from "@/components/LazySection";
 import TrustBadge from "@/components/ui/TrustBadge";
+import OptimizedButton from "@/components/ui/OptimizedButton";
 
 const ScienceSection = () => {
   return (
@@ -98,8 +99,14 @@ const ScienceSection = () => {
           </p>
         </div>
 
-        {/* Trust Badge */}
-        <div className="flex justify-center mt-8 sm:mt-12">
+        {/* CTA Button and Trust Badge */}
+        <div className="flex flex-col items-center justify-center mt-8 sm:mt-12 space-y-6">
+          <OptimizedButton variant="primary" size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-base sm:text-xl font-bold">Yes! I Want Instant Access Now</span>
+              <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
+            </div>
+          </OptimizedButton>
           <TrustBadge />
         </div>
       </div>
