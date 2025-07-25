@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import LazySection from "@/components/LazySection";
+import TrustBadge from "@/components/ui/TrustBadge";
 import { CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
 
@@ -70,13 +71,14 @@ const FAQSection = ({ onCTAClick }: SectionProps) => {
           >
             Get Instant Access Now →
           </Button>
-          <div className="flex justify-center">
+          <div className="flex justify-center mb-4">
             <img 
               src="/lovable-uploads/36484096-74f6-40bb-988c-86af5ddd059a.png" 
               alt="30 Days Money Back Guarantee" 
               className="w-24 h-24 object-contain"
             />
           </div>
+          <TrustBadge />
         </div>
       </div>
     </LazySection>
