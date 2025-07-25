@@ -49,7 +49,7 @@ const FAQSection = ({
 
         {/* CTA Button Section */}
         <div className="text-center">
-          <Button onClick={() => onCTAClick?.(CTA_LOCATIONS.FAQ_CTA)} size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
+          <Button onClick={() => onCTAClick?.(CTA_LOCATIONS.FAQ_CTA)} size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-4 sm:px-8 sm:py-5 md:px-12 md:py-6 text-lg sm:text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto w-full sm:w-auto max-w-md sm:max-w-none mx-auto">
             Yes! I Want Instant Access Now →
           </Button>
           
