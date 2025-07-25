@@ -1,5 +1,5 @@
 
-import { CheckCircle, Clock, Shield, Target, Lock } from "lucide-react";
+import { CheckCircle, Clock, Shield, Target, Lock, ChevronDown } from "lucide-react";
 import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import MobileOptimizedSection from "@/components/ui/MobileOptimizedSection";
@@ -48,9 +48,14 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       </h1>
       
       {/* Subheadline */}
-      <p className="text-sm sm:text-lg md:text-xl text-slate-800 mb-3 sm:mb-6 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
+      <p className="text-sm sm:text-lg md:text-xl text-slate-800 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
         Without overhauling your routine that barely keeps you functioning, eliminating your favorite foods, or avoiding social events because of your "weird diet"
       </p>
+
+      {/* Transition Arrow */}
+      <div className="flex justify-center py-8 sm:py-12">
+        <ChevronDown className="h-8 w-8 sm:h-10 sm:w-10 text-slate-400 animate-bounce" />
+      </div>
 
       </MobileOptimizedSection>
     </>
