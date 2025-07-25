@@ -108,29 +108,27 @@ const SolutionSection = ({
 
         {/* CTA Section */}
         <div className="text-center my-8 sm:my-12">
-          <div className="bg-gradient-to-r from-blue-50/80 to-slate-50/60 border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6">
-            <OptimizedButton 
-              onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} 
-              variant="primary" 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-lg font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
-            >
-              <div className="flex items-center justify-center gap-3">
-                <div className="text-center">
-                  <div className="text-xl font-bold">Yes! I Want Instant Access Now</div>
-                  <div className="text-sm font-medium opacity-90">Reclaim your energy and physique in 30 days or less</div>
-                </div>
-                <ArrowRight className="h-6 w-6 flex-shrink-0" />
+          <OptimizedButton 
+            onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} 
+            variant="primary" 
+            size="lg" 
+            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
+          >
+            <div className="flex items-center justify-center gap-2 sm:gap-3">
+              <div className="text-center">
+                <div className="text-base sm:text-xl font-bold leading-tight">Yes! I Want Instant Access Now</div>
+                <div className="text-xs sm:text-sm font-medium opacity-90 leading-tight">Reclaim your energy and physique in 30 days or less</div>
               </div>
-            </OptimizedButton>
-            
-            <div className="flex justify-center mt-4">
-              <img 
-                src="/src/assets/guarantee-badge.png" 
-                alt="30-Day Money Back Guarantee" 
-                className="h-12 w-auto"
-              />
+              <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
             </div>
+          </OptimizedButton>
+          
+          <div className="flex justify-center mt-4">
+            <img 
+              src="/lovable-uploads/5a79b5e8-8c21-4078-a3fe-4150e6d0be4b.png" 
+              alt="30-Day Money Back Guarantee" 
+              className="h-12 w-auto"
+            />
           </div>
         </div>
 
