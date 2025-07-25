@@ -110,6 +110,15 @@ const SolutionSection = ({
           </div>
         </div>
 
+        {/* Product Showcase Image */}
+        <div className="flex justify-center my-8 sm:my-12">
+          <img 
+            src="/lovable-uploads/1af6e23c-82e9-4311-95a7-d6ec00d84029.png" 
+            alt="Surgeon Metabolism Bible Product Suite" 
+            className="w-full max-w-2xl h-auto"
+          />
+        </div>
+
         {/* CTA Section */}
         <div className="text-center my-8 sm:my-12">
           {/* Pricing */}
