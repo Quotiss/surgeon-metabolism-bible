@@ -74,6 +74,14 @@ const SolutionSection = ({
             </div>
           </div>
           
+          {/* Product Image */}
+          <div className="flex justify-center my-6 sm:my-8">
+            <img 
+              src="/lovable-uploads/156d3ca1-09aa-4a02-8528-29d1a66b4bf3.png" 
+              alt="The Surgeon Metabolism Bible 5-Module eBook on laptop" 
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto rounded-lg shadow-lg" 
+            />
+          </div>
           
           <div className="flex justify-center my-6 sm:my-8">
             <TrustBadge size="medium" />
