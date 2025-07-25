@@ -39,12 +39,16 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
         background="gradient"
       >
       {/* Main Headline */}
-      <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-2 sm:mb-4 leading-tight font-bold px-2 sm:px-4">
+      <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-6 sm:mb-8 leading-tight font-bold px-2 sm:px-4">
         The <span className="text-blue-600 font-bold">Hidden</span> Metabolic Protocol{" "}
         <span className="text-blue-600 font-bold">Elite Surgeons</span> Are Using to{" "}
         <span className="text-blue-600 font-bold">Supercharge Their Physiques</span> and{" "}
         <span className="text-blue-600 font-bold">Reclaim Their Mental Energy</span> in Under{" "}
         <span className="text-blue-600 font-bold">30 Days</span>
+        <br />
+        <span className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-slate-700 font-normal">
+          (And How to Steal Their System)
+        </span>
       </h1>
       
       {/* Subheadline */}
