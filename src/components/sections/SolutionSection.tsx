@@ -127,7 +127,7 @@ const SolutionSection = ({
             <img 
               src="/lovable-uploads/5a79b5e8-8c21-4078-a3fe-4150e6d0be4b.png" 
               alt="30-Day Money Back Guarantee" 
-              className="h-12 w-auto"
+              className="h-24 w-auto"
             />
           </div>
         </div>
