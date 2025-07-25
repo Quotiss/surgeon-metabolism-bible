@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, BookOpen, Gift, Pill, Star, Check, Shield } from "lucide-react";
 import { PRODUCT_PRICING, CTA_LOCATIONS } from "@/lib/constants";
 import CompleteCTA from "@/components/cta/CompleteCTA";
+import TrustBadge from "@/components/ui/TrustBadge";
 import type { SectionProps } from "@/types/common";
 const ProductValueSection = ({
   onCTAClick
@@ -88,28 +89,24 @@ const ProductValueSection = ({
         </div>
       </div>
 
-      {/* Pricing Section */}
-      <div className="bg-slate-50 rounded-xl p-6 sm:p-8 text-center border border-slate-200 mb-8 sm:mb-10">
-        <div className="space-y-4 sm:space-y-6">
-          
-          <div className="border-t border-slate-200 pt-4 sm:pt-6">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-black text-blue-600 mb-2 sm:mb-3">
-              ONLY: <span className="line-through text-slate-500 mr-2">$97</span> $27
-            </p>
-            <p className="mobile-body font-bold text-green-600">
-              (Save $70 TODAY)
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* CTA Section */}
-      <div className="max-w-lg mx-auto">
-        <p className="mobile-body-small font-bold text-amber-700 mb-6 sm:mb-8 tracking-wide uppercase text-center">
-          ⚡ Limited to First 500 Surgeons Only
+      <div className="max-w-lg mx-auto space-y-6">
+        <p className="mobile-body-small font-bold text-amber-700 tracking-wide uppercase text-center">
+          ⚡ Limited To First 500 Surgeons Only
         </p>
         
-        <CompleteCTA onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} size="large" showPricing={false} />
+        <CompleteCTA 
+          onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} 
+          size="large" 
+          showPricing={false}
+          buttonText="Get Instant Access Now"
+        />
+        
+        <p className="mobile-body-small font-bold text-slate-700 text-center">
+          Instant Download • For Surgeons Only
+        </p>
+        
+        <TrustBadge size="medium" className="pt-2" />
       </div>
     </div>;
 };
