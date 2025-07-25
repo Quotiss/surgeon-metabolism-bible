@@ -225,7 +225,7 @@ const SolutionSection = ({
               </div>
             </OptimizedButton>
             
-            <p className="text-sm sm:text-base text-slate-600 font-medium mb-6">
+            <p className="text-base sm:text-lg text-slate-600 font-semibold mb-6">
               Reclaim your energy and physique in 30 days or less
             </p>
             
