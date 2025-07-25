@@ -90,16 +90,16 @@ const ProductValueSection = ({
       </div>
 
       {/* CTA Section */}
-      <div className="max-w-lg mx-auto space-y-6">
-        
-        
-        <CompleteCTA onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} size="large" showPricing={false} buttonText="Get Instant Access Now" />
-        
-        <p className="mobile-body-small font-bold text-slate-700 text-center">
-          Instant Download • For Surgeons Only
-        </p>
-        
-        <TrustBadge size="medium" className="pt-2" />
+      <div className="flex flex-col items-center justify-center mt-8 sm:mt-12 space-y-6">
+        <CompleteCTA 
+          onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} 
+          size="large" 
+          showPricing={false} 
+          showSecurity={false} 
+          showGuarantee={false} 
+          buttonText="Yes! I Want Instant Access Now" 
+        />
+        <TrustBadge />
       </div>
     </div>;
 };
