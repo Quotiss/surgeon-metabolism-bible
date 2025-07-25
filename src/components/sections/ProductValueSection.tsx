@@ -82,7 +82,7 @@ const ProductValueSection = ({
               <p className="mobile-body-small text-slate-700 mb-4">
                 Revealing the exact supplementation protocol elite surgeons use to amplify their results and maximize performance. Designed specifically for your stress physiology and recovery demands.
               </p>
-              <p className="text-sm sm:text-base text-blue-600 font-bold">Value: $147</p>
+              
             </div>
           </div>
         </div>
