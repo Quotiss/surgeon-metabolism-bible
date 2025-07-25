@@ -91,16 +91,9 @@ const ProductValueSection = ({
 
       {/* CTA Section */}
       <div className="max-w-lg mx-auto space-y-6">
-        <p className="mobile-body-small font-bold text-amber-700 tracking-wide uppercase text-center">
-          ⚡ Limited To First 500 Surgeons Only
-        </p>
         
-        <CompleteCTA 
-          onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} 
-          size="large" 
-          showPricing={false}
-          buttonText="Get Instant Access Now"
-        />
+        
+        <CompleteCTA onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} size="large" showPricing={false} buttonText="Get Instant Access Now" />
         
         <p className="mobile-body-small font-bold text-slate-700 text-center">
           Instant Download • For Surgeons Only
