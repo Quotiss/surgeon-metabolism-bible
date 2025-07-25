@@ -13,7 +13,7 @@ const ProductValueSection = ({
           Join The <span className="text-blue-600 font-bold">Elite Surgeons</span> Who Invest In Themselves
         </h2>
         <h3 className="mobile-h3 text-slate-900 mb-6">
-          Here's What You Get With the ...
+          Here's What You Get With the <span className="text-blue-600 font-bold">Surgeon Metabolism Bible</span>...
         </h3>
         <div className="flex items-center justify-center gap-3 mb-4">
           
