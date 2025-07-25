@@ -108,7 +108,18 @@ const SolutionSection = ({
 
         {/* CTA Section */}
         <div className="text-center my-8 sm:my-12">
-          <OptimizedButton onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} variant="primary" size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold mb-3 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
+          {/* Pricing */}
+          <div className="mb-6">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+              ONLY <span className="line-through text-slate-400">$97.00</span> $27
+            </div>
+            <p className="text-lg sm:text-xl text-slate-700 font-semibold">
+              (SAVE $70.00 TODAY)
+            </p>
+          </div>
+          
+          {/* CTA Button */}
+          <OptimizedButton onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} variant="primary" size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
             <div className="flex items-center justify-center gap-2">
               <span className="text-base sm:text-xl font-bold">Yes! I Want Instant Access Now</span>
               <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
@@ -119,6 +130,13 @@ const SolutionSection = ({
             Reclaim your energy and physique in 30 days or less
           </p>
           
+          {/* Secure Payments */}
+          <div className="flex items-center justify-center gap-2 mb-4 text-sm text-slate-600">
+            <Shield className="h-4 w-4 text-green-600" />
+            <span className="font-medium">Secure Payments • Powered by Polar</span>
+          </div>
+          
+          {/* Guarantee Badge */}
           <div className="flex justify-center mt-4">
             <img src="/lovable-uploads/5a79b5e8-8c21-4078-a3fe-4150e6d0be4b.png" alt="30-Day Money Back Guarantee" className="h-16 w-auto" />
           </div>
