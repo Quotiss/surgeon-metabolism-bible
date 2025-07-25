@@ -14,7 +14,7 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
         <img 
           src="/lovable-uploads/d8d4eb4c-c865-49cb-9cca-9201328face7.png" 
           alt="30 Days Money Back Guarantee" 
-          className="w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 object-contain"
+          className="w-44 h-44 sm:w-56 sm:h-56 md:w-64 md:h-64 object-contain"
         />
       </div>
 
