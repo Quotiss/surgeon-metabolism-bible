@@ -12,9 +12,12 @@ const ProductValueSection = ({
         <h2 className="mobile-h2 text-slate-900 mb-6 leading-tight">
           Join The <span className="text-blue-600 font-bold">Elite Surgeons</span> Who Invest In Themselves
         </h2>
-        <h3 className="mobile-h3 text-slate-900 mb-6">
-          Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
-        </h3>
+         <div className="flex items-center justify-center gap-3 mb-6">
+           <CheckCircle className="h-6 w-6 text-green-600" />
+           <div className="mobile-h3 text-slate-900">
+             Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
+           </div>
+         </div>
         <div className="flex items-center justify-center gap-3 mb-4">
           
           <p className="mobile-body text-slate-600 max-w-5xl mx-auto leading-relaxed">
