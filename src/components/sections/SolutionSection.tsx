@@ -138,8 +138,8 @@ const SolutionSection = ({
           </div>
           
           {/* Guarantee Badge */}
-          <div className="flex justify-center mt-4">
-            <img src="/lovable-uploads/5a79b5e8-8c21-4078-a3fe-4150e6d0be4b.png" alt="30-Day Money Back Guarantee" className="h-16 w-auto" />
+          <div className="flex justify-center my-6">
+            <img src="/lovable-uploads/5a79b5e8-8c21-4078-a3fe-4150e6d0be4b.png" alt="30-Day Money Back Guarantee" className="h-20 w-auto" />
           </div>
         </div>
 
