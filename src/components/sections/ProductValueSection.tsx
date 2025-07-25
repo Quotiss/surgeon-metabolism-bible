@@ -96,7 +96,11 @@ const ProductValueSection = ({
         
         {/* Product Image */}
         <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto mt-6 mb-4">
-          
+          <img 
+            src="/lovable-uploads/71f3c678-7457-4ccb-807c-58f758509b1b.png" 
+            alt="The Surgeon Metabolism Bible 5-Module eBook" 
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
         </div>
         
         <TrustBadge />
