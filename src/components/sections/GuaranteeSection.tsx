@@ -60,21 +60,13 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-slate-50/80 to-blue-50/60 border-2 border-blue-200/50 rounded-2xl p-6 sm:p-8 mb-6 max-w-2xl mx-auto">
-        <p className="mobile-body-small font-bold text-amber-700 mb-6 sm:mb-8 tracking-wide uppercase text-center">
-          ⚡ Limited to First 500 Surgeons Only
-        </p>
-        
-        <div className="flex flex-col items-center gap-4 sm:gap-6">
-          <CTAButton 
-            onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
-            size="large"
-          />
-          
-          <CTASecurity />
-          
-          <CTAGuarantee showBadge={false} />
-        </div>
+      <div className="flex flex-col items-center justify-center">
+        <CTAButton 
+          onClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)}
+          size="large"
+        >
+          Yes! I Want Instant Access Now
+        </CTAButton>
       </div>
     </MobileOptimizedSection>
   );
