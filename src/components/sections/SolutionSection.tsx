@@ -112,16 +112,17 @@ const SolutionSection = ({
             onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} 
             variant="primary" 
             size="lg" 
-            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
+            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold mb-3 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
           >
-            <div className="flex items-center justify-center gap-2 sm:gap-3">
-              <div className="text-center">
-                <div className="text-base sm:text-xl font-bold leading-tight">Yes! I Want Instant Access Now</div>
-                <div className="text-xs sm:text-sm font-medium opacity-90 leading-tight">Reclaim your energy and physique in 30 days or less</div>
-              </div>
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-base sm:text-xl font-bold">Yes! I Want Instant Access Now</span>
               <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
             </div>
           </OptimizedButton>
+          
+          <p className="text-sm sm:text-base text-slate-600 font-medium mb-4">
+            Reclaim your energy and physique in 30 days or less
+          </p>
           
           <div className="flex justify-center mt-4">
             <img 
