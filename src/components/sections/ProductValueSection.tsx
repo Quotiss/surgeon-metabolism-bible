@@ -93,6 +93,16 @@ const ProductValueSection = ({
       <div className="flex flex-col items-center justify-center mt-8 sm:mt-12 space-y-4">
         <CompleteCTA onCTAClick={() => onCTAClick(CTA_LOCATIONS.MAIN_CTA)} size="large" showPricing={false} showSecurity={false} showGuarantee={false} buttonText="Yes! I Want Instant Access Now" />
         <p className="text-base sm:text-lg text-slate-600 font-semibold text-center">Reclaim Your Energy and Physique in 30 Days Or Less</p>
+        
+        {/* Product Image */}
+        <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto mt-6 mb-4">
+          <img 
+            src="/lovable-uploads/b0179a95-7feb-4fe1-8189-c33553c1c339.png" 
+            alt="The Surgeon Metabolism Bible 5-Module eBook on laptop screen" 
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+        
         <TrustBadge />
       </div>
     </div>;
