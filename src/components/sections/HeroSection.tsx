@@ -44,11 +44,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
         <span className="text-blue-600 font-bold">Elite Surgeons</span> Are Using to{" "}
         <span className="text-blue-600 font-bold">Supercharge Their Physiques</span> and{" "}
         <span className="text-blue-600 font-bold">Reclaim Their Mental Energy</span> in Under{" "}
-        <span className="text-blue-600 font-bold">30 Days</span>
-        <br />
-        <span className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-slate-700 font-normal">
-          (And How to Steal Their System)
-        </span>
+        <span className="text-blue-600 font-bold">30 Days</span> (And How to Steal Their System)
       </h1>
       
       {/* Subheadline */}
