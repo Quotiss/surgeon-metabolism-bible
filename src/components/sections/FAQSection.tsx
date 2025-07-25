@@ -50,7 +50,7 @@ const FAQSection = ({
         {/* CTA Button Section */}
         <div className="text-center">
           <Button onClick={() => onCTAClick?.(CTA_LOCATIONS.FAQ_CTA)} size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
-            Get Instant Access Now →
+            Yes! I Want Instant Access Now →
           </Button>
           
           <TrustBadge />
