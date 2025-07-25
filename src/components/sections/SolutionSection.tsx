@@ -64,10 +64,12 @@ const SolutionSection = ({
         <div className="mb-8 sm:mb-12">
           <div className="bg-gradient-to-r from-blue-50/30 via-white to-blue-50/30 p-6 sm:p-8 rounded-2xl border border-blue-100/50 shadow-sm mb-6 sm:mb-8">
             <div className="flex justify-center items-center mb-4 sm:mb-6">
-              
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 text-center">
                 Introducing the <HighlightedText variant="gradient">Surgeon Metabolism Bible</HighlightedText>
               </h2>
+            </div>
+            <div className="flex justify-center">
+              <BookOpen className="h-12 w-12 text-blue-600" />
             </div>
           </div>
           
