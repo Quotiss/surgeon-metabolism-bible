@@ -67,7 +67,7 @@ const ProductValueSection = ({
               <p className="mobile-body-small text-slate-700 mb-4">
                 MUST HAVE done-for-you shopping template designed for fast-moving surgeons who don't have any time to waste. Designed for maximum efficiency.
               </p>
-              <p className="text-sm sm:text-base text-blue-600 font-bold">Value: $97</p>
+              
             </div>
           </div>
         </div>
