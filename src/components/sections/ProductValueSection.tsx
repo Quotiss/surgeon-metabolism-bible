@@ -12,12 +12,9 @@ const ProductValueSection = ({
         <h2 className="mobile-h2 text-slate-900 mb-6 leading-tight">
           Join The <span className="text-blue-600 font-bold">Elite Surgeons</span> Who Invest In Themselves
         </h2>
-         <div className="flex items-center justify-center gap-3 mb-6">
-           <CheckCircle className="h-8 w-8 text-green-600 flex-shrink-0" />
-           <div className="mobile-h3 text-slate-900">
-             Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
-           </div>
-         </div>
+        <h3 className="mobile-h3 text-slate-900 mb-6">
+          Here's What You Get With the ...
+        </h3>
         <div className="flex items-center justify-center gap-3 mb-4">
           
           <p className="mobile-body text-slate-600 max-w-5xl mx-auto leading-relaxed">
@@ -52,11 +49,7 @@ const ProductValueSection = ({
             
             {/* Product Image */}
             <div className="w-full lg:w-96 flex justify-center lg:justify-end">
-              <img 
-                src="/lovable-uploads/6cdd542e-6d8d-4bfb-bbce-616c53019b5a.png" 
-                alt="The Surgeon Metabolism Bible 5-Module eBook on laptop"
-                className="w-full max-w-xl lg:max-w-3xl h-auto rounded-lg shadow-lg"
-              />
+              <img src="/lovable-uploads/6cdd542e-6d8d-4bfb-bbce-616c53019b5a.png" alt="The Surgeon Metabolism Bible 5-Module eBook on laptop" className="w-full max-w-xl lg:max-w-3xl h-auto rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
