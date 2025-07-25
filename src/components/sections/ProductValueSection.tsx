@@ -13,7 +13,7 @@ const ProductValueSection = ({
           Join The <span className="text-blue-600 font-bold">Elite Surgeons</span> Who Invest In Themselves
         </h2>
          <div className="flex items-center justify-center gap-3 mb-6">
-           <CheckCircle className="h-6 w-6 text-green-600" />
+           <CheckCircle className="h-8 w-8 text-green-600 flex-shrink-0" />
            <div className="mobile-h3 text-slate-900">
              Here's What You Get With the <span className="text-blue-600">Surgeon Metabolism Bible</span>...
            </div>
