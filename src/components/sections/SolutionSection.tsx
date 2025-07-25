@@ -2,6 +2,7 @@ import { Check, BookOpen, Zap, Flame, Clock, Apple, Shield, Stethoscope, Battery
 import LazySection from "@/components/LazySection";
 import HighlightedText from "@/components/ui/HighlightedText";
 import OptimizedButton from "@/components/ui/OptimizedButton";
+import TrustBadge from "@/components/ui/TrustBadge";
 import { CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
 const SolutionSection = ({
@@ -71,6 +72,11 @@ const SolutionSection = ({
             <div className="flex justify-center">
               <BookOpen className="h-12 w-12 text-blue-600" />
             </div>
+          </div>
+          
+          
+          <div className="flex justify-center my-6 sm:my-8">
+            <TrustBadge size="medium" />
           </div>
           
           <div className="prose prose-lg max-w-none text-slate-700">
