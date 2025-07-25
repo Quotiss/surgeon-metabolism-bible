@@ -108,12 +108,7 @@ const SolutionSection = ({
 
         {/* CTA Section */}
         <div className="text-center my-8 sm:my-12">
-          <OptimizedButton 
-            onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} 
-            variant="primary" 
-            size="lg" 
-            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold mb-3 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
-          >
+          <OptimizedButton onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} variant="primary" size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold mb-3 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
             <div className="flex items-center justify-center gap-2">
               <span className="text-base sm:text-xl font-bold">Yes! I Want Instant Access Now</span>
               <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
@@ -125,11 +120,7 @@ const SolutionSection = ({
           </p>
           
           <div className="flex justify-center mt-4">
-            <img 
-              src="/lovable-uploads/5a79b5e8-8c21-4078-a3fe-4150e6d0be4b.png" 
-              alt="30-Day Money Back Guarantee" 
-              className="h-16 w-auto"
-            />
+            <img src="/lovable-uploads/5a79b5e8-8c21-4078-a3fe-4150e6d0be4b.png" alt="30-Day Money Back Guarantee" className="h-16 w-auto" />
           </div>
         </div>
 
@@ -208,12 +199,7 @@ const SolutionSection = ({
         {/* New CTA Section */}
         <div className="text-center mt-8 sm:mt-12">
           <div className="p-6 sm:p-8 mb-6">
-            <OptimizedButton 
-              onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} 
-              variant="primary" 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold mb-3 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
-            >
+            <OptimizedButton onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} variant="primary" size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-12 py-4 sm:py-6 font-bold mb-3 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
               <div className="flex items-center justify-center gap-2">
                 <span className="text-base sm:text-xl font-bold">Yes! I Want Instant Access Now</span>
                 <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
@@ -226,11 +212,7 @@ const SolutionSection = ({
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <TrustBadge size="medium" />
-              <img 
-                src="/lovable-uploads/5a79b5e8-8c21-4078-a3fe-4150e6d0be4b.png" 
-                alt="30-Day Money Back Guarantee" 
-                className="h-16 w-auto"
-              />
+              
             </div>
           </div>
         </div>
