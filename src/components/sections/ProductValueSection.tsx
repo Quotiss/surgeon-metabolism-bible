@@ -13,7 +13,7 @@ const ProductValueSection = ({
           Join The <span className="text-blue-600 font-bold">Elite Surgeons</span> Who Invest In Themselves
         </h2>
         <h3 className="mobile-h3 text-slate-900 mb-6">
-          Here's What You Get With the <span className="text-blue-600 font-bold">Surgeon Metabolism Bible</span>...
+          Here's What You Get With the ...
         </h3>
         <div className="flex items-center justify-center gap-3 mb-4">
           
@@ -43,7 +43,7 @@ const ProductValueSection = ({
                     Includes the 24-Hour Surgeon-Shift Protocol for a taste of the system that gets results in ONE DAY.
                   </p>
                 </div>
-                <p className="text-sm sm:text-base text-blue-600 font-bold">Value: $297</p>
+                
               </div>
             </div>
             
