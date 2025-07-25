@@ -127,7 +127,7 @@ const SolutionSection = ({
           </OptimizedButton>
           
           <p className="text-base sm:text-lg text-slate-600 font-semibold mb-4">
-            Reclaim your energy and physique in 30 days or less
+            Reclaim Your Energy And Physique In 30 Days Or Less
           </p>
           
           {/* Secure Payments */}
