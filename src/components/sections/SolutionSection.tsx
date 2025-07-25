@@ -111,7 +111,7 @@ const SolutionSection = ({
           {/* Pricing */}
           <div className="mb-6">
             <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600 mb-2">
-              ONLY <span className="line-through text-slate-400">$97.00</span> $27
+              ONLY <span className="line-through text-blue-600">$97.00</span> $27
             </div>
             <p className="text-lg sm:text-xl text-slate-700 font-semibold">
               (SAVE $70.00 TODAY)
