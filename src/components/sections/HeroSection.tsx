@@ -1,5 +1,5 @@
 
-import { CheckCircle, Clock, Shield, Target, Lock, ChevronDown } from "lucide-react";
+import { CheckCircle, Clock, Shield, Target, Lock } from "lucide-react";
 import { useHeroVisibilityTracking } from "@/hooks/useHeroVisibilityTracking";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import MobileOptimizedSection from "@/components/ui/MobileOptimizedSection";
@@ -35,7 +35,7 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       <MobileOptimizedSection 
         ref={elementRef}
         className="hero-section text-center"
-        padding="lg"
+        padding="md"
         background="gradient"
       >
       {/* Main Headline */}
@@ -51,11 +51,6 @@ const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
       <p className="text-sm sm:text-lg md:text-xl text-slate-800 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
         Without overhauling your routine that barely keeps you functioning, eliminating your favorite foods, or avoiding social events because of your "weird diet"
       </p>
-
-      {/* Transition Arrow */}
-      <div className="flex justify-center py-8 sm:py-12">
-        <ChevronDown className="h-8 w-8 sm:h-10 sm:w-10 text-slate-400" />
-      </div>
 
       </MobileOptimizedSection>
     </>
