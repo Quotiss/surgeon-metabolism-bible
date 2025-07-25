@@ -89,7 +89,7 @@ const SolutionSection = ({
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              The best part? 30 days is all it takes to reverse the biological damage the system has done to you.
+              The best part? <HighlightedText><strong>30 days</strong></HighlightedText> is all it takes to reverse the biological damage the system has done to you.
             </p>
             
             {/* Quick-Win Paragraph */}
