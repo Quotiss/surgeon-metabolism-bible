@@ -4,10 +4,10 @@ import HighlightedText from "@/components/ui/HighlightedText";
 import OptimizedButton from "@/components/ui/OptimizedButton";
 import { CTA_LOCATIONS } from "@/lib/constants";
 import type { SectionProps } from "@/types/common";
-
-const SolutionSection = ({ onCTAClick }: SectionProps) => {
-  return (
-    <LazySection className="py-8 sm:py-12 md:py-16">
+const SolutionSection = ({
+  onCTAClick
+}: SectionProps) => {
+  return <LazySection className="py-8 sm:py-12 md:py-16">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
@@ -64,7 +64,7 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
         <div className="mb-8 sm:mb-12">
           <div className="bg-gradient-to-r from-blue-50/30 via-white to-blue-50/30 p-6 sm:p-8 rounded-2xl border border-blue-100/50 shadow-sm mb-6 sm:mb-8">
             <div className="flex justify-center items-center mb-4 sm:mb-6">
-              <Zap className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 mr-4" />
+              
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 text-center">
                 Introducing the <HighlightedText variant="gradient">Surgeon Metabolism Bible</HighlightedText>
               </h2>
@@ -174,12 +174,7 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
             <p className="text-sm sm:text-base font-bold text-amber-700 mb-4 tracking-wide uppercase">
               ⚡ Limited to First 500 Surgeons Only
             </p>
-            <OptimizedButton
-              onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)}
-              variant="primary"
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto"
-            >
+            <OptimizedButton onClick={() => onCTAClick?.(CTA_LOCATIONS.MAIN_CTA)} variant="primary" size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto">
               Get Instant Access Now →
             </OptimizedButton>
             <div className="space-y-2">
@@ -200,8 +195,6 @@ const SolutionSection = ({ onCTAClick }: SectionProps) => {
           </div>
         </div>
       </div>
-    </LazySection>
-  );
+    </LazySection>;
 };
-
 export default SolutionSection;
