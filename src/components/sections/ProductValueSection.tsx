@@ -91,9 +91,7 @@ const ProductValueSection = ({
       {/* Pricing Section */}
       <div className="bg-slate-50 rounded-xl p-6 sm:p-8 text-center border border-slate-200 mb-8 sm:mb-10">
         <div className="space-y-4 sm:space-y-6">
-          <p className="mobile-body text-slate-600">
-            Total Package Value: <span className="font-bold text-slate-900">$521</span>
-          </p>
+          
           <div className="border-t border-slate-200 pt-4 sm:pt-6">
             <p className="text-2xl sm:text-3xl md:text-4xl font-black text-blue-600 mb-2 sm:mb-3">
               ONLY: <span className="line-through text-slate-500 mr-2">$97</span> $27
