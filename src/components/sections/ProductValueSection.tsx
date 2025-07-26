@@ -83,16 +83,25 @@ const ProductValueSection = ({
         </div>
 
         <div className="p-4 sm:p-6 lg:p-8 bg-blue-50 rounded-lg border border-blue-200">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6 text-center sm:text-left px-2 sm:px-4 lg:px-0">
-            <Pill className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600 flex-shrink-0" />
-            <div className="flex-1 max-w-2xl lg:max-w-none">
-              <h4 className="mobile-h4 text-blue-600 mb-3">
-                Quick Start Bonus #2: The Surgical Stress Supplement Stack
-              </h4>
-              <p className="mobile-body-small text-slate-700 mb-4">
-                Revealing the exact supplementation protocol elite surgeons use to amplify their results and maximize performance. Designed specifically for your stress physiology and recovery demands.
-              </p>
-              
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
+            {/* Icon and Text Content */}
+            <div className="w-full lg:flex-1 text-center lg:text-left px-2 sm:px-4 lg:px-0">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6">
+                <Pill className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600 flex-shrink-0" />
+                <div className="flex-1 max-w-2xl lg:max-w-none">
+                  <h4 className="mobile-h4 text-blue-600 mb-3">
+                    Quick Start Bonus #2: The Surgical Stress Supplement Stack
+                  </h4>
+                  <p className="mobile-body-small text-slate-700 mb-4">
+                    Revealing the exact supplementation protocol elite surgeons use to amplify their results and maximize performance. Designed specifically for your stress physiology and recovery demands.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Product Image */}
+            <div className="w-full lg:w-96 flex justify-center">
+              <img src="/lovable-uploads/1cc93192-42d5-49f3-8522-396a337ecbef.png" alt="The Surgical Stress Supplement Stack on tablet" className="w-full max-w-sm sm:max-w-md lg:max-w-3xl h-auto rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
