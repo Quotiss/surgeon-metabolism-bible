@@ -59,16 +59,25 @@ const ProductValueSection = ({
 
         {/* Bonus Items */}
         <div className="p-4 sm:p-6 lg:p-8 bg-blue-50 rounded-lg border border-blue-200">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6 text-center sm:text-left px-2 sm:px-4 lg:px-0">
-            <Gift className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600 flex-shrink-0" />
-            <div className="flex-1 max-w-2xl lg:max-w-none">
-              <h4 className="mobile-h4 text-blue-600 mb-3">
-                Quick Start Bonus #1: The Surgeon's Grocery Blueprint
-              </h4>
-              <p className="mobile-body-small text-slate-700 mb-4">
-                MUST HAVE done-for-you shopping template designed for fast-moving surgeons who don't have any time to waste. Designed for maximum efficiency.
-              </p>
-              
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
+            {/* Icon and Text Content */}
+            <div className="w-full lg:flex-1 text-center lg:text-left px-2 sm:px-4 lg:px-0">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6">
+                <Gift className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600 flex-shrink-0" />
+                <div className="flex-1 max-w-2xl lg:max-w-none">
+                  <h4 className="mobile-h4 text-blue-600 mb-3">
+                    Quick Start Bonus #1: The Surgeon's Grocery Blueprint
+                  </h4>
+                  <p className="mobile-body-small text-slate-700 mb-4">
+                    MUST HAVE done-for-you shopping template designed for fast-moving surgeons who don't have any time to waste. Designed for maximum efficiency.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Product Image */}
+            <div className="w-full lg:w-96 flex justify-center">
+              <img src="/lovable-uploads/c98d1447-c76a-4e0c-a5d6-d4afd35ae04b.png" alt="The Surgeon's Grocery Blueprint on tablet" className="w-full max-w-sm sm:max-w-md lg:max-w-3xl h-auto rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
