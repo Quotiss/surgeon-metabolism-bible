@@ -113,7 +113,7 @@ const SolutionSection = ({
         {/* CTA Section */}
         <div className="text-center my-4 sm:my-6">
           {/* Product Showcase Image */}
-          <div className="flex justify-center mb-3 sm:mb-4">
+          <div className="flex justify-center mb-1">
             <img 
               src="/lovable-uploads/1af6e23c-82e9-4311-95a7-d6ec00d84029.png" 
               alt="Surgeon Metabolism Bible Product Suite" 
