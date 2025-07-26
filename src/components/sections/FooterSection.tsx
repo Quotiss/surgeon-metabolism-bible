@@ -44,7 +44,7 @@ const FooterSection = () => {
           {/* Bottom Section */}
           <div className="border-t border-slate-700 pt-6 sm:pt-8">
             <div className="text-center">
-              <p className="text-slate-400 mb-4 sm:mb-6 text-sm sm:text-base">© 202 Surgeon Metabolism Bible. All rights reserved.</p>
+              <p className="text-slate-400 mb-4 sm:mb-6 text-sm sm:text-base">© 2025 Surgeon Metabolism Bible. All rights reserved.</p>
               
               <p className="text-xs text-slate-500">
                 This product is not intended to diagnose, treat, cure, or prevent any disease.
