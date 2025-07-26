@@ -37,6 +37,15 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
                 </div>
               </div>
               
+              {/* Grocery Blueprint Image */}
+              <div className="flex justify-center mb-4">
+                <img 
+                  src="/lovable-uploads/ae08e356-5b79-409c-b657-d0726cb4839a.png" 
+                  alt="The Surgeon's Grocery Blueprint" 
+                  className="w-full max-w-xs sm:max-w-sm h-auto"
+                />
+              </div>
+              
               <div className="space-y-3">
                 <div className="flex items-start gap-2">
                   <Check className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
