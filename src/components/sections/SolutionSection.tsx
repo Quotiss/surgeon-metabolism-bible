@@ -117,7 +117,7 @@ const SolutionSection = ({
             <img 
               src="/lovable-uploads/1af6e23c-82e9-4311-95a7-d6ec00d84029.png" 
               alt="Surgeon Metabolism Bible Product Suite" 
-              className="w-full max-w-2xl h-auto"
+              className="w-full max-w-4xl h-auto"
             />
           </div>
           {/* Pricing */}
