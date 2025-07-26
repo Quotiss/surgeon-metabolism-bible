@@ -2,14 +2,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import LazySection from "@/components/LazySection";
 import CaseStudy from "@/components/sections/CaseStudy";
 import { ShoppingCart, Pill, Check } from "lucide-react";
-
 interface FeaturesSectionProps {
   onCTAClick: (location: string) => void;
 }
-
-const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
-  return (
-    <LazySection className="py-8 sm:py-12 md:py-16 bg-slate-50">
+const FeaturesSection = ({
+  onCTAClick
+}: FeaturesSectionProps) => {
+  return <LazySection className="py-8 sm:py-12 md:py-16 bg-slate-50">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900">
@@ -39,11 +38,7 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
               
               {/* Grocery Blueprint Image */}
               <div className="flex justify-center mb-4">
-                <img 
-                  src="/lovable-uploads/ae08e356-5b79-409c-b657-d0726cb4839a.png" 
-                  alt="The Surgeon's Grocery Blueprint" 
-                  className="w-full max-w-xs sm:max-w-sm h-auto"
-                />
+                
               </div>
               
               <div className="space-y-3">
@@ -118,8 +113,6 @@ const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
 
         <CaseStudy />
       </div>
-    </LazySection>
-  );
+    </LazySection>;
 };
-
 export default FeaturesSection;
