@@ -1,5 +1,5 @@
 
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ChevronDown } from "lucide-react";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 
 const ThankYouHeroSection = () => {
@@ -30,10 +30,15 @@ const ThankYouHeroSection = () => {
           </div>
           
           {/* Second subheader paragraph */}
-          <div className="mb-4">
+          <div className="mb-8">
             <p className="text-sm sm:text-base text-white max-w-4xl mx-auto leading-relaxed">
               But before you dive in, <span className="font-bold">read this carefully</span> — it may be the difference between <span className="font-bold">the guilt of another wasted investment</span>, and a <span className="font-bold">complete transformation</span> of the surgeon and man you're meant to be.
             </p>
+          </div>
+          
+          {/* Scroll down indicator */}
+          <div className="flex justify-center">
+            <ChevronDown className="h-6 w-6 text-white/70 animate-pulse" />
           </div>
         </div>
       </OptimizedContainer>
