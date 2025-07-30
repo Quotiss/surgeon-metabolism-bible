@@ -5,10 +5,40 @@ const ThankYouProblemSection = () => {
       <OptimizedContainer size="md">
         <div className="text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
-            
+            <AlertTriangle className="h-8 w-8 text-amber-500" />
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
               Why Even Elite Surgeons Struggle to Implement...
             </h2>
+          </div>
+          
+          <div className="max-w-3xl mx-auto text-left space-y-4 text-slate-700">
+            <p className="text-lg">
+              You now have the full metabolic system top-performing surgeons are using to reclaim mental clarity, sharpen their physiques, and dominate their peers in the OR.
+            </p>
+            
+            <p className="text-lg font-semibold">
+              But here's the reality nobody talks about:
+            </p>
+            
+            <p className="text-lg">
+              <strong>Information isn't the problem. Implementation is.</strong>
+            </p>
+            
+            <p className="text-base">
+              Even the most disciplined surgeons lose momentum. Not from lack of willpower or discipline, but because their lifestyle is engineered to create friction.
+            </p>
+            
+            <p className="text-base">
+              Maybe it's a particularly brutal surgery day, and you grab the first piece of food in sight. Maybe it's an emergency late-night operation and you skip the ritual that resets your circadian rhythm.
+            </p>
+            
+            <p className="text-base">
+              Little breaks in the chain that eventually compound.
+            </p>
+            
+            <p className="text-base">
+              That's why most never stick with protocols — not because they don't care or don't have discipline, but because they haven't developed a system that optimizes for resiliency when real life inevitably hits you hard.
+            </p>
           </div>
         </div>
       </OptimizedContainer>
