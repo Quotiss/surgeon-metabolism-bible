@@ -1,13 +1,11 @@
-import { AlertTriangle } from "lucide-react";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 const ThankYouProblemSection = () => {
   return <section className="py-12 bg-white">
       <OptimizedContainer size="md">
         <div className="text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <AlertTriangle className="h-8 w-8 text-amber-500" />
+          <div className="mb-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Why Even Elite Surgeons Struggle to Implement...
+              Why Even Elite Surgeons <span className="text-blue-600">Struggle to Implement</span>...
             </h2>
           </div>
           
@@ -21,7 +19,7 @@ const ThankYouProblemSection = () => {
             </p>
             
             <p className="text-lg">
-              <strong>Information isn't the problem. Implementation is.</strong>
+              <span className="text-blue-600 font-bold">Information isn't the problem. Implementation is.</span>
             </p>
             
             <p className="text-base">
