@@ -4,7 +4,6 @@ import ThankYouProblemSection from "@/components/sections/ThankYouProblemSection
 import ThankYouAgitateSection from "@/components/sections/ThankYouAgitateSection";
 import ThankYouSolutionSection from "@/components/sections/ThankYouSolutionSection";
 import ThankYouValueStackSection from "@/components/sections/ThankYouValueStackSection";
-import ThankYouCTASection from "@/components/sections/ThankYouCTASection";
 
 const ThankYou = () => {
   return (
@@ -14,7 +13,6 @@ const ThankYou = () => {
       <ThankYouAgitateSection />
       <ThankYouSolutionSection />
       <ThankYouValueStackSection />
-      <ThankYouCTASection />
     </div>
   );
 };

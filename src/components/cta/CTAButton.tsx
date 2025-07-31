@@ -32,7 +32,7 @@ const CTAButton = forwardRef<HTMLButtonElement, CTAButtonProps>(
 
     const sizeClasses = {
       default: "px-4 py-3 text-sm min-h-[52px]",
-      large: "px-6 py-4 text-sm min-h-[60px]"
+      large: "px-6 py-4 text-base min-h-[60px]"
     };
 
     return (
@@ -55,8 +55,8 @@ const CTAButton = forwardRef<HTMLButtonElement, CTAButtonProps>(
             <span>Opening checkout...</span>
           </div>
         ) : (
-          <span className="flex items-center justify-center gap-1.5 text-center leading-tight max-w-full">
-            <span className="truncate max-w-[calc(100%-2rem)] text-xs sm:text-sm">{children}</span>
+          <span className="flex items-center justify-center gap-1.5 text-center leading-tight">
+            <span className="truncate">{children}</span>
             {showArrow && <ArrowRight className="h-4 w-4 flex-shrink-0" />}
           </span>
         )}
