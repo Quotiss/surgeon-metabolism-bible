@@ -30,6 +30,15 @@ const SimpleCTA = ({
         {buttonText}
       </CTAButton>
       
+      <div className="text-center space-y-1">
+        <div className="text-3xl font-bold text-blue-600">
+          ONLY $97
+        </div>
+        <div className="text-sm text-slate-600">
+          $400.00 Worth Of Value
+        </div>
+      </div>
+      
       <CTASecurity />
       
       <TrustBadge size="small" />
