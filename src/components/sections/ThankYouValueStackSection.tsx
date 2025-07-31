@@ -34,10 +34,10 @@ const ThankYouValueStackSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-slate-50">
+    <section className="py-16 bg-blue-600">
       <OptimizedContainer size="lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
             Here's What You'll Get With Your 14-Day Surgeon Metabolism Bible Implementation System
           </h2>
           
@@ -58,7 +58,7 @@ const ThankYouValueStackSection = () => {
                 className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
                     <IconComponent className="h-6 w-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
