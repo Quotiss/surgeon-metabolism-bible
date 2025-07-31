@@ -32,7 +32,7 @@ const CTAButton = forwardRef<HTMLButtonElement, CTAButtonProps>(
 
     const sizeClasses = {
       default: "px-4 py-3 text-sm min-h-[52px]",
-      large: "px-6 py-4 text-base min-h-[60px]"
+      large: "px-6 py-4 text-sm min-h-[60px]"
     };
 
     return (
