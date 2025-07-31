@@ -1,5 +1,6 @@
 import { memo, useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Target } from 'lucide-react';
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 import CTAButton from "@/components/cta/CTAButton";
 import { usePolarCheckout } from "@/hooks/usePolarCheckout";
@@ -41,34 +42,43 @@ const ThankYouCTASection = memo(() => {
     <section className="py-20 bg-gradient-to-b from-white to-slate-50">
       <OptimizedContainer size="md">
         <div className="text-center max-w-2xl mx-auto">
-          {/* Space reserved for limited time offer text */}
-          <div className="mb-8 min-h-[2rem]">
-            {/* Space intentionally left for future limited time offer messaging */}
+          {/* Icon */}
+          <div className="mb-8 flex justify-center">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-600 rounded-full flex items-center justify-center">
+              <Target className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+            </div>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8">
-            Join The Elite 5% Who Get Results Fast
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
+            Everything you need to fast-track your results from the Surgeon Metabolism Bible
           </h2>
           
-          <p className="text-lg text-slate-600 mb-12 leading-relaxed">
-            Most surgeons struggle for months trying to figure out implementation. 
-            You can skip the trial and error phase entirely.
+          <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+            You already have the information. The implementation system makes sure you maximize its value. If you're serious about reclaiming your energy, revealing the physique you've painstakingly crafted, and running laps around your peers in the OR — this system is your edge.
           </p>
 
+          {/* Limited time offer highlight */}
+          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8">
+            <p className="text-red-700 font-semibold text-base">
+              This is a one-time offer, only available right now. Once you leave this page, it's gone.
+            </p>
+          </div>
+
           {/* Main CTA Button */}
-          <div className="mb-6">
+          <div className="mb-3">
             <CTAButton
               onClick={handleUpsellClick}
               variant="primary"
               size="large"
               loading={loading}
+              className="text-sm sm:text-base"
             >
               Yes! I want the 14-Day Implementation System →
             </CTAButton>
           </div>
 
           {/* Description text */}
-          <p className="text-base text-slate-600 mb-8 font-normal">
+          <p className="text-base text-slate-600 mb-4 font-normal">
             Get instant access to the implementation system designed for maximum clarity, faster results, and zero guesswork.
           </p>
 
