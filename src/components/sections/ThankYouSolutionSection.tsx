@@ -1,8 +1,13 @@
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 import HighlightedText from "@/components/ui/HighlightedText";
+import SimpleCTA from "@/components/cta/SimpleCTA";
 import { Check } from "lucide-react";
+import { useAnalytics } from "@/hooks/useAnalytics";
+import { createCTAHandler } from "@/utils/ctaUtils";
 
 const ThankYouSolutionSection = () => {
+  const { trackCTAClick } = useAnalytics();
+  const handleCTAClick = createCTAHandler(trackCTAClick);
   return (
     <section className="py-16 bg-white">
       <OptimizedContainer size="md">
@@ -53,6 +58,16 @@ const ThankYouSolutionSection = () => {
           <p className="font-bold text-xl">
             <HighlightedText>Absolutely zero guesswork.</HighlightedText>
           </p>
+          
+          <div className="flex justify-center mt-8">
+            <div className="w-full max-w-md">
+              <SimpleCTA 
+                onCTAClick={() => handleCTAClick('thank_you_solution')}
+                buttonText="Get the Implementation System Now"
+                size="large"
+              />
+            </div>
+          </div>
         </div>
       </OptimizedContainer>
     </section>
