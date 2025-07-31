@@ -1,7 +1,12 @@
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
+import SimpleCTA from "@/components/cta/SimpleCTA";
+import { useAnalytics } from "@/hooks/useAnalytics";
+import { createCTAHandler } from "@/utils/ctaUtils";
 import { Calendar, Clipboard, Users, Puzzle, ArrowRight, FileText, Play } from "lucide-react";
 
 const ThankYouValueStackSection = () => {
+  const { trackCTAClick } = useAnalytics();
+  const handleCTAClick = createCTAHandler(trackCTAClick);
   const valueItems = [
     {
       title: "14-Day Complete Done-For-You Meal Plan",
@@ -95,6 +100,16 @@ const ThankYouValueStackSection = () => {
             <p>
               Don't force yourself to do it alone. Everything is taken care of for you right here.
             </p>
+          </div>
+          
+          <div className="flex justify-center mt-8">
+            <div className="w-full max-w-md">
+              <SimpleCTA 
+                onCTAClick={() => handleCTAClick('thank_you_value_stack')}
+                buttonText="Yes! I want to implement now"
+                size="large"
+              />
+            </div>
           </div>
         </div>
       </OptimizedContainer>
