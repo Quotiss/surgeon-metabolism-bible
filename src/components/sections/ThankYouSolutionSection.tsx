@@ -63,7 +63,7 @@ const ThankYouSolutionSection = () => {
             <div className="w-full max-w-md">
               <SimpleCTA 
                 onCTAClick={() => handleCTAClick('thank_you_solution')}
-                buttonText="Get the Implementation System Now"
+                buttonText="Yes! I want to implement now"
                 size="large"
               />
             </div>
