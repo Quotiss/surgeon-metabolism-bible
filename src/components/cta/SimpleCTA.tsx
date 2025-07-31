@@ -34,6 +34,9 @@ const SimpleCTA = ({
         <div className="text-3xl font-bold text-blue-600">
           Limited One-Time Offer
         </div>
+        <div className="text-sm text-slate-600">
+          (Offer expires once you leave this page)
+        </div>
         <div className="text-3xl font-bold text-blue-600">
           ONLY $97
         </div>

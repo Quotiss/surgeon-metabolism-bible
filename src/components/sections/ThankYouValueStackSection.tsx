@@ -119,6 +119,9 @@ const ThankYouValueStackSection = () => {
                 <div className="text-3xl font-bold text-white">
                   Limited One-Time Offer
                 </div>
+                <div className="text-sm text-white/80">
+                  (Offer expires once you leave this page)
+                </div>
                 <div className="text-3xl font-bold text-white">
                   ONLY $97
                 </div>
