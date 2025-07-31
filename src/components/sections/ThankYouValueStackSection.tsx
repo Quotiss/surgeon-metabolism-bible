@@ -111,6 +111,7 @@ const ThankYouValueStackSection = () => {
               >
                 <span className="flex items-center justify-center gap-1.5 text-center leading-tight">
                   <span>Yes! I want to implement now</span>
+                  <ArrowRight className="h-4 w-4 flex-shrink-0 text-blue-600" />
                 </span>
               </button>
             </div>
