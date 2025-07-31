@@ -114,6 +114,24 @@ const ThankYouValueStackSection = () => {
                   <ArrowRight className="h-4 w-4 flex-shrink-0 text-blue-600" />
                 </span>
               </button>
+              
+              <div className="text-center space-y-1 mt-4">
+                <div className="text-3xl font-bold text-white">
+                  Limited One-Time Offer
+                </div>
+                <div className="text-3xl font-bold text-white">
+                  ONLY $97
+                </div>
+              </div>
+              
+              <div className="mt-4 text-center">
+                <a 
+                  href="/success"
+                  className="text-sm text-white/70 hover:text-white underline transition-colors"
+                >
+                  No thanks, I'll spend the energy to implement by myself
+                </a>
+              </div>
             </div>
           </div>
         </div>
