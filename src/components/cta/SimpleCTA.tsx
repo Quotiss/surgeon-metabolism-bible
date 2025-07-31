@@ -1,5 +1,6 @@
 import CTAButton from './CTAButton';
 import CTASecurity from './CTASecurity';
+import CTAGuarantee from './CTAGuarantee';
 import TrustBadge from '@/components/ui/TrustBadge';
 
 interface SimpleCTAProps {
@@ -48,6 +49,8 @@ const SimpleCTA = ({
       <CTASecurity />
       
       <TrustBadge size="small" />
+      
+      <CTAGuarantee />
     </div>
   );
 };
