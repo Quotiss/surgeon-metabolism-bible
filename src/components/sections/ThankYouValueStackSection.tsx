@@ -77,6 +77,26 @@ const ThankYouValueStackSection = () => {
             );
           })}
         </div>
+        
+        <div className="mt-16 max-w-3xl mx-auto text-center">
+          <div className="space-y-4 text-white leading-relaxed">
+            <p>
+              For an elite surgeon like yourself, time is the most valuable resource on the planet.
+            </p>
+            <p>
+              Everything in this implementation system is specifically designed to have your mental energy firing on all cylinders and metabolism running like a blast furnace — in as little time as possible.
+            </p>
+            <p>
+              Your patients in the OR rely on your mental bandwidth to operate at max capacity.
+            </p>
+            <p>
+              While all the information from the Surgeon Metabolism Bible is here for you, implementing it can be frustrating.
+            </p>
+            <p>
+              Don't force yourself to do it alone. Everything is taken care of for you right here.
+            </p>
+          </div>
+        </div>
       </OptimizedContainer>
     </section>
   );
