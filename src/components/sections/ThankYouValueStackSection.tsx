@@ -6,30 +6,37 @@ const ThankYouValueStackSection = () => {
     {
       title: "14-Day Complete Done-For-You Meal Plan",
       icon: Calendar,
+      description: "Sharper physique and unlimited energy without thinking. You'll know exactly what to eat, when to eat it, and how it supports your metabolic supremacy. No guesswork, no planning, no backtracking."
     },
     {
       title: "Batch Prep Blueprint",
       icon: Clipboard,
+      description: "Win the week in 90 minutes. Save 5+ hours each week while guaranteeing consistency and momentum, even during your busiest OR days."
     },
     {
       title: "Dining Out & Social Survival Guide",
       icon: Users,
+      description: "Stay on track without staying home. Know exactly how to eat out, manage social events, and navigate real life — without being the \"weird diet guy\"."
     },
     {
       title: "Mix & Match Meal Builder",
       icon: Puzzle,
+      description: "Flexibility without friction. Build custom meals using protocol-approved ingredients that match your cravings, macros, or mood. There are no bad foods. Only bad ingredients."
     },
     {
       title: "Post-Reset Transition Plan",
       icon: ArrowRight,
+      description: "Lock in your results. For good. You'll know exactly how to stabilize and maintain the results you've made, without sliding backwards or crashing your hormones. Built specifically for your high-performance surgical lifestyle."
     },
     {
       title: "Quick Start Cheatsheet",
       icon: FileText,
+      description: "Don't overthink it. Just start. One page tells you what to eat, prep, and avoid in your first 24 hours. Feel the shift immediately."
     },
     {
       title: "Loom Video Walkthrough",
       icon: Play,
+      description: "Zero confusion. Zero delay. I walk you through exactly how to use the system. Instant clarity and complete execution confidence in under 10 minutes."
     },
   ];
 
@@ -65,11 +72,9 @@ const ThankYouValueStackSection = () => {
                     <h3 className="text-xl font-bold text-slate-900 mb-3">
                       {item.title}
                     </h3>
-                    <div className="bg-slate-100 border border-dashed border-slate-300 rounded-lg p-4">
-                      <p className="text-slate-500 text-sm">
-                        [Space for body copy]
-                      </p>
-                    </div>
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </div>
