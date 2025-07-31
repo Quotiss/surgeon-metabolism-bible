@@ -66,6 +66,14 @@ const ThankYouSolutionSection = () => {
                 buttonText="Yes! I want to implement now"
                 size="large"
               />
+              <div className="mt-4 text-center">
+                <a 
+                  href="/success"
+                  className="text-sm text-slate-500 hover:text-slate-700 underline transition-colors"
+                >
+                  No thanks, I'll spend the energy to implement by myself
+                </a>
+              </div>
             </div>
           </div>
         </div>
