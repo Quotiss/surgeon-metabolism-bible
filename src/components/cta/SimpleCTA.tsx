@@ -35,7 +35,7 @@ const SimpleCTA = ({
           ONLY $97
         </div>
         <div className="text-sm text-slate-600">
-          $400.00 Worth Of Value
+          ($400.00 Worth Of Value)
         </div>
       </div>
       
