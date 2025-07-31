@@ -64,8 +64,8 @@ const ThankYouValueStackSection = () => {
                 key={index}
                 className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-300 text-center"
               >
-                <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="h-6 w-6 text-blue-600" />
+                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <IconComponent className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">
                   {item.title}
