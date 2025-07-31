@@ -104,11 +104,15 @@ const ThankYouValueStackSection = () => {
           
           <div className="flex justify-center mt-8">
             <div className="w-full max-w-md">
-              <SimpleCTA 
-                onCTAClick={() => handleCTAClick('thank_you_value_stack')}
-                buttonText="Yes! I want to implement now"
-                size="large"
-              />
+              <button
+                onClick={() => handleCTAClick('thank_you_value_stack')}
+                className="w-full bg-white hover:bg-slate-50 text-blue-600 border-2 border-blue-600 px-6 py-4 text-base min-h-[60px] font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-xl touch-manipulation flex items-center justify-center rounded-md"
+                style={{ WebkitTapHighlightColor: 'transparent' }}
+              >
+                <span className="flex items-center justify-center gap-1.5 text-center leading-tight">
+                  <span>Yes! I want to implement now</span>
+                </span>
+              </button>
             </div>
           </div>
         </div>
