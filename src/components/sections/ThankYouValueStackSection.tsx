@@ -1,63 +1,84 @@
-
-import { ChefHat, Clock, MapPin, BookOpen } from "lucide-react";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
-import { memo } from "react";
-import ValueStackHeader from "./value-stack/ValueStackHeader";
-import ValueStackItem from "./value-stack/ValueStackItem";
-import ValueStackCTA from "./value-stack/ValueStackCTA";
-import LimitedAccessPricing from "./value-stack/LimitedAccessPricing";
+import { Calendar, Clipboard, Users, Puzzle, ArrowRight, FileText, Play } from "lucide-react";
 
-const valueItems = [
-  {
-    title: "Complete Precision Meal Plan",
-    description: "Every meal strategically mapped to natural energy cycles. No more wasting mental resources. What nutritionists charge $500/session for, handed to you on a silver platter",
-    icon: ChefHat
-  },
-  {
-    title: "Mistake-Proof Timing",
-    description: "Exact nutritional timing to guarantee conversion into fat-burning fuel. This eliminates the #1 reason surgeons plateau",
-    icon: Clock
-  },
-  {
-    title: "Emergency Protocols",
-    description: "Bulletproof backup plans for navigating the inevitable chaos - exact protocols for traveling, dining out, and maintaining stress-free flexibility while others break down at the first sign of slipping up",
-    icon: MapPin
-  },
-  {
-    title: "Batch Prep Mastery",
-    description: "Streamline your entire week in under 2 hours. Execute like an elite performer while colleagues are stuck wasting resources on simple decisions. This single system pays for itself in time savings - your most important asset.",
-    icon: BookOpen
-  }
-];
+const ThankYouValueStackSection = () => {
+  const valueItems = [
+    {
+      title: "14-Day Complete Done-For-You Meal Plan",
+      icon: Calendar,
+    },
+    {
+      title: "Batch Prep Blueprint",
+      icon: Clipboard,
+    },
+    {
+      title: "Dining Out & Social Survival Guide",
+      icon: Users,
+    },
+    {
+      title: "Mix & Match Meal Builder",
+      icon: Puzzle,
+    },
+    {
+      title: "Post-Reset Transition Plan",
+      icon: ArrowRight,
+    },
+    {
+      title: "Quick Start Cheatsheet",
+      icon: FileText,
+    },
+    {
+      title: "Loom Video Walkthrough",
+      icon: Play,
+    },
+  ];
 
-const ThankYouValueStackSection = memo(() => {
   return (
-    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50">
-      <OptimizedContainer size="md">
-        <ValueStackHeader />
-
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <div className="space-y-8">
-            {valueItems.map((item, index) => (
-              <ValueStackItem
-                key={index}
-                title={item.title}
-                description={item.description}
-                icon={item.icon}
-                index={index}
-              />
-            ))}
+    <section className="py-16 bg-slate-50">
+      <OptimizedContainer size="lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8">
+            Here's What You'll Get With Your 14-Day Surgeon Metabolism Bible Implementation System
+          </h2>
+          
+          {/* Space reserved for large photo asset */}
+          <div className="bg-slate-200 border-2 border-dashed border-slate-300 rounded-xl p-12 mb-12 max-w-2xl mx-auto">
+            <p className="text-slate-500 text-lg">
+              [Space reserved for large photo asset]
+            </p>
           </div>
         </div>
 
-        <ValueStackCTA />
-
-        <LimitedAccessPricing />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {valueItems.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <IconComponent className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3">
+                      {item.title}
+                    </h3>
+                    <div className="bg-slate-100 border border-dashed border-slate-300 rounded-lg p-4">
+                      <p className="text-slate-500 text-sm">
+                        [Space for body copy]
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </OptimizedContainer>
     </section>
   );
-});
-
-ThankYouValueStackSection.displayName = 'ThankYouValueStackSection';
+};
 
 export default ThankYouValueStackSection;
