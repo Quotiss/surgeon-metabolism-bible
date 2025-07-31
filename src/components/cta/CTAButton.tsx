@@ -55,8 +55,8 @@ const CTAButton = forwardRef<HTMLButtonElement, CTAButtonProps>(
             <span>Opening checkout...</span>
           </div>
         ) : (
-          <span className="flex items-center justify-center gap-1.5 text-center leading-tight">
-            <span className="truncate">{children}</span>
+          <span className="flex items-center justify-center gap-1.5 text-center leading-tight max-w-full">
+            <span className="truncate max-w-[calc(100%-2rem)] text-xs sm:text-sm">{children}</span>
             {showArrow && <ArrowRight className="h-4 w-4 flex-shrink-0" />}
           </span>
         )}
