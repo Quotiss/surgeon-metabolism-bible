@@ -78,8 +78,8 @@ const ThankYouValueStackSection = () => {
           })}
         </div>
         
-        <div className="mt-16 max-w-3xl mx-auto text-center">
-          <div className="space-y-4 text-white leading-relaxed">
+        <div className="mt-16 max-w-3xl mx-auto">
+          <div className="space-y-4 text-white leading-relaxed text-left">
             <p>
               For an elite surgeon like yourself, time is the most valuable resource on the planet.
             </p>
