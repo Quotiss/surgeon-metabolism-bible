@@ -62,21 +62,17 @@ const ThankYouValueStackSection = () => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-300"
+                className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-300 text-center"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
-                    <IconComponent className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-slate-900 mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
+                <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <IconComponent className="h-6 w-6 text-blue-600" />
                 </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             );
           })}
