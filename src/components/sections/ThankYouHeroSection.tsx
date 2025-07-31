@@ -16,8 +16,7 @@ const ThankYouHeroSection = () => {
           
           {/* Download confirmation - separate div */}
           <div className="flex items-center justify-center mb-8">
-            <CheckCircle className="h-5 w-5 text-green-400 mr-2 flex-shrink-0" />
-            <p className="text-base sm:text-lg text-white font-bold">
+            <p className="text-base sm:text-lg text-white font-bold text-center underline">
               Your download is on its way to your email.
             </p>
           </div>
