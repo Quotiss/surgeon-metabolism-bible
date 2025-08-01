@@ -6,6 +6,7 @@ import {
   PRODUCT_PRICE_USD,
 } from "@/lib/constants";
 import type { CTAClickHandler } from "@/types/common";
+import { generateThankYouUrl } from "@/hooks/usePurchaseVerification";
 
 // Debounce utility to prevent rapid clicks
 let lastClickTime = 0;
@@ -38,6 +39,10 @@ export const createCTAHandler = (trackCTAClick: (location: string) => void): CTA
           currency: "USD",
           value: PRODUCT_PRICE_USD,
         });
+        
+        // Redirect to thank you page with verification token
+        const thankYouUrl = generateThankYouUrl();
+        window.location.href = thankYouUrl;
       });
       
     } catch (error) {
