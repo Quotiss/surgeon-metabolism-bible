@@ -52,7 +52,7 @@ const ThankYouGuaranteeSection = () => {
             variant="primary"
             size="large"
           >
-            Yes! I want to implement now
+            Yes! I Want To Implement Now
           </CTAButton>
           
           <CTASecurity />

@@ -110,7 +110,7 @@ const ThankYouValueStackSection = () => {
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 <span className="flex items-center justify-center gap-1.5 text-center leading-tight">
-                  <span>Yes! I want to implement now</span>
+                  <span>Yes! I Want To Implement Now</span>
                   <ArrowRight className="h-4 w-4 flex-shrink-0 text-blue-600" />
                 </span>
               </button>
