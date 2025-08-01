@@ -1,19 +1,72 @@
-import { Shield } from "lucide-react";
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
+import CTAButton from "@/components/cta/CTAButton";
+import CTASecurity from "@/components/cta/CTASecurity";
+import TrustBadge from "@/components/ui/TrustBadge";
+import { createCTAHandler } from "@/utils/ctaUtils";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 const ThankYouGuaranteeSection = () => {
+  const { trackCTAClick } = useAnalytics();
+  const handleCTAClick = createCTAHandler(trackCTAClick);
+
   return (
     <section className="py-16 bg-white">
       <OptimizedContainer size="md" className="text-center">
         <div className="flex justify-center mb-8">
-          <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center">
-            <Shield className="h-12 w-12 text-green-600" />
-          </div>
+          <img 
+            src="/lovable-uploads/9b576cca-496d-4e1a-844c-97334c1c20d8.png" 
+            alt="30 Days Money Back Guarantee" 
+            className="w-48 h-48 sm:w-56 sm:h-56" 
+          />
         </div>
         
-        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-          Backed by the same 30-Day Guarantee
+        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8">
+          This purchase is also covered under our UNCONDITIONAL MONEY BACK GUARANTEE
         </h2>
+
+        <div className="max-w-2xl mx-auto text-lg text-slate-700 leading-relaxed mb-8 space-y-4">
+          <p>
+            Even though this is just a $97 add-on, I want you to feel 100% comfortable with your purchase.
+          </p>
+          
+          <p>
+            If you read through, utilize, and follow through with the 14-day implementation system and don't feel noticably more energized, mentally sharp, or in control of your vitality — just email support@surgeon-reset.org within 30 days.
+          </p>
+          
+          <p>
+            We'll refund you, no questions asked.
+          </p>
+          
+          <p>
+            No risk. No pressure. Just results.
+          </p>
+          
+          <p className="font-semibold">
+            Hit the button below to secure your limited one-time offer of the 14-Day Surgeon Metabolism Bible Implementation System — elite surgeons don't leave their results up to chance.
+          </p>
+        </div>
+
+        <div className="space-y-4 max-w-md mx-auto">
+          <CTAButton
+            onClick={() => handleCTAClick('thank_you_guarantee')}
+            variant="primary"
+            size="large"
+          >
+            Get Instant Access Now
+          </CTAButton>
+          
+          <TrustBadge size="small" />
+          
+          <div className="flex justify-center">
+            <img 
+              src="/lovable-uploads/e7446cbf-9df3-4a1f-8e32-156838308a16.png" 
+              alt="30 Days Money Back Guarantee" 
+              className="h-12" 
+            />
+          </div>
+          
+          <CTASecurity />
+        </div>
       </OptimizedContainer>
     </section>
   );
