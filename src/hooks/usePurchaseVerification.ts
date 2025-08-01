@@ -17,6 +17,13 @@ export const usePurchaseVerification = (): PurchaseVerification => {
 
   useEffect(() => {
     const verifyPurchase = () => {
+      // Development mode bypass - always allow access during development
+      if (import.meta.env.DEV) {
+        setIsVerified(true);
+        setIsLoading(false);
+        return;
+      }
+      
       // Check URL parameters first
       const token = searchParams.get('token');
       const timestamp = searchParams.get('timestamp');
