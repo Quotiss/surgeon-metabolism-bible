@@ -66,6 +66,15 @@ const ThankYouGuaranteeSection = () => {
               className="h-12" 
             />
           </div>
+          
+          <div className="mt-4 text-center">
+            <a 
+              href="/success"
+              className="text-sm text-slate-600 hover:text-slate-800 underline transition-colors"
+            >
+              No thanks, I'll spend the energy to implement by myself
+            </a>
+          </div>
         </div>
       </OptimizedContainer>
     </section>
