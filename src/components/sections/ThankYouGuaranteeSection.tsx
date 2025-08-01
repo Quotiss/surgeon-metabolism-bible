@@ -16,21 +16,21 @@ const ThankYouGuaranteeSection = () => {
           <img 
             src="/lovable-uploads/9b576cca-496d-4e1a-844c-97334c1c20d8.png" 
             alt="30 Days Money Back Guarantee" 
-            className="w-48 h-48 sm:w-56 sm:h-56" 
+            className="w-40 h-auto sm:w-48" 
           />
         </div>
         
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8">
-          This purchase is also covered under our UNCONDITIONAL MONEY BACK GUARANTEE
+          This purchase is also covered under our <span className="text-blue-600">UNCONDITIONAL MONEY BACK GUARANTEE</span>
         </h2>
 
-        <div className="max-w-2xl mx-auto text-lg text-slate-700 leading-relaxed mb-8 space-y-4">
+        <div className="max-w-2xl mx-auto text-lg text-slate-700 leading-relaxed mb-8 space-y-4 text-left">
           <p>
             Even though this is just a $97 add-on, I want you to feel 100% comfortable with your purchase.
           </p>
           
           <p>
-            If you read through, utilize, and follow through with the 14-day implementation system and don't feel noticably more energized, mentally sharp, or in control of your vitality — just email support@surgeon-reset.org within 30 days.
+            If you read through, utilize, and follow through with the 14-day implementation system and don't feel noticably more energized, mentally sharp, or in control of your vitality — just email <span className="text-blue-600">support@surgeon-reset.org</span> within 30 days.
           </p>
           
           <p>
@@ -52,8 +52,10 @@ const ThankYouGuaranteeSection = () => {
             variant="primary"
             size="large"
           >
-            Get Instant Access Now
+            Get The 14-Day Implementation System Now
           </CTAButton>
+          
+          <CTASecurity />
           
           <TrustBadge size="small" />
           
@@ -64,8 +66,6 @@ const ThankYouGuaranteeSection = () => {
               className="h-12" 
             />
           </div>
-          
-          <CTASecurity />
         </div>
       </OptimizedContainer>
     </section>
