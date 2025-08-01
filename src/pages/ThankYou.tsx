@@ -5,8 +5,13 @@ import ThankYouAgitateSection from "@/components/sections/ThankYouAgitateSection
 import ThankYouSolutionSection from "@/components/sections/ThankYouSolutionSection";
 import ThankYouValueStackSection from "@/components/sections/ThankYouValueStackSection";
 import ThankYouGuaranteeSection from "@/components/sections/ThankYouGuaranteeSection";
+import ThankYouFAQSection from "@/components/sections/ThankYouFAQSection";
 
 const ThankYou = () => {
+  const handleCTAClick = (location: string) => {
+    window.open('https://gumroad.com/l/surgeon-metabolism-bible', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <ThankYouHeroSection />
@@ -15,6 +20,7 @@ const ThankYou = () => {
       <ThankYouSolutionSection />
       <ThankYouValueStackSection />
       <ThankYouGuaranteeSection />
+      <ThankYouFAQSection onCTAClick={handleCTAClick} />
     </div>
   );
 };
