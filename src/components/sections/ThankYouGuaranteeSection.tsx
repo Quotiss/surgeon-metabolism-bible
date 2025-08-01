@@ -52,7 +52,7 @@ const ThankYouGuaranteeSection = () => {
             variant="primary"
             size="large"
           >
-            Get The 14-Day Implementation System Now
+            Yes! I want to implement now
           </CTAButton>
           
           <CTASecurity />
