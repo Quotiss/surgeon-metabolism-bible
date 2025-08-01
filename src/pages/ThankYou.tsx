@@ -6,6 +6,7 @@ import ThankYouSolutionSection from "@/components/sections/ThankYouSolutionSecti
 import ThankYouValueStackSection from "@/components/sections/ThankYouValueStackSection";
 import ThankYouGuaranteeSection from "@/components/sections/ThankYouGuaranteeSection";
 import ThankYouFAQSection from "@/components/sections/ThankYouFAQSection";
+import FooterSection from "@/components/sections/FooterSection";
 
 const ThankYou = () => {
   const handleCTAClick = (location: string) => {
@@ -21,6 +22,7 @@ const ThankYou = () => {
       <ThankYouValueStackSection />
       <ThankYouGuaranteeSection />
       <ThankYouFAQSection onCTAClick={handleCTAClick} />
+      <FooterSection />
     </div>
   );
 };
