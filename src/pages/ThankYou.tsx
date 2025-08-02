@@ -13,9 +13,6 @@ import { usePurchaseVerification } from "@/hooks/usePurchaseVerification";
 const ThankYou = () => {
   const { isVerified, isLoading } = usePurchaseVerification();
 
-  const handleCTAClick = (location: string) => {
-    window.open('https://gumroad.com/l/surgeon-metabolism-bible', '_blank');
-  };
 
   // Add meta tags for security
   useEffect(() => {
@@ -55,7 +52,7 @@ const ThankYou = () => {
       <ThankYouSolutionSection />
       <ThankYouValueStackSection />
       <ThankYouGuaranteeSection />
-      <ThankYouFAQSection onCTAClick={handleCTAClick} />
+      <ThankYouFAQSection />
       <FooterSection />
     </div>
   );

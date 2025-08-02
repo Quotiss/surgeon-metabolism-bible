@@ -1,13 +1,27 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import LazySection from "@/components/LazySection";
 import TrustBadge from "@/components/ui/TrustBadge";
-import { CTA_LOCATIONS } from "@/lib/constants";
-import type { SectionProps } from "@/types/common";
+import CTAButton from "@/components/cta/CTAButton";
+import { POLAR_UPSELL_CHECKOUT_LINK } from "@/lib/constants";
+import { usePolarCheckout } from "@/hooks/usePolarCheckout";
+import { useCallback } from "react";
 
-const ThankYouFAQSection = ({
-  onCTAClick
-}: SectionProps) => {
+const ThankYouFAQSection = () => {
+  const handleUpsellSuccess = useCallback(() => {
+    window.fbq?.("track", "Purchase", {
+      currency: "USD",
+      value: 97,
+    });
+  }, []);
+
+  const { createCheckout } = usePolarCheckout({
+    onSuccess: handleUpsellSuccess
+  });
+
+  const handleCTAClick = useCallback(async () => {
+    console.log("Thank You FAQ CTA clicked");
+    await createCheckout(POLAR_UPSELL_CHECKOUT_LINK);
+  }, [createCheckout]);
   const faqs = [{
     question: "Is this different from the Surgeon Metabolism Bible I just bought?",
     answer: "Yes — completely. The Bible gives you the playbook; this gives you the execution. It's the step-by-step plan that ensures you lock in your results. Faster, easier, and with more certainty."
@@ -48,13 +62,15 @@ const ThankYouFAQSection = ({
 
         {/* CTA Button Section */}
         <div className="text-center">
-          <Button 
-            onClick={() => onCTAClick?.(CTA_LOCATIONS.FAQ_CTA)} 
-            size="lg" 
-            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-4 sm:px-8 sm:py-5 md:px-12 md:py-6 text-lg sm:text-xl font-bold mb-4 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl border-2 border-blue-500 h-auto w-full sm:w-auto max-w-md sm:max-w-none mx-auto"
-          >
-            Yes! I Want To Implement Now →
-          </Button>
+          <div className="max-w-md mx-auto">
+            <CTAButton
+              onClick={handleCTAClick}
+              variant="primary"
+              size="large"
+            >
+              Yes! I Want To Implement Now
+            </CTAButton>
+          </div>
           
           <div className="text-center space-y-1 mt-4">
             <div className="text-3xl font-bold text-blue-600">

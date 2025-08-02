@@ -1,13 +1,31 @@
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
 import HighlightedText from "@/components/ui/HighlightedText";
-import SimpleCTA from "@/components/cta/SimpleCTA";
+import CTAButton from "@/components/cta/CTAButton";
+import CTASecurity from "@/components/cta/CTASecurity";
 import { Check } from "lucide-react";
-import { useAnalytics } from "@/hooks/useAnalytics";
-import { createCTAHandler } from "@/utils/ctaUtils";
+import { POLAR_UPSELL_CHECKOUT_LINK } from "@/lib/constants";
+import { usePolarCheckout } from "@/hooks/usePolarCheckout";
+import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 
 const ThankYouSolutionSection = () => {
-  const { trackCTAClick } = useAnalytics();
-  const handleCTAClick = createCTAHandler(trackCTAClick);
+  const navigate = useNavigate();
+
+  const handleUpsellSuccess = useCallback(() => {
+    window.fbq?.("track", "Purchase", {
+      currency: "USD",
+      value: 97,
+    });
+  }, []);
+
+  const { createCheckout } = usePolarCheckout({
+    onSuccess: handleUpsellSuccess
+  });
+
+  const handleCTAClick = useCallback(async () => {
+    console.log("Thank You Solution CTA clicked");
+    await createCheckout(POLAR_UPSELL_CHECKOUT_LINK);
+  }, [createCheckout]);
   return (
     <section className="py-16 bg-white">
       <OptimizedContainer size="md">
@@ -60,12 +78,32 @@ const ThankYouSolutionSection = () => {
           </p>
           
           <div className="flex justify-center mt-8">
-            <div className="w-full max-w-md">
-              <SimpleCTA 
-                onCTAClick={() => handleCTAClick('thank_you_solution')}
-                buttonText="Yes! I Want To Implement Now"
+            <div className="w-full max-w-md space-y-4">
+              <CTAButton
+                onClick={handleCTAClick}
+                variant="primary"
                 size="large"
-              />
+              >
+                Yes! I Want To Implement Now
+              </CTAButton>
+              
+              <div className="text-center space-y-1">
+                <div className="text-3xl font-bold text-blue-600">
+                  Limited One-Time Offer
+                </div>
+                <div className="text-sm text-slate-600">
+                  (Offer expires once you leave this page)
+                </div>
+                <div className="text-3xl font-bold text-blue-600">
+                  ONLY $97
+                </div>
+                <div className="text-sm text-slate-600">
+                  ($400.00 Worth Of Value)
+                </div>
+              </div>
+              
+              <CTASecurity />
+              
               <div className="mt-4 text-center">
                 <a 
                   href="/success"

@@ -1,12 +1,26 @@
 import OptimizedContainer from "@/components/ui/OptimizedContainer";
-import SimpleCTA from "@/components/cta/SimpleCTA";
-import { useAnalytics } from "@/hooks/useAnalytics";
-import { createCTAHandler } from "@/utils/ctaUtils";
+import CTAButton from "@/components/cta/CTAButton";
+import { POLAR_UPSELL_CHECKOUT_LINK } from "@/lib/constants";
+import { usePolarCheckout } from "@/hooks/usePolarCheckout";
 import { Calendar, Clipboard, Users, Puzzle, ArrowRight, FileText, Play } from "lucide-react";
+import { useCallback } from "react";
 
 const ThankYouValueStackSection = () => {
-  const { trackCTAClick } = useAnalytics();
-  const handleCTAClick = createCTAHandler(trackCTAClick);
+  const handleUpsellSuccess = useCallback(() => {
+    window.fbq?.("track", "Purchase", {
+      currency: "USD",
+      value: 97,
+    });
+  }, []);
+
+  const { createCheckout } = usePolarCheckout({
+    onSuccess: handleUpsellSuccess
+  });
+
+  const handleCTAClick = useCallback(async () => {
+    console.log("Thank You Value Stack CTA clicked");
+    await createCheckout(POLAR_UPSELL_CHECKOUT_LINK);
+  }, [createCheckout]);
   const valueItems = [
     {
       title: "14-Day Complete Done-For-You Meal Plan",
@@ -104,16 +118,13 @@ const ThankYouValueStackSection = () => {
           
           <div className="flex justify-center mt-8">
             <div className="w-full max-w-md">
-              <button
-                onClick={() => handleCTAClick('thank_you_value_stack')}
-                className="w-full bg-white hover:bg-slate-50 text-blue-600 border-2 border-blue-600 px-6 py-4 text-base min-h-[60px] font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-xl touch-manipulation flex items-center justify-center rounded-md"
-                style={{ WebkitTapHighlightColor: 'transparent' }}
+              <CTAButton
+                onClick={handleCTAClick}
+                variant="secondary"
+                size="large"
               >
-                <span className="flex items-center justify-center gap-1.5 text-center leading-tight">
-                  <span>Yes! I Want To Implement Now</span>
-                  <ArrowRight className="h-4 w-4 flex-shrink-0 text-blue-600" />
-                </span>
-              </button>
+                Yes! I Want To Implement Now
+              </CTAButton>
               
               <div className="text-center space-y-1 mt-4">
                 <div className="text-3xl font-bold text-white">

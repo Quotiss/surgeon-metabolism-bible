@@ -2,12 +2,26 @@ import OptimizedContainer from "@/components/ui/OptimizedContainer";
 import CTAButton from "@/components/cta/CTAButton";
 import CTASecurity from "@/components/cta/CTASecurity";
 import TrustBadge from "@/components/ui/TrustBadge";
-import { createCTAHandler } from "@/utils/ctaUtils";
-import { useAnalytics } from "@/hooks/useAnalytics";
+import { POLAR_UPSELL_CHECKOUT_LINK } from "@/lib/constants";
+import { usePolarCheckout } from "@/hooks/usePolarCheckout";
+import { useCallback } from "react";
 
 const ThankYouGuaranteeSection = () => {
-  const { trackCTAClick } = useAnalytics();
-  const handleCTAClick = createCTAHandler(trackCTAClick);
+  const handleUpsellSuccess = useCallback(() => {
+    window.fbq?.("track", "Purchase", {
+      currency: "USD",
+      value: 97,
+    });
+  }, []);
+
+  const { createCheckout } = usePolarCheckout({
+    onSuccess: handleUpsellSuccess
+  });
+
+  const handleCTAClick = useCallback(async () => {
+    console.log("Thank You Guarantee CTA clicked");
+    await createCheckout(POLAR_UPSELL_CHECKOUT_LINK);
+  }, [createCheckout]);
 
   return (
     <section className="py-16 bg-white">
@@ -48,7 +62,7 @@ const ThankYouGuaranteeSection = () => {
 
         <div className="space-y-4 max-w-md mx-auto">
           <CTAButton
-            onClick={() => handleCTAClick('thank_you_guarantee')}
+            onClick={handleCTAClick}
             variant="primary"
             size="large"
           >
