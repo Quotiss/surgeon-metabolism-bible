@@ -67,11 +67,12 @@ const ThankYouValueStackSection = () => {
             Here's What You'll Get With Your 14-Day Surgeon Metabolism Bible Implementation System
           </h2>
           
-          {/* Space reserved for large photo asset */}
-          <div className="bg-slate-200 border-2 border-dashed border-slate-300 rounded-xl p-12 mb-12 max-w-2xl mx-auto">
-            <p className="text-slate-500 text-lg">
-              [Space reserved for large photo asset]
-            </p>
+          <div className="mb-12 max-w-2xl mx-auto">
+            <img 
+              src="/lovable-uploads/55d0d07d-3f84-4e7b-b2c3-69e5834c4ca4.png" 
+              alt="14-Day Surgeon Metabolism Bible Implementation System" 
+              className="w-full h-auto"
+            />
           </div>
         </div>
 
