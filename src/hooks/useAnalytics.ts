@@ -1,6 +1,5 @@
 
 import { useEffect } from 'react';
-import { META_PIXEL_EVENTS } from '@/lib/constants';
 
 declare global {
   interface Window {
@@ -41,16 +40,6 @@ export const useAnalytics = () => {
 
   const trackCTAClick = (location: string) => {
     trackEvent('cta_click', { location });
-    
-    // Only track AddPaymentInfo when user goes to checkout - removed InitiateCheckout
-    if (window.fbq) {
-      window.fbq('track', META_PIXEL_EVENTS.ADD_PAYMENT_INFO, { 
-        source: location,
-        value: 27,
-        currency: 'USD'
-      });
-      console.log('Meta Pixel AddPaymentInfo event fired for:', location);
-    }
   };
 
   return { trackEvent, trackPageView, trackCTAClick };

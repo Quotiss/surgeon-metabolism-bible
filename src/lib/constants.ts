@@ -27,7 +27,5 @@ export const CTA_LOCATIONS = {
 } as const;
 
 export const META_PIXEL_EVENTS = {
-  INITIATE_CHECKOUT: 'InitiateCheckout',
-  ADD_PAYMENT_INFO: 'AddPaymentInfo',
   PURCHASE: 'Purchase',
 } as const;
