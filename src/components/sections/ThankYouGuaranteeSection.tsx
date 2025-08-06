@@ -44,7 +44,7 @@ const ThankYouGuaranteeSection = () => {
           </p>
           
           <p>
-            If you read through, utilize, and follow through with the 14-day implementation system and don't feel noticably more energized, mentally sharp, or in control of your vitality — just email <span className="text-blue-600">support@surgeon-reset.org</span> within 30 days.
+            If you read through, utilize, and follow through with the 14-day implementation system and don't feel noticably more energized, mentally sharp, or in control of your vitality — just email <span className="text-blue-600">surgeonmetabolismbible@gmail.com</span> within 30 days.
           </p>
           
           <p>

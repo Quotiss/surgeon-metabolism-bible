@@ -30,7 +30,7 @@ const FAQSection = ({
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-slate-600">
-            Need help? support@surgeon-reset.org
+            Need help? surgeonmetabolismbible@gmail.com
           </p>
         </div>
 

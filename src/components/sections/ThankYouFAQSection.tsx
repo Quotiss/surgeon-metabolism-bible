@@ -41,7 +41,7 @@ const ThankYouFAQSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-slate-600">
-            Need help? <span className="text-blue-600">support@surgeon-reset.org</span>
+            Need help? <span className="text-blue-600">surgeonmetabolismbible@gmail.com</span>
           </p>
         </div>
 

@@ -10,7 +10,7 @@ const SuccessSupportSection = memo(() => {
       <OptimizedContainer size="md" className="text-center">
         <div className="mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 text-center">
-            Need Help? support@surgeon-reset.org
+            Need Help? surgeonmetabolismbible@gmail.com
           </h2>
         </div>
         

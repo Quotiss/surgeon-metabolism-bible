@@ -44,7 +44,7 @@ const GuaranteeSection = ({ onCTAClick }: SectionProps) => {
         
         <p>
           If you're not happy for any reason at all, shoot us an email at{" "}
-          <span className="font-semibold text-blue-600">support@surgeon-reset.org</span>{" "}
+          <span className="font-semibold text-blue-600">surgeonmetabolismbible@gmail.com</span>{" "}
           and request a refund within 30 days.
         </p>
         
